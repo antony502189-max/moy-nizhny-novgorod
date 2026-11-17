@@ -27,7 +27,9 @@ for (const ep of endpoints) {
       body: 'data=' + encodeURIComponent(q),
     });
     if (!r.ok) throw new Error(ep + ' -> HTTP ' + r.status);
-    data = await r.json();
+    const result = await r.json();
+    if (result.remark || !Array.isArray(result.elements) || !result.elements.length) throw new Error('Incomplete extract');
+    data = result;
     break;
   } catch (e) { console.error('overpass failed:', e.message); }
 }

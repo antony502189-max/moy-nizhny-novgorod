@@ -1,13 +1,6 @@
-/**
- * Thin serverless proxy for the AI tour builder (Vercel Node function; also served in `npm run dev` by vite.config.ts).
- * The API key lives ONLY in server env vars — it never reaches the browser.
- *
- * Env:
- *   ANTHROPIC_API_KEY   -> uses the Anthropic Messages API (default provider)
- *   TOUR_MODEL          -> optional model id (default claude-haiku-5-5)
- *   LLM_BASE_URL + LLM_API_KEY (+ TOUR_MODEL) -> any OpenAI-compatible chat/completions endpoint instead
- * No key => responds 200 {error:"no_key"} and the client falls back to its deterministic offline planner.
- */
+import { reserveModelCall } from '../server/quota.ts';
+import { acceptOrigin } from '../server/origin.ts';
+// Optional online tour generator. The static site uses the local planner by default.
 interface Req { method?: string; body?: any; headers?: Record<string, string | string[] | undefined> }
 interface Res { status(c: number): Res; setHeader(k: string, v: string): Res; json(o: unknown): void }
 
@@ -27,19 +20,20 @@ function systemPrompt(lang: string) {
 }
 
 async function callLLM(system: string, user: string): Promise<string> {
-  const model = process.env.TOUR_MODEL || 'claude-haiku-5-5';
-  if (process.env.LLM_BASE_URL && process.env.LLM_API_KEY) {
-    const r = await fetch(process.env.LLM_BASE_URL.replace(/\/$/, '') + '/chat/completions', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json', authorization: 'Bearer ' + process.env.LLM_API_KEY },
-      body: JSON.stringify({ model, max_tokens: 900, temperature: 0.3, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
+  const deepseek = process.env.DEEPSEEK_API_KEY;
+  const model = process.env.TOUR_MODEL || (deepseek ? 'deepseek-flash' : undefined);
+  if (deepseek || (process.env.LLM_BASE_URL && process.env.LLM_API_KEY)) {
+    const r = await fetch((deepseek ? 'https://api.deepseek.com' : process.env.LLM_BASE_URL!).replace(/\/$/, '') + '/chat/completions', {
+      method: 'POST', signal: AbortSignal.timeout(18000),
+      headers: { 'content-type': 'application/json', authorization: 'Bearer ' + (deepseek || process.env.LLM_API_KEY) },
+      body: JSON.stringify({ model, ...(deepseek ? {thinking:{type:'disabled'},response_format:{type:'json_object'}} : {}), max_tokens: 900, temperature: 0.3, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
     });
     if (!r.ok) throw new Error('llm_http_' + r.status);
     const j: any = await r.json();
     return j.choices?.[0]?.message?.content ?? '';
   }
   const r = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
+    method: 'POST', signal: AbortSignal.timeout(18000),
     headers: { 'content-type': 'application/json', 'x-api-key': process.env.ANTHROPIC_API_KEY!, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({ model, max_tokens: 900, system, messages: [{ role: 'user', content: user }] }),
   });
@@ -50,15 +44,13 @@ async function callLLM(system: string, user: string): Promise<string> {
 
 export default async function handler(req: Req, res: Res) {
   res.setHeader('cache-control', 'no-store');
+  if (!acceptOrigin(req,res)) return res.status(403).json({error:'origin'});
+  if (req.method === 'OPTIONS') return res.status(200).json({});
   if (req.method !== 'POST') return res.status(405).json({ error: 'method' });
-  const hasKey = !!(process.env.ANTHROPIC_API_KEY || (process.env.LLM_BASE_URL && process.env.LLM_API_KEY));
-  if (!hasKey) return res.status(200).json({ source: 'none', error: 'no_key' }); // 200 on purpose: keeps the browser console clean, the client falls back offline
-
-  // Same-site check: browsers always send Origin on cross-origin POST. Set ALLOWED_ORIGINS (comma list) to allow other hosts.
-  const origin = String(req.headers?.origin ?? '');
-  const host = String(req.headers?.host ?? '');
-  const allowed = (process.env.ALLOWED_ORIGINS || '').split(',').map((x) => x.trim()).filter(Boolean);
-  if (origin && !origin.endsWith('//' + host) && !allowed.includes(origin) && !/^https?:\/\/(localhost|127\.0\.0\.1)/.test(origin)) return res.status(403).json({ error: 'origin' });
+  const hasKey = process.env.DEEPSEEK_API_KEY || process.env.ANTHROPIC_API_KEY || (process.env.LLM_BASE_URL && process.env.LLM_API_KEY);
+  if (process.env.TOUR_API_ENABLED !== '1' || !hasKey || (!process.env.DEEPSEEK_API_KEY && !process.env.TOUR_MODEL)) {
+    return res.status(503).json({error:'offline_only'});
+  }
   if (JSON.stringify(req.body ?? {}).length > 12000) return res.status(413).json({ error: 'too_large' });
   const body = req.body ?? {};
   const prompt = String(body.prompt ?? '').replaceAll('"""', "'").slice(0, MAX_PROMPT).trim();
@@ -70,6 +62,9 @@ export default async function handler(req: Req, res: Res) {
     [String(c.id).slice(0, 40), String(c.name).slice(0, 80), 'tags=' + String(c.tags).slice(0, 80), 'min=' + Number(c.minutes), 'effort=' + Number(c.effort), 'sunset=' + (c.sunset ? 1 : 0), `ll=${Number(c.lat).toFixed(4)},${Number(c.lon).toFixed(4)}`].join(' | '));
   const user = `Guest request: """${prompt}"""\n\nCatalog (id | name | tags | typical visit minutes | effort | sunset viewpoint | lat,lon):\n${lines.join('\n')}`;
 
+  try {
+    if (!await reserveModelCall()) return res.status(429).json({error:'quota_exceeded'});
+  } catch { return res.status(503).json({error:'quota_unavailable'}); }
   try {
     const text = await callLLM(systemPrompt(lang), user);
     const a = text.indexOf('{'), b = text.lastIndexOf('}');

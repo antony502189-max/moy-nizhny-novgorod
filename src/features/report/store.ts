@@ -1,19 +1,23 @@
-import { readLocal, writeLocal } from '../../core/store';
-import { districtOf } from '../../core/geo';
+import { readLocal } from '../../core/store.ts';
+import { districtOf } from '../../core/geo.ts';
 
 export interface Report {
   id: string; ts: number; cat: string; text: string; lat: number; lon: number; lang: 'ru' | 'en' | 'zh';
   photo?: string; district: string; synthetic?: boolean;
 }
 export const REPORTS_KEY = 'ng.reports';
-export const loadReports = (): Report[] => { const v = readLocal<Report[]>(REPORTS_KEY, []); return Array.isArray(v) ? v : []; };
+export function loadReports(): Report[] {
+  const saved = readLocal<unknown>(REPORTS_KEY, []);
+  if (!Array.isArray(saved)) return [];
+  return saved.filter((r): r is Report => r && typeof r.id === 'string' && typeof r.text === 'string'
+    && typeof r.cat === 'string' && ['ru','en','zh'].includes(r.lang) && Number.isFinite(r.ts)
+    && Number.isFinite(r.lat) && Number.isFinite(r.lon))
+    .map(r => ({...r, district: districtOf(r)}));
+}
 
 export function addReport(r: Omit<Report, 'id' | 'ts' | 'district'>): Report {
-  const full: Report = { ...r, id: 'NG-' + Math.random().toString(36).slice(2, 8).toUpperCase(), ts: Date.now(), district: districtOf(r) };
-  writeLocal(REPORTS_KEY, [full, ...loadReports()]);
-  // Optional: forward to a serverless endpoint if the deployer configured one (never required for the demo).
-  const ep = import.meta.env.VITE_REPORT_ENDPOINT as string | undefined;
-  if (ep) fetch(ep, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...full, photo: undefined }) }).catch(() => {});
+  const full = { ...r, id: 'NG-' + crypto.randomUUID(), ts: Date.now(), district: districtOf(r) };
+  localStorage.setItem(REPORTS_KEY, JSON.stringify([full, ...loadReports()]));
   return full;
 }
 

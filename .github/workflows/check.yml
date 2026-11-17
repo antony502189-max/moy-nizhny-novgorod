@@ -1,0 +1,22 @@
+name: Check static site
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run pages:prepare
+      - name: Check the branch-root Pages release
+        run: |
+          git diff --exit-code -- index.html resident.html sw.js bundle/
+          test -z "$(git ls-files --others --exclude-standard -- bundle/)"
+      - run: npx playwright-core install --with-deps chromium
+      - run: npm run test:browser

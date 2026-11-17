@@ -10,6 +10,7 @@ export function MorePage() {
   const [done, setDone] = useState(false);
   const am = amenities as { fetchedAt: string; count: number };
   const items = [
+    {icon:'pin',title:t('guide.title'),sub:t('guide.stories'),to:'/guide'},
     { icon: 'chart', title: t('more.dashboard'), sub: t('more.dashboard.sub'), to: '/dashboard' },
     { icon: 'globe', title: t('more.twin'), sub: t('more.twin.sub'), to: '/twin' },
   ];
@@ -17,6 +18,7 @@ export function MorePage() {
     <div className="page">
       <PageTitle title={t('more.title')} sub={t('more.sub')} />
       <div className="list">
+        <a className="row row--btn" href="./resident.html#/home"><Icon name="pin" size={24}/><b>{t('more.resident')}</b><Icon name="chev" size={18}/></a>
         {items.map((i) => (
           <button key={i.to} className="row row--btn" onClick={() => go(i.to)}>
             <Icon name={i.icon} size={24} /><div className="row__main"><b>{i.title}</b><span>{i.sub}</span></div><Icon name="chev" size={18} />

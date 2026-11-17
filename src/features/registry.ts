@@ -1,4 +1,5 @@
 import type { FeatureModule } from './types';
+import { guideFeature } from './guide';
 import { nowFeature } from './now';
 import { historyFeature } from './history';
 import { tourFeature } from './tour';
@@ -7,4 +8,4 @@ import { twinFeature } from './twin';
 import { dashboardFeature } from './dashboard';
 
 /** Order = tab order. Non-tab modules are still routable (e.g. /dashboard, /twin). */
-export const FEATURES: FeatureModule[] = [nowFeature, historyFeature, tourFeature, reportFeature, dashboardFeature, twinFeature];
+export const FEATURES: FeatureModule[] = [nowFeature, historyFeature, tourFeature, reportFeature, dashboardFeature, twinFeature, guideFeature];

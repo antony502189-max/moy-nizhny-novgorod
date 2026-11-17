@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { ratingsKey, readRatings } from './ratings';
+import { useLocal } from './store';
 import { useEffect, useRef } from 'react';
 import { useI18n } from './i18n';
 import { Icon } from './Icon';
@@ -14,6 +17,8 @@ export function EffortDots({ level }: { level: 0 | 1 | 2 }) {
 
 export function PlaceSheet({ place, onClose, extra }: { place: Place; onClose?: () => void; extra?: React.ReactNode }) {
   const { t, l } = useI18n();
+  const [ratingError, setRatingError] = useState(false);
+  const [ratings, setRatings] = useLocal(ratingsKey, readRatings());
   const photo = placePhoto(place);
   const c = place.photo ? photoCredits[place.photo] : undefined;
   const ref = useRef<HTMLDivElement>(null);
@@ -43,7 +48,11 @@ export function PlaceSheet({ place, onClose, extra }: { place: Place; onClose?: 
           ? <a className="btn btn--ghost btn--sm" href={place.site} target="_blank" rel="noreferrer"><Icon name="link" size={16} />{t('common.official')}</a>
           : <span className="badge badge--soon">{t('common.verify')}</span>}
       </div>
-      {extra}
+      <div role="group" aria-label={t('rating.label')}><p>{t('rating.label')}</p><div className="chips">{[1,2,3,4,5].map(n =>
+        <button key={n} className="chip" aria-pressed={ratings?.[place.id] === n}
+          onClick={()=>setRatingError(!setRatings({...readRatings(), [place.id]:n}))}>{n} ★</button>)}</div></div>
+      {ratingError && <p role="alert">{t('common.storageError')}</p>}
+      <a href={'#/guide/'+place.id}>{t('guide.stories')} · {t('guide.title')} →</a>{extra}
     </div>
   );
 }

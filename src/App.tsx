@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { I18nProvider, LANGS, LANG_LABEL, registerStrings, useI18n } from './core/i18n';
 import { coreStrings } from './core/strings';
 import { usePath } from './core/router';
@@ -23,19 +23,19 @@ function Shell() {
   return (
     <div className="app">
       <header className="topbar">
-        <a className="brand" href="#/now"><Icon name="pin" size={20} /><span>{t('app.name')}<small>{t('app.sub')}</small></span></a>
+        <a className="brand" href="#/now"><img src={import.meta.env.BASE_URL+'favicon.svg'} alt="" width={32} height={32}/><span>{t('app.name')}<small>{t('app.sub')}</small></span></a>
         <div className="lang" role="group" aria-label={t('app.lang')}>
           {LANGS.map((l) => <button key={l} aria-pressed={lang === l} onClick={() => setLang(l)}>{LANG_LABEL[l]}</button>)}
         </div>
       </header>
-      <main tabIndex={-1}>{feature ? <feature.Component path={path} /> : <MorePage />}</main>
+      <main tabIndex={-1}>{feature ? <Suspense fallback={<p role="status">…</p>}><feature.Component path={path} /></Suspense> : <MorePage />}</main>
       <nav className="tabbar" aria-label="Main"><div className="tabbar__in">
         {tabs.map((f) => (
           <a key={f.id} className="tab" href={'#' + f.path} aria-current={feature?.id === f.id ? 'page' : undefined}>
-            <Icon name={f.tab!.icon} size={22} />{t(f.tab!.labelKey)}
+            <Icon name={f.tab!.icon} size={22} /><span className="tab__label">{t(f.tab!.labelKey)}</span>
           </a>
         ))}
-        <a className="tab" href="#/more" aria-current={moreActive ? 'page' : undefined}><Icon name="grid" size={22} />{t('tab.more')}</a>
+        <a className="tab" href="#/more" aria-current={moreActive ? 'page' : undefined}><Icon name="grid" size={22} /><span className="tab__label">{t('tab.more')}</span></a>
       </div></nav>
     </div>
   );

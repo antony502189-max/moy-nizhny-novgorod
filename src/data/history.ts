@@ -1,5 +1,6 @@
 import type { L10n } from '../core/i18n';
-import { photoCredits } from './places';
+import archive from './archiveCredits.json' with { type:'json' };
+import { photoCredits } from './places.ts';
 
 /**
  * "Then / now" spots. Old photos come ONLY from Wikimedia Commons items tagged Public domain (checked via the Commons
@@ -18,7 +19,7 @@ export interface HistorySpot {
   guessYear: number | null; guessExact: boolean;
 }
 
-const B = import.meta.env.BASE_URL;
+const B = import.meta.env?.BASE_URL || './';
 const commons = (file: string) => 'https://commons.wikimedia.org/wiki/File:' + file;
 const nowCredit = (id: string): Credit => {
   const c = photoCredits[id];
@@ -27,6 +28,27 @@ const nowCredit = (id: string): Credit => {
 const DMITRIEV = 'Maxim Dmitriev (1858–1948)';
 
 export const HISTORY: HistorySpot[] = [
+  {
+    id:'pechersky',placeId:'monastery',guessYear:null,guessExact:false,
+    title:{ru:'Вознесенский собор',en:'Ascension Cathedral',zh:'升天大教堂'},
+    then:[{id:'pechersky-1900',src:B+archive['pechersky-1900'].src,year:null,yearLabel:{ru:'1890–1910',en:'1890–1910',zh:'1890–1910'},credit:archive['pechersky-1900']}],
+    now:{src:B+archive['pechersky-2025'].src,credit:{...archive['pechersky-2025'],note:'2025'}},
+    story:{ru:'Максим Дмитриев снял Вознесенский собор Печерского монастыря на рубеже XIX и XX веков. Архив указывает диапазон 1890–1910 годов. Современная фотография того же собора сделана в октябре 2025 года.',
+      en:'Maxim Dmitriev photographed the Ascension Cathedral at the turn of the twentieth century. The archive dates the photograph to 1890–1910. The modern view shows the same cathedral in October 2025.',
+      zh:'马克西姆·德米特里耶夫在十九世纪与二十世纪之交拍摄了升天大教堂。档案将日期定在1890至1910年。现代照片拍摄于2025年10月。'},
+  },
+  {
+    id:'stadium', placeId:'stadium', guessYear:null, guessExact:false,
+    title:{ru:'Стадион на Стрелке',en:'Stadium at the Strelka',zh:'斯特列尔卡体育场'},
+    then:[
+      {id:'stadium-2016',src:B+archive['stadium-2016'].src,year:2016,yearLabel:{ru:'стройка · 2016',en:'construction · 2016',zh:'施工 · 2016'},credit:archive['stadium-2016']},
+      {id:'stadium-2018',src:B+archive['stadium-2018'].src,year:2018,yearLabel:{ru:'май 2018',en:'May 2018',zh:'2018年5月'},credit:archive['stadium-2018']},
+    ],
+    now:{src:B+archive['stadium-2024'].src,credit:{...archive['stadium-2024'],note:'2024'}},
+    story:{ru:'Первая фотография документирует стройку 5 августа 2016 года. Второй снимок сделан 6 мая 2018 года. Панорама 8 июня 2024 года показывает стадион через шесть лет. Авторы снимали его с разных точек.',
+      en:'The first photograph records the construction site on 5 August 2016. Another shows the stadium on 6 May 2018. The panorama was taken on 8 June 2024. The photographers used different viewpoints.',
+      zh:'第一张照片记录了2016年8月5日的施工现场。第二张拍摄于2018年5月6日。全景照拍摄于2024年6月8日。三张照片的拍摄角度不同。'},
+  },
   {
     id: 'dmitrievskaya', placeId: 'dmitriev', guessYear: 1913, guessExact: true,
     title: { ru: 'Дмитриевская башня', en: 'Dmitrievskaya Tower', zh: '季米特里塔' },
@@ -86,7 +108,7 @@ export const HISTORY: HistorySpot[] = [
     },
   },
   {
-    id: 'gymnasium', placeId: 'school', guessYear: 1900, guessExact: false,
+    id: 'gymnasium', placeId: 'minin', guessYear: 1900, guessExact: false,
     title: { ru: 'Губернская гимназия', en: 'The provincial gymnasium', zh: '省立中学' },
     then: [
       { id: 'g1900', src: B + photoCredits.school.src, year: 1900, yearLabel: { ru: 'около 1900', en: 'c. 1900', zh: '约1900年' },
@@ -94,9 +116,9 @@ export const HISTORY: HistorySpot[] = [
     ],
     now: { src: B + 'places/minin.jpg', credit: nowCredit('minin') },
     story: {
-      ru: 'Фото Василия Зеведе (ок. 1900), подпись на Commons — «губернская гимназия, Благовещенская площадь», зимой. Мы сопоставили его с Гимназией № 1 у площади Минина и Пожарского (по справочнику прототипа; точное совпадение здания стоит проверить краеведам). На современном снимке видна Дмитриевская башня, гимназия — вдали. Ракурс другой.',
-      en: 'A photo by Vasily Zeveke (c. 1900) captioned on Commons “provincial gymnasium, Blagoveshchenskaya Square”, in winter. We matched it to Gymnasium No. 1 by Minin and Pozharsky Square (per the prototype’s place list; local historians should confirm the exact building). The modern shot shows the Dmitrievskaya Tower, with the gymnasium in the distance. The angle differs.',
-      zh: '瓦西里·泽韦克拍摄的冬日照片（约1900年），维基共享资源标题为“省立中学，布拉戈维申斯卡娅广场”。我们将其对应到米宁和波扎尔斯基广场旁的第一中学（依据原型的地点清单，具体建筑请本地史学者核实）。现代照片中可见季米特里塔，中学在远处。拍摄角度不同。',
+      ru: 'На архивном снимке Василия Зевеке — губернская гимназия на Благовещенской площади. В реестре Мининского университета историческое здание указано по адресу улица Ульянова, 1. Современный снимок показывает площадь Минина и Пожарского с другого ракурса, со стороны Дмитриевской башни.',
+      en: 'Vasily Zeveke photographed the provincial gymnasium on Blagoveshchenskaya Square. Minin University lists the former gymnasium at 1 Ulyanova Street. The modern image shows the square from a different angle by the Dmitrievskaya Tower.',
+      zh: '瓦西里·泽韦克的老照片记录了当时广场上的省立中学。米宁大学的资料显示，旧校址位于乌里扬诺夫街1号。现代照片从季米特里塔附近拍摄，展示同一广场的另一个视角。',
     },
   },
 ];

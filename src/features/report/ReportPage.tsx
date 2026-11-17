@@ -23,20 +23,29 @@ export function ReportPage() {
   const submit = () => {
     if (!cat) { setErr(t('rep.err.cat')); return; }
     if (!pt) { setErr(t('rep.err.point')); return; }
-    const r = addReport({ cat, text: text.trim(), lat: pt.lat, lon: pt.lon, lang: rlang, photo: photo || undefined });
+    try {
+      const r = addReport({ cat, text: text.trim(), lat: pt.lat, lon: pt.lon, lang: rlang, photo: photo || undefined });
     setDone(r); setMine(loadReports()); setErr('');
+    } catch { setErr(t('rep.storage')); }
   };
   const reset = () => { setDone(null); setCat(''); setText(''); setPt(null); setPhoto(''); };
-  const me = () => navigator.geolocation?.getCurrentPosition((p) => {
-    const q = { lat: p.coords.latitude, lon: p.coords.longitude };
-    setPt(distanceM(q, CENTER) > 40000 ? CENTER : q);
-  }, () => {}, { timeout: 8000 });
+  const me = () => {
+    if (!navigator.geolocation) { setErr(t('rep.geo')); return; }
+    navigator.geolocation.getCurrentPosition(p => {
+      const q = {lat:p.coords.latitude, lon:p.coords.longitude};
+      if (distanceM(q,CENTER) > 40000) { setErr(t('rep.geo')); return; }
+      setPt(q); setErr('');
+    }, () => setErr(t('rep.geo')), {timeout:8000});
+  };
 
   if (done) {
     return (
       <div className="page">
         <div className="hero"><h2><Icon name="check" size={22} />{t('rep.done.title')}</h2><p style={{ fontSize: 22, fontWeight: 700 }}>{t('rep.done.no', { id: done.id })}</p><p className="muted">{l(catById(done.cat).label)}</p></div>
         <div className="banner"><Icon name="info" size={18} /><span>{t('rep.done.local')}</span></div>
+        <textarea readOnly aria-label={t('rep.text')} value={[l(catById(done.cat).label), done.text, done.lat.toFixed(6)+', '+done.lon.toFixed(6)].filter(Boolean).join('\n')} onFocus={e=>e.target.select()}/>
+        {done.photo && <a className="btn btn--ghost" href={done.photo} download={done.id+'.jpg'}>{t('rep.savePhoto')}</a>}
+        <a className="btn" href="https://admgor.nnov.ru/reception/reception-form" target="_blank" rel="noreferrer">{t('rep.official')} ↗</a>
         <div className="chips"><button className="btn" onClick={() => go('/dashboard')}><Icon name="chart" size={18} />{t('rep.done.dash')}</button><button className="btn btn--ghost" onClick={reset}>{t('rep.done.more')}</button></div>
       </div>
     );
@@ -57,8 +66,8 @@ export function ReportPage() {
       <div className="field"><label htmlFor="rt">{t('rep.text')}</label><textarea id="rt" value={text} maxLength={500} placeholder={t('rep.text.ph')} onChange={(e) => setText(e.target.value)} /></div>
       <div className="field">
         <label htmlFor="rp">{t('rep.photo')}</label>
-        {photo ? (<><img src={photo} alt="" style={{ maxHeight: 180, borderRadius: 12, objectFit: 'cover' }} /><button className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start' }} onClick={() => setPhoto('')}>{t('rep.photo.remove')}</button></>)
-          : <input id="rp" type="file" accept="image/*" onChange={async (e) => { const f = e.target.files?.[0]; if (f) { try { setPhoto(await shrinkPhoto(f)); } catch { /* ignore */ } } }} />}
+        {photo ? (<><img src={photo} alt="" style={{ maxHeight: 180, borderRadius: 0, objectFit: 'cover' }} /><button className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start' }} onClick={() => setPhoto('')}>{t('rep.photo.remove')}</button></>)
+          : <input id="rp" type="file" accept="image/*" onChange={async (e) => { const f = e.target.files?.[0]; if (f) { try { setPhoto(await shrinkPhoto(f)); } catch { setErr(t('rep.imageError')); } } }} />}
       </div>
       <div className="field"><label>{t('rep.lang')}</label>
         <div className="seg" role="group">{LANGS.map((x) => <button key={x} aria-pressed={rlang === x} onClick={() => setRlang(x)}>{LANG_LABEL[x]}</button>)}</div>
@@ -70,7 +79,7 @@ export function ReportPage() {
         {mine.length === 0 ? <p className="muted">{t('rep.mine.none')}</p> : (
           <div className="list">
             {mine.map((r) => (
-              <div key={r.id} className="row"><div className="row__main"><b>{l(catById(r.cat).label)}</b><span>{r.id} · {new Date(r.ts).toLocaleString(lang)}</span>{r.text && <span>{r.text}</span>}</div><span className="badge badge--soon">{t('rep.status')}</span></div>
+              <div key={r.id} className="row"><div className="row__main"><b>{l(catById(r.cat).label)}</b><span>{r.id} · {new Date(r.ts).toLocaleString(lang)}</span>{r.text && <span>{r.text}</span>}</div><button className="chip" onClick={()=>setDone(r)}>{t('rep.status')}</button></div>
             ))}
           </div>
         )}

@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/package-site.mjs",
     "preview": "vite preview",
     "data:amenities": "node scripts/fetch-amenities.mjs",
-    "api:dev": "node scripts/dev-api.mjs"
+    "test": "node --experimental-strip-types --test resident/domain/*.test.ts tests/*.test.mjs",
+    "pages:prepare": "npm run build && node scripts/package-site.mjs --pages",
+    "test:browser": "node --experimental-strip-types scripts/check-browser.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
+    "lucide-react": "0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -22,6 +25,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "playwright-core": "1.62.1",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"
   }

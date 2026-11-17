@@ -1,34 +1,29 @@
-import { defineConfig, loadEnv, type Plugin } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Dev-only: serve the Vercel function `api/tour.ts` at /api/tour so the AI proxy works in `npm run dev`.
-function devApi(env: Record<string, string>): Plugin {
-  return {
-    name: 'dev-api',
+export default defineConfig({
+  base: './',
+  publicDir: false,
+  plugins: [react(), {
+    name: 'development-entries',
+    transformIndexHtml() {
+      return [
+        {tag:'link', attrs:{rel:'manifest', href:'./manifest.webmanifest'}, injectTo:'head'},
+        {tag:'link', attrs:{rel:'icon', href:'./favicon.svg'}, injectTo:'head'},
+        {tag:'link', attrs:{rel:'apple-touch-icon', href:'./icon-192.png'}, injectTo:'head'},
+      ];
+    },
     configureServer(server) {
-      for (const [k, v] of Object.entries(env)) if (!(k in process.env)) process.env[k] = v;
-      server.middlewares.use('/api/tour', async (req, res) => {
-        let body = '';
-        for await (const chunk of req) body += chunk;
-        try { (req as any).body = body ? JSON.parse(body) : {}; } catch { (req as any).body = {}; }
-        const mod = await server.ssrLoadModule('/api/tour.ts');
-        const shim = {
-          status(code: number) { res.statusCode = code; return shim; },
-          setHeader(k: string, v: string) { res.setHeader(k, v); return shim; },
-          json(obj: unknown) { res.setHeader('content-type', 'application/json'); res.end(JSON.stringify(obj)); },
-          end(s?: string) { res.end(s); },
-        };
-        try { await mod.default(req, shim); } catch (e) { res.statusCode = 500; res.end(JSON.stringify({ error: String(e) })); }
+      server.middlewares.use((req, _res, next) => {
+        const url = new URL(req.url || '/', 'http://localhost');
+        if (url.pathname === '/' || url.pathname === '/index.html') req.url = '/guest.html' + url.search;
+        if (url.pathname === '/resident.html') req.url = '/city.html' + url.search;
+        next();
       });
     },
-  };
-}
-
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
-  return {
-    base: './',
-    plugins: [react(), devApi(env)],
-    build: { chunkSizeWarningLimit: 900 },
-  };
+  }],
+  build: {
+    assetsDir: 'bundle',
+    rollupOptions: { input: ['guest.html', 'city.html'] },
+  },
 });
