@@ -15,7 +15,8 @@ export function registerStrings(b: Partial<Bundle>) {
 }
 
 function detect(): Lang {
-  const saved = localStorage.getItem('ng.lang') as Lang | null;
+  let saved: Lang | null = null;
+  try { saved = localStorage.getItem('ng.lang') as Lang | null; } catch { /* private browsing */ }
   if (saved && LANGS.includes(saved)) return saved;
   const nav = (navigator.language || 'ru').toLowerCase();
   if (nav.startsWith('zh')) return 'zh';
@@ -32,7 +33,7 @@ const I18nCtx = createContext<Ctx>(null as unknown as Ctx);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(detect);
-  const setLang = useCallback((l: Lang) => { localStorage.setItem('ng.lang', l); setLangState(l); }, []);
+  const setLang = useCallback((l: Lang) => { try { localStorage.setItem('ng.lang', l); } catch { /* session only */ } setLangState(l); }, []);
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   const value = useMemo<Ctx>(() => ({
     lang, setLang,

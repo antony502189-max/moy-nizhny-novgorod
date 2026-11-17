@@ -1,0 +1,42 @@
+{
+  "stadium-2016": {
+    "date": "2016-08-05",
+    "author": "A.Savin, Wikipedia",
+    "license": "FAL",
+    "licenseUrl": "http://artlibre.org/licence/lal/en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN_Strelka_Stadium_construction_08-2016.jpg",
+    "src": "history/stadium-2016.jpg"
+  },
+  "stadium-2018": {
+    "date": "2018-05-06 16:46:09",
+    "author": "Bestalex",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Stadium_(06_May_2018).jpg",
+    "src": "history/stadium-2018.jpg"
+  },
+  "stadium-2024": {
+    "date": "2024-06-08 14:38:44",
+    "author": "Vyacheslav Bukharov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Stadium_(June_2024)_-_1.jpg",
+    "src": "history/stadium-2024.jpg"
+  },
+  "pechersky-1900": {
+    "date": "1890-1910",
+    "author": "Maxim Petrovich Dmitriev",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ascension_Cathedral_in_Pechersky_Ascension_Monastery_1900.jpg",
+    "src": "history/pechersky-1900.jpg"
+  },
+  "pechersky-2025": {
+    "date": "2025-10-27 13:23:07",
+    "author": "Дмитрий Сазанов",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ascension_Cathedral_of_Pechersky_Monastery,_Nizhny_Novgorod_-_2025-10-27_01.jpg",
+    "src": "history/pechersky-2025.jpg"
+  }
+}

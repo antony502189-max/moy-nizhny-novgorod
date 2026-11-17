@@ -17,27 +17,32 @@ export interface MapProps {
   fit?: boolean; className?: string; label?: string; picked?: { lat: number; lon: number } | null; selectedId?: string | null;
 }
 
-const TILE = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+import { addBasemap } from './basemap';
 
-export function LeafMap({ center = CENTER, zoom = 14, markers = [], lines = [], heat, onMapClick, fit, className = '', label, picked, selectedId }: MapProps) {
+const NO_MARKERS: MapMarker[] = [];
+const NO_LINES: MapLine[] = [];
+
+export function LeafMap({ center = CENTER, zoom = 14, markers = NO_MARKERS, lines = NO_LINES, heat, onMapClick, fit, className = '', label, picked, selectedId }: MapProps) {
   const { t } = useI18n();
   const el = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
   const layer = useRef<L.LayerGroup | null>(null);
+  const pins = useRef(new Map<string, L.Marker>());
   const heatLayer = useRef<any>(null);
   const clickRef = useRef(onMapClick);
   clickRef.current = onMapClick;
 
   useEffect(() => {
     if (!el.current || map.current) return;
-    const m = L.map(el.current, { zoomControl: false, attributionControl: true }).setView([center.lat, center.lon], zoom);
-    L.tileLayer(TILE, { maxZoom: 19, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(m);
+    const m = L.map(el.current, { zoomControl: false, attributionControl: true, zoomAnimation: false, fadeAnimation: false, markerZoomAnimation: false }).setView([center.lat, center.lon], zoom);
+    addBasemap(m);
     L.control.zoom({ position: 'bottomright' }).addTo(m);
     layer.current = L.layerGroup().addTo(m);
     m.on('click', (e: L.LeafletMouseEvent) => clickRef.current?.(e.latlng.lat, e.latlng.lng));
     map.current = m;
-    setTimeout(() => m.invalidateSize(), 50);
-    return () => { m.remove(); map.current = null; };
+    const resize = new ResizeObserver(() => {if(map.current===m)m.invalidateSize({animate:false})});
+    resize.observe(el.current);
+    return () => { resize.disconnect(); m.stop(); m.remove(); map.current = null; heatLayer.current = null; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -45,23 +50,31 @@ export function LeafMap({ center = CENTER, zoom = 14, markers = [], lines = [], 
     const m = map.current, g = layer.current;
     if (!m || !g) return;
     g.clearLayers();
+    pins.current.clear();
     for (const ln of lines) L.polyline(ln.points, { color: ln.color ?? '#3283c7', weight: 4, opacity: 0.85, dashArray: ln.dashed ? '6 8' : undefined }).addTo(g);
     for (const mk of markers) {
       const size = mk.size ?? 30;
       const icon = L.divIcon({
         className: 'pin-wrap', iconSize: [size, size], iconAnchor: [size / 2, size / 2],
-        html: `<div class="${mk.cls ?? 'pin'}${selectedId === mk.id ? ' pin--sel' : ''}" style="width:${size}px;height:${size}px">${mk.glyph ?? ''}</div>`,
+        html: `<div class="${mk.cls ?? 'pin'}" style="width:${size}px;height:${size}px">${mk.glyph ?? ''}</div>`,
       });
       const m2 = L.marker([mk.lat, mk.lon], { icon, title: mk.title, keyboard: false }).addTo(g);
+      pins.current.set(mk.id, m2);
       if (mk.popup) { const d = document.createElement('div'); d.textContent = mk.popup; m2.bindPopup(d); }
       if (mk.onClick) m2.on('click', mk.onClick);
     }
     if (picked) L.marker([picked.lat, picked.lon], { icon: L.divIcon({ className: 'pin-wrap', iconSize: [34, 34], iconAnchor: [17, 34], html: '<div class="pin-drop"></div>' }) }).addTo(g);
-    if (fit && (markers.length > 1)) {
+    if (fit && (markers.length > 0)) {
       const b = L.latLngBounds(markers.map((x) => [x.lat, x.lon] as [number, number]));
-      m.fitBounds(b, { padding: [36, 36], maxZoom: 16 });
+      m.fitBounds(b, { padding: [36, 36], maxZoom: 16, animate:false });
     }
-  }, [markers, lines, picked, selectedId, fit]);
+  }, [markers, lines, picked, fit]);
+
+  useEffect(() => {
+    const pin = selectedId ? pins.current.get(selectedId)?.getElement()?.firstElementChild : null;
+    pin?.classList.add('pin--sel');
+    return () => pin?.classList.remove('pin--sel');
+  }, [selectedId, markers, lines, picked, fit]);
 
   useEffect(() => {
     const m = map.current;

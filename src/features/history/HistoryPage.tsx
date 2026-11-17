@@ -4,7 +4,7 @@ import { Icon } from '../../core/Icon';
 import { PageTitle, Section } from '../../core/ui';
 import { go } from '../../core/router';
 import { HISTORY, type Credit, type HistorySpot } from '../../data/history';
-import { placeById } from '../../data/places';
+import { Narration } from '../../core/Narration';
 import { BeforeAfter } from './BeforeAfter';
 import { GuessGame } from './GuessGame';
 
@@ -15,10 +15,9 @@ function CreditLine({ label, c }: { label: string; c: Credit }) {
 }
 
 function SpotView({ spot }: { spot: HistorySpot }) {
-  const { t, l } = useI18n();
+  const { t, l, lang } = useI18n();
   const [ti, setTi] = useState(0);
   const then = spot.then[ti];
-  const place = placeById(spot.placeId);
   return (
     <div className="page">
       <button className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start' }} onClick={() => go('/history')}><Icon name="back" size={16} />{t('hist.back')}</button>
@@ -28,9 +27,9 @@ function SpotView({ spot }: { spot: HistorySpot }) {
           {spot.then.map((x, i) => <button key={x.id} aria-pressed={i === ti} onClick={() => setTi(i)}>{l(x.yearLabel)}</button>)}
         </div>
       )}
-      <BeforeAfter key={then.id} thenSrc={then.src} nowSrc={spot.now.src} thenLabel={`${t('hist.then')} · ${l(then.yearLabel)}`} nowLabel={t('hist.now')} alt={l(spot.title)} />
+      <BeforeAfter key={then.id} thenSrc={then.src} nowSrc={spot.now.src} thenLabel={`${t('hist.then')} · ${l(then.yearLabel)}`} nowLabel={spot.now.credit.note?.match(/^\d{4}$/)?.[0] || t('hist.now')} alt={l(spot.title)} />
       <p className="muted small">{t('hist.drag')}. {t('hist.angle')}</p>
-      <div className="card"><p>{l(spot.story)}</p></div>
+      <div className="card"><p>{l(spot.story)}</p><Narration id={'photo-'+then.id} lang={lang}/></div>
       <div className="list" style={{ gap: 4 }}>
         <CreditLine label={t('hist.credit.then')} c={then.credit} />
         <CreditLine label={t('hist.credit.now')} c={spot.now.credit} />
@@ -38,7 +37,7 @@ function SpotView({ spot }: { spot: HistorySpot }) {
       </div>
       <div className="chips">
         {spot.guessYear !== null && <button className="btn" onClick={() => go('/history/guess')}><Icon name="star" size={18} />{t('hist.guess')}</button>}
-        {place && <a className="btn btn--ghost" href={`https://www.openstreetmap.org/?mlat=${place.lat}&mlon=${place.lon}#map=17/${place.lat}/${place.lon}`} target="_blank" rel="noreferrer"><Icon name="pin" size={18} />{t('hist.on_map')}</a>}
+        <a className="btn btn--ghost" href={'#/guide/'+spot.placeId}><Icon name="pin" size={18}/>{t('hist.on_map')}</a>
       </div>
     </div>
   );
@@ -49,7 +48,7 @@ export function HistoryPage({ path }: { path: string }) {
   const sub = path.replace(/^\/history\/?/, '');
   const spot = useMemo(() => HISTORY.find((s) => s.id === sub), [sub]);
   if (sub === 'guess') return <GuessGame />;
-  if (spot) return <SpotView spot={spot} />;
+  if (spot) return <SpotView key={spot.id} spot={spot} />;
   return (
     <div className="page">
       <PageTitle title={t('hist.title')} sub={t('hist.sub')} />

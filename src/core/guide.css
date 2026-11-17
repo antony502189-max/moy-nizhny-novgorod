@@ -1,0 +1,18 @@
+@import './city-type.css';
+.narration { border-top: 1px solid #cbd8df; padding: .8rem 0; color: inherit; }
+.narration summary, .field summary { cursor: pointer; font-weight: 650; }
+.narration p,.narration .chips { margin: .7rem 0; }
+.narration a { text-decoration: underline; }
+.story-rating { display: flex; flex-wrap: wrap; gap: .25rem; align-items: center; margin-top: .65rem; }
+.story-rating small { margin-right: .3rem; }
+.story-rating button,.narration .chip { border: 1px solid #9db1bf; background: #fff; color: #27495e; border-radius: 2px; padding: .35rem .5rem; cursor: pointer; }
+.story-rating button[aria-pressed=true],.narration .chip[aria-pressed=true] { background: #224c65; color: white; }
+.landmark-photo,.walk-photos figure { margin: 0; min-width: 0; }
+.landmark-photo img { width: 100%; max-height: 320px; object-fit: contain; border-radius: 0; background: #edf2f4; }
+.landmark-photo figcaption { font-size: .8rem; }
+.walk-photos { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(130px,100%),1fr)); gap: .5rem; }
+.walk-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0; }
+.walk-control { scroll-margin-top: 4.5rem; }
+.field label { display: block; }
+.field input:not([type=checkbox]), .page input[type=search] { display: block; width: 100%; max-width: 100%; margin-top: .3rem; }
+.row__main,.step__body,.sec__head > b { min-width: 0; overflow-wrap: anywhere; }

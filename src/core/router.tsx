@@ -8,7 +8,7 @@ export function currentPath(): string {
 export function usePath(): string {
   const [p, setP] = useState(currentPath());
   useEffect(() => {
-    const on = () => { setP(currentPath()); window.scrollTo(0, 0); };
+    const on = () => { setP(currentPath()); document.querySelector('.app > main')?.scrollTo(0, 0); };
     window.addEventListener('hashchange', on);
     return () => window.removeEventListener('hashchange', on);
   }, []);

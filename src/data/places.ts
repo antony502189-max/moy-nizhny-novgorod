@@ -1,7 +1,7 @@
 import type { L10n } from '../core/i18n';
-import credits from './photoCredits.json';
+import credits from './photoCredits.json' with { type: 'json' };
 
-export type Tag = 'history' | 'view' | 'sunset' | 'walk' | 'art' | 'family' | 'architecture' | 'park' | 'religion' | 'water';
+export type Tag = 'history' | 'view' | 'sunset' | 'walk' | 'art' | 'family' | 'architecture' | 'park' | 'religion' | 'water' | 'food' | 'souvenir';
 /** effort: 0 flat / easy, 1 some slope or stairs, 2 many steps or a steep climb */
 export type Effort = 0 | 1 | 2;
 
@@ -23,7 +23,7 @@ const OSM = 'Coordinates: OpenStreetMap (via the source prototype); texts: team 
 
 export const PLACES: Place[] = [
   {
-    id: 'kremlin', lat: 56.3280332, lon: 44.0021054, tags: ['history', 'view', 'architecture'], minutes: 60, effort: 1,
+    id: 'kremlin', lat: 56.3280332, lon: 44.0021054, tags: ['food', 'souvenir', 'history', 'view', 'architecture'], minutes: 60, effort: 1,
     name: { ru: 'Нижегородский кремль', en: 'Nizhny Novgorod Kremlin', zh: '下诺夫哥罗德克里姆林宫' },
     blurb: {
       ru: 'Каменная крепость начала XVI века на высоком берегу у слияния Оки и Волги. Башни, стены, музеи и обзорные площадки.',
@@ -185,7 +185,7 @@ export const PLACES: Place[] = [
     sunset: { ru: 'Станция у воды на Казанской набережной; вид на Волгу из кабины.', en: 'A waterside station on the Kazanskaya Embankment; river views from the cabin.', zh: '喀山滨河路水边的车站，可在车厢内欣赏伏尔加河风光。' },
   },
   {
-    id: 'wheel', lat: 56.3241447, lon: 44.0359323, tags: ['view', 'family', 'sunset'], minutes: 30, effort: 0,
+    id: 'wheel', lat: 56.3241447, lon: 44.0359323, tags: ['food', 'view', 'family', 'sunset'], minutes: 30, effort: 0,
     name: { ru: 'Колесо обозрения «НиНо»', en: '“NiNo” Ferris wheel', zh: '“尼诺”摩天轮' },
     blurb: {
       ru: 'Колесо обозрения у Казанского съезда. Закрытые кабинки, рядом арт-объекты и кофейня (по описанию оператора).',
@@ -207,7 +207,7 @@ export const PLACES: Place[] = [
     photo: 'pokrovskaya', source: OSM,
   },
   {
-    id: 'monastery', lat: 56.3231362, lon: 44.0493471, tags: ['history', 'religion', 'architecture'], minutes: 40, effort: 1,
+    id: 'monastery', lat: 56.3234343, lon: 44.0472557, tags: ['history', 'religion', 'architecture'], minutes: 40, effort: 1,
     name: { ru: 'Вознесенский Печерский монастырь', en: 'Ascension Pechersky Monastery', zh: '升天洞窟修道院' },
     blurb: {
       ru: 'Действующий мужской монастырь в Приволжской слободе.',
@@ -215,10 +215,10 @@ export const PLACES: Place[] = [
       zh: '位于伏尔加河畔区的现役男修道院。',
     },
     source: OSM,
-    tip: { ru: 'Действующая обитель: соблюдайте правила посещения; осмотр снаружи доступен как отдельный сценарий.', en: 'A working monastery: respect the visiting rules; an exterior-only visit is possible.', zh: '现役修道院：请遵守参观规定；也可仅在外部参观。' },
+    tip: { ru: 'Точка маршрута у пешеходных ворот. Действующая обитель: соблюдайте правила посещения; осмотр снаружи доступен как отдельный сценарий.', en: 'A working monastery: respect the visiting rules; an exterior-only visit is possible.', zh: '现役修道院：请遵守参观规定；也可仅在外部参观。' },
   },
   {
-    id: 'art', lat: 56.3275176, lon: 44.0057012, tags: ['art', 'history'], minutes: 60, effort: 0,
+    id: 'art', lat: 56.3275176, lon: 44.0057012, tags: ['souvenir', 'art', 'history'], minutes: 60, effort: 0,
     name: { ru: 'Центр современного искусства «Арсенал»', en: '“Arsenal” Centre for Contemporary Art', zh: '“阿尔谢纳尔”当代艺术中心' },
     blurb: {
       ru: 'Находится в корпусе 6 кремля; Волго-Вятский филиал ГМИИ имени А. С. Пушкина. Вход ближе к Дмитриевской башне.',
@@ -230,11 +230,11 @@ export const PLACES: Place[] = [
   },
   {
     id: 'school', lat: 56.327378, lon: 44.0081026, tags: ['history', 'architecture'], minutes: 10, effort: 0,
-    name: { ru: 'Гимназия № 1 (бывшая губернская гимназия)', en: 'Gymnasium No. 1 (former provincial gymnasium)', zh: '第一中学（原省立中学）' },
+    name: { ru: 'Гимназия № 1', en: 'Gymnasium No. 1', zh: '第一中学' },
     blurb: {
-      ru: 'Учебное здание рядом с площадью Минина и Пожарского; на старом фото около 1900 года, возможно, он же.',
-      en: 'A school building near Minin and Pozharsky Square; it may be the one in the old photo from around 1900.',
-      zh: '米宁和波扎尔斯基广场附近的学校建筑，可能就是约1900年老照片中的那一座。',
+      ru: 'Гимназия находится рядом с площадью Минина и Пожарского. Здание можно осмотреть с улицы.',
+      en: 'A school near Minin and Pozharsky Square. You can see the building from the street.',
+      zh: '学校位于米宁和波扎尔斯基广场附近，可从街上参观建筑外观。',
     },
     photo: undefined, source: OSM,
     tip: { ru: 'Это учебное здание: осмотр снаружи, внутрь не заходят.', en: 'This is a school building: view it from outside only.', zh: '这是学校建筑，仅限外部参观。' },

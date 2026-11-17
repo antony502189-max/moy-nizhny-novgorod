@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {parsePersonal,encodeRoute,decodeRoute,moveStop} from './personal.ts';
+import {parsePreferences} from './logic.ts';
+import {parseBackup} from './geo.ts';
+test('legacy preferences migrate without losing favorites or home',()=>{const p=parsePreferences(JSON.stringify({onboarded:true,homeQuery:'Мой адрес',favorites:{places:['a'],walks:[]}}));assert.deepEqual(p.personal,{routes:[],notes:{},visits:{}});assert.equal(p.homeQuery,'Мой адрес');assert.deepEqual(p.favorites.places,['a']);});
+test('backup round trip includes personal routes, notes, visits and house',()=>{const p=parsePreferences(JSON.stringify({homeQuery:'Дом',houseRecordId:'house-1',favorites:{places:[],walks:[]},personal:{routes:[{id:'walk-1',title:'Прогулка',description:'Текст',placeIds:['a','b']}],notes:{a:'Заметка\nв две строки'},visits:{a:'2026-11-15T12:00:00Z'}}}));const restored=parsePreferences(JSON.stringify(parseBackup(JSON.stringify({app:'moynn-web',version:2,preferences:p}))));assert.deepEqual(restored,p);});
+test('shared route contains only title and valid stops',()=>{const r={id:'route',title:'Мой маршрут & парк',description:'Личная заметка',placeIds:['a','b']};const encoded=encodeRoute(r);assert.deepEqual(decodeRoute(encoded,['a','b']),{title:r.title,placeIds:['a','b']});assert.ok(!decodeURIComponent(encoded).includes('Личная'));assert.throws(()=>decodeRoute(encoded,['a']));assert.throws(()=>decodeRoute('%invalid',[]));assert.throws(()=>decodeRoute(encodeURIComponent(JSON.stringify({title:'T',placeIds:['a','a']})),['a']));});
+test('ordering handles boundaries without mutating source',()=>{const ids=['a','b','c'];assert.deepEqual(moveStop(ids,1,-1),['b','a','c']);assert.deepEqual(moveStop(ids,0,-1),ids);assert.deepEqual(ids,['a','b','c']);});
+test('untrusted imports reject prototype keys and cap data',()=>{const d=parsePersonal(JSON.parse('{"routes":[{"id":"__proto__","title":"x","placeIds":[]}],"notes":{"__proto__":"bad","a":"ok"},"visits":{"a":"not-a-date"}}'));assert.equal(d.routes.length,0);assert.deepEqual(d.notes,{a:'ok'});assert.deepEqual(d.visits,{});});

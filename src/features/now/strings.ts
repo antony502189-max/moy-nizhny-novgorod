@@ -1,9 +1,10 @@
 import type { Bundle } from '../../core/i18n';
 export const nowStrings: Bundle = {
   ru: {
+    'now.next': 'Ближайшие события', 'now.noProgramme': 'В сохранённой афише больше нет предстоящих событий.', 'now.edition': 'Афиша Арсенала · сверено {date}.',
     'now.title': 'Сейчас в Нижнем', 'now.sub': 'Что происходит в ближайшие 3 часа, закат и удобства рядом',
     'now.events': 'В ближайшие 3 часа', 'now.events.none': 'В ближайшие 3 часа ничего нет — вот что будет дальше:',
-    'now.live': 'идёт сейчас', 'now.in': 'через {m}', 'now.free': 'бесплатно', 'now.demo.banner': 'Афиша — демо-данные: названия и время выдуманы для показа. В продукте здесь будет «Афиша» города.',
+    'now.live': 'идёт сейчас', 'now.in': 'через {m}', 'now.free': 'бесплатно',
     'now.sunset': 'Закат сегодня', 'now.sunset.tomorrow': 'Закат завтра', 'now.tomorrow': 'завтра', 'now.golden': 'золотой час с', 'now.dir': 'солнце сядет на', 'now.sunset.left': 'до заката {m}', 'now.sunset.done': 'закат уже был',
     'now.sunset.calc': 'Время считается на устройстве по координатам центра, точность около минуты.',
     'now.viewpoints': 'Где встретить закат', 'now.viewpoints.note': 'Точки отобраны по открытому виду на реку по описаниям; сторону заката проверьте на месте.',
@@ -12,13 +13,14 @@ export const nowStrings: Bundle = {
     'now.from_center': 'от центра (кремль)', 'now.from_me': 'от вас', 'now.near_me': 'Рядом со мной', 'now.geo.far': 'Вы далеко от Нижнего — считаем от центра.', 'now.geo.fail': 'Не удалось определить место — считаем от центра.',
     'now.fee.yes': 'платный', 'now.fee.no': 'бесплатный', 'now.osm': 'Данные OpenStreetMap, возможны неточности.',
     'now.stepfree.hint': 'Безбарьерные места — объекты с отметкой wheelchair=yes в OpenStreetMap; серые точки — лестницы, которых лучше избегать с коляской.',
-    'now.twin.q': 'Вы из города-побратима?', 'now.twin.go': 'Приветствие для гостей',
+    'now.twin.q': 'Вы из города-партнёра или побратима?', 'now.twin.go': 'Приветствие для гостей',
     'now.time': 'в {t}', 'now.nodata': 'Нет данных',
   },
   en: {
+    'now.next': 'Upcoming events', 'now.noProgramme': 'No upcoming events in this edition.', 'now.edition': 'Arsenal programme · checked {date}.',
     'now.title': 'Now in Nizhny', 'now.sub': 'What is on in the next 3 hours, today’s sunset and amenities nearby',
     'now.events': 'In the next 3 hours', 'now.events.none': 'Nothing in the next 3 hours — here is what comes next:',
-    'now.live': 'on now', 'now.in': 'in {m}', 'now.free': 'free', 'now.demo.banner': 'The programme is demo data: titles and times are made up for the demo. In the product this shows the city’s “Afisha”.',
+    'now.live': 'on now', 'now.in': 'in {m}', 'now.free': 'free',
     'now.sunset': 'Sunset today', 'now.sunset.tomorrow': 'Sunset tomorrow', 'now.tomorrow': 'tomorrow', 'now.golden': 'golden hour from', 'now.dir': 'the sun sets to the', 'now.sunset.left': '{m} until sunset', 'now.sunset.done': 'sunset has passed',
     'now.sunset.calc': 'Computed on your device from the city-centre coordinates, accurate to about a minute.',
     'now.viewpoints': 'Where to watch the sunset', 'now.viewpoints.note': 'Spots were picked for an open view over the river from their descriptions; check the sunset direction on site.',
@@ -31,9 +33,10 @@ export const nowStrings: Bundle = {
     'now.time': 'at {t}', 'now.nodata': 'No data',
   },
   zh: {
+    'now.next': '即将举行的活动', 'now.noProgramme': '本期保存的节目单没有更多活动。', 'now.edition': '兵工厂博物馆活动 · 核对日期 {date}。',
     'now.title': '此刻的下诺夫哥罗德', 'now.sub': '未来3小时的活动、今日日落以及附近设施',
     'now.events': '未来3小时', 'now.events.none': '未来3小时没有活动——接下来有：',
-    'now.live': '进行中', 'now.in': '{m}后', 'now.free': '免费', 'now.demo.banner': '活动为演示数据：名称和时间为演示而虚构。正式产品中此处显示城市“活动海报”。',
+    'now.live': '进行中', 'now.in': '{m}后', 'now.free': '免费',
     'now.sunset': '今日日落', 'now.sunset.tomorrow': '明日日落', 'now.tomorrow': '明天', 'now.golden': '黄金时刻自', 'now.dir': '太阳将落在', 'now.sunset.left': '距日落 {m}', 'now.sunset.done': '日落已过',
     'now.sunset.calc': '根据市中心坐标在设备上计算，精度约一分钟。',
     'now.viewpoints': '在哪里看日落', 'now.viewpoints.note': '地点依据描述选取，视野开阔、临河；日落方向请到现场确认。',

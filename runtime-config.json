@@ -1,4 +1,0 @@
-{
-  "geocoderUrl": "https://photon.komoot.io/api/",
-  "tileUrl": "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-}

@@ -2,14 +2,14 @@ import { useEffect, useMemo, useState } from 'react';
 import { useI18n } from '../../core/i18n';
 import { Icon, svgInner } from '../../core/Icon';
 import { LeafMap, type MapMarker } from '../../core/Map';
-import { PageTitle, Section, Chip, DemoBadge } from '../../core/ui';
+import { PageTitle, Section, Chip } from '../../core/ui';
 import { PlaceSheet } from '../../core/PlaceCard';
 import { CENTER, distanceM, fmtDist, type LatLon } from '../../core/geo';
 import { sunDay, compass } from '../../core/sun';
-import { fmtTime, getNow, minutesOfDay } from '../../core/time';
+import { fmtTime, getNow, TZ } from '../../core/time';
 import { go } from '../../core/router';
 import { PLACES, placeById, placePhoto, type Place } from '../../data/places';
-import { EVENTS } from '../../data/events';
+import { edition, upcomingEvents, type CityEvent } from '../../data/events';
 import amenityData from '../../data/amenities.json';
 
 interface Amenity { id: string; kind: 'toilet' | 'water' | 'steps' | 'stepfree'; lat: number; lon: number; name?: string; fee?: string; opening?: string }
@@ -23,7 +23,7 @@ export function fmtDur(min: number, lang: string): string {
 }
 
 type Layer = 'events' | 'sunset' | 'wc' | 'water' | 'access' | 'steps';
-type Sel = { type: 'place'; place: Place; demo?: boolean } | { type: 'amen'; a: Amenity } | null;
+type Sel = { type: 'place'; place: Place; event?: CityEvent } | { type: 'amen'; a: Amenity } | null;
 
 export function NowPage() {
   const { t, l, lang } = useI18n();
@@ -34,14 +34,7 @@ export function NowPage() {
   const [layers, setLayers] = useState<Set<Layer>>(new Set(['events', 'sunset', 'wc', 'water']));
   const [sel, setSel] = useState<Sel>(null);
 
-  const nowMin = minutesOfDay(now);
-  const upcoming = useMemo(() => {
-    const all = EVENTS.map((e) => { const [h, m] = e.start.split(':').map(Number); return { e, s: h * 60 + m }; });
-    const win = all.filter(({ e, s }) => s <= nowMin + 180 && s + e.durationMin > nowMin).sort((a, b) => a.s - b.s);
-    if (win.length) return { list: win, none: false };
-    const later = all.filter(({ s }) => s > nowMin).sort((a, b) => a.s - b.s).slice(0, 3);
-    return { list: later.length ? later : all.sort((a, b) => a.s - b.s).slice(0, 3), none: true };
-  }, [nowMin]);
+  const upcoming = useMemo(() => upcomingEvents(now), [now]);
 
   const sun = useMemo(() => {
     let d = sunDay(now, CENTER.lat, CENTER.lon), tomorrow = false;
@@ -68,9 +61,9 @@ export function NowPage() {
   const markers = useMemo<MapMarker[]>(() => {
     const out: MapMarker[] = [];
     if (layers.has('events')) {
-      for (const { e } of upcoming.list) {
+      for (const e of upcoming.list) {
         const p = placeById(e.placeId); if (!p) continue;
-        out.push({ id: 'ev-' + e.id, lat: p.lat, lon: p.lon, cls: 'pin pin--ev', glyph: svgInner('clock', 16), size: 30, title: `${l(e.title)} (${t('demo.badge')})`, onClick: () => setSel({ type: 'place', place: p, demo: true }) });
+        out.push({ id: 'ev-' + e.id, lat: p.lat, lon: p.lon, cls: 'pin pin--ev', glyph: svgInner('clock', 16), size: 30, title: l(e.title), onClick: () => setSel({ type: 'place', place: p, event: e }) });
       }
     }
     if (layers.has('sunset')) for (const p of viewpoints) out.push({ id: 'sun-' + p.id, lat: p.lat, lon: p.lon, cls: 'pin pin--sun', glyph: svgInner('sunset', 16), title: l(p.name), onClick: () => setSel({ type: 'place', place: p }) });
@@ -85,39 +78,30 @@ export function NowPage() {
 
   const toggle = (k: Layer) => setLayers((s) => { const n = new Set(s); n.has(k) ? n.delete(k) : n.add(k); return n; });
   const sunLeft = sun.sunset && !sun.tomorrow ? Math.round((sun.sunset.getTime() - now.getTime()) / 60000) : null;
-  const evLabel = (s: number, dur: number) => {
-    if (s <= nowMin && s + dur > nowMin) return <span className="badge badge--live">{t('now.live')}</span>;
-    if (s > nowMin) return <span className="badge badge--soon">{t('now.in', { m: fmtDur(s - nowMin, lang) })}</span>;
-    return <span className="badge badge--soon">{t('now.tomorrow')}</span>;
-  };
   const amenName = (a: Amenity) => a.name || (a.kind === 'toilet' ? t('now.wc') : a.kind === 'water' ? t('now.water') : a.kind === 'steps' ? t('now.steps') : t('now.access'));
   const refLabel = ref.me ? t('now.from_me') : t('now.from_center');
 
   return (
     <div className="page">
       <PageTitle title={t('now.title')} sub={t('now.sub')} />
+      <a className="guide-cover" href="#/guide"><img src={import.meta.env.BASE_URL+'places/kremlin.jpg'} alt={l(placeById('kremlin')?.name)}/>
+        <span>{t('guide.title')} <Icon name="arrow" size={21}/></span></a>
 
+      <a className="row row--btn" href="./resident.html#/home"><Icon name="pin" size={22}/><div className="row__main"><b>{t('more.resident')}</b></div><Icon name="chev" size={18}/></a>
       <button className="row row--btn" onClick={() => go('/twin')}>
         <Icon name="globe" size={22} /><div className="row__main"><b>{t('now.twin.q')}</b><span>{t('now.twin.go')}</span></div><Icon name="chev" size={18} />
       </button>
 
-      <Section title={t('now.events')} icon="clock" right={<DemoBadge />}>
-        {upcoming.none && <p className="muted">{t('now.events.none')}</p>}
+      <Section title={t(upcoming.soon ? 'now.events' : 'now.next')} icon="clock">
+        {!upcoming.list.length && <p role="status">{t('now.noProgramme')}</p>}
         <div className="list">
-          {upcoming.list.map(({ e, s }) => {
-            const p = placeById(e.placeId);
-            return (
-              <button key={e.id} className="row row--btn" onClick={() => p && setSel({ type: 'place', place: p, demo: true })}>
-                <div className="row__time">{e.start}</div>
-                <div className="row__main"><b>{l(e.title)}</b><span>{p ? l(p.name) : ''}</span></div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-end' }}>
-                  {evLabel(s, e.durationMin)}{e.free && <span className="badge badge--free">{t('now.free')}</span>}
-                </div>
-              </button>
-            );
-          })}
+          {upcoming.list.map(e => <a className="row row--btn" key={e.id} href={e.source} target="_blank" rel="noreferrer">
+            <div className="row__time">{fmtTime(new Date(e.start),lang)}</div>
+            <div className="row__main"><b>{l(e.title)}</b><span>{new Date(e.start).toLocaleDateString(lang, {day:'numeric',month:'long',timeZone:TZ})} · {l(placeById(e.placeId)?.name)}</span></div>
+            <Icon name="link" size={16}/>
+          </a>)}
         </div>
-        <div className="banner"><Icon name="info" size={18} /><span>{t('now.demo.banner')}</span></div>
+        <p className="muted small">{t('now.edition', {date:edition})} <a href="https://arsenal-museum.art/events-all/" target="_blank" rel="noreferrer">{t('common.official')} ↗</a></p>
       </Section>
 
       <Section title={sun.tomorrow ? t('now.sunset.tomorrow') : t('now.sunset')} icon="sunset">
@@ -158,7 +142,7 @@ export function NowPage() {
         </div>
         <LeafMap markers={markers} zoom={14} className="leafmap--tall" selectedId={sel?.type === 'amen' ? sel.a.id : undefined} />
         <p className="muted small">{layers.has('access') || layers.has('steps') ? t('now.stepfree.hint') + ' ' : ''}{t('now.osm')}</p>
-        {sel?.type === 'place' && <PlaceSheet place={sel.place} onClose={() => setSel(null)} extra={sel.demo ? <div className="banner"><Icon name="info" size={18} /><span>{t('now.demo.banner')}</span></div> : undefined} />}
+        {sel?.type === 'place' && <PlaceSheet place={sel.place} onClose={() => setSel(null)} extra={sel.event ? <a href={sel.event.source} target="_blank" rel="noreferrer">{l(sel.event.title)} ↗</a> : undefined} />}
         {sel?.type === 'amen' && (
           <div className="sheet">
             <div className="sec__head"><h3>{amenName(sel.a)}</h3><button className="chip" onClick={() => setSel(null)} aria-label={t('common.close')}><Icon name="close" size={16} /></button></div>

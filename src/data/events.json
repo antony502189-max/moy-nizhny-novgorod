@@ -1,0 +1,10 @@
+{
+  "checked": "2026-11-18",
+  "events": [
+    {"id":"mosaic","placeId":"art","start":"2026-11-18T18:00:00+03:00","title":{"ru":"Христианская мозаика. Лекция Татьяны Мошковой","en":"Christian mosaics with Tatyana Moshkova","zh":"基督教镶嵌艺术讲座"},"source":"https://arsenal-museum.art/events/lektsiya-hristianskaya-mozaika-drevnie-traditsii-i-vozrozhdenie/"},
+    {"id":"design-lab","placeId":"art","start":"2026-11-21T15:00:00+03:00","title":{"ru":"Дизайн-лаборатория","en":"Design laboratory","zh":"设计实验室"},"source":"https://arsenal-museum.art/events/cikl-zaniaty-dizain-laboratiri-501-798-368-554-400-467-911-466-361/"},
+    {"id":"dementia-history","placeId":"art","start":"2026-11-21T18:00:00+03:00","title":{"ru":"История деменции. Лекция Анны Матвеичевой","en":"A history of dementia with Anna Matveicheva","zh":"关于失智症历史的讲座"},"source":"https://arsenal-museum.art/events/lektsiya-anny-matveichevoy-istoriya-dementsii-razvitiye-meditsini-i-borba-so-stigmoy/"},
+    {"id":"family-support","placeId":"art","start":"2026-11-24T19:00:00+03:00","title":{"ru":"Жизнь с деменцией. Лекция Александры Щёткиной","en":"Living with dementia with Alexandra Shchetkina","zh":"与失智症共处讲座"},"source":"https://arsenal-museum.art/events/lektsiya-aleksandry-schetkinoy-zhizn-s-dementsiey-kak-raspoznat-pomoch-i-sohranit-kontakt/"},
+    {"id":"modigliani","placeId":"art","start":"2026-11-27T18:30:00+03:00","title":{"ru":"Париж и Амедео Модильяни. Занятие на английском","en":"Paris and Amedeo Modigliani (in English)","zh":"巴黎与莫迪利亚尼（英语课程）"},"source":"https://arsenal-museum.art/events/zanyatie-na-angliyskom-yazyke-parizh-amedeo-modilyani/"}
+  ]
+}

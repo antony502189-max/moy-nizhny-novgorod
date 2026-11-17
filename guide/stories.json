@@ -1,0 +1,632 @@
+{
+  "chkalov": {
+    "model": "deepseek-flash",
+    "signature": "e767b256d13b67ae95b76a9ed269295ad0a076ece4c5e7de57db1a3b7384e4e1",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A7%D0%BA%D0%B0%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%86%D0%B0_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Лестница в форме восьмёрки соединяет площадку у памятника Валерию Чкалову с Нижне-Волжской набережной и катером «Герой». Её открыли в 1949 году. На промежуточных площадках удобно остановиться и посмотреть на Волгу и противоположный берег.",
+      "en": "This figure-eight-shaped staircase connects the area by the Valery Chkalov monument with the Nizhne-Volzhskaya embankment and the «Geroi» boat. It opened in 1949. The intermediate landings are convenient places to stop and look at the Volga and the opposite bank.",
+      "zh": "这座呈八字形的楼梯连接着瓦列里·奇卡洛夫纪念碑旁的平台与下伏尔加河沿岸街以及“英雄号”汽艇。它于1949年开放。在中间的平台上可以停下来，看看伏尔加河和对岸。"
+    }
+  },
+  "stadium": {
+    "model": "deepseek-flash",
+    "signature": "af376a13d7f00d6b5ba734fc2f8d35bc37ebf3e56b4425f9bccb415248128434",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%B2%D0%BA%D0%BE%D0%BC%D0%B1%D0%B0%D0%BD%D0%BA_%D0%90%D1%80%D0%B5%D0%BD%D0%B0",
+    "text": {
+      "ru": "Перед вами «Совкомбанк Арена» на Стрелке, построенная к чемпионату мира по футболу 2018 года. На этом стадионе проходили матчи группового этапа и плей-офф. Светлая колоннада арены стала частью панорамы слияния Оки и Волги.",
+      "en": "Before you is the Sovcombank Arena on the Spit, built for the 2018 FIFA World Cup. This stadium hosted group stage and knockout matches. The arena's light-colored colonnade has become part of the panorama of the confluence of the Oka and Volga rivers.",
+      "zh": "您眼前是位于箭嘴岛的Sovcombank竞技场，为2018年国际足联世界杯而建。该体育场曾举办小组赛和淘汰赛。竞技场浅色的柱廊已成为奥卡河与伏尔加河交汇处全景的一部分。"
+    }
+  },
+  "art": {
+    "model": "deepseek-flash",
+    "signature": "308581eb91b48fb84845a68291007aa689d7eca4264f6ae39a3abf55eab70b17",
+    "source": "https://arsenal-museum.art/info-for-our-visitors/",
+    "text": {
+      "ru": "«Арсенал» занимает историческое здание в Нижегородском кремле. Это центр современного искусства и Волго-Вятский филиал ГМИИ имени А. С. Пушкина. Здесь проходят выставки, лекции и встречи, а посещение можно совместить с прогулкой по кремлю.",
+      "en": "Arsenal occupies a historic building in the Nizhny Novgorod Kremlin. It is a contemporary art centre and the Volga-Vyatka branch of the Pushkin State Museum of Fine Arts. It hosts exhibitions, lectures and meetings, and a visit can be combined with a walk around the Kremlin.",
+      "zh": "“阿森纳”位于下诺夫哥罗德克里姆林宫的一座历史建筑内。它是当代艺术中心，也是普希金造型艺术博物馆伏尔加-维亚特卡分馆。这里举办展览、讲座和聚会，参观可与克里姆林宫漫步结合。"
+    }
+  },
+  "volga": {
+    "model": "deepseek-flash",
+    "signature": "45d4ea9333ac908b13d00612bc1376b6c682bdabcb12d0ca0bbc082b3378b369",
+    "source": "https://irgsno.ru/news/prixodite-gulyat-na-strelku",
+    "text": {
+      "ru": "Волжская набережная проходит по левому берегу Волги в Канавинском районе. Прогулку по ней удобно продолжить от Стрелки в сторону стадиона. Отсюда виден высокий исторический берег города, и не путайте её с Верхне-Волжской и Нижне-Волжской набережными на другом берегу.",
+      "en": "The Volga Embankment runs along the left bank of the Volga in the Kanavinsky district. It is convenient to continue a walk along it from the Strelka toward the stadium. From here the high historic bank of the city is visible, and do not confuse it with the Verkhne-Volzhskaya and Nizhne-Volzhskaya embankments on the other bank.",
+      "zh": "伏尔加河沿岸街位于卡纳文斯基区的伏尔加河左岸。从这里出发，沿河岸街从斯特列尔卡继续往体育场方向散步很方便。从这里可以看到城市高高的历史河岸，请不要把它与对岸的上伏尔加河沿岸街和下伏尔加河沿岸街混淆。"
+    }
+  },
+  "oka": {
+    "model": "deepseek-flash",
+    "signature": "b57a658745cd37ef61ff9d57cfd72ca687a2a26ef97ade6ab2493ee64e9bca25",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Прогулочное пространство на левом берегу Оки связывает район Канавинского моста со Стрелкой. После благоустройства 2021 года здесь появились места отдыха и видовые точки. На противоположном берегу видны склоны Започаинья и историческая застройка.",
+      "en": "This promenade on the left bank of the Oka links the Kanavinsky Bridge area with the Strelka. After the 2021 improvements, rest areas and viewing points appeared here. On the opposite bank you can see the slopes of Zapochainye and historic buildings.",
+      "zh": "奥卡河左岸的这片步行空间连接卡纳温斯基桥一带与斯特列尔卡。2021年改造后，这里出现了休闲区和观景点。对岸可以看到扎波恰伊尼耶的坡地和历史建筑。"
+    }
+  },
+  "rowing": {
+    "model": "deepseek-flash",
+    "signature": "0e8dadff32f51000e41dc245799d88419778feeebd55e40a01752a56ef0989e2",
+    "source": "https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Набережная Гребного канала идёт у воды под высоким городским откосом. Канал появился после сооружения дамбы между берегом Волги и островом Печёрские Пески в 1976 году. Этот район связан с водными видами спорта и прогулками, а неподалёку находится Печерский монастырь.",
+      "en": "The Rowing Canal embankment runs along the water beneath a high city slope. The canal appeared after a dam was built between the Volga bank and Pechyorsky Peski Island in 1976. The area is linked to water sports and walks, and the Pechersky Monastery is nearby.",
+      "zh": "赛艇运河滨水步道沿水而行，位于高高的城市坡地之下。1976年，在伏尔加河岸与佩乔尔斯基沙滩岛之间修建了堤坝，运河由此形成。这一区域与水上运动和散步相关，佩乔尔斯基修道院就在附近。"
+    }
+  },
+  "upper-volga": {
+    "model": "deepseek-flash",
+    "signature": "588629b204efe255185686056d0c5459318b52f5d95d44a12fb4f935501da6ee",
+    "source": "https://nn-grad.ru/kuda-poyti/Verhne-Volzhskaya_naberezhnaya/",
+    "text": {
+      "ru": "Верхне-Волжская набережная тянется по высокому откосу от площади Минина и Пожарского к Сенной площади, её протяжённость около 1,75 км. Отсюда смотрят на Волгу сверху, рассматривают исторические здания и спускаются в Александровский сад.",
+      "en": "The Upper Volga Embankment runs along a high slope from Minin and Pozharsky Square to Sennaya Square, and its length is about 1.75 km. From here you look down at the Volga, examine historic buildings and descend into the Alexander Garden.",
+      "zh": "上伏尔加河滨步道沿高处斜坡从米宁和波扎尔斯基广场一直延伸到先纳亚广场，全长约1.75公里。人们在这里俯瞰伏尔加河、观看历史建筑，并下到亚历山大花园。"
+    }
+  },
+  "fedorovsky": {
+    "model": "deepseek-flash",
+    "signature": "2ea8117b02a5132e7c59fca8d805c0aa8bf8aa8b71d349443e87fd2eb7628268",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE",
+    "text": {
+      "ru": "Набережная Федоровского находится в Започаинье и названа в честь геолога Николая Федоровского. В 2021 году она стала частью парка 800-летия Нижнего Новгорода. Дорожки на склонах и мостики связывают видовые площадки, с которых открываются Ока, Стрелка и заречная часть города.",
+      "en": "Fedrovsky Embankment is in Zapochainye and is named after the geologist Nikolai Fedorovsky. In 2021 it became part of the 800th Anniversary of Nizhny Novgorod Park. Paths on the slopes and bridges link viewing platforms that open onto the Oka, the Strelka and the part of the city across the river.",
+      "zh": "费多罗夫斯基滨河路位于扎波恰因耶，以地质学家尼古拉·费多罗夫斯基命名。2021年，它成为下诺夫哥罗德建城800周年公园的一部分。斜坡上的小径和桥梁连接着观景平台，从那里可以看到奥卡河、斯特列尔卡和河对岸的城区。"
+    }
+  },
+  "lower-volga": {
+    "model": "deepseek-flash",
+    "signature": "723800f8be960f7ea5a64719f69e0fd617a58a97453d6e19cad07868c0e3e9cf",
+    "source": "https://nn-grad.ru/kuda-poyti/Nizhnevolzhskaya_naberezhnaya/",
+    "text": {
+      "ru": "Нижне-Волжская набережная идёт вдоль Волги от Казанского съезда к Канавинскому мосту. На прогулке можно увидеть катер «Герой», Чкаловскую лестницу, оленя, бывший речной вокзал и торговый дом Рукавишникова. Это нижний, прибрежный уровень исторического центра.",
+      "en": "The Lower Volga Embankment runs along the Volga from Kazansky Syezd to the Kanavinsky Bridge. On a walk you can see the «Geroi» boat, the Chkalov Staircase, a deer, the former river station and the Rukavishnikov trading house. This is the lower, riverside level of the historic centre.",
+      "zh": "下伏尔加河滨路沿伏尔加河从喀山斜坡延伸至卡纳文斯基桥。散步时可以看到“英雄”号游船、奇卡洛夫阶梯、一只鹿、前河运站和鲁卡维什尼科夫商行。这是历史中心的下层滨水区域。"
+    }
+  },
+  "kazan-embankment": {
+    "model": "deepseek-flash",
+    "signature": "030471bda8d492d7cba6ab3041f9b0db9f0516f40bcc14059aa2814c2c945884",
+    "source": "https://nn-grad.ru/konstruktor-marshrutov/Istoricheskii/",
+    "text": {
+      "ru": "Казанская набережная находится у Сенной площади на высоком волжском берегу. Здесь расположены соборная мечеть и нижегородская станция канатной дороги. Она подходит как связующий участок прогулки между колесом обозрения и переправой в Бор.",
+      "en": "Kazanskaya Embankment is located by Sennaya Square on the high bank of the Volga. Here stand the cathedral mosque and the Nizhny Novgorod cable car station. It works as a connecting stretch of a walk between the Ferris wheel and the crossing to Bor.",
+      "zh": "喀山沿岸街位于高地沃尔加河岸的谢纳亚广场旁。这里有清真寺大寺和在下诺夫哥罗德段的缆车站。它适合作为摩天轮与通往博尔的渡口之间散步路线的连接段。"
+    }
+  },
+  "fair": {
+    "model": "deepseek-flash",
+    "signature": "02c8775ce785d1d0f88dd28e8771ea5a05e6b6bc608dd2ffb8a0682d70c085bc",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F_%D1%8F%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B0",
+    "text": {
+      "ru": "Исторический ярмарочный комплекс напоминает о торговой роли Нижнего Новгорода. Главный ярмарочный дом и пространство перед ним находятся в заречной части города. Отсюда можно выйти к Окской набережной, собору Александра Невского и Стрелке.",
+      "en": "The historic fair complex recalls Nizhny Novgorod's trading role. The Main Fair House and the space in front of it are in the city's river-side lower part. From here you can walk out to the Oka Embankment, the Alexander Nevsky Cathedral and the Strelka.",
+      "zh": "这座历史悠久的集市建筑群让人想起下诺夫哥罗德在贸易中的作用。主集市楼及其前方的空间位于城市河对岸的低处。从这里可以走到奥卡河滨河路、亚历山大·涅夫斯基大教堂和斯特列尔卡。"
+    }
+  },
+  "pokrovskaya": {
+    "model": "deepseek-flash",
+    "signature": "3a2356bf4562797922247d67da2efaa5b52aa2be5cead5aa845e3b6a79dc6598",
+    "source": "https://nn-tourist.ru/stati/marshrut-po-pokrovke",
+    "text": {
+      "ru": "Большая Покровская — главная прогулочная улица исторического центра. Пешеходная часть ведёт от площади Минина в сторону площади Горького. По дороге встречаются театр драмы, здание Государственного банка, городские скульптуры и дома разных архитектурных эпох.",
+      "en": "Bolshaya Pokrovskaya is the main pedestrian street of the historic centre. The pedestrian section runs from Minin Square towards Gorky Square. Along the way you pass the drama theatre, the State Bank building, city sculptures and buildings from different architectural eras.",
+      "zh": "大波克罗夫斯卡娅街是历史中心的主要步行街。步行段从米宁广场通往高尔基广场方向。沿途可以看到话剧院、国家银行大楼、城市雕塑以及不同建筑时代的房屋。"
+    }
+  },
+  "rozhdestvenskaya": {
+    "model": "deepseek-flash",
+    "signature": "dca625f5dc87fe3d0189b47a5522348de37279869f033592385c4d80bd37012c",
+    "source": "https://nn-grad.ru/kuda-poyti/Ulica_Rozhdestvenskaya_/",
+    "text": {
+      "ru": "Рождественская улица выросла рядом с торгом и волжскими пристанями. В XIX — начале XX века здесь сосредоточились торговые конторы, банки, гостиницы и доходные дома. Сегодня прогулка по улице позволяет рассмотреть купеческие фасады и Строгановскую церковь.",
+      "en": "Rozhdestvenskaya Street grew up next to the trading quarter and the Volga piers. In the 19th and early 20th centuries, trading offices, banks, hotels and revenue houses were concentrated here. Today a walk along the street allows you to examine the merchant facades and the Stroganov Church.",
+      "zh": "罗日杰斯特文斯卡娅街在交易区和伏尔加河码头附近发展起来。19世纪至20世纪初，这里集中了贸易办事处、银行、旅馆和出租房屋。如今沿街漫步可以欣赏商人风格的立面和斯特罗加诺夫教堂。"
+    }
+  },
+  "mayak": {
+    "model": "deepseek-flash",
+    "signature": "cace24489b7ab62455219879e8d0b276911af970007012e989ad401c448fac53",
+    "source": "https://nn-grad.ru/kuda-poyti/Nizhnevolzhskaya_naberezhnaya/",
+    "text": {
+      "ru": "Перед вами Торговый дом С.М. Рукавишникова на Нижне-Волжской набережной — его выразительный фасад напоминает замок. Здание известно также как бывшая фабрика «Маяк». Его удобно осмотреть с набережной и включить в прогулку по историческому торговому кварталу.",
+      "en": "In front of you is the S.M. Rukavishnikov Trading House on the Nizhne-Volzhskaya Embankment, whose striking facade resembles a castle. The building is also known as the former Mayak factory. It is convenient to view from the embankment and to include in a walk through the historic trading quarter.",
+      "zh": "您面前是下伏尔加河沿岸街上的鲁卡维什尼科夫商行，其醒目的立面形似城堡。这座建筑也被称为前“灯塔”工厂。从这里沿河岸便于观赏，也适合纳入历史商业街区的散步路线。"
+    }
+  },
+  "model": {
+    "model": "deepseek-flash",
+    "signature": "c2e7925ae7fdce337a36b45af97529022287fee18818d25c2fd19cefae25739a",
+    "source": "https://kremlnn.ru/faq",
+    "text": {
+      "ru": "Бронзовый макет показывает старый Нижний Новгород в миниатюре: кремль, улицы и историческую застройку. Он находится в сквере рядом с Никольской башней. Здесь удобно сопоставить прежний город с современной картой перед прогулкой по центру.",
+      "en": "The bronze model shows old Nizhny Novgorod in miniature: the kremlin, streets and historic buildings. It stands in the square next to the Nikolskaya Tower. Here it is convenient to compare the former city with the modern map before a walk through the centre.",
+      "zh": "这座青铜模型以微缩形式展示旧时的下诺夫哥罗德：克里姆林宫、街道和历史建筑。它位于尼科尔斯卡娅塔旁边的街心花园里。在这里可以方便地把昔日的城市与现代地图对照，然后再去市中心散步。"
+    }
+  },
+  "station": {
+    "model": "deepseek-flash",
+    "signature": "f3c1784acafd799a4699842d3432c310f59b0e7dd5cc9917a71c2b0762e7a515",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%BC%D0%BE%D0%B4%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB",
+    "text": {
+      "ru": "Перед вами Ромодановский, или Казанский, вокзал, построенный в 1900–1904 годах и обслуживавший железнодорожное сообщение до 1974 года. Здание завершает панораму Черниговской улицы у Оки. После реставрации оно используется компанией «НоваКард», а не как действующий пассажирский вокзал.",
+      "en": "In front of you is the Romodanovsky, or Kazan, station, built in 1900–1904 and serving rail traffic until 1974. The building closes the panorama of Chernigovskaya Street by the Oka. After restoration it is used by the company NovaCard, rather than as a working passenger station.",
+      "zh": "您面前是罗莫达诺夫斯基站，也称喀山站，建于1900–1904年，铁路运营一直持续到1974年。这座建筑在奥卡河畔为切尔尼戈夫街的全景收尾。经过修复后，它由“NovaCard”公司使用，而不再是运营中的客运站。"
+    }
+  },
+  "barysheva": {
+    "model": "deepseek-flash",
+    "signature": "456453e1501e98f9ae7339c67d9eedbcc1e1b5231ea6c8aeba45c32f2d395d1b",
+    "source": "https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC_%D0%90._%D0%9B._%D0%91%D0%B0%D1%80%D1%8B%D1%88%D0%B5%D0%B2%D0%BE%D0%B9",
+    "text": {
+      "ru": "Дом А. Л. Барышевой на Черниговской улице построен в 1837–1839 годах по проекту городского архитектора Георга Кизеветтера. Это памятник исторической жилой застройки на правом берегу Оки. Обратите внимание на пропорции фасада и оформление окон.",
+      "en": "The House of A. L. Barysheva on Chernigovskaya Street was built in 1837–1839 to a design by the city architect Georg Kizevetter. It is a monument of historic residential architecture on the right bank of the Oka. Notice the proportions of the facade and the treatment of the windows.",
+      "zh": "切尔尼戈夫斯卡娅街上阿·列·巴雷舍娃的住宅建于1837–1839年，由城市建筑师格奥尔格·基泽韦特设计。它是奥卡河右岸历史居住建筑的一处遗迹。请注意立面的比例和窗户的装饰。"
+    }
+  },
+  "kozhevnikov": {
+    "model": "deepseek-flash",
+    "signature": "b31d0a633418ac453b580665d750852dea004b418a84b84298b210938b05e645",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%92._%D0%95._%D0%9A%D0%BE%D0%B6%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0",
+    "text": {
+      "ru": "Усадьба Кожевникова состоит из сохранившихся главного дома и флигеля на Черниговской улице. Её отличает кирпичный декор фасадов. Ансамбль помогает представить, как выглядела городская усадебная застройка вдоль правого берега Оки.",
+      "en": "Kozhevnikov's estate consists of the surviving main house and a wing on Chernigovskaya Street. It is distinguished by the brick decoration of its facades. The ensemble helps imagine what the town estate buildings along the right bank of the Oka looked like.",
+      "zh": "科热夫尼科夫庄园由切尔尼戈夫斯卡亚街上现存的主楼和侧翼组成。它的特点是立面的砖砌装饰。这一建筑群有助于想象奥卡河右岸沿线的城市庄园建筑风貌。"
+    }
+  },
+  "vyakhirev": {
+    "model": "deepseek-flash",
+    "signature": "44339318b9f30257161d60dcfa620853a240a3424ce9459b91d95ebbf45c1010",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%92%D1%8F%D1%85%D0%B8%D1%80%D0%B5%D0%B2%D1%8B%D1%85",
+    "text": {
+      "ru": "Усадьба Вяхиревых, также известная как усадьба Щепетовой, сформировалась в 1838–1849 годах. Проект связан с архитектором Георгом Кизеветтером. В ансамбль входят главный дом, флигели и кирпичные проездные ворота — характерные элементы городской усадьбы XIX века.",
+      "en": "The Vyakhirev Estate, also known as the Shchepetova Estate, took shape between 1838 and 1849. The project is associated with the architect Georg Kiesewetter. The ensemble includes the main house, wings, and brick drive-through gates — characteristic elements of a 19th-century town estate.",
+      "zh": "维亚希列夫庄园，又称谢佩托娃庄园，形成于1838至1849年。该项目与建筑师格奥尔格·基泽韦特有关。建筑群包括主楼、侧翼和砖砌通车大门——这是19世纪城市庄园的典型元素。"
+    }
+  },
+  "prison": {
+    "model": "deepseek-flash",
+    "signature": "dbfe4ce19b60d87adee0030f5c298a1805d083c6adf6058d7b0af5eb5d2c62fe",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B3",
+    "text": {
+      "ru": "Перед вами Нижегородский острог — бывший тюремный комплекс на площади Свободы. Прямоугольный корпус с угловыми башнями окружён кирпичной стеной. Эта архитектура напоминает о том, как в городе XIX века устраивали места заключения и административные здания.",
+      "en": "In front of you is the Nizhny Novgorod Ostrog, a former prison complex on Freedom Square. The rectangular building with corner towers is surrounded by a brick wall. Its architecture recalls how places of confinement and administrative buildings were arranged in the city in the 19th century.",
+      "zh": "您面前是下诺夫哥罗德监狱，一处位于自由广场的旧监狱建筑群。这座带角楼的矩形建筑被砖墙环绕。其建筑风格让人想起19世纪该市如何建造关押场所和行政建筑。"
+    }
+  },
+  "olisov": {
+    "model": "deepseek-flash",
+    "signature": "f2700dd64c0e1a02b585b1cdedc2dfb149ebebe63510d39b9c4167648b613c1e",
+    "source": "https://nn-grad.ru/kuda-poyti/palati_kupca_Afanasiya_Olisova/",
+    "text": {
+      "ru": "Каменные палаты купца Афанасия Олисова — одна из старейших сохранившихся гражданских построек города. Они стоят в Крутом переулке рядом с Успенской церковью. При осмотре обратите внимание на нарядное обрамление окон и декор, характерный для палат XVII века.",
+      "en": "The stone chambers of the merchant Afanasy Olisov are one of the oldest surviving civil buildings in the city. They stand in Krutoy Lane next to the Uspenskaya Church. As you look, notice the ornate window surrounds and the decoration characteristic of seventeenth-century chambers.",
+      "zh": "商人阿法纳西·奥利索夫的石砌宅邸是城中现存最古老的民用建筑之一。它坐落在克鲁托伊巷，紧邻圣母安息教堂。参观时请留意华丽的窗框，以及十七世纪宅邸特有的装饰。"
+    }
+  },
+  "peter": {
+    "model": "deepseek-flash",
+    "signature": "a68dc934a3ca92850bd86c92fed1704e69013fd3004ea7bff11dbc6c82ffbafc",
+    "source": "https://nn-grad.ru/kuda-poyti/Domik_Petra/",
+    "text": {
+      "ru": "Каменные палаты конца XVII века на Почаинской улице — это дом Чатыгина. Народное название «Домик Петра I» связано с преданием об остановке здесь Петра перед Азовским походом. На фотографии видно декоративное обрамление окон, но это лишь часть исторического облика здания, а не свидетельство пребывания царя.",
+      "en": "The stone chambers of the late 17th century on Pochainskaya Street are the Chatygin House. The popular name 'Peter I's Small House' comes from a legend that Peter stayed here before the Azov campaign. In the photograph you can see the decorative window frames, but that is only part of the building's historical appearance, not evidence of the tsar's visit.",
+      "zh": "波恰因斯卡亚街上的17世纪末石砌宅邸是恰特金之家。民间称之为“彼得小屋”，源于彼得一世在亚速远征前曾在此停留的传说。照片中可以看到装饰性的窗框，但这只是建筑历史外观的一部分，并非沙皇到访的证据。"
+    }
+  },
+  "garden": {
+    "model": "deepseek-flash",
+    "signature": "525a827efed706976e6cb1319f22c1ff4d47b5b94dc455fc4d582a565ca5334d",
+    "source": "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Александровский сад заложен в 1835 году как общественный парк на волжских склонах. Он назван в честь императрицы Александры Фёдоровны. Извилистые дорожки соединяют верхний и нижний уровни берега, видовые места и сцену «Ракушка».",
+      "en": "Alexander Garden was founded in 1835 as a public park on the Volga slopes. It is named in honour of Empress Alexandra Feodorovna. Winding paths connect the upper and lower levels of the bank, viewpoints and the 'Shell' stage.",
+      "zh": "亚历山德罗夫花园建于1835年，是伏尔加河斜坡上的一座公共公园。它以皇后亚历山德拉·费奥多罗芙娜的名字命名。蜿蜒的小路连接河岸的上下两层、观景点和“贝壳”舞台。"
+    }
+  },
+  "shell": {
+    "model": "deepseek-flash",
+    "signature": "3f27aae36b8cdf214b6269589b4c383505f75878d6be9f3f1f359930db680af2",
+    "source": "https://nn-tourist.ru/assets/content/doc/guide/putevoditel-znakomtes-nizhnij-leto-2025.pdf",
+    "text": {
+      "ru": "«Ракушка» — открытая сцена в Александровском саду. Её легко включить в прогулку по склону между набережными: здесь можно сделать остановку в парке, а в дни мероприятий — попасть на концерт. Афишу стоит проверять отдельно от маршрута.",
+      "en": "The Shell is an open-air stage in Aleksandrovsky Garden. It fits easily into a walk along the slope between the embankments: you can stop here in the park, and on event days catch a concert. Check the programme separately from the route.",
+      "zh": "“贝壳”是亚历山大花园里的一座露天舞台。它很容易纳入沿岸街之间坡地上的散步路线：可以在这里的公园里停留，赶上活动日还能听一场音乐会。演出海报请与路线分开另行查看。"
+    }
+  },
+  "sormovo-house": {
+    "model": "deepseek-flash",
+    "signature": "7dd90059622dccb45ef1b36bde640e7064afb690794aae1b659a2f4017a56255",
+    "source": "https://ru.wikipedia.org/wiki/%D0%96%D0%B8%D0%BB%D0%BE%D0%B9_%D0%B4%D0%BE%D0%BC_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%C2%AB%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B5_%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D0%BE%C2%BB",
+    "text": {
+      "ru": "Перед вами жилой дом завода «Красное Сормово» на Большой Покровской, 29. Он построен в 1952–1954 годах по проекту Людмилы Рождественской и служит примером послевоенной неоклассики на главной пешеходной улице. Историческое название связано с заводом, хотя сам дом находится далеко от Сормова.",
+      "en": "You are looking at the residential building of the Krasnoye Sormovo plant at Bolshaya Pokrovskaya, 29. It was built in 1952–1954 to a design by Lyudmila Rozhdestvenskaya and is an example of post-war neoclassicism on the main pedestrian street. The historical name comes from the plant, even though the building is far from Sormovo.",
+      "zh": "您面前是红色索尔莫沃工厂的住宅楼，位于大波克罗夫斯卡娅街29号。它建于1952至1954年，由柳德米拉·罗日杰斯特文斯卡娅设计，是主步行街上战后新古典主义的例子。这个历史名称来自工厂，尽管这座楼离索尔莫沃很远。"
+    }
+  },
+  "gaz": {
+    "model": "deepseek-flash",
+    "signature": "141a4c396f0c1a7876cdeabca0da9cda86e9250fc38349032204a30bc55db2b2",
+    "source": "https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4",
+    "text": {
+      "ru": "Горьковский автомобильный завод — крупное автомобилестроительное предприятие Нижнего Новгорода, и его история связана с развитием Автозаводского района. Для знакомства с техникой и заводской историей удобнее выбрать музей ГАЗ на проспекте Ленина, 95.",
+      "en": "The Gorky Automobile Plant is a large automobile manufacturing enterprise in Nizhny Novgorod, and its history is tied to the development of the Avtozavodsky district. To learn about the vehicles and the plant's history, the GAZ Museum at 95 Lenin Avenue is the more convenient choice.",
+      "zh": "高尔基汽车厂是下诺夫哥罗德的一家大型汽车制造企业，它的历史与汽车厂区的发展相关。要了解车辆和工厂历史，更方便的选择是列宁大街95号的GAZ博物馆。"
+    }
+  },
+  "gaz-museum": {
+    "model": "deepseek-flash",
+    "signature": "7f48ef6ac38a55ed422e3938b9d15499511957288d3f427eb4e12bdc079a2444",
+    "source": "https://museum.gaz.ru/contacts/",
+    "text": {
+      "ru": "Исторический музей ГАЗ рассказывает о развитии автозавода и отечественного автомобилестроения. В экспозиции представлены автомобили, документы и материалы об их создателях. Визит подойдёт для отдельной поездки в Автозаводский район; есть детская познавательная площадка.",
+      "en": "The GAZ history museum tells about the development of the automobile plant and the domestic car industry. The exhibition presents cars, documents and materials about their creators. The visit suits a separate trip to the Avtozavodsky district; there is a children's educational area.",
+      "zh": "高尔基汽车厂历史博物馆讲述汽车厂和本国汽车工业的发展。展览陈列汽车、文件以及关于其创造者的资料。此行适合专程前往汽车厂区；馆内设有儿童科普区。"
+    }
+  },
+  "sormovo": {
+    "model": "deepseek-flash",
+    "signature": "e1b7f0cc03d708645745fc88225efd6c91928935565f84b5ba8babd11f9e87bb",
+    "source": "https://www.krsormovo.nnov.ru/",
+    "text": {
+      "ru": "Завод «Красное Сормово» основан в 1849 году и стал одним из центров российского судостроения. История предприятия включает строительство речных судов и подводных лодок. Отдельный музей на улице Свободы, 1 рассказывает посетителям города о заводе.",
+      "en": "The Krasnoye Sormovo plant was founded in 1849 and became one of the centres of Russian shipbuilding. Its history includes the construction of river vessels and submarines. A separate museum at 1 Svobody Street tells visitors to the city about the plant.",
+      "zh": "“红色索尔莫沃”工厂始建于1849年，是俄罗斯造船业的中心之一。该厂的历史包括建造内河船舶和潜艇。位于自由街1号的独立博物馆向到访这座城市的游客介绍该工厂。"
+    }
+  },
+  "sormovo-museum": {
+    "model": "deepseek-flash",
+    "signature": "5d909781642c6e8460a042ee8e3e31b9cd8a48df22a3079ccf3db1aebf7a8142",
+    "source": "https://www.krsormovo.nnov.ru/o-predpriyatii/muzej-istorii-zavoda/index.html",
+    "text": {
+      "ru": "Музей истории завода «Красное Сормово» был создан в 1967 году. Здесь собраны модели судов, документы и фотографии, рассказывающие о предприятии и его работниках. Отдельное место занимает история подводного судостроения: в 2004 году соответствующая коллекция вошла в общий музей.",
+      "en": "The Museum of History of the Krasnoye Sormovo plant was founded in 1967. It holds ship models, documents and photographs that tell about the enterprise and its workers. A separate place is given to the history of submarine shipbuilding; in 2004 the corresponding collection became part of the main museum.",
+      "zh": "«红色索尔莫沃»工厂历史博物馆创建于1967年。这里收藏了讲述该企业及其员工的船舶模型、文件和照片。潜艇造船史占据单独的位置；2004年，相关收藏并入了整体博物馆。"
+    }
+  },
+  "zachatie": {
+    "model": "deepseek-flash",
+    "signature": "1ece44e01c4ac39b5a031f3948aa8b4e0e8dc8931edb1a04d8da9e70607e7dcd",
+    "source": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D1%87%D0%B0%D1%82%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F",
+    "text": {
+      "ru": "Зачатьевская башня стоит в нижней части кремля у Волги. Старую башню повредили оползни, позднее её разобрали, а воссоздание завершилось в 2012 году. Отсюда видно, как крепостные стены спускаются от высокого плато к берегу.",
+      "en": "The Zachatyevskaya Tower stands in the lower part of the kremlin by the Volga. The old tower was damaged by landslides and later dismantled, and the reconstruction was completed in 2012. From here you can see how the fortress walls descend from the high plateau to the bank.",
+      "zh": "扎恰季耶夫斯卡亚塔位于克里姆林宫靠伏尔加河的下部。旧塔曾遭滑坡损坏，后来被拆除，重建于2012年完成。从这里可以看到城墙如何从高地向下延伸到岸边。"
+    }
+  },
+  "barracks": {
+    "model": "deepseek-flash",
+    "signature": "7d3bc3a3e746a4ba04d5d01e521d9ceb7a9effd306d0fb754e2e26fca099df30",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC%D1%8B_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Красные казармы — это исторический ансамбль из восточного и западного корпусов, построенный в 1835–1853 годах по проекту Ивана Ефимова. Длинные кирпичные фасады обращены к Нижне-Волжской набережной. Комплекс относится к архитектурному наследию города.",
+      "en": "The Red Barracks are a historic ensemble of an eastern and a western wing, built in 1835–1853 to a design by Ivan Efimov. Their long brick facades face the Nizhne-Volzhskaya Embankment. The complex is part of the city's architectural heritage.",
+      "zh": "红兵营是一座历史建筑群，由东翼和西翼组成，建于1835–1853年，由伊万·叶菲莫夫设计。长长的砖砌立面朝向下伏尔加河沿岸街。该建筑群属于城市建筑遗产。"
+    }
+  },
+  "cable": {
+    "model": "deepseek-flash",
+    "signature": "00fc5f0c16670dc846f427badcda8b48070f786e536557a1a442ef7f44787107",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%B0%D0%BD%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%B4%D0%BE%D1%80%D0%BE%D0%B3%D0%B0",
+    "text": {
+      "ru": "Канатная дорога соединяет Нижний Новгород и Бор через Волгу, нижегородская станция находится на Казанской набережной. Регулярное движение началось в 2012 году. Это и городской транспорт, и возможность увидеть реку с высоты.",
+      "en": "The cable car links Nizhny Novgorod and Bor across the Volga, and the Nizhny Novgorod station is on Kazanskaya Embankment. Regular service began in 2012. It works both as city transport and as a way to see the river from above.",
+      "zh": "缆车横跨伏尔加河，连接下诺夫哥罗德和博尔，下诺夫哥罗德站位于喀山滨河路。定期运行始于2012年。它既是城市交通工具，也能让人从高处看河。"
+    }
+  },
+  "mosque": {
+    "model": "deepseek-flash",
+    "signature": "9cc5001107aca656dac62b0467f11cd955a2ce9d5ff9648aa0470bc0f17d4a99",
+    "source": "https://www.culture.ru/objects/1807/sobornaya-mechet-v-nizhnem-novgorode",
+    "text": {
+      "ru": "Соборная мечеть на Казанской набережной открылась в 1915 году и стала важным центром мусульманской общины города. Здание находится рядом с Сенной площадью и станцией канатной дороги, поэтому его удобно увидеть во время прогулки по верхнему берегу.",
+      "en": "The Cathedral Mosque on Kazanskaya Embankment opened in 1915 and became an important centre of the city's Muslim community. The building stands near Sennaya Square and the cable car station, so it is easy to see during a walk along the upper bank.",
+      "zh": "喀山沿岸街的聚礼清真寺于1915年开放，成为该市穆斯林社群的重要中心。这座建筑位于先纳亚广场和缆车站附近，因此沿着上河岸散步时很容易看到它。"
+    }
+  },
+  "monastery": {
+    "model": "deepseek-flash",
+    "signature": "bd9137a4916d8949e0b20e9db9ca204f6c6cd23e31879ab6da6def485aa68011",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D0%92%D0%BE%D0%B7%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+    "text": {
+      "ru": "Печерский Вознесенский монастырь ведёт историю с XIV века и расположен у волжского берега в районе Печёрской слободы. Ансамбль хорошо виден с набережной Гребного канала, и здесь можно завершить прогулку по восточной части исторического центра.",
+      "en": "The Pechersky Ascension Monastery dates back to the 14th century and stands by the Volga bank in the Pecherskaya Sloboda area. Its ensemble is clearly visible from the embankment of the Rowing Canal, and this is where you can finish your walk through the eastern part of the historic centre.",
+      "zh": "佩乔尔斯基升天修道院的历史可追溯到14世纪，坐落在佩乔尔斯卡亚斯洛博达一带的伏尔加河岸边。从赛艇运河的滨河路可以清楚地看到这片建筑群，在这里可以结束历史中心东部的漫步。"
+    }
+  },
+  "hero": {
+    "model": "deepseek-flash",
+    "signature": "5e301a86ebfe8fa97c8a43396f5e9edbb4e05b4b6ae16ac59cf48534c6b7374d",
+    "source": "https://nn-grad.ru/bank/guide.pdf",
+    "text": {
+      "ru": "Катер «Герой» установлен у подножия Чкаловской лестницы на Нижне-Волжской набережной. Это памятник ветерану волжского флота. Его удобно использовать как ориентир и место встречи перед подъёмом по лестнице или прогулкой вдоль реки.",
+      "en": "The boat \"Geroi\" stands at the foot of the Chkalov Stairs on the Nizhne-Volzhskaya Embankment. It is a monument to a veteran of the Volga fleet. It is convenient to use as a landmark and meeting point before climbing the stairs or walking along the river.",
+      "zh": "“英雄”号船停放在下伏尔加河沿岸街的奇卡洛夫阶梯脚下。它是伏尔加河船队老兵的纪念碑。在登上阶梯或沿河散步之前，它便于用作地标和会面地点。"
+    }
+  },
+  "kremlin": {
+    "model": "deepseek-flash",
+    "signature": "4f5495273e4d0f6951f27e33dd6dbf5328a7a1ff58fb95eddd406dfa3ef6aaa7",
+    "source": "https://nn-grad.ru/kuda-poyti/nizhegorodskiy-kreml/",
+    "text": {
+      "ru": "Нижегородский кремль занимает высокий берег у слияния Оки и Волги. Каменная крепость начала XVI века спускается по крутому склону, поэтому прогулка проходит на разных высотах. На территории находятся исторические здания, музеи, памятники и обзорные площадки.",
+      "en": "The Nizhny Novgorod Kremlin occupies the high bank at the confluence of the Oka and the Volga. The stone fortress from the early 16th century descends a steep slope, so the walk passes at different elevations. Within the grounds are historical buildings, museums, monuments and viewing platforms.",
+      "zh": "下诺夫哥罗德克里姆林宫占据奥卡河与伏尔加河交汇处的高岸。这座16世纪初的石砌要塞沿陡坡而下，因此步行路线处于不同高度。园区内有历史建筑、博物馆、纪念碑和观景平台。"
+    }
+  },
+  "dmitriev": {
+    "model": "deepseek-flash",
+    "signature": "1a082f6fa07bff13bddd01ca41748bb93fade7ec8c7aeb238d4936ee33d8521a",
+    "source": "https://ru.wikipedia.org/wiki/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F",
+    "text": {
+      "ru": "Дмитриевская башня выходит на площадь Минина и Пожарского и служит главными воротами кремля. Её привычный облик в русском стиле сформировался в 1895 году. Здесь удобно начать знакомство с крепостью и выбрать направление прогулки.",
+      "en": "The Dmitrievskaya Tower faces Minin and Pozharsky Square and serves as the main gate of the kremlin. Its familiar appearance in the Russian style took shape in 1895. This is a convenient place to begin exploring the fortress and to choose the direction of your walk.",
+      "zh": "德米特里耶夫塔面向米宁和波扎尔斯基广场，是克里姆林宫的主入口。它如今为人熟知的俄罗斯风格外观形成于1895年。从这里开始了解这座要塞并选择散步方向都很方便。"
+    }
+  },
+  "bell": {
+    "model": "deepseek-flash",
+    "signature": "cffe918d903c14735d6a8f990df8ddff19d117a951f65b41c5b870b69da40011",
+    "source": "https://kremlnn.ru/churchs/",
+    "text": {
+      "ru": "Спасская колокольня в кремле была воссоздана к 800-летию Нижнего Новгорода и напоминает об утраченном Спасо-Преображенском соборе. Высокая шатровая постройка снова стала заметной частью силуэта кремля. Условия подъёма уточняйте у администрации комплекса.",
+      "en": "The Spasskaya Bell Tower in the kremlin was recreated for the 800th anniversary of Nizhny Novgorod and recalls the lost Transfiguration Cathedral. The tall tented structure has again become a noticeable part of the kremlin skyline. Check the conditions for going up with the complex's administration.",
+      "zh": "克里姆林宫内的救世主钟楼是为下诺夫哥罗德建城800周年而重建的，它让人想起已消失的救世主显容大教堂。这座高大的锥顶建筑再次成为克里姆林宫轮廓中醒目的一部分。登楼条件请向建筑群管理部门咨询。"
+    }
+  },
+  "minin": {
+    "model": "deepseek-flash",
+    "signature": "109695922ee69131c53168f19c68dc1e52692275bcf2843daa78ab0b92bf67c3",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C_%D0%9C%D0%B8%D0%BD%D0%B8%D0%BD%D0%B0_%D0%B8_%D0%9F%D0%BE%D0%B6%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE",
+    "text": {
+      "ru": "Площадь Минина и Пожарского соединяет главные улицы исторического центра: Большую Покровскую, Варварскую, Минина и Верхне-Волжскую набережную. С одной стороны к ней примыкает кремль. Это удобная точка начала прогулки и важное пространство городской жизни.",
+      "en": "Minin and Pozharsky Square connects the main streets of the historic center: Bolshaya Pokrovskaya, Varvarskaya, Minina and the Verkhne-Volzhskaya embankment. The kremlin adjoins it on one side. It is a convenient starting point for a walk and an important space of city life.",
+      "zh": "米宁和波扎尔斯基广场连接历史中心的主要街道：大波克罗夫斯卡亚街、瓦尔瓦尔斯卡亚街、米宁街和上伏尔加河滨河路。克里姆林宫从一侧与广场相邻。这里是散步的便利起点，也是重要的城市生活空间。"
+    }
+  },
+  "school": {
+    "model": "deepseek-flash",
+    "signature": "5bb7ae2b4807a0b13f33698e92e0367a17423bc100de2babb0a45ecb4bd3c115",
+    "source": "https://mininuniver.ru/sveden/files/rix/Otchet_o_rezulytatx_deyatelynosti_za_2025_god.pdf",
+    "text": {
+      "ru": "Гимназия №1 находится на площади Минина и Пожарского, 5. На историческом снимке в подборке видна губернская мужская гимназия по соседству, на улице Ульянова, 1. Оба адреса можно увидеть во время прогулки по площади.",
+      "en": "Gymnasium No. 1 is located at 5 Minin and Pozharsky Square. The historical photograph in the collection shows the provincial men's gymnasium nearby, at 1 Ulyanov Street. Both addresses can be seen during a walk around the square.",
+      "zh": "第一中学位于米宁和波扎尔斯基广场5号。合集里的历史照片显示的是邻近的省立男子中学，位于乌里扬诺夫街1号。沿广场散步时可以看到这两个地址。"
+    }
+  },
+  "walls": {
+    "model": "deepseek-flash",
+    "signature": "9993aaf0addee8cc88af82ed0bcbf0c57eae0ceb05bf51e96c66ed70f30584c7",
+    "source": "https://kremlnn.ru/",
+    "text": {
+      "ru": "Крепостные стены объединяют башни кремля и повторяют сложный рельеф берега. Прогулка по стене позволяет рассмотреть укрепления с необычного ракурса. Для этого маршрута предусмотрены отдельные правила посещения и билеты; на стене много ступеней.",
+      "en": "The fortress walls connect the kremlin towers and follow the complex relief of the bank. A walk along the wall lets you view the fortifications from an unusual angle. This route has its own visiting rules and tickets; there are many steps on the wall.",
+      "zh": "城墙将克里姆林的塔楼连接起来，并顺应岸边的复杂地形。沿城墙漫步可以从不同寻常的角度观察防御工事。这条路线有单独的参观规则和门票；墙上有许多台阶。"
+    }
+  },
+  "viewpoint": {
+    "model": "deepseek-flash",
+    "signature": "2e6967515daf2b684b875c8e2cd3633080c7c887ed4606b88325dcdabcb62e16",
+    "source": "https://kremlnn.ru/",
+    "text": {
+      "ru": "С обзорных площадок кремля видны слияние Оки и Волги, Стрелка и заречная часть города. Остановку удобно совместить с осмотром стен и башен. Вид меняется в зависимости от площадки, а в ясную погоду хорошо различим противоположный берег.",
+      "en": "From the Kremlin observation areas you can see the confluence of the Oka and Volga, the Strelka and the part of the city across the river. It is convenient to combine this stop with viewing the walls and towers. The view changes depending on the observation area, and on a clear day the opposite bank is clearly visible.",
+      "zh": "从克里姆林的观景台可以看到奥卡河与伏尔加河的交汇处、斯特列尔卡以及对岸城区。这一站很适合与参观城墙和塔楼安排在一起。景观会因观景台不同而变化，晴朗天气下对岸清晰可见。"
+    }
+  },
+  "north-tower": {
+    "model": "deepseek-flash",
+    "signature": "751a42e5f9f79179944d4fdfa91381e875fe600e197655531a80d80bb01d22ca",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Северная башня — круглая башня в нагорной части кремля, между Тайницкой и Часовой. Несмотря на название, это не самая северная точка крепости. Рядом хорошо видно, как стены следуют изгибам и перепадам высоты берега.",
+      "en": "The North Tower is a round tower in the hilltop part of the kremlin, between the Taynitskaya and Chasovaya towers. Despite its name, it is not the northernmost point of the fortress. Nearby you can clearly see how the walls follow the bends and changes in height of the bank.",
+      "zh": "北塔是克里姆林宫高地部分的一座圆形塔楼，位于塔伊尼茨卡娅塔和恰索瓦娅塔之间。尽管名为“北塔”，它并不是城堡的最北点。旁边可以清楚看到城墙如何顺着岸边的弯曲和高度变化延伸。"
+    }
+  },
+  "kazan-church": {
+    "model": "deepseek-flash",
+    "signature": "5bec32462a62ca07da5f8d40df28cc706dc66eeb354e9fb4eec36af85a84d9f9",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BA%D0%BE%D0%BD%D1%8B_%D0%91%D0%BE%D0%B6%D0%B8%D0%B5%D0%B9_%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Казанская церковь стоит у выхода Зеленского съезда к площади Народного Единства. Современное здание возведено в 2005–2012 годах на месте утраченного храма. Его внешний вид отличается от старой церкви, которую разобрали в 1935 году.",
+      "en": "The Kazan Church stands where Zelenetsky Descent meets Narodnogo Yedinstva Square. The current building was erected in 2005–2012 on the site of the lost church. Its appearance differs from the old church, which was dismantled in 1935.",
+      "zh": "喀山教堂位于泽连斯基坡道通往民族团结广场的出口处。现在的建筑建于2005至2012年，位于已消失教堂的原址上。它的外观与1935年被拆除的旧教堂不同。"
+    }
+  },
+  "gorky": {
+    "model": "deepseek-flash",
+    "signature": "fd3229f25eb6096fd4d86441d32c14977f909c6f5efe225709fd136242787498",
+    "source": "https://galina-lukas.ru/article/555/naberezhnaya-fedorovskogo-v-nizhnem-novgorode-izyashchnyy-labirint-na-okskom-otkose",
+    "text": {
+      "ru": "Памятник Максиму Горькому на набережной Федоровского обращён к речной панораме. Писатель изображён сидящим и смотрящим в сторону Оки и Стрелки. Это другой памятник, не скульптура на площади Горького.",
+      "en": "The monument to Maxim Gorky on Fedorovsky Embankment faces the river panorama. The writer is shown seated and looking toward the Oka and the Strelka. This is a different monument, not the sculpture on Gorky Square.",
+      "zh": "费多罗夫斯基滨河路上的马克西姆·高尔基纪念碑面向河景。作家被塑造成坐姿，望向奥卡河和斯特列尔卡。这是另一座纪念碑，不是高尔基广场上的那座雕塑。"
+    }
+  },
+  "deer": {
+    "model": "deepseek-flash",
+    "signature": "7470558486ebff13fb7c188ec91d10df0425198b1ffacad7d9745fdc5d4e6610",
+    "source": "https://nn-grad.ru/kuda-poyti/Nizhnevolzhskaya_naberezhnaya/",
+    "text": {
+      "ru": "Металлический олень венгерского скульптора Габора Миклоша Жокэ стоит на Нижне-Волжской набережной. Ажурную скульптуру удобно рассмотреть по пути от Чкаловской лестницы к бывшему речному вокзалу. Животное отсылает к гербу Нижнего Новгорода.",
+      "en": "A metal deer by the Hungarian sculptor Gábor Miklós Szőke stands on the Nizhnevolzhskaya Embankment. The openwork sculpture is easy to see along the route from the Chkalov Stairs to the former river station. The animal refers to the coat of arms of Nizhny Novgorod.",
+      "zh": "匈牙利雕塑家加博尔·米克洛什·瑟克创作的一只金属鹿矗立在下伏尔加河沿岸街。沿着从奇卡洛夫台阶通往旧河运站的路线，可以方便地观赏这座镂空雕塑。这只动物呼应下诺夫哥罗德的市徽。"
+    }
+  },
+  "warehouses": {
+    "model": "deepseek-flash",
+    "signature": "6b2453f891c375af4a93894ccf07062cad3ba6a6b1107cfd76afafdb2dead458",
+    "source": "https://nn-tourist.ru/stati/greenroute",
+    "text": {
+      "ru": "Металлические конструкции Пакгаузов сохранились от павильонов Всероссийской выставки 1896 года. На Стрелке они получили новую жизнь как концертное и выставочное пространства. Снаружи можно рассмотреть ажурный каркас, а внутренние события имеют отдельную программу.",
+      "en": "The metal structures of the Pakgauzy warehouses survive from the pavilions of the 1896 All-Russian Exhibition. At the Strelka they gained a new life as concert and exhibition spaces. From outside you can see the openwork frame; the indoor events follow a separate programme.",
+      "zh": "帕克高兹仓库的金属结构保存自1896年全俄展览会的展馆。在斯特列尔卡，它们作为音乐会和展览空间获得了新生。从外面可以看到镂空框架；内部活动另有单独的日程安排。"
+    }
+  },
+  "shukhov": {
+    "model": "deepseek-flash",
+    "signature": "2d2f4fa416e5ef55a2c458acc8d52249db1f10428c05e9d2cd36ba2957a00947",
+    "source": "https://irgsno.ru/news/prixodite-gulyat-na-strelku",
+    "text": {
+      "ru": "На Окской набережной у Стрелки установлены арт-объекты, напоминающие гиперболоидные башни Владимира Шухова. Это современные реплики, а не историческая опора ЛЭП на Оке возле Дзержинска. Их можно увидеть во время прогулки по общественному пространству.",
+      "en": "On the Oka Embankment at the Strelka, art objects resembling Vladimir Shukhov's hyperboloid towers have been installed. These are modern replicas, not the historic power line tower on the Oka near Dzerzhinsk. They can be seen while walking through the public space.",
+      "zh": "在奥卡河畔的斯特列尔卡，安装了类似弗拉基米尔·舒霍夫双曲面塔的艺术装置。这些是现代复制品，而不是捷尔任斯克附近奥卡河上的历史输电塔。在公共空间散步时可以看到它们。"
+    }
+  },
+  "victory": {
+    "model": "deepseek-flash",
+    "signature": "0bdfae4ca016e77e9f27f40b0d7ec7f98ea0c8fe1c77a866726b6b8180135a69",
+    "source": "https://www.culture.ru/institutes/22197/park-pobedy-g-nizhnego-novgoroda",
+    "text": {
+      "ru": "Парк Победы на набережной Гребного канала основан в 1985 году к сорокалетию Победы. Это парк-музей под открытым небом с военно-исторической тематикой. Его удобно включить в прогулку по нижнему берегу.",
+      "en": "Park Pobedy on the Grebnoy Canal embankment was founded in 1985 for the fortieth anniversary of the Victory. It is an open-air museum park with a military-historical theme. It is convenient to include in a walk along the lower bank.",
+      "zh": "位于格列布诺伊运河沿岸的胜利公园建于1985年，以纪念胜利四十周年。它是一座露天博物馆式公园，主题为军事历史。适合将其纳入下岸的散步行程。"
+    }
+  },
+  "church": {
+    "model": "deepseek-flash",
+    "signature": "d6ce0d8c585e867bced7849a308a39f44c77cc676b4a8e7ceaf2ac794a9fe25c",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_(%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+    "text": {
+      "ru": "Перед нами Рождественская, или Строгановская, церковь на Рождественской улице. Этот храм построили в 1696–1719 годах на средства Григория Строганова, отсюда оба названия. На фасадах хорошо видна богатая белокаменная резьба — это характерный памятник строгановского барокко.",
+      "en": "We are looking at the Rozhdestvenskaya, or Stroganovskaya, Church on Rozhdestvenskaya Street. It was built between 1696 and 1719 at the expense of Grigory Stroganov, which is where both names come from. The rich white-stone carving is clearly visible on the facades; this is a characteristic monument of Stroganov Baroque.",
+      "zh": "我们眼前是罗日杰斯特文斯卡亚街上的圣诞（斯特罗加诺夫）教堂。这座教堂建于1696至1719年，由格里戈里·斯特罗加诺夫出资修建，两个名称都由此而来。外立面上可见繁复的白石雕刻，是斯特罗加诺夫巴洛克风格的典型建筑。"
+    }
+  },
+  "suetinskaya": {
+    "model": "deepseek-flash",
+    "signature": "643b65fd88a89230bb8b87fb796111a545bcb023367f98b4fa6e04d79653bd68",
+    "source": "https://pravda-nn.ru/news/stena-zdaniya-duhovnogo-uchilishha-razvalilas-v-nizhnem-novgorode-vspominaem-kakie-eshhe-doma-pamyatniki-razrushila-restavratsiya/",
+    "text": {
+      "ru": "Перед вами исторический дом на Суетинской, 29, связанный с застройкой склона над Рождественской улицей. Его фасад относится к классицистической архитектуре. В 2019 году сообщалось об обрушении части стены во время работ, поэтому доступ внутрь и сохранность всех частей здания не гарантируются.",
+      "en": "Here is the historic house at Suetinskaya, 29, tied to the development of the slope above Rozhdestvenskaya Street. Its facade belongs to classicist architecture. In 2019 a partial collapse of a wall was reported during works, so the card makes no promise of access inside or that all parts of the building are preserved.",
+      "zh": "这里是苏耶京斯卡娅街29号的历史建筑，与罗日杰斯特文斯卡娅街上方的坡地开发相关。它的立面属于古典主义建筑。2019年有报道称施工期间部分墙体坍塌；此介绍不保证可以进入内部，也不保证建筑各部分完好。"
+    }
+  },
+  "ski": {
+    "model": "deepseek-flash",
+    "signature": "5a7b9651e9527e75a6b1a6d42dacf02f770d13adf916be112dc50c45723a9a19",
+    "source": "https://nne.ru/news/rukovoditel-sportivnogo-otdela-nizhegorodskoj-eparhii-sovershil-chin-osvyashheniya-rekonstruirovannogo-lyzhnogo-tramplina/",
+    "text": {
+      "ru": "Трамплин К-60 находится на волжском склоне у Сенной площади и набережной Гребного канала. Он относится к спортивному комплексу для прыжков на лыжах. Со стороны общественных дорожек можно рассмотреть сооружение, но спортивные зоны не являются туристическим аттракционом.",
+      "en": "The K-60 ski jump stands on the Volga slope near Sennaya Square and the Grebnoy Canal embankment. It belongs to a sports complex for ski jumping. From the public walkways you can view the structure, but the sports areas are not a tourist attraction.",
+      "zh": "K-60跳台位于谢纳亚广场和格列布诺伊运河沿岸附近的伏尔加河坡地上。它属于跳台滑雪运动综合体。从公共步道可以观看这座建筑，但运动区域并非旅游景点。"
+    }
+  },
+  "wheel": {
+    "model": "deepseek-flash",
+    "signature": "5404cd2325ba3b0264a823caf999da3d440274ac80f31cd5c71f18d68ddb679c",
+    "source": "https://kolesonino.ru/",
+    "text": {
+      "ru": "Пятидесятиметровое колесо обозрения «Колесо НиНо» открылось в 2021 году к 800-летию Нижнего Новгорода. Оно находится у Казанского съезда, над волжским берегом, и из кабин видны река, городские склоны и соседние достопримечательности.",
+      "en": "The 50-metre Ferris wheel, Koleso NiNo, opened in 2021 for the 800th anniversary of Nizhny Novgorod. It stands by the Kazansky Syezd above the Volga bank, and from its cabins you can see the river, the city slopes and nearby landmarks.",
+      "zh": "五十米高的“下诺夫哥罗德之轮”摩天轮于2021年为下诺夫哥罗德建城800周年而开放。它位于喀山道上、伏尔加河岸上方，从座舱里可以看到河流、城市坡地和附近的景点。"
+    }
+  },
+  "markin": {
+    "model": "deepseek-flash",
+    "signature": "a90ba3566b4eb207dadd604aceb226ea5e69553d490e3ea8f451a1a9d23e1634",
+    "source": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C_%D0%9C%D0%B0%D1%80%D0%BA%D0%B8%D0%BD%D0%B0",
+    "text": {
+      "ru": "Площадь Маркина расположена между Рождественской улицей и Нижне-Волжской набережной, напротив бывшего речного вокзала. Она связывает прогулку вдоль Волги с купеческими кварталами. Здесь удобно завершить маршрут по набережным или перейти на Рождественскую улицу.",
+      "en": "Markin Square lies between Rozhdestvenskaya Street and the Nizhne-Volzhskaya Embankment, opposite the former river station. It links a walk along the Volga with the merchants' quarters. Here it is convenient to finish the embankment route or turn onto Rozhdestvenskaya Street.",
+      "zh": "马尔金广场位于罗日杰斯特文斯卡娅街与下伏尔加河沿岸街之间，正对旧河运站。它把沿伏尔加河的散步路线与商人街区连接起来。在这里可以方便地结束沿岸街的路线，或转入罗日杰斯特文斯卡娅街。"
+    }
+  },
+  "photo-pechersky-1900": {
+    "model": "deepseek-flash",
+    "signature": "28355ba91d07c1796889c5d166ce5fb0fc148f5736b216e5bb0b48c46de0b3fa",
+    "source": "https://commons.wikimedia.org/wiki/File:Ascension_Cathedral_in_Pechersky_Ascension_Monastery_1900.jpg",
+    "text": {
+      "ru": "На этой архивной фотографии Максима Дмитриева запечатлён Вознесенский собор Печерского монастыря, снятый на рубеже XIX и XX веков; архив указывает диапазон 1890–1910 годов. Хорошо видна белая церковь с куполами-луковицами и колокольней слева. Современная фотография того же собора сделана в октябре 2025 года.",
+      "en": "This archival photograph by Maxim Dmitriev shows the Ascension Cathedral of the Pechersky Monastery, taken at the turn of the 19th and 20th centuries; the archive gives the range 1890–1910. Clearly visible is the white church with onion domes and the bell tower on the left. A modern photograph of the same cathedral was taken in October 2025.",
+      "zh": "这张马克西姆·德米特里耶夫的档案照片拍摄的是佩切尔斯基修道院的升天大教堂，拍摄于19世纪和20世纪之交；档案给出的年代范围是1890–1910年。可以清楚看到带洋葱形圆顶的白色教堂以及左侧的钟楼。同一座大教堂的现代照片拍摄于2025年10月。"
+    }
+  },
+  "photo-stadium-2016": {
+    "model": "deepseek-flash",
+    "signature": "c33c28f8e3b11c17a1cdd5590bcee321f5e2da944fdb2832f8d8b32f1f7ac37f",
+    "source": "https://commons.wikimedia.org/wiki/File:NN_Strelka_Stadium_construction_08-2016.jpg",
+    "text": {
+      "ru": "На этом снимке от 5 августа 2016 года видна стройплощадка: синий сплошной забор на переднем плане и подъёмные краны над котлованом. Это документальная фиксация одного из этапов строительства стадиона на Стрелке, а не современный вид готового объекта. Позднее авторы снимали стадион с разных точек — второй снимок датирован 6 мая 2018 года, а панорама 8 июня 2024 года показывает его через шесть лет.",
+      "en": "This photograph dated 5 August 2016 shows a construction site, with a solid blue fence in the foreground and cranes rising above the excavation. It documents one stage of the stadium's construction at Strelka rather than a modern view of the finished venue. The authors later photographed the stadium from different points: the second image is dated 6 May 2018, and a panorama from 8 June 2024 shows it six years on.",
+      "zh": "这张标注为2016年8月5日的照片显示的是施工现场，前景是一道蓝色实心围挡，基坑上方立着起重机。它记录的是箭头岛体育场建设过程中的一个阶段，而不是建成后场馆的现代景象。拍摄者后来从不同角度拍摄了这座体育场：第二张照片标注为2018年5月6日，而2024年6月8日的全景则展示了六年后的它。"
+    }
+  },
+  "photo-stadium-2018": {
+    "model": "deepseek-flash",
+    "signature": "8e1391b6156f37f0a9b632d479daabff9844b856d279cd4ab42a745966442329",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Stadium_(06_May_2018).jpg",
+    "text": {
+      "ru": "На этом снимке, сделанном 6 мая 2018 года, хорошо видна заполненная трибуна и зелёное поле стадиона на Стрелке. Для сравнения: первая фотография документирует стройку 5 августа 2016 года, а панорама 8 июня 2024 года показывает стадион через шесть лет. Авторы снимали его с разных точек.",
+      "en": "This photograph, taken on 6 May 2018, clearly shows a packed stand and the green pitch of the stadium on the Spit. For comparison, the first photograph documents construction on 5 August 2016, and a panorama from 8 June 2024 shows the stadium six years later. The authors shot it from different points.",
+      "zh": "这张摄于2018年5月6日的照片清晰展示了看台坐满观众和斯特列尔卡体育场的绿色草坪。作为对比，第一张照片记录了2016年8月5日的施工现场，而2024年6月8日的全景则展示了六年后的体育场。拍摄者从不同角度拍摄了它。"
+    }
+  },
+  "photo-d1913": {
+    "model": "deepseek-flash",
+    "signature": "20aee853faaa6b8d73622c77e49c3b35f0d8d5d48318ee38701bf4ea0684f644",
+    "source": "https://commons.wikimedia.org/wiki/File:Dmitrievskaya_tower_1913.jpg",
+    "text": {
+      "ru": "На этой фотографии 1913 года хорошо видна высокая шатровая крыша башни. До 1895 года башня выглядела гладкой и приземистой, а нынешний облик в русском стиле сложился в 1895-м. С 1896 по 1919 год в башне работал Художественный музей.",
+      "en": "This 1913 photograph clearly shows the tower's tall hipped roof. Before 1895 the tower looked smooth and squat, and its current Russian-style appearance took shape in 1895. From 1896 to 1919 an art museum operated in the tower.",
+      "zh": "这张1913年的照片清楚显示了塔楼高耸的锥形屋顶。1895年之前，塔楼外观平滑而低矮，如今的俄罗斯风格外观形成于1895年。1896年至1919年间，塔内设有艺术博物馆。"
+    }
+  },
+  "photo-dpre": {
+    "model": "deepseek-flash",
+    "signature": "12679b8af2f48568808b74424be5cfc0344c6dbd785116d3b704bb7d1b7216eb",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Dmitrovskaya_Tower_pre-1895.jpg",
+    "text": {
+      "ru": "На этой фотографии Дмитриевская башня выглядит гладкой и приземистой — такой она была до 1895 года. Нынешний облик в русском стиле сложился только в 1895-м. С 1896 по 1919 год в башне работал Художественный музей.",
+      "en": "In this photograph the Dmitrievskaya Tower looks smooth and squat, as it was before 1895. Its present Russian-style appearance took shape only in 1895. From 1896 to 1919 the tower housed an Art Museum.",
+      "zh": "在这张照片里，德米特里耶夫塔显得平整而低矮，这是它在1895年之前的样子。如今看到的俄罗斯风格外观到1895年才形成。1896年至1919年间，塔内曾设有艺术博物馆。"
+    }
+  },
+  "photo-p1913": {
+    "model": "deepseek-flash",
+    "signature": "4dce9e3227375e2f854ce5b9b646c3e4ca7fcafba449f1012742c466b95faf4b",
+    "source": "https://commons.wikimedia.org/wiki/File:Bolshaya_Pokrovskaya_St_1913.jpg",
+    "text": {
+      "ru": "На этой открытке 1913 года по Большой Покровской идёт трамвай, а над крышами видны колокольня и купол церкви. Сегодня это главная пешеходная улица центра, хотя ракурс на фото немного отличается.",
+      "en": "In this 1913 postcard, a tram runs along Bolshaya Pokrovskaya, and the bell tower and church dome are visible above the roofs. Today it is the main pedestrian street in the center, though the angle in the photo is slightly different.",
+      "zh": "在这张1913年的明信片上，一辆有轨电车沿着大波克罗夫斯卡亚街行驶，屋顶上方可以看到钟楼和教堂圆顶。如今这里是市中心的主要步行街，不过照片中的角度略有不同。"
+    }
+  },
+  "photo-fold": {
+    "model": "deepseek-flash",
+    "signature": "1753e24fd91968c02efd45846201f5c7a6cb6296a8779cab0af533719657d205",
+    "source": "https://commons.wikimedia.org/wiki/File:Нижний_Новгород_Нижегородская_ярмарка_главный_дом_8.jpg",
+    "text": {
+      "ru": "На этой открытке «Нижегородская ярмарка. Главный дом» виден фасад с лавками, а справа на вывеске читается слово «Игрушки». Сегодня перед домом находится общественное пространство, и закат подсвечивает фасад. Ракурс почти совпадает, но вывеска и лавки относятся к историческому контексту, а не к современному виду.",
+      "en": "This postcard, 'Nizhny Novgorod Fair. Main House,' shows the façade with shops, and the sign on the right reads 'Toys.' Today a public space lies in front of the building, and sunset lights up the façade. The viewpoint almost matches, but the sign and shops belong to the historical context, not to the modern appearance.",
+      "zh": "这张题为《下诺夫哥罗德集市。主楼》的明信片展示了带有店铺的立面，右侧招牌上写着“玩具”。如今楼前是公共空间，夕阳照亮了立面。取景角度几乎一致，但招牌和店铺属于历史背景，并非现代景象。"
+    }
+  },
+  "photo-s1896": {
+    "model": "deepseek-flash",
+    "signature": "8f63b832be0d05e77e6988cdd073be5ff66f3460a0caa1e91b0c5b4aee6a8de0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shukhov_Hyperboloid_Tower_in_Nizhniy_Novgorod_1896.jpg",
+    "text": {
+      "ru": "На этой фотографии 1896 года видна гиперболоидная башня Шухова на фоне главного павильона Всероссийской выставки. На снимке хорошо заметна ажурная металлическая конструкция башни, однако это историческое изображение, а не современная точка съёмки. Ажурные металлические пакгаузы на Стрелке сохранились от павильонов той выставки — сегодня это выставочные пространства.",
+      "en": "This 1896 photograph shows Shukhov's hyperboloid tower against the backdrop of the main pavilion of the All-Russian Exhibition. The tower's openwork metal structure is clearly visible, but this is a historical image, not a modern viewpoint. The openwork metal warehouses on the Strelka have survived from the pavilions of that exhibition — today they are exhibition spaces.",
+      "zh": "这张1896年的照片显示了舒霍夫双曲面塔，背景是全俄展览会的主展馆。照片中塔的镂空金属结构清晰可见，但这是历史影像，并非现代拍摄点。箭头地的镂空金属仓库保留自那次展览会的展馆——如今是展览空间。"
+    }
+  },
+  "photo-g1900": {
+    "model": "deepseek-flash",
+    "signature": "687365ea42b711743b4b54739c3e24d21c43a61769df3c8abb3846cb99d2617e",
+    "source": "https://commons.wikimedia.org/wiki/File:Blagoveschenskaya_Sq-Provincial_gymnasia-NNovgorod-1900.jpg",
+    "text": {
+      "ru": "На этом архивном снимке Василия Зевеке, датированном примерно 1900 годом, заснеженная Благовещенская площадь и губернская гимназия. Здание на фотографии видно как светлый корпус с рядом окон, а его историческое местоположение в реестре Мининского университета указано по адресу улица Ульянова, 1. Современный вид площади Минина и Пожарского снят с другого ракурса, со стороны Дмитриевской башни, поэтому он не показывает то же самое здание в кадре.",
+      "en": "This archival photograph by Vasily Zeveke, dated around 1900, shows the snow-covered Blagoveshchenskaya Square and the provincial gymnasium. The building appears as a light-colored block with rows of windows, and its historical location is listed in the Minin University register at 1 Ulyanova Street. The modern photograph of Minin and Pozharsky Square is taken from a different angle, from the side of the Dmitrievskaya Tower, so it does not show the same building in the frame.",
+      "zh": "这张瓦西里·泽韦克拍摄的档案照片约摄于1900年，展现了白雪覆盖的报喜广场和省立中学。照片中的建筑是一座浅色楼房，可见成排窗户；在米宁大学的登记册中，其历史位置标注为乌里扬诺夫街1号。米宁与波扎尔斯基广场的现代照片是从德米特里耶夫塔一侧的另一角度拍摄的，因此画面中并未呈现同一座建筑。"
+    }
+  }
+}

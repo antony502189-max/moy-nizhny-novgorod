@@ -1,3 +1,4 @@
+import polygons from '../data/districts.json' with { type: 'json' };
 export interface LatLon { lat: number; lon: number }
 export const CENTER: LatLon = { lat: 56.3269, lon: 44.0059 };
 
@@ -13,20 +14,31 @@ export function fmtDist(m: number, lang: string): string {
   return `${(m / 1000).toFixed(1)} ${lang === 'en' ? 'km' : lang === 'zh' ? '公里' : 'км'}`;
 }
 
-/** Approximate city districts (nearest conventional centre — for the demo dashboard only, NOT official boundaries). */
-export const DISTRICTS: { id: string; ru: string; en: string; zh: string; lat: number; lon: number }[] = [
-  { id: 'nizhegorodsky', ru: 'Нижегородский', en: 'Nizhegorodsky', zh: '下城区', lat: 56.3155, lon: 43.9950 },
-  { id: 'sovetsky', ru: 'Советский', en: 'Sovetsky', zh: '苏维埃区', lat: 56.2900, lon: 43.9750 },
-  { id: 'kanavinsky', ru: 'Канавинский', en: 'Kanavinsky', zh: '卡纳温区', lat: 56.3330, lon: 43.9450 },
-  { id: 'moskovsky', ru: 'Московский', en: 'Moskovsky', zh: '莫斯科区', lat: 56.3150, lon: 43.8950 },
-  { id: 'avtozavodsky', ru: 'Автозаводский', en: 'Avtozavodsky', zh: '汽车厂区', lat: 56.2450, lon: 43.8750 },
-  { id: 'sormovsky', ru: 'Сормовский', en: 'Sormovsky', zh: '索尔莫沃区', lat: 56.3600, lon: 43.8650 },
-  { id: 'prioksky', ru: 'Приокский', en: 'Prioksky', zh: '奥卡河畔区', lat: 56.2700, lon: 43.9300 },
-  { id: 'leninsky', ru: 'Ленинский', en: 'Leninsky', zh: '列宁区', lat: 56.2750, lon: 43.9950 },
+/** Localized names keyed by the OSM administrative boundary. */
+export const DISTRICTS: { id: string; ru: string; en: string; zh: string; }[] = [
+  { id: 'nizhegorodsky', ru: 'Нижегородский', en: 'Nizhegorodsky', zh: '下城区' },
+  { id: 'sovetsky', ru: 'Советский', en: 'Sovetsky', zh: '苏维埃区' },
+  { id: 'kanavinsky', ru: 'Канавинский', en: 'Kanavinsky', zh: '卡纳温区' },
+  { id: 'moskovsky', ru: 'Московский', en: 'Moskovsky', zh: '莫斯科区' },
+  { id: 'avtozavodsky', ru: 'Автозаводский', en: 'Avtozavodsky', zh: '汽车厂区' },
+  { id: 'sormovsky', ru: 'Сормовский', en: 'Sormovsky', zh: '索尔莫沃区' },
+  { id: 'prioksky', ru: 'Приокский', en: 'Prioksky', zh: '奥卡河畔区' },
+  { id: 'leninsky', ru: 'Ленинский', en: 'Leninsky', zh: '列宁区' },
 ];
 
+function contains(ring: number[][], p: LatLon) {
+  let inside = false;
+  for (let i=0, j=ring.length-1; i<ring.length; j=i++) {
+    const [y1,x1] = ring[j], [y2,x2] = ring[i];
+    if ((y1 > p.lat) !== (y2 > p.lat) && p.lon < (x2-x1)*(p.lat-y1)/(y2-y1)+x1) inside = !inside;
+  }
+  return inside;
+}
+
 export function districtOf(p: LatLon): string {
-  let best = DISTRICTS[0], bd = Infinity;
-  for (const d of DISTRICTS) { const x = distanceM(p, d); if (x < bd) { bd = x; best = d; } }
-  return best.id;
+  for (const district of DISTRICTS) {
+    const shape = polygons[district.ru as keyof typeof polygons];
+    if (shape.outer.some(ring => contains(ring,p)) && !shape.inner.some(ring => contains(ring,p))) return district.id;
+  }
+  return 'unknown';
 }

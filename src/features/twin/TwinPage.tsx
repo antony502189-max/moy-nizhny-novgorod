@@ -15,11 +15,11 @@ export function TwinPage({ path }: { path: string }) {
     return (
       <div className="page">
         <PageTitle title={t('twin.title')} sub={t('twin.sub')} />
-        <span className="badge badge--demo" style={{ alignSelf: 'flex-start' }}>{t('twin.draft')}</span>
+
         <div className="list">
           {TWINS.map((c) => (
             <button key={c.id} className="row row--btn" onClick={() => { writeLocal('ng.twin', c.id); go('/twin/' + c.id); }}>
-              <span className="flagc" aria-hidden="true">{c.flag}</span>
+              <span className="flagc" aria-hidden="true">{c.flag || <Icon name="globe"/>}</span>
               <div className="row__main"><b>{l(c.name)}</b><span>{l(c.country)} · {fmtDist(distanceM(c, CENTER), lang)}</span></div><Icon name="chev" size={18} />
             </button>
           ))}
@@ -30,14 +30,14 @@ export function TwinPage({ path }: { path: string }) {
   const starts = [
     { to: '/now', icon: 'sunset', label: t('twin.start.now') },
     { to: '/history', icon: 'camera', label: t('twin.start.hist') },
-    { to: '/tour', icon: 'sparkle', label: t('twin.start.tour') },
+    { to: '/tour', icon: 'route', label: t('twin.start.tour') },
     { to: '/report', icon: 'flag', label: t('twin.start.rep') },
   ];
   return (
     <div className="page">
       <button className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start' }} onClick={() => go('/twin')}><Icon name="back" size={16} />{t('twin.back')}</button>
       <div className="hero">
-        <span className="flagc" style={{ fontSize: 36 }} aria-hidden="true">{city.flag}</span>
+        <span className="flagc" style={{ fontSize: 36 }} aria-hidden="true">{city.flag || <Icon name="globe"/>}</span>
         <h1>{l(city.name)}</h1>
         <p>{l(city.welcome)}</p>
         <p className="muted small">{t('twin.dist', { d: fmtDist(distanceM(city, CENTER), lang) })}</p>
@@ -56,7 +56,7 @@ export function TwinPage({ path }: { path: string }) {
               </div>
             </div>
           ))}
-          <span className="badge badge--demo" style={{ alignSelf: 'flex-start' }}>{t('twin.draft')}</span>
+          <a href={city.source} target="_blank" rel="noreferrer">{t(city.id === 'vitebsk' ? 'twin.partner' : 'twin.sister')} ↗</a>
         </div>
       </Section>
       <Section title={t('twin.start')} icon="route">
