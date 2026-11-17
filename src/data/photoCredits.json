@@ -1,0 +1,164 @@
+{
+ "kremlin": {
+  "src": "places/kremlin.jpg",
+  "author": "WildPea",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B_cropped.jpg",
+  "caption": "Вид на Нижегородский кремль с высоты cropped.jpg",
+  "historic": false
+ },
+ "dmitriev": {
+  "src": "places/dmitriev.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN-16-05-2022_14.jpg",
+  "caption": "NN-16-05-2022 14.jpg",
+  "historic": false
+ },
+ "minin": {
+  "src": "places/minin.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN-16-05-2022_11.jpg",
+  "caption": "NN-16-05-2022 11.jpg",
+  "historic": false
+ },
+ "chkalov": {
+  "src": "places/chkalov.jpg",
+  "author": "WildPea",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%BA%D0%B0%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%86%D0%B0._%D0%92%D0%B8%D0%B4_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5-%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg",
+  "caption": "Чкаловская лестница. Вид со стороны Нижне-Волжской набережной.jpg",
+  "historic": false
+ },
+ "fair": {
+  "src": "places/fair.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN-16-05-2022_41.jpg",
+  "caption": "NN-16-05-2022 41.jpg",
+  "historic": false
+ },
+ "garden": {
+  "src": "places/garden.jpg",
+  "author": "WildPea",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4_%D0%B2_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%BC_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5_2024.jpg",
+  "caption": "Александровский сад в Нижнем Новгороде 2024.jpg",
+  "historic": false
+ },
+ "upper-volga": {
+  "src": "places/upper-volga.jpg",
+  "author": "WildPea",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B5-%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_2024.jpg",
+  "caption": "Верхне-Волжская набережная 2024.jpg",
+  "historic": false
+ },
+ "lower-volga": {
+  "src": "places/lower-volga.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lower-Volga_River_embankment_04.jpg",
+  "caption": "Lower-Volga River embankment 04.jpg",
+  "historic": false
+ },
+ "pokrovskaya": {
+  "src": "places/pokrovskaya.jpg",
+  "author": "Vyacheslav Bukharov",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bolshaya_Pokrovskaya_Street_(June_2024)_-_3.jpg",
+  "caption": "Bolshaya Pokrovskaya Street (June 2024) - 3.jpg",
+  "historic": false
+ },
+ "rozhdestvenskaya": {
+  "src": "places/rozhdestvenskaya.jpg",
+  "author": "Vyacheslav Bukharov",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Streets_in_Nizhny_Novgorod_(June_2024)_-_9.jpg",
+  "caption": "Streets in Nizhny Novgorod (June 2024) - 9.jpg",
+  "historic": false
+ },
+ "victory": {
+  "src": "places/victory.jpg",
+  "author": "Vyacheslav Bukharov",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monuments_and_memorials_in_Nizhny_Novgorod_(June_2024)_-_15.jpg",
+  "caption": "Monuments and memorials in Nizhny Novgorod (June 2024) - 15.jpg",
+  "historic": false
+ },
+ "school": {
+  "src": "places/school.jpg",
+  "author": "Vasily Zeveke(1878-1941)",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blagoveschenskaya_Sq-Provincial_gymnasia-NNovgorod-1900.jpg",
+  "caption": "Blagoveschenskaya Sq-Provincial gymnasia-NNovgorod-1900.jpg",
+  "historic": true
+ },
+ "fedorovsky": {
+  "src": "places/fedorovsky.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN_30-06-2022_Fedorovsky_Embankment.jpg",
+  "caption": "NN 30-06-2022 Fedorovsky Embankment.jpg",
+  "historic": false
+ },
+ "station": {
+  "src": "places/station.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Novacard_office_01.jpg",
+  "caption": "Novacard office 01.jpg",
+  "historic": false
+ },
+ "bell": {
+  "src": "places/bell.jpg",
+  "author": "Alexxx1979",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Kremlin._The_restored_bell_tower_of_the_Transfiguration_Cathedral_P5180711_2800.jpg",
+  "caption": "Nizhny Novgorod. Kremlin. The restored bell tower of the Transfiguration Cathedral P5180711 2800.jpg",
+  "historic": false
+ },
+ "zachatie": {
+  "src": "places/zachatie.jpg",
+  "author": "Алексей Трефилов",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN_28-08-2021_22.jpg",
+  "caption": "NN 28-08-2021 22.jpg",
+  "historic": false
+ },
+ "barracks": {
+  "src": "places/barracks.jpg",
+  "author": "Гордиенко Надежда",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC%D1%8B%22_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5-%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg",
+  "caption": "Нижний Новгород. \"Красные казармы\" на Нижне-Волжской набережной.jpg",
+  "historic": false
+ },
+ "markin": {
+  "src": "places/markin.jpg",
+  "author": "Aleksey Igonin",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_(2012.06.14)_-_panoramio.jpg",
+  "caption": "Фонтан (2012.06.14) - panoramio.jpg",
+  "historic": false
+ }
+}

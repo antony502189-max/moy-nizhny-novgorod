@@ -1,0 +1,33 @@
+import type { Bundle } from '../../core/i18n';
+export const historyStrings: Bundle = {
+  ru: {
+    'hist.title': 'Тогда и сейчас', 'hist.sub': 'Как выглядели места раньше: двигайте ползунок', 'hist.guess': 'Угадай год', 'hist.guess.sub': 'Посмотрите на старое фото и назовите год',
+    'hist.then': 'Тогда', 'hist.now': 'Сейчас', 'hist.slider': 'Ползунок: старое фото и современное', 'hist.drag': 'Двигайте ползунок',
+    'hist.credit.then': 'Старое фото', 'hist.credit.now': 'Современное фото', 'hist.angle': 'Ракурс может отличаться.', 'hist.licence.note': 'Лицензии указаны так, как их приводит Wikimedia Commons.',
+    'hist.on_map': 'Где это', 'hist.spots': 'Места', 'hist.back': 'Все места',
+    'guess.round': 'Фото {n} из {total}', 'guess.q': 'В каком году сделан этот снимок?', 'guess.your': 'Ваш год', 'guess.submit': 'Ответить', 'guess.next': 'Дальше', 'guess.finish': 'Итог',
+    'guess.exact': 'Точно в цель!', 'guess.off': 'Ошибка на {n} {yrs}', 'guess.truth': 'Правильный год', 'guess.truth.approx': 'Примерно (дата по данным Commons)', 'guess.points': '+{n} очков',
+    'guess.score': 'Ваш результат: {n} из {max}', 'guess.again': 'Сыграть ещё раз', 'guess.to_list': 'К местам', 'guess.hint': 'Подсказка: на фото есть трамвай, вывески, одежда…',
+    'yrs.1': 'год', 'yrs.2': 'года', 'yrs.5': 'лет',
+  },
+  en: {
+    'hist.title': 'Then and now', 'hist.sub': 'How places looked before: drag the slider', 'hist.guess': 'Guess the year', 'hist.guess.sub': 'Look at an old photo and name the year',
+    'hist.then': 'Then', 'hist.now': 'Now', 'hist.slider': 'Slider: old photo versus modern photo', 'hist.drag': 'Drag the slider',
+    'hist.credit.then': 'Old photo', 'hist.credit.now': 'Modern photo', 'hist.angle': 'The angle may differ.', 'hist.licence.note': 'Licences are given as stated on Wikimedia Commons.',
+    'hist.on_map': 'Where is it', 'hist.spots': 'Places', 'hist.back': 'All places',
+    'guess.round': 'Photo {n} of {total}', 'guess.q': 'In what year was this photo taken?', 'guess.your': 'Your year', 'guess.submit': 'Answer', 'guess.next': 'Next', 'guess.finish': 'Result',
+    'guess.exact': 'Spot on!', 'guess.off': 'Off by {n} {yrs}', 'guess.truth': 'Correct year', 'guess.truth.approx': 'Approximately (date per Commons)', 'guess.points': '+{n} points',
+    'guess.score': 'Your score: {n} of {max}', 'guess.again': 'Play again', 'guess.to_list': 'To places', 'guess.hint': 'Hint: look at trams, signs, clothes…',
+    'yrs.1': 'year', 'yrs.2': 'years', 'yrs.5': 'years',
+  },
+  zh: {
+    'hist.title': '今昔对比', 'hist.sub': '看看地点过去的模样：拖动滑块', 'hist.guess': '猜年份', 'hist.guess.sub': '看老照片，说出年份',
+    'hist.then': '当年', 'hist.now': '现在', 'hist.slider': '滑块：老照片与现代照片对比', 'hist.drag': '拖动滑块',
+    'hist.credit.then': '老照片', 'hist.credit.now': '现代照片', 'hist.angle': '拍摄角度可能不同。', 'hist.licence.note': '许可信息按维基共享资源所示。',
+    'hist.on_map': '在哪里', 'hist.spots': '地点', 'hist.back': '全部地点',
+    'guess.round': '第 {n} 张，共 {total} 张', 'guess.q': '这张照片拍于哪一年？', 'guess.your': '您的答案', 'guess.submit': '提交', 'guess.next': '下一张', 'guess.finish': '结果',
+    'guess.exact': '完全正确！', 'guess.off': '相差 {n} {yrs}', 'guess.truth': '正确年份', 'guess.truth.approx': '大约（日期以共享资源为准）', 'guess.points': '+{n} 分',
+    'guess.score': '您的得分：{n} / {max}', 'guess.again': '再玩一次', 'guess.to_list': '回到地点', 'guess.hint': '提示：留意电车、招牌、服饰……',
+    'yrs.1': '年', 'yrs.2': '年', 'yrs.5': '年',
+  },
+};
