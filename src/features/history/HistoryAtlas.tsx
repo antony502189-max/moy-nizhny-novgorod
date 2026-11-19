@@ -28,7 +28,7 @@ export function HistoryAtlas({ focused }: { focused?: HistorySpot }) {
   return (
     <div className="page history-atlas">
       <PageTitle title={t('hist.title')} sub={t('hist.sub')} />
-      <section className="sec" aria-label={t('hist.map')}>
+      <Section title={t('hist.mapTitle')} right={<span className="muted">{shown.length}</span>} icon="pin">
         <label className="history-atlas__search">
           <Icon name="search" size={18}/>
           <input type="search" aria-label={t('hist.search')} placeholder={t('hist.search')} value={query} onChange={e => setQuery(e.target.value)} />
@@ -36,11 +36,6 @@ export function HistoryAtlas({ focused }: { focused?: HistorySpot }) {
         <LeafMap markers={markers} fit cluster selectedId={selected?.id} focusPoint={selected}
           label={t('hist.map')} className="history-atlas__map" />
         {selected && <a className="history-atlas__selected" href={'#/history/' + selected.id}><Icon name="pin" size={16}/>{selected.title}</a>}
-      </section>
-      <button className="hero" style={{ border: 0, textAlign: 'left' }} onClick={() => go('/history/guess')}>
-        <h2><Icon name="star" size={20} />{t('hist.guess')}</h2><p className="muted">{t('hist.guess.sub')}</p>
-      </button>
-      <Section title={t('hist.spots')} right={<span className="muted">{shown.length}</span>} icon="camera">
         {!shown.length && <p role="status">{t('guide.none')}</p>}
         <div className="list">
           {shown.map(({ spot }) => (
@@ -53,6 +48,9 @@ export function HistoryAtlas({ focused }: { focused?: HistorySpot }) {
           ))}
         </div>
       </Section>
+      <button className="hero" style={{ border: 0, textAlign: 'left' }} onClick={() => go('/history/guess')}>
+        <h2><Icon name="star" size={20} />{t('hist.guess')}</h2><p className="muted">{t('hist.guess.sub')}</p>
+      </button>
     </div>
   );
 }
