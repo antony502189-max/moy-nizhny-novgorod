@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useI18n } from '../../core/i18n';
 import { Icon, svgInner } from '../../core/Icon';
 import { LeafMap, type MapMarker } from '../../core/Map';
 import { PageTitle, Section, Chip } from '../../core/ui';
 import { PlaceSheet } from '../../core/PlaceCard';
 import { CENTER, distanceM, fmtDist, type LatLon } from '../../core/geo';
+import { isOnCityMap } from '../../core/basemap';
 import { sunDay, compass } from '../../core/sun';
 import { fmtTime, getNow, TZ } from '../../core/time';
 import { go } from '../../core/router';
@@ -23,16 +24,20 @@ export function fmtDur(min: number, lang: string): string {
 }
 
 type Layer = 'events' | 'sunset' | 'wc' | 'water' | 'access' | 'steps';
-type Sel = { type: 'place'; place: Place; event?: CityEvent } | { type: 'amen'; a: Amenity } | null;
+type Sel = { type: 'place'; place: Place; event?: CityEvent } | { type: 'amen'; a: Amenity };
+const LOCATION_MARKER = 'me';
+const MAX_LOCATION_ACCURACY_M = 500;
 
 export function NowPage() {
   const { t, l, lang } = useI18n();
   const [now, setNow] = useState(getNow());
   useEffect(() => { const i = setInterval(() => setNow(getNow()), 30000); return () => clearInterval(i); }, []);
-  const [ref, setRef] = useState<LatLon & { me: boolean }>({ ...CENTER, me: false });
-  const [toast, setToast] = useState('');
+  const [location, setLocation] = useState<LatLon | null>(null);
+  const [geoStatus, setGeoStatus] = useState('');
   const [layers, setLayers] = useState<Set<Layer>>(new Set(['events', 'sunset', 'wc', 'water']));
-  const [sel, setSel] = useState<Sel>(null);
+  const [sel, setSel] = useState<Sel | null>(null);
+  const [focusPoint, setFocusPoint] = useState<LatLon | null>(null);
+  const mapAnchor = useRef<HTMLDivElement>(null);
 
   const upcoming = useMemo(() => upcomingEvents(now), [now]);
 
@@ -42,21 +47,56 @@ export function NowPage() {
     return { ...d, tomorrow };
   }, [now]);
 
-  const viewpoints = useMemo(() => PLACES.filter((p) => p.sunset).sort((a, b) => distanceM(ref, a) - distanceM(ref, b)).slice(0, 5), [ref]);
-  const nearest = (kind: Amenity['kind']) => AMEN.filter((a) => a.kind === kind).map((a) => ({ a, d: distanceM(ref, a) })).sort((x, y) => x.d - y.d)[0];
+  const viewpoints = useMemo(() => {
+    const origin = location ?? CENTER;
+    return PLACES.filter(p => p.sunset).sort((a, b) => distanceM(origin, a) - distanceM(origin, b)).slice(0, 5);
+  }, [location]);
+  const nearest = (kind: Amenity['kind']) => location
+    ? AMEN.filter(a => a.kind === kind).map(a => ({ a, d: distanceM(location, a) })).sort((a, b) => a.d - b.d)[0]
+    : undefined;
   const nWc = nearest('toilet'), nWater = nearest('water');
+  const locating = geoStatus === 'now.geo.locating';
+  const fromLocation = (meters: number) => t('now.distance', { d: fmtDist(meters, lang) });
 
-  const locate = () => {
-    if (!navigator.geolocation) { setToast(t('now.geo.fail')); return; }
+  function revealMap({ lat, lon }: LatLon) {
+    setFocusPoint({ lat, lon });
+    mapAnchor.current?.scrollIntoView({ block: 'start' });
+    mapAnchor.current?.focus({ preventScroll: true });
+  }
+
+  function selectOnMap(selection: Sel, layer: Layer) {
+    setSel(selection);
+    setLayers(active => active.has(layer) ? active : new Set(active).add(layer));
+    revealMap(selection.type === 'place' ? selection.place : selection.a);
+  }
+
+  function locate() {
+    setLocation(null);
+    setSel(null);
+    if (!navigator.geolocation) {
+      setGeoStatus('now.geo.unavailable');
+      return;
+    }
+    setGeoStatus('now.geo.locating');
     navigator.geolocation.getCurrentPosition(
-      (p) => {
-        const me = { lat: p.coords.latitude, lon: p.coords.longitude };
-        if (distanceM(me, CENTER) > 40000) { setToast(t('now.geo.far')); return; }
-        setRef({ ...me, me: true });
+      ({ coords }) => {
+        const point = { lat: coords.latitude, lon: coords.longitude };
+        if (!isOnCityMap(point)) {
+          setGeoStatus('now.geo.far');
+          return;
+        }
+        if (coords.accuracy > MAX_LOCATION_ACCURACY_M) {
+          setGeoStatus('now.geo.inaccurate');
+          return;
+        }
+        setLocation(point);
+        setGeoStatus('now.geo.found');
+        revealMap(point);
       },
-      () => setToast(t('now.geo.fail')), { timeout: 8000 });
-  };
-  useEffect(() => { if (toast) { const i = setTimeout(() => setToast(''), 3500); return () => clearTimeout(i); } }, [toast]);
+      ({ code }) => setGeoStatus(code === 1 ? 'now.geo.denied' : code === 3 ? 'now.geo.timeout' : 'now.geo.fail'),
+      { enableHighAccuracy: true, maximumAge: 0, timeout: 15000 },
+    );
+  }
 
   const markers = useMemo<MapMarker[]>(() => {
     const out: MapMarker[] = [];
@@ -72,14 +112,17 @@ export function NowPage() {
     if (layers.has('water')) add('water', 'pin pin--water', 'drop', 26);
     if (layers.has('access')) add('stepfree', 'pin pin--access', 'access', 26);
     if (layers.has('steps')) AMEN.filter((a) => a.kind === 'steps').forEach((a) => out.push({ id: a.id, lat: a.lat, lon: a.lon, cls: 'pin pin--step', size: 10, onClick: () => setSel({ type: 'amen', a }) }));
-    if (ref.me) out.push({ id: 'me', lat: ref.lat, lon: ref.lon, cls: 'pin pin--bad', size: 16 });
+    if (location) out.push({ id: LOCATION_MARKER, ...location, cls: 'pin pin--me', size: 18, title: t('now.you'), popup: t('now.you') });
     return out;
-  }, [layers, upcoming, viewpoints, ref, l, t]);
+  }, [layers, upcoming, viewpoints, location, l, t]);
 
   const toggle = (k: Layer) => setLayers((s) => { const n = new Set(s); n.has(k) ? n.delete(k) : n.add(k); return n; });
   const sunLeft = sun.sunset && !sun.tomorrow ? Math.round((sun.sunset.getTime() - now.getTime()) / 60000) : null;
   const amenName = (a: Amenity) => a.name || (a.kind === 'toilet' ? t('now.wc') : a.kind === 'water' ? t('now.water') : a.kind === 'steps' ? t('now.steps') : t('now.access'));
-  const refLabel = ref.me ? t('now.from_me') : t('now.from_center');
+  const selectedId = sel?.type === 'place' ? (sel.event ? 'ev-' + sel.event.id : 'sun-' + sel.place.id)
+    : sel?.type === 'amen' ? sel.a.id : location ? LOCATION_MARKER : undefined;
+  const selectedName = sel?.type === 'place' ? l(sel.place.name)
+    : sel?.type === 'amen' ? amenName(sel.a) : location ? t('now.you') : null;
 
   return (
     <div className="page">
@@ -114,46 +157,50 @@ export function NowPage() {
           <p className="muted small">{t('now.sunset.calc')}</p>
         </div>
         <h3>{t('now.viewpoints')}</h3>
-        <p className="muted small">{t('now.viewpoints.note')}</p>
-        <div className="list">
+        <p className="muted small">{t('now.viewpoints.note')}{location && ' ' + t('now.geo.found')}</p>
+        <div className="list" role="group" aria-label={t('now.viewpoints')}>
           {viewpoints.map((p) => (
-            <button key={p.id} className="row row--btn" onClick={() => setSel({ type: 'place', place: p })}>
+            <button key={p.id} className="row row--btn" onClick={() => selectOnMap({ type: 'place', place: p }, 'sunset')}>
               {placePhoto(p) ? <img className="thumb" src={placePhoto(p)} alt="" loading="lazy" /> : <span className="thumb" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f08a24' }}><Icon name="sunset" size={26} /></span>}
               <div className="row__main"><b>{l(p.name)}</b><span>{l(p.sunset)}</span></div>
-              <span className="muted small">{fmtDist(distanceM(ref, p), lang)}</span>
+              {location && <span className="muted small now-distance">{fromLocation(distanceM(location, p))}</span>}
+              <Icon name="chev" size={18} />
             </button>
           ))}
         </div>
       </Section>
 
-      <Section title={t('now.nearest')} icon="pin" right={<button className="btn btn--ghost btn--sm" onClick={locate}><Icon name="pin" size={16} />{t('now.near_me')}</button>}>
-        <div className="stats">
-          {[{ k: 'wc', n: nWc, i: 'wc', lab: t('now.wc') }, { k: 'water', n: nWater, i: 'drop', lab: t('now.water') }].map(({ k, n, i, lab }) => n && (
-            <button key={k} className="stat row--btn" style={{ border: 0, textAlign: 'left' }} onClick={() => { setSel({ type: 'amen', a: n.a }); setLayers((s) => new Set(s).add(k as Layer)); }}>
-              <Icon name={i} size={22} /><b>{fmtDist(n.d, lang)}</b><span className="muted small">{lab} · {refLabel}</span>
+      <Section title={t('now.nearest')} icon="pin" right={<button className="btn btn--ghost btn--sm" onClick={locate} disabled={locating}><Icon name="pin" size={16} />{t('now.near_me')}</button>}>
+        <p className="muted small" role="status">{t(geoStatus || 'now.geo.hint')}</p>
+        {location && <div className="stats">
+          {([{ k: 'wc', n: nWc, i: 'wc', lab: t('now.wc') }, { k: 'water', n: nWater, i: 'drop', lab: t('now.water') }] as const).map(({ k, n, i, lab }) => n && (
+            <button key={k} className="stat row--btn" style={{ border: 0, textAlign: 'left' }} onClick={() => selectOnMap({ type: 'amen', a: n.a }, k)}>
+              <Icon name={i} size={22} /><b>{lab}</b><span className="muted small">{fromLocation(n.d)}</span>
             </button>
           ))}
-        </div>
+        </div>}
       </Section>
 
       <Section title={t('now.map')} icon="layers">
         <div className="chips">
           {(['events', 'sunset', 'wc', 'water', 'access', 'steps'] as Layer[]).map((k) => <Chip key={k} active={layers.has(k)} onClick={() => toggle(k)}>{t('now.layer.' + k)}</Chip>)}
         </div>
-        <LeafMap markers={markers} zoom={14} className="leafmap--tall" selectedId={sel?.type === 'amen' ? sel.a.id : undefined} />
+        <div ref={mapAnchor} tabIndex={-1} role="group" aria-label={selectedName ?? t('now.map')}>
+          {selectedName && <p className="now-map-point"><Icon name="pin" size={16} />{selectedName}</p>}
+          <LeafMap markers={markers} zoom={14} className="leafmap--tall" selectedId={selectedId} focusPoint={focusPoint} />
+        </div>
         <p className="muted small">{layers.has('access') || layers.has('steps') ? t('now.stepfree.hint') + ' ' : ''}{t('now.osm')}</p>
         {sel?.type === 'place' && <PlaceSheet place={sel.place} onClose={() => setSel(null)} extra={sel.event ? <a href={sel.event.source} target="_blank" rel="noreferrer">{l(sel.event.title)} ↗</a> : undefined} />}
         {sel?.type === 'amen' && (
           <div className="sheet">
             <div className="sec__head"><h3>{amenName(sel.a)}</h3><button className="chip" onClick={() => setSel(null)} aria-label={t('common.close')}><Icon name="close" size={16} /></button></div>
-            <p className="muted">{fmtDist(distanceM(ref, sel.a), lang)} · {refLabel}</p>
+            {location && <p className="muted">{fromLocation(distanceM(location, sel.a))}</p>}
             {sel.a.fee && <p>{sel.a.fee === 'yes' ? t('now.fee.yes') : sel.a.fee === 'no' ? t('now.fee.no') : sel.a.fee}</p>}
             {sel.a.opening && <p className="muted small">{sel.a.opening}</p>}
             <p className="credit">{t('now.osm')} © OpenStreetMap contributors</p>
           </div>
         )}
       </Section>
-      {toast && <div className="toast" role="status">{toast}</div>}
     </div>
   );
 }

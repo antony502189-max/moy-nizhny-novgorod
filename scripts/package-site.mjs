@@ -13,7 +13,7 @@ if (process.argv.includes('--pages')) {
   await rename('dist/city.html', 'dist/resident.html');
   await mkdir('dist/assets', { recursive: true });
   const images = (await readdir('assets')).filter(n => n.startsWith('map-') && n.endsWith('.webp')).map(n => 'assets/' + n);
-  for (const name of [...images, 'places', 'history', 'housing', 'maps', 'guide', 'fonts/OFL.txt', 'favicon.svg',
+  for (const name of [...images, 'assets/city-banner-teal.webp', 'assets/mayor.webp', 'places', 'history', 'housing', 'maps', 'guide', 'fonts/OFL.txt', 'favicon.svg',
     'icon-192.png', 'icon-512.png', 'manifest.webmanifest', '.nojekyll']) {
     await cp(name, 'dist/' + name, { recursive: true, filter: path => !path.endsWith('.md') });
   }

@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { Home, LayoutGrid, MapPin, MapPinned, ChevronLeft, Info, Heart, Navigation, Route, Search, ChevronDown, ArrowUp, Clock3, CalendarDays, GalleryVerticalEnd, ExternalLink, Check } from 'lucide-react';
+import { Home, LayoutGrid, MapPin, MapPinned, ChevronLeft, Info, Heart, Navigation, Route, Search, ChevronDown, ArrowUp, Clock3, CalendarDays, GalleryVerticalEnd, ExternalLink, Check, FileText } from 'lucide-react';
 import { places, walks, closures, categories, serviceInfo } from './domain/data';
 import { filterPlaces, plural, toggleFavorite } from './domain/logic';
 import type { Category, Place, Walk, Closure, Screen, RootScreen, Preferences } from './domain/types';
@@ -20,6 +20,8 @@ import { emptyPersonal } from './domain/personal';
 import { Settings } from './components/Settings';
 import { distanceKm, routeUrl, validPoint } from './domain/geo';
 import type { GeoPoint } from './domain/types';
+
+const assets = import.meta.env.BASE_URL + 'assets/';
 
 type Modal = {kind:'settings'}|{kind:'nearby';position?:GeoPoint}|{kind:'info';service:keyof typeof serviceInfo}|{kind:'place';place:Place}|{kind:'closure';closure:Closure}|{kind:'notice';title:string;message:string};
 type MapTarget={title:string;address:string;walk?:Walk;lat?:number;lon?:number};
@@ -135,9 +137,25 @@ export default function App(){
   {onboarding?<Onboarding onDone={done} onCommunity={()=>external('community')} onNotification={permission=>{setPrefs(p=>({...p,notificationPermission:permission}));setToast(permission==='granted'?'Разрешение получено. Доставка уведомлений требует подключения сервиса.':permission==='denied'?'Уведомления отключены в браузере.':'Можно продолжить без уведомлений.')}}/>:<>
   <div className={`screen-scroll screen-${screen.name} ${hasBottomNav?'with-bottom-nav':''}`} ref={viewport} {...(modalOpen ? { inert: '' } : {})} onScroll={e=>setScrolled(e.currentTarget.scrollTop>320)}>
    {screen.name==='home'&&<main className="home-screen">
-    <header className="resident-cover"><h1>Мой Нижний Новгород</h1><img src={import.meta.env.BASE_URL+'places/kremlin.jpg'} alt="Нижегородский кремль с высоты"/><a href="./index.html#/guide/kremlin">Нижегородский кремль · WildPea, CC0</a></header>
+    <header className="resident-cover">
+     <h1 className="resident-title">Мой Нижний Новгород</h1>
+     <img src={assets+'city-banner-teal.webp'} width={1440} height={552} alt="Приложение для жителей города"/>
+    </header>
     <div className="home-surface"><a className="guest-switch" href="./index.html#/now">Нижний для гостей ↗</a><section className="city-services"><h2>Городские сервисы</h2><div className="service-carousel"><ServiceTile service="roads" onClick={()=>openService('roads')}/><ServiceTile service="culture" onClick={()=>openService('culture')}/></div></section>
-    <button className="home-personal" onClick={()=>navigate({name:'routes'})}><Route size={24}/><span><strong>Мои маршруты и дневник</strong><small>Прогулки, посещения и заметки</small></span><span>›</span></button><section className="city-contact"><h2>Общение с городом</h2><button className="city-link" onClick={()=>external('requests')}>Подать обращение на платформе «Лобачевский» <ExternalLink size={16}/></button><button className="city-link" onClick={()=>external('mayor')}>Канал главы города в MAX <ExternalLink size={16}/></button></section></div>
+    <button className="home-personal" onClick={()=>navigate({name:'routes'})}><Route size={24}/><span><strong>Мои маршруты и дневник</strong><small>Прогулки, посещения и заметки</small></span><span>›</span></button>
+    <section className="city-contact">
+     <h2>Общение с городом</h2>
+     <button className="city-link city-request" onClick={()=>external('requests')}>
+      <span className="city-request-icon"><FileText size={22} aria-hidden="true"/></span>
+      <span className="city-link-label"><strong>Подать обращение</strong><small>Платформа «Лобачевский»</small></span>
+      <ExternalLink size={16} aria-hidden="true"/>
+     </button>
+     <button className="city-link" onClick={()=>external('mayor')}>
+      <img className="mayor-portrait" src={assets+'mayor.webp'} width={44} height={44} alt=""/>
+      <span className="city-link-label"><strong>Юрий Шалабаев</strong><small>Канал главы города в MAX</small></span>
+      <ExternalLink size={16} aria-hidden="true"/>
+     </button>
+    </section></div>
    </main>}
    {screen.name==='services'&&<main><PageHeader title="Все сервисы"/><div className="all-services"><ServiceTile service="roads" list onClick={()=>openService('roads')}/><ServiceTile service="culture" list onClick={()=>openService('culture')}/></div><div className="service-extras"><button className="primary-button" onClick={()=>navigate({name:'routes'})}>Мои маршруты и дневник</button><button className="text-link" onClick={()=>setModal({kind:'settings'})}>Данные и настройки</button></div></main>}
    {screen.name==='routes'&&<main><PageHeader title="Мои прогулки" onBack={back}/><PersonalRoutes data={personal} onChange={updatePersonal} onPlace={openPlace}/></main>}

@@ -1,67 +1,88 @@
-import { useI18n, LANGS, LANG_LABEL } from '../../core/i18n';
+import { useState } from 'react';
+import { useI18n } from '../../core/i18n';
 import { Icon } from '../../core/Icon';
 import { PageTitle, Section } from '../../core/ui';
-import { go } from '../../core/router';
-import { CENTER, distanceM, fmtDist } from '../../core/geo';
-import { writeLocal } from '../../core/store';
-import { TWINS } from '../../data/twin';
+import { CITY_PROGRAMME, SISTER_CITY_REGISTER, TWINS } from '../../data/twin';
+
+const groups = ['sister', 'partner'] as const;
+
+function searchText(value: string) {
+  return value.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
+}
 
 export function TwinPage({ path }: { path: string }) {
-  const { t, l, lang, setLang } = useI18n();
+  const { t, l, lang } = useI18n();
+  const [query, setQuery] = useState('');
   const id = path.replace(/^\/twin\/?/, '');
-  const city = TWINS.find((c) => c.id === id);
+  const city = TWINS.find(c => c.id === id);
 
   if (!city) {
+    const term = searchText(query.trim());
+    const matches = TWINS.filter(c => (
+      [...Object.values(c.name), ...Object.values(c.area)].some(value => searchText(value).includes(term))
+    )).sort((a,b) => l(a.name).localeCompare(l(b.name), lang));
+
     return (
       <div className="page">
         <PageTitle title={t('twin.title')} sub={t('twin.sub')} />
-
-        <div className="list">
-          {TWINS.map((c) => (
-            <button key={c.id} className="row row--btn" onClick={() => { writeLocal('ng.twin', c.id); go('/twin/' + c.id); }}>
-              <span className="flagc" aria-hidden="true">{c.flag || <Icon name="globe"/>}</span>
-              <div className="row__main"><b>{l(c.name)}</b><span>{l(c.country)} · {fmtDist(distanceM(c, CENTER), lang)}</span></div><Icon name="chev" size={18} />
-            </button>
-          ))}
+        <div className="field">
+          <label htmlFor="twin-search">{t('twin.search')}</label>
+          <input id="twin-search" type="search" value={query} onChange={e => setQuery(e.target.value)} />
         </div>
+        {!matches.length && <p role="status">{t('twin.empty')}</p>}
+        {groups.map(relationship => {
+          const entries = matches.filter(c => c.relationship === relationship);
+          if (!entries.length) return null;
+          return (
+            <Section key={relationship} title={t('twin.group.' + relationship)} icon="globe">
+              <div className="list">
+                {entries.map(c => (
+                  <a className="row row--btn" key={c.id} href={'#/twin/' + c.id}>
+                    <div className="row__main">
+                      <b>{l(c.name)}</b>
+                      <span>{l(c.area)} · {t('twin.relationship.' + c.relationship)}</span>
+                    </div>
+                    <Icon name="chev" size={18} />
+                  </a>
+                ))}
+              </div>
+            </Section>
+          );
+        })}
+        <Section title={t('twin.sources')} icon="link">
+          <a href={SISTER_CITY_REGISTER} target="_blank" rel="noreferrer">{t('twin.register')} ↗</a>
+          <a href={CITY_PROGRAMME} target="_blank" rel="noreferrer">{t('twin.programme')} ↗</a>
+        </Section>
       </div>
     );
   }
+
   const starts = [
     { to: '/now', icon: 'sunset', label: t('twin.start.now') },
     { to: '/history', icon: 'camera', label: t('twin.start.hist') },
     { to: '/tour', icon: 'route', label: t('twin.start.tour') },
     { to: '/report', icon: 'flag', label: t('twin.start.rep') },
   ];
+
   return (
     <div className="page">
-      <button className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start' }} onClick={() => go('/twin')}><Icon name="back" size={16} />{t('twin.back')}</button>
+      <a className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start' }} href="#/twin">
+        <Icon name="back" size={16} />{t('twin.back')}
+      </a>
+      <PageTitle title={l(city.name)} sub={l(city.area)} />
       <div className="hero">
-        <span className="flagc" style={{ fontSize: 36 }} aria-hidden="true">{city.flag || <Icon name="globe"/>}</span>
-        <h1>{l(city.name)}</h1>
-        <p>{l(city.welcome)}</p>
-        <p className="muted small">{t('twin.dist', { d: fmtDist(distanceM(city, CENTER), lang) })}</p>
+        <b>{t('twin.relationship.' + city.relationship)}</b>
+        {city.since && <p>{t('twin.since', { year: city.since })}</p>}
+        <a href={city.source} target="_blank" rel="noreferrer">{t('twin.source')} ↗</a>
+        {city.relatedAgreement && (
+          <p>{l(city.relatedAgreement.text)} <a href={city.relatedAgreement.source} target="_blank" rel="noreferrer">{t('twin.agreementSource')} ↗</a></p>
+        )}
       </div>
-      <div className="field"><label>{t('twin.lang')}</label>
-        <div className="seg" role="group">{LANGS.map((x) => <button key={x} aria-pressed={lang === x} onClick={() => setLang(x)}>{LANG_LABEL[x]}</button>)}</div>
-      </div>
-      <Section title={t('twin.compare')} icon="globe">
-        <div className="card list" style={{ gap: 12 }}>
-          {city.compare.map((c, i) => (
-            <div key={i}>
-              <b>{l(c.topic)}</b>
-              <div className="stats" style={{ marginTop: 6 }}>
-                <div className="stat"><span className="muted small">{t('twin.yours')} · {l(city.name)}</span><br />{l(c.yours)}</div>
-                <div className="stat"><span className="muted small">{t('twin.ours')} · {lang === 'ru' ? 'Нижний' : lang === 'zh' ? '下诺夫哥罗德' : 'Nizhny'}</span><br />{l(c.ours)}</div>
-              </div>
-            </div>
-          ))}
-          <a href={city.source} target="_blank" rel="noreferrer">{t(city.id === 'vitebsk' ? 'twin.partner' : 'twin.sister')} ↗</a>
-        </div>
-      </Section>
       <Section title={t('twin.start')} icon="route">
-        <div className="list">{starts.map((s) => (
-          <button key={s.to} className="row row--btn" onClick={() => go(s.to)}><Icon name={s.icon} size={22} /><div className="row__main"><b>{s.label}</b></div><Icon name="chev" size={18} /></button>
+        <div className="list">{starts.map(s => (
+          <a key={s.to} className="row row--btn" href={'#' + s.to}>
+            <Icon name={s.icon} size={22} /><div className="row__main"><b>{s.label}</b></div><Icon name="chev" size={18} />
+          </a>
         ))}</div>
       </Section>
     </div>

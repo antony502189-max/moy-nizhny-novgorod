@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.heat';
-import { CENTER } from './geo';
+import { CENTER, type LatLon } from './geo';
 import { useI18n } from './i18n';
 
 export interface MapMarker {
@@ -15,6 +15,7 @@ export interface MapProps {
   center?: { lat: number; lon: number }; zoom?: number; markers?: MapMarker[]; lines?: MapLine[];
   heat?: [number, number, number][]; onMapClick?: (lat: number, lon: number) => void;
   fit?: boolean; className?: string; label?: string; picked?: { lat: number; lon: number } | null; selectedId?: string | null;
+  focusPoint?: LatLon | null;
 }
 
 import { addBasemap } from './basemap';
@@ -22,7 +23,7 @@ import { addBasemap } from './basemap';
 const NO_MARKERS: MapMarker[] = [];
 const NO_LINES: MapLine[] = [];
 
-export function LeafMap({ center = CENTER, zoom = 14, markers = NO_MARKERS, lines = NO_LINES, heat, onMapClick, fit, className = '', label, picked, selectedId }: MapProps) {
+export function LeafMap({ center = CENTER, zoom = 14, markers = NO_MARKERS, lines = NO_LINES, heat, onMapClick, fit, className = '', label, picked, selectedId, focusPoint }: MapProps) {
   const { t } = useI18n();
   const el = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
@@ -71,10 +72,21 @@ export function LeafMap({ center = CENTER, zoom = 14, markers = NO_MARKERS, line
   }, [markers, lines, picked, fit]);
 
   useEffect(() => {
-    const pin = selectedId ? pins.current.get(selectedId)?.getElement()?.firstElementChild : null;
+    const marker = selectedId ? pins.current.get(selectedId) : undefined;
+    const pin = marker?.getElement()?.firstElementChild;
+    marker?.setZIndexOffset(1000);
     pin?.classList.add('pin--sel');
-    return () => pin?.classList.remove('pin--sel');
+    return () => {
+      marker?.setZIndexOffset(0);
+      pin?.classList.remove('pin--sel');
+    };
   }, [selectedId, markers, lines, picked, fit]);
+
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !focusPoint) return;
+    m.setView([focusPoint.lat, focusPoint.lon], Math.max(m.getZoom(), 16), { animate: false });
+  }, [focusPoint]);
 
   useEffect(() => {
     const m = map.current;
