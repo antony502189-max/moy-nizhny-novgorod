@@ -2,6 +2,7 @@
 export const ICONS: Record<string, string> = {
   sunset: '<path d="M12 3v3M5.6 7.6l1.6 1.6M18.4 7.6l-1.6 1.6M2 15h2M20 15h2M7 15a5 5 0 0110 0M3 19h18"/>',
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
   camera: '<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
   flag: '<path d="M5 21V4M5 4h12l-2 4 2 4H5"/>',
   grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',

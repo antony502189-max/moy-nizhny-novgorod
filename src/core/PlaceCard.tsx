@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ratingsKey, readRatings } from './ratings';
 import { useLocal } from './store';
-import { useEffect, useRef } from 'react';
 import { useI18n } from './i18n';
 import { Icon } from './Icon';
 import { photoCredits, placePhoto, type Place } from '../data/places';
@@ -21,14 +20,8 @@ export function PlaceSheet({ place, onClose, extra }: { place: Place; onClose?: 
   const [ratings, setRatings] = useLocal(ratingsKey, readRatings());
   const photo = placePhoto(place);
   const c = place.photo ? photoCredits[place.photo] : undefined;
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const prev = document.activeElement as HTMLElement | null;
-    ref.current?.focus({ preventScroll: true });
-    return () => { prev?.focus?.({ preventScroll: true }); };
-  }, [place.id]);
   return (
-    <div className="sheet" role="dialog" aria-label={l(place.name)} tabIndex={-1} ref={ref}
+    <div className="sheet" role="region" aria-label={l(place.name)}
       onKeyDown={(e) => { if (e.key === 'Escape' && onClose) { e.stopPropagation(); onClose(); } }}>
       <div className="sec__head">
         <h3>{l(place.name)}</h3>
@@ -52,6 +45,7 @@ export function PlaceSheet({ place, onClose, extra }: { place: Place; onClose?: 
         <button key={n} className="chip" aria-pressed={ratings?.[place.id] === n}
           onClick={()=>setRatingError(!setRatings({...readRatings(), [place.id]:n}))}>{n} ★</button>)}</div></div>
       {ratingError && <p role="alert">{t('common.storageError')}</p>}
+      <a className="btn btn--ghost" href={'#/history/landmark/'+place.id}>{t('hist.timeline')}</a>
       <a href={'#/guide/'+place.id}>{t('guide.stories')} · {t('guide.title')} →</a>{extra}
     </div>
   );

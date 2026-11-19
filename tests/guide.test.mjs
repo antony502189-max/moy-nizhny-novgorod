@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {places,walks} from '../resident/domain/data.ts';
-import {HISTORY} from '../src/data/history.ts';
+import {HISTORY,historyForPlace} from '../src/data/history.ts';
 import {curatedLegs} from '../src/core/curatedPaths.ts';
 import {parseIntent,planOffline} from '../src/features/tour/planner.ts';
 import {PLACES} from '../src/data/places.ts';
@@ -17,10 +17,34 @@ test('every landmark and archive stage has sourced trilingual narration and loca
     const clip=readFileSync(new URL('../guide/audio/'+id+'.m4a',import.meta.url));
     assert.equal(clip.toString('ascii',4,8),'ftyp');assert(clip.length>5000);
   }
+  for (const spot of HISTORY) {
+    assert.equal(spot.then.length, 3, spot.id);
+    assert.equal(new Set([...spot.then, spot.now].map(frame=>frame.src)).size, 4, spot.id);
+  }
   for(const h of HISTORY)for(const image of [h.now,...h.then]){
+    for(const lang of ['ru','en','zh'])assert(image.caption[lang]?.trim(), h.id+' '+lang);
     assert(readFileSync(new URL('../'+image.src,import.meta.url)).length>1000);
     assert(image.credit.author && image.credit.license && image.credit.sourceUrl);
   }
+});
+test('every catalogue landmark resolves to its own dated timeline and map point', () => {
+  assert.equal(new Set(HISTORY.map(spot => spot.id)).size, HISTORY.length);
+  const ids = new Set();
+  for (const place of places) {
+    const story = historyForPlace(place.id);
+    assert.equal(story?.placeId, place.id, place.id);
+    assert(!ids.has(story.id), place.id);
+    ids.add(story.id);
+    const point = story.point ?? place;
+    assert(Number.isFinite(point.lat) && Number.isFinite(point.lon), place.id);
+  }
+  for (const story of HISTORY) {
+    const dates = [...story.then, story.now].map(frame => frame.year).filter(year => year !== null);
+    assert.deepEqual(dates, [...dates].sort((a,b) => a-b), story.id);
+  }
+  assert.equal(historyForPlace('shukhov').id, 'place-shukhov');
+  assert.equal(historyForPlace('warehouses').id, 'shukhov');
+  assert.equal(historyForPlace('minin').id, 'place-minin');
 });
 test('every consecutive leg of every published walk follows the bundled street graph',()=>{
   for(const w of walks){

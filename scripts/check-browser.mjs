@@ -4,7 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {extname,resolve,sep} from 'node:path';
 import {chromium} from 'playwright-core';
 import {places,walks} from '../resident/domain/data.ts';
-import {HISTORY} from '../src/data/history.ts';
+import {HISTORY,historyForPlace} from '../src/data/history.ts';
+import {TWINS} from '../src/data/twin.ts';
 
 const root=resolve('dist');
 const prefix='/city/';
@@ -36,6 +37,75 @@ try{
   await page.waitForFunction(()=>Boolean(navigator.serviceWorker.controller),null,{timeout:60000});
   await context.setOffline(true);
   await page.reload();
+  const sunsetSpots = page.getByRole('group', { name: 'Где встретить закат' }).getByRole('button');
+  async function checkCenteredPin(title) {
+    const map = page.getByRole('region', { name: 'Карта', exact: true });
+    await page.waitForFunction(({title}) => {
+      const map = document.querySelector('.leafmap');
+      const marker = [...map.querySelectorAll('.leaflet-marker-icon')].find(el => el.title === title);
+      if (!marker?.querySelector('.pin--sel')) return false;
+      const bounds = map.getBoundingClientRect(), pin = marker.getBoundingClientRect();
+      return bounds.top >= 0 && bounds.top < innerHeight / 2
+        && Math.abs(pin.x + pin.width / 2 - (bounds.x + bounds.width / 2)) < 3
+        && Math.abs(pin.y + pin.height / 2 - (bounds.y + bounds.height / 2)) < 3;
+    }, { title });
+    assert(await map.isVisible());
+  }
+  await sunsetSpots.first().waitFor();
+  assert.equal(await page.locator('.now-distance').count(), 0);
+  await page.getByRole('button', { name: 'Закат', exact: true }).click();
+  for (const spot of await sunsetSpots.all()) {
+    const title = await spot.locator('b').innerText();
+    await spot.click();
+    await checkCenteredPin(title);
+  }
+  const nearMe = page.getByRole('button', { name: 'Рядом со мной' });
+  await nearMe.click();
+  await checkCenteredPin('Вы здесь');
+  assert.equal(await page.locator('.now-distance').count(), await sunsetSpots.count());
+  assert.match(await page.locator('.now-distance').first().innerText(), /^≈ /);
+  await page.locator('.stats button').first().click();
+  await page.locator('.pin--sel.pin--wc').waitFor();
+
+  await context.setGeolocation({ latitude: 56.3280332, longitude: 44.0021054, accuracy: 1000 });
+  await nearMe.click();
+  await page.getByText(/Геопозиция слишком неточная/).waitFor();
+  assert.equal(await page.locator('.now-distance, .pin--me').count(), 0);
+  await context.setGeolocation({ latitude: 55.75, longitude: 37.61 });
+  await nearMe.click();
+  await page.getByText(/за пределами карты Нижнего Новгорода/).waitFor();
+  assert.equal(await page.locator('.now-distance, .pin--me').count(), 0);
+  await context.setGeolocation({ latitude: 56.3280332, longitude: 44.0021054 });
+  const deniedContext = await browser.newContext({ locale: 'ru-RU' });
+  try {
+    const deniedPage = await deniedContext.newPage();
+    const cdp = await deniedContext.newCDPSession(deniedPage);
+    const { targetInfo } = await cdp.send('Target.getTargetInfo');
+    await cdp.send('Browser.setPermission', {
+      permission: { name: 'geolocation' }, origin: new URL(base).origin,
+      browserContextId: targetInfo.browserContextId, setting: 'denied',
+    });
+    await deniedPage.goto(base + '#/now');
+    await deniedPage.getByRole('button', { name: 'Рядом со мной' }).click();
+    await deniedPage.getByText(/Доступ к геопозиции закрыт/).waitFor();
+    assert.equal(await deniedPage.locator('.now-distance, .pin--me').count(), 0);
+  } finally {
+    await deniedContext.close();
+  }
+
+  await visit('#/twin', '#twin-search');
+  const cityLinks = page.locator('main a[href^="#/twin/"]');
+  assert.equal(await cityLinks.count(), TWINS.length);
+  await page.locator('#twin-search').fill('Wuxi');
+  assert.equal(await cityLinks.count(), 1);
+  await cityLinks.first().click();
+  await page.getByRole('heading', { name: 'Уси', exact: true }).waitFor();
+  assert.match(await page.getByRole('link', {name: /Источник о статусе/}).getAttribute('href'), /^https:\/\/en\.wuxi\.gov\.cn\//);
+  for (const city of TWINS) {
+    await visit('#/twin/' + city.id, 'main h1');
+    assert.equal(await page.locator('main h1').innerText(), city.name.ru);
+    assert.equal(await page.getByRole('link', {name: /Источник о статусе/}).getAttribute('href'), city.source);
+  }
   await visit('#/guide','main h2');
   assert.equal(await page.locator('.leaflet-marker-icon').count(),places.length);
   for(const place of places){
@@ -50,13 +120,47 @@ try{
       assert.equal(await page.locator('.leaflet-overlay-pane path').count(),walk.placeIds.length-1);
     }
   }
+  for (const place of places) {
+    await visit('#/history/landmark/' + place.id, '.history-timeline');
+    assert.equal(await page.locator('main h1').innerText(), historyForPlace(place.id).title.ru, place.id);
+  }
+  await visit('#/guide', '.leafmap');
+  await page.locator('input[type=search]').fill('Дмитриевская башня');
+  await page.locator('.leaflet-marker-icon[title="Дмитриевская башня"]').click();
+  await page.locator('.history-timeline').waitFor();
+  assert.equal(await page.locator('main h1').innerText(), 'Дмитриевская башня');
+  await page.getByRole('link', {name:'Где это'}).click();
+  await page.locator('.history-atlas__map .pin--sel').waitFor();
+  assert.equal(await page.locator('.history-atlas__selected').innerText(), 'Дмитриевская башня');
+  await visit('#/history', '.history-atlas__map');
+  assert.equal(await page.locator('.history-atlas .row').count(), HISTORY.length);
+  const search = page.getByRole('searchbox', {name:'Найти место на карте'});
+  await search.fill('несуществующий объект');
+  assert.equal(await page.locator('.history-atlas .row, .history-atlas .leaflet-marker-icon').count(), 0);
+  await search.fill('Губернская гимназия');
+  await page.locator('.leaflet-marker-icon[title="Губернская гимназия"]').click();
+  await page.locator('.history-timeline').waitFor();
+  assert.equal(await page.locator('main h1').innerText(), 'Губернская гимназия');
   for(const spot of HISTORY){
-    await visit('#/history/'+spot.id,'.ba');
-    for(let i=0;i<spot.then.length;i++){
-      if(spot.then.length>1)await page.locator('.seg button').nth(i).click();
-      await page.locator('.ba img').evaluateAll(images=>Promise.all(images.map(img=>img.decode())));
-      await page.getByRole('slider').focus();await page.keyboard.press('ArrowRight');
+    await visit('#/history/map/'+spot.id, '.history-atlas__map .pin--sel');
+    await page.locator('.history-atlas__map .pin--sel').click();
+    await page.locator('.history-timeline').waitFor();
+    assert.equal(await page.locator('main h1').innerText(), spot.title.ru);
+    const stages = page.getByRole('radiogroup', {name:'Фотохронология'}).getByRole('radio');
+    const photo = page.locator('.history-timeline__photo img');
+    const frames = [...spot.then, spot.now];
+    assert.equal(await stages.count(), 4);
+    for (const [i, frame] of frames.entries()) {
+      await page.locator('.history-timeline__choice').nth(i).click();
+      assert(await stages.nth(i).isChecked(), spot.id);
+      assert.equal(await photo.getAttribute('src'), frame.src);
+      await photo.evaluate(img => img.decode());
+      assert.equal(await page.locator('figcaption p').innerText(), frame.caption.ru);
     }
+    await stages.last().focus();
+    await page.keyboard.press('ArrowLeft');
+    assert(await stages.nth(2).isChecked());
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   }
   await visit('#/tour?ids=kremlin,art','.step');
   await page.getByRole('button',{name:'Начать прогулку'}).click();
@@ -72,7 +176,7 @@ try{
   for(const [width,height,scale] of [[320,568,1],[390,844,1],[768,1024,1],[1280,800,1],[320,640,2],[844,390,1]]){
     await page.setViewportSize({width,height});
     await page.evaluate(scale=>{document.documentElement.style.fontSize=16*scale+'px'},scale);
-    for(const route of ['#/tour','#/guide','#/history/stadium','#/report','#/more']){
+    for(const route of ['#/tour','#/guide','#/history','#/history/stadium','#/report','#/more','#/twin','#/twin/east-sarajevo']){
       await visit(route,'main h1');
       const fits=await page.evaluate(()=>{
         const main=document.querySelector('.app > main'),nav=document.querySelector('.tabbar');
@@ -86,5 +190,5 @@ try{
     }
   }
   assert.deepEqual(errors,[]);
-  console.log('Verified both offline maps, all landmarks, walks, archive stages, walk photos and navigation layout.');
+  console.log('Verified sunset and location map controls, both offline maps, all landmarks, walks, archive stages, walk photos and navigation layout.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve))}

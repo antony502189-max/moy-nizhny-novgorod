@@ -1,0 +1,380 @@
+import { catalogHistory } from './catalogHistory.ts';
+import type { HistorySpot } from './history.ts';
+
+export const catalogC: HistorySpot[] = [
+  catalogHistory("bell", [
+    {
+      src: "history/catalog-c/bell-0.webp",
+      year: 1900,
+      yearLabel: {"ru": "1900-е", "en": "1900s", "zh": "1900年代"},
+      caption: {"ru": "На открытке рядом со Спасо-Преображенским собором стоит старая колокольня.", "en": "The old bell tower stands beside the Transfiguration Cathedral on this postcard.", "zh": "这张明信片上，旧钟楼立在显圣容主教座堂旁。"},
+      credit: {"author": "Неизвестный фотограф · МАММ / МДФ", "license": "Public domain", "sourceUrl": "https://russiainphoto.ru/photos/967/"},
+    },
+    {
+      src: "history/catalog-c/bell-1.webp",
+      year: 2020,
+      caption: {"ru": "Заново возведённую колокольню ещё закрывают строительные леса.", "en": "Scaffolding still surrounds the tower as it is being rebuilt.", "zh": "重建中的钟楼外还围着脚手架。"},
+      credit: {"author": "Дмитрий Сазанов", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Bell_Tower,_restoration_-_2020-08-08.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/bell-2.webp",
+      year: 2021,
+      caption: {"ru": "К августу леса сняли. На белом шатре видны слуховые окна.", "en": "By August the scaffolding is gone, revealing the openings in the white tent roof.", "zh": "到了八月，脚手架已经拆除，白色帐篷顶上的小窗清晰可见。"},
+      credit: {"author": "Дмитрий Сазанов", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Bell_Tower,_Nizhny_Novgorod_-_2021-08-26_(2).jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/bell-3.webp",
+      year: 2025,
+      caption: {"ru": "Со стороны кремлёвской аллеи белый шатёр поднимается над деревьями.", "en": "From the Kremlin avenue, the white tent roof rises above the trees.", "zh": "从克里姆林宫内的林荫道望去，白色尖顶高出树冠。"},
+      credit: {"author": "Alexxx1979", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Kremlin._The_restored_bell_tower_of_the_Transfiguration_Cathedral_P5180711_2800.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("minin", [
+    {
+      src: "history/catalog-c/minin-0.webp",
+      year: 1870,
+      caption: {"ru": "Благовещенский собор и гимназия стоят на бывшей Благовещенской площади.", "en": "The Annunciation Cathedral and the gymnasium face what was then Annunciation Square.", "zh": "在当年的圣母领报广场上，可以看到领报主教座堂和中学。"},
+      credit: {"author": "Andrey Karelin and Ivan Shishkin", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blagoveschensky_Cathedral_and_Province_Gymnasia_NNovgorod.jpg"},
+    },
+    {
+      src: "history/catalog-c/minin-1.webp",
+      year: 1900,
+      yearLabel: {"ru": "Около 1900", "en": "c. 1900", "zh": "约1900年"},
+      caption: {"ru": "На снимке Василия Зевеке площадь перед гимназией покрыта снегом.", "en": "Snow covers the square in front of the gymnasium in Vasily Zeveke’s photograph.", "zh": "瓦西里·泽韦克拍下了积雪覆盖的广场和中学校舍。"},
+      credit: {"author": "Vasily Zeveke(1878-1941)", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blagoveschenskaya_Sq-Provincial_gymnasia-NNovgorod-1900.jpg"},
+    },
+    {
+      src: "history/catalog-c/minin-2.webp",
+      year: 2014,
+      caption: {"ru": "Над домами у площади видна Дмитриевская башня с зелёной крышей.", "en": "The green roof of the Dmitrievskaya Tower rises over the houses beside the square.", "zh": "德米特里耶夫塔的绿顶高出广场旁的房屋。"},
+      credit: {"author": "Юрий Лебедев", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dmitrovskaya_Tower._Minin_and_Pozharsky_square.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/minin-3.webp",
+      year: 2024,
+      caption: {"ru": "Широкая площадь тянется вдоль кремлёвской стены к Дмитриевской башне.", "en": "The square stretches along the Kremlin wall towards the Dmitrievskaya Tower.", "zh": "宽阔的广场沿克里姆林宫城墙延伸至德米特里耶夫塔。"},
+      credit: {"author": "Vyacheslav Bukharov", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minin_and_Pozharsky_Square_(June_2024)_-_1.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("walls", [
+    {
+      src: "history/catalog-c/walls-0.webp",
+      year: 1890,
+      yearLabel: {"ru": "1890-е", "en": "1890s", "zh": "1890年代"},
+      caption: {"ru": "На снимке Максима Дмитриева видны Пороховая башня и примыкающая к ней стена кремля.", "en": "Maxim Dmitriev’s photograph shows the Powder Tower and the adjoining Kremlin wall.", "zh": "马克西姆·德米特里耶夫的镜头记录了火药塔和与其相连的克里姆林宫城墙。"},
+      credit: {"author": "Максим Дмитриев · МАММ / МДФ", "license": "Public domain", "sourceUrl": "https://russiainphoto.ru/photos/2337/"},
+    },
+    {
+      src: "history/catalog-c/walls-1.webp",
+      year: 2014,
+      caption: {"ru": "С внешней стороны хорошо видны уступы стены, спускающейся к Волге.", "en": "Seen from outside, the wall drops in steps towards the Volga.", "zh": "从外侧可以看到城墙顺着山坡逐级下降，伸向伏尔加河。"},
+      credit: {"author": "amanderson2", "license": "CC BY 2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kremlin_wall_and_Volga_River_Nizhny_Novgorod_Russia_(14259081810).jpg", "licenseUrl": "https://creativecommons.org/licenses/by/2.0"},
+    },
+    {
+      src: "history/catalog-c/walls-2.webp",
+      year: 2021,
+      caption: {"ru": "Крытый проход соединяет Пороховую и Дмитриевскую башни по верху стены.", "en": "A roofed walkway follows the wall between the Powder and Dmitrievskaya towers.", "zh": "有顶步道沿城墙顶部连接火药塔和德米特里耶夫塔。"},
+      credit: {"author": "I am smiling", "license": "CC BY 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Kremlin_—_Wall_between_Porokhovaya_and_Dmitrievskaya_towers.jpg", "licenseUrl": "https://creativecommons.org/licenses/by/4.0"},
+    },
+    {
+      src: "history/catalog-c/walls-3.webp",
+      year: 2024,
+      caption: {"ru": "На волжском склоне кремлёвская стена повторяет изгибы холма.", "en": "The Kremlin wall follows the contours of the hillside above the Volga.", "zh": "克里姆林宫的城墙沿着伏尔加河岸的山势蜿蜒。"},
+      credit: {"author": "Readdiwiki", "license": "CC0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Kremlin.jpg", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"},
+    },
+  ]),
+  catalogHistory("north-tower", [
+    {
+      src: "history/catalog-c/north-tower-0.webp",
+      year: 1870,
+      caption: {"ru": "На раскрашенном снимке Карелина Северная башня белеет над Нижним базаром.", "en": "In Karelin’s hand-coloured photograph, the white North Tower stands above the Lower Bazaar.", "zh": "卡列林拍摄的手工着色照片中，白色的北塔矗立在下集市上方。"},
+      credit: {"author": "Ivan Shishkin / Andrei Osipovich Karelin", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lower_Bazaar_and_Nizhny_Novgorod_Kremlin.jpg"},
+    },
+    {
+      src: "history/catalog-c/north-tower-1.webp",
+      year: 1900,
+      yearLabel: {"ru": "1900-е", "en": "1900s", "zh": "1900年代"},
+      caption: {"ru": "Дмитриев снял подход к кремлёвскому элеватору. Выше по склону видны башни кремля.", "en": "Dmitriev photographed the approach to the Kremlin funicular, with the towers visible higher up the hill.", "zh": "德米特里耶夫拍下了通往克里姆林宫缆车的街道，坡上可见塔楼。"},
+      credit: {"author": "Максим Дмитриев · МАММ / МДФ", "license": "Public domain", "sourceUrl": "https://russiainphoto.ru/photos/922/"},
+    },
+    {
+      src: "history/catalog-c/north-tower-2.webp",
+      year: 2012,
+      caption: {"ru": "Сквозь деревья видны круглая Северная башня и соседняя Часовая.", "en": "The round North Tower and the neighbouring Clock Tower rise above the trees.", "zh": "树木后方可以看到圆形北塔和旁边的钟塔。"},
+      credit: {"author": "19rzm41", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Башня_Северная_(Нижегородская_область,_Нижний_Новгород).JPG", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"},
+    },
+    {
+      src: "history/catalog-c/north-tower-3.webp",
+      year: 2024,
+      caption: {"ru": "В сентябре 2024 года со склона хорошо видны кирпичная кладка круглой башни и её шатровая крыша.", "en": "The September 2024 hillside view shows the brickwork of the round tower and its conical roof.", "zh": "2024年9月，从山坡上可以看清圆形砖塔和它的锥形屋顶。"},
+      credit: {"author": "Nkonor", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Северная_башня_07.09.25.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("viewpoint", [
+    {
+      src: "history/catalog-c/viewpoint-0.webp",
+      year: 1860,
+      caption: {"ru": "С высоты кремлёвского холма видны Нижний посад, крыши лавок и Стрелка.", "en": "The Kremlin hill overlooks the trading quarter, its rooftops and the Spit beyond.", "zh": "从克里姆林宫山丘俯瞰，可见下城商区的屋顶和远处的两河交汇处。"},
+      credit: {"author": "Неизвестный автор", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Old_view_of_Nizhny_Novgorod_City.jpg"},
+    },
+    {
+      src: "history/catalog-c/viewpoint-1.webp",
+      year: 2011,
+      caption: {"ru": "С территории кремля ещё видны портовые краны на другом берегу Оки.", "en": "The port cranes are still visible across the Oka in this view from the Kremlin.", "zh": "从克里姆林宫望向奥卡河对岸，仍可见港口的起重机。"},
+      credit: {"author": "Наталья Филатова", "license": "CC BY 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Вид_на_Стрелку_с_территории_Нижегородского_кремля_-_panoramio.jpg", "licenseUrl": "https://creativecommons.org/licenses/by/3.0"},
+    },
+    {
+      src: "history/catalog-c/viewpoint-2.webp",
+      year: 2022,
+      caption: {"ru": "За собором Александра Невского появился стадион с белой крышей.", "en": "The stadium’s white roof has joined Alexander Nevsky Cathedral on the skyline.", "zh": "亚历山大·涅夫斯基主教座堂后方的天际线上出现了白色体育场屋顶。"},
+      credit: {"author": "Алексей Трефилов", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:NN-16-05-2022_27.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/viewpoint-3.webp",
+      year: 2025,
+      caption: {"ru": "Со стороны Ивановской башни хорошо видно место, где Ока впадает в Волгу.", "en": "Looking past the Ivanovskaya Tower, the Oka can be seen flowing into the Volga.", "zh": "视线越过伊万诺夫塔，可见奥卡河汇入伏尔加河。"},
+      credit: {"author": "AlexTref871", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_2025-04-29_View_from_the_Kremlin_to_St._John_Tower_and_the_Spit_02.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("markin", [
+    {
+      src: "history/catalog-c/markin-0.webp",
+      year: 1890,
+      yearLabel: {"ru": "1890-е", "en": "1890s", "zh": "1890年代"},
+      caption: {"ru": "Максим Дмитриев снял Софроновскую площадь и дорогу к речным пристаням.", "en": "Maxim Dmitriev photographed Sofronovskaya Square and the road to the river piers.", "zh": "马克西姆·德米特里耶夫拍下了索夫罗诺夫广场以及通往河港的道路。"},
+      credit: {"author": "Максим Дмитриев · Архив аудиовизуальной документации Нижегородской области", "license": "Public domain", "sourceUrl": "https://russiainphoto.ru/photos/51303/"},
+    },
+    {
+      src: "history/catalog-c/markin-1.webp",
+      year: 1900,
+      yearLabel: {"ru": "Рубеж XIX–XX вв.", "en": "c. 1900", "zh": "约1900年"},
+      caption: {"ru": "В то время площадь у речных пристаней называлась Софроновской.", "en": "At the time, the square by the river piers was known as Sofronovskaya Square.", "zh": "当时，河畔码头旁的广场名叫索夫罗诺夫广场。"},
+      credit: {"author": "Неизвестный автор", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Нижний_Новгород_Вид_на_Софроновскую_площадь.jpg"},
+    },
+    {
+      src: "history/catalog-c/markin-2.webp",
+      year: 2007,
+      caption: {"ru": "Вечером на площади Маркина включили цветную подсветку фонтана.", "en": "Coloured lights illuminate the fountain on Markin Square after dark.", "zh": "夜幕下，马尔金广场喷泉亮起彩灯。"},
+      credit: {"author": "Алексей Белобородов", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Fountain_on_Markin_Square.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"},
+    },
+    {
+      src: "history/catalog-c/markin-3.webp",
+      year: 2025,
+      caption: {"ru": "В июне 2025 года на площади работал фонтан. В центре чаши видны параллельные ряды водяных струй.", "en": "In June 2025 the square’s fountain was running, with parallel rows of jets rising from the basin.", "zh": "2025年6月，广场喷泉正在喷水，池中喷起数排整齐的水柱。"},
+      credit: {"author": "Надя Кей · ИА «В городе N»", "license": "По правилам издания", "sourceUrl": "https://www.vgoroden.ru/statyi/chasha-zabveniya-kak-vyglyadyat-fontany-nizhnego-novgoroda-i-chto-s-nimi-ne-tak", "licenseUrl": "https://www.vgoroden.ru/statyi/chasha-zabveniya-kak-vyglyadyat-fontany-nizhnego-novgoroda-i-chto-s-nimi-ne-tak"},
+    },
+  ]),
+  catalogHistory("church", [
+    {
+      src: "history/catalog-c/church-0.webp",
+      year: 1870,
+      caption: {"ru": "Андрей Карелин снял Рождественскую церковь со стороны торговой улицы.", "en": "Andrey Karelin photographed the Nativity Church from the trading street.", "zh": "安德烈·卡列林从商业街拍摄了圣母诞生教堂。"},
+      credit: {"author": "Андрей Карелин · МАММ / МДФ", "license": "CC BY 4.0", "sourceUrl": "https://russiainphoto.ru/photos/12421/", "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"},
+    },
+    {
+      src: "history/catalog-c/church-1.webp",
+      year: 2005,
+      caption: {"ru": "С улицы хорошо виден резной белокаменный декор красного фасада.", "en": "From the street, white stone carving stands out against the red façade.", "zh": "从街上可见，白色石雕装饰在红色立面上分外醒目。"},
+      credit: {"author": "sergfokin", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ц._Рождества_Богородицы_(Строгановская)_(03.09.05)_-_panoramio.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"},
+    },
+    {
+      src: "history/catalog-c/church-2.webp",
+      year: 2011,
+      caption: {"ru": "Колокольня со шпилем стоит поодаль от главного церковного здания.", "en": "The steepled bell tower stands apart from the main church building.", "zh": "尖顶钟楼独立于教堂主建筑一侧。"},
+      credit: {"author": "Наталья Филатова", "license": "CC BY 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Церковь_Собора_Пресвятой_Богородицы_(Строгановская)_-_panoramio_(1).jpg", "licenseUrl": "https://creativecommons.org/licenses/by/3.0"},
+    },
+    {
+      src: "history/catalog-c/church-3.webp",
+      year: 2025,
+      caption: {"ru": "С площадки между зданиями видны ярусы колокольни и край церковного фасада.", "en": "The space between the buildings reveals the tiers of the bell tower beside the church façade.", "zh": "从两座建筑之间的小广场可以看清钟楼的层次和教堂外墙。"},
+      credit: {"author": "Alexxx1979", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russia._Nizhny_Novgorod._Stroganov_Church,_bell_tower_P5180807_2800.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("kazan-church", [
+    {
+      src: "history/catalog-c/kazan-church-0.webp",
+      year: 1890,
+      yearLabel: {"ru": "1890-е", "en": "1890s", "zh": "1890年代"},
+      caption: {"ru": "Максим Дмитриев снял старую Казанскую церковь среди торговых рядов.", "en": "Maxim Dmitriev photographed the old Kazan church among the market stalls.", "zh": "马克西姆·德米特里耶夫拍下了集市商铺间的旧喀山教堂。"},
+      credit: {"author": "Максим Дмитриев · Архив аудиовизуальной документации Нижегородской области", "license": "Public domain", "sourceUrl": "https://russiainphoto.ru/photos/51236/"},
+    },
+    {
+      src: "history/catalog-c/kazan-church-1.webp",
+      year: 2006,
+      caption: {"ru": "На площадке нового храма пока виден фундамент с очертаниями будущих стен.", "en": "Only the foundation traces the outline of the new church on the construction site.", "zh": "新教堂的工地上仅见基础，勾勒出未来墙体的轮廓。"},
+      credit: {"author": "Vadim Zhivotovsky", "license": "CC BY 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Россия,_Нижний_Новгород,_Нижегородский_район,_строительство_новой_церкви_(^),_13-54_08.05.2006_-_panoramio.jpg", "licenseUrl": "https://creativecommons.org/licenses/by/3.0"},
+    },
+    {
+      src: "history/catalog-c/kazan-church-2.webp",
+      year: 2008,
+      caption: {"ru": "С холма видна стройка нового храма. Стены уже подняты, купола ещё нет.", "en": "From the hill the new church can be seen under construction, its walls up but its dome still missing.", "zh": "从山上可见新教堂正在施工，墙体已砌起，圆顶尚未安装。"},
+      credit: {"author": "saint.michael", "license": "CC BY 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Церковь_в_честь_иконы_Казанской_Божьей_Матери,_Почаинская,_31_-_panoramio.jpg", "licenseUrl": "https://creativecommons.org/licenses/by/3.0"},
+    },
+    {
+      src: "history/catalog-c/kazan-church-3.webp",
+      year: 2017,
+      caption: {"ru": "Казанский храм после освящения. На снимке 2017 года за белым фасадом видна кремлёвская стена.", "en": "The Kazan church after its consecration. In this 2017 photograph, the Kremlin wall rises behind its white façade.", "zh": "这是喀山教堂祝圣后的面貌。2017年的照片中，白色立面后方可见克里姆林宫城墙。"},
+      credit: {"author": "Alexxx1979", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Church_of_Our_Lady_of_Kazan_P8132492_2200.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("ski", [
+    {
+      src: "history/catalog-c/ski-0.webp",
+      year: 2006,
+      caption: {"ru": "На Сенной ещё стоит вышка большого старого трамплина. Её разберут в 2008 году.", "en": "The old large jump still has its tower. It was dismantled in 2008.", "zh": "当时旧大跳台的高塔仍然矗立，后来于2008年拆除。"},
+      credit: {"author": "vadimpl", "license": "CC BY 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhniy_Novgorod_ski_jumps_04.jpg", "licenseUrl": "https://creativecommons.org/licenses/by/3.0"},
+    },
+    {
+      src: "history/catalog-c/ski-1.webp",
+      year: 2007,
+      caption: {"ru": "Со стороны Соборной мечети видны металлические опоры старого комплекса.", "en": "The steel structures of the old jumps are visible beside the Cathedral Mosque.", "zh": "从大清真寺旁望去，可以看到旧跳台的钢结构。"},
+      credit: {"author": "Vmenkov", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny-Novgorod-Mosque-and-Ski-Jump-C0273.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"},
+    },
+    {
+      src: "history/catalog-c/ski-2.webp",
+      year: 2010,
+      caption: {"ru": "На склоне сохранились судейская вышка и трасса старого трамплинного комплекса.", "en": "The judges’ tower and the old jump track still stand on the hillside.", "zh": "山坡上还保留着旧跳台的裁判塔和滑道。"},
+      credit: {"author": "Евгений Катышев", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Трамплинный_комплекс_(04.09.2010)_-_panoramio.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"},
+    },
+    {
+      src: "history/catalog-c/ski-3.webp",
+      year: 2024,
+      caption: {"ru": "У нового трамплина К-60 теперь видны разгонная дорожка и зона выкатки внизу.", "en": "The new K-60 jump has an inrun above the hillside and an outrun below.", "zh": "新K-60跳台的助滑道沿坡而下，坡底设有滑行缓冲区。"},
+      credit: {"author": "Vyacheslav Bukharov", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Ski_Jumps_(June_2024)_-_1.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("wheel", [
+    {
+      src: "history/catalog-c/wheel-0.webp",
+      year: 2007,
+      caption: {"ru": "У будущей площадки колеса над откосом возвышались конструкции лыжного трамплина.", "en": "Beside the future wheel site, the ski jumping tower once dominated the hillside.", "zh": "在摩天轮建成前，附近的山坡上矗立着跳台滑雪设施。"},
+      credit: {"author": "Vmenkov", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny-Novgorod-Mosque-and-Ski-Jump-C0273.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"},
+    },
+    {
+      src: "history/catalog-c/wheel-1.webp",
+      year: 2021,
+      caption: {"ru": "Колесо «НиНо» с застеклёнными кабинками открылось у Сенной площади.", "en": "The NiNo wheel opened by Sennaya Square with enclosed passenger cabins.", "zh": "带有封闭式座舱的“尼诺”摩天轮在干草广场旁开放。"},
+      credit: {"author": "Надя Кей · ИА «В городе N»", "license": "По правилам издания", "sourceUrl": "https://www.vgoroden.ru/novosti/koleso-obozreniya-zarabotalo-na-ploshhadi-sennoy-v-nizhnem-novgorode-id341958", "licenseUrl": "https://www.vgoroden.ru/novosti/koleso-obozreniya-zarabotalo-na-ploshhadi-sennoy-v-nizhnem-novgorode-id341958"},
+    },
+    {
+      src: "history/catalog-c/wheel-2.webp",
+      year: 2023,
+      caption: {"ru": "В зимнем небе видно, как кабинки подвешены к наружному ободу колеса.", "en": "Against the winter sky, the cabins can be seen suspended from the outer rim.", "zh": "冬日天空下，能清楚看到悬挂在轮缘上的座舱。"},
+      credit: {"author": "Дмитрий Сазанов", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:NiNo_Ferris_Wheel,_Nizhny_Novgorod_-_2023-02-07_(1).jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/wheel-3.webp",
+      year: 2024,
+      caption: {"ru": "На летнем снимке кабинки проходят над Казанской набережной, рядом с мечетью.", "en": "The summer view shows cabins passing above Kazan Embankment beside the mosque.", "zh": "夏日里，摩天轮座舱从喀山滨河路和清真寺旁的高处经过。"},
+      credit: {"author": "Алексей Белобородов", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._View_of_The_Kazanskaya_Embankment,_Mosque_and_Ferris_wheel_2024-07.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("suetinskaya", [
+    {
+      src: "history/catalog-c/suetinskaya-0.webp",
+      year: 2011,
+      caption: {"ru": "Со двора видно, как дом № 29 вписан в крутой склон Суетинской улицы.", "en": "The courtyard view shows how No. 29 is built into the steep slope of Suetinskaya Street.", "zh": "从院内可以看到，苏耶京街29号住宅依陡坡而建。"},
+      credit: {"author": "Aleksandr Zykov from Russia", "license": "CC BY-SA 2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_(5970253168).jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"},
+    },
+    {
+      src: "history/catalog-c/suetinskaya-1.webp",
+      year: 2019,
+      caption: {"ru": "После обрушения стены западной пристройки обнажились внутренние перекрытия.", "en": "The collapse of a wall in the western extension exposed the floors inside.", "zh": "西侧附楼的外墙坍塌后，里面的楼板露了出来。"},
+      credit: {"author": "ГУ МЧС России по Нижегородской области", "license": "CC BY 4.0", "sourceUrl": "https://www.vgoroden.ru/novosti/stena-zdaniya-rpc-na-suetinskoy-ne-vyderzhala-plohoy-pogody-id311790", "licenseUrl": "https://52.mchs.gov.ru/"},
+    },
+    {
+      src: "history/catalog-c/suetinskaya-2.webp",
+      year: 2021,
+      caption: {"ru": "С улицы видны розовый фасад, белые наличники и нижний этаж со стороны склона.", "en": "The street view shows the pink façade, white window surrounds and the lower floor on the hillside.", "zh": "从街边可见粉色外墙、白色窗套和面向山坡的底层。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Суетинская,_29.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/suetinskaya-3.webp",
+      year: 2022,
+      caption: {"ru": "На летнем снимке хорошо видны оба фасада дома и выступ над карнизом.", "en": "In the summer view, both façades and the raised centre above the cornice are visible.", "zh": "这张夏季照片清楚呈现了房屋的两面立面，以及屋檐中央凸起的装饰。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Суетинская,_дом_29.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("victory", [
+    {
+      src: "history/catalog-c/victory-0.webp",
+      year: 2013,
+      caption: {"ru": "В Парке Победы уже разбиты цветники, а за ними выстроена техника под открытым небом.", "en": "Flowerbeds line the open-air display of vehicles in Victory Park.", "zh": "胜利公园的露天展区里，花坛后排列着各式展品。"},
+      credit: {"author": "Aleksey Churushkin", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Вид_на_Парк_Победы_в_2013_году.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/victory-1.webp",
+      year: 2015,
+      caption: {"ru": "Среди самолётов парка стоит учебный реактивный Л-29 «Дельфин».", "en": "An L-29 Delfín jet trainer is among the aircraft on display.", "zh": "公园的飞机展区里陈列着一架L-29“海豚”喷气教练机。"},
+      credit: {"author": "Апатинаити", "license": "CC BY 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Л-29_Н.Новг.Парк_Победы_—_копия.JPG", "licenseUrl": "https://creativecommons.org/licenses/by/4.0"},
+    },
+    {
+      src: "history/catalog-c/victory-2.webp",
+      year: 2021,
+      caption: {"ru": "На аллее установлен памятник лётчику Михаилу Девятаеву и его товарищам по побегу.", "en": "A monument along the path commemorates pilot Mikhail Devyataev and the men who escaped with him.", "zh": "步道旁的纪念碑纪念飞行员米哈伊尔·杰维亚塔耶夫及与他共同逃生的同伴。"},
+      credit: {"author": "A.Morgunovskaya", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Нижний_Новгород,_памятник_группе_Девятаева_в_Парке_Победы.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/victory-3.webp",
+      year: 2024,
+      caption: {"ru": "С высоты Казанского спуска видна вся открытая экспозиция у Гребного канала.", "en": "From Kazansky Descent the open-air displays can be seen beside the Rowing Canal.", "zh": "从喀山坡道高处可俯瞰赛艇运河边的露天展区。"},
+      credit: {"author": "Vyacheslav Bukharov", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monuments_and_memorials_in_Nizhny_Novgorod_(June_2024)_-_15.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+  ]),
+  catalogHistory("gorky", [
+    {
+      src: "history/catalog-c/gorky-0.webp",
+      year: 1972,
+      caption: {"ru": "Так могла выглядеть верхняя терраса, когда сюда перенесли скульптуру Ивана Шмагуна.", "en": "A reconstruction of the upper terrace when Ivan Shmagun’s sculpture was moved here.", "zh": "这幅复原图描绘了伊万·施马贡的雕像迁到上层观景台时可能的场景。"},
+      credit: {"author": "OpenAI ImageGen · ракурс по фото Arsi Smith", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Памятник_Максиму_Горькому_на_набережной_Федоровского.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+      generated: true,
+    },
+    {
+      src: "history/catalog-c/gorky-1.webp",
+      year: 2016,
+      caption: {"ru": "Старый каменный постамент приподнимал фигуру писателя над краем откоса.", "en": "The old stone plinth raised the writer’s figure above the edge of the slope.", "zh": "旧石基座将作家的雕像托起，高出坡顶。"},
+      credit: {"author": "Arsi Smith", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Памятник_Максиму_Горькому_на_набережной_Федоровского.jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"},
+    },
+    {
+      src: "history/catalog-c/gorky-2.webp",
+      year: 2018,
+      caption: {"ru": "Ещё до переустройства набережной скульптуру можно было рассмотреть сбоку. В руке у Горького трость.", "en": "Before the embankment was remodelled, this side view showed the cane in Gorky’s hand.", "zh": "滨河路改造前的侧面照中，可以看到高尔基手中的拐杖。"},
+      credit: {"author": "Надежда Кей, Наталия Болотова, Екатерина Сумина · ИА «В городе N»", "license": "По правилам издания", "sourceUrl": "https://www.vgoroden.ru/statyi/gorkiy-na-karte-nizhnego", "licenseUrl": "https://www.vgoroden.ru/statyi/gorkiy-na-karte-nizhnego"},
+    },
+    {
+      src: "history/catalog-c/gorky-3.webp",
+      year: 2021,
+      caption: {"ru": "После открытия обновлённой набережной к фигуре можно подойти с верхнего яруса амфитеатра.", "en": "After the embankment reopened, visitors could approach the figure from the top tier of the amphitheatre.", "zh": "滨河路重新开放后，游客可以从露天阶梯的顶层走近雕像。"},
+      credit: {"author": "Дмитрий Лавров, Надя Кей, «Центр 800» · ИА «В городе N»", "license": "По правилам издания", "sourceUrl": "https://www.vgoroden.ru/statyi/teatr-prirodnyh-deystviy-nad-volgoy-i-okoy", "licenseUrl": "https://www.vgoroden.ru/statyi/teatr-prirodnyh-deystviy-nad-volgoy-i-okoy"},
+    },
+  ]),
+  catalogHistory("deer", [
+    {
+      src: "history/catalog-c/deer-0.webp",
+      year: 2011,
+      caption: {"ru": "Вид вниз от Чкаловской лестницы. За три года до установки оленя у воды ещё свободная площадка.", "en": "Looking down from the Chkalov Stairs, the space by the river is still open three years before the deer arrived.", "zh": "从契卡洛夫阶梯向下俯瞰，雕像落成前三年，河边仍是一片空地。"},
+      credit: {"author": "Aleksandr Zykov from Russia", "license": "CC BY-SA 2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_(5969669039).jpg", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"},
+    },
+    {
+      src: "history/catalog-c/deer-1.webp",
+      year: 2014,
+      yearLabel: {"ru": "До открытия", "en": "Before unveiling", "zh": "揭幕前"},
+      caption: {"ru": "Так могла выглядеть работа в венгерской мастерской. Шкуру оленя мастер собрал из стальных пластинок.", "en": "A reconstruction of the Hungarian workshop. The sculptor formed the deer’s coat from strips of steel.", "zh": "这幅复原图描绘了匈牙利工作室中的制作场景，雕塑家用钢片拼出了鹿的皮毛。"},
+      credit: {"author": "OpenAI ImageGen", "license": "AI reconstruction", "sourceUrl": "https://gabormszoke.com/wp-content/uploads/2023/05/22_GaborMSzoke_PORTFOLIO_online.pdf"},
+      generated: true,
+    },
+    {
+      src: "history/catalog-c/deer-2.webp",
+      year: 2014,
+      yearLabel: {"ru": "12 июня 2014", "en": "12 Jun 2014", "zh": "2014年6月12日"},
+      caption: {"ru": "12 июня на Нижне-Волжской набережной открыли пятиметровую скульптуру Габора Миклоша Жоке.", "en": "On 12 June, Gábor Miklós Szőke’s five-metre sculpture was unveiled on the Lower Volga Embankment.", "zh": "6月12日，加博尔·米克洛什·瑟克创作的五米高鹿雕塑在下伏尔加滨河路揭幕。"},
+      credit: {"author": "ИА «Время Н»", "license": "По правилам издания", "sourceUrl": "https://www.vremyan.ru/news/skulpturu_olenja_otkryli_na_nizhnevolzhskoj_naberezhnoj.html", "licenseUrl": "https://www.vremyan.ru/rules"},
+    },
+    {
+      src: "history/catalog-c/deer-3.webp",
+      year: 2019,
+      caption: {"ru": "В фоторепортаже 2019 года видна серебристая фигура целиком. На солнце стальные пластинки по-разному отражают свет.", "en": "This 2019 photo report shows the entire silver deer, its steel strips catching the sunlight at different angles.", "zh": "2019年的实地报道拍下了银鹿全貌，身上的钢片从不同角度反射阳光。"},
+      credit: {"author": "Надежда Кей · ИА «В городе N»", "license": "По правилам издания", "sourceUrl": "https://www.vgoroden.ru/statyi/koshka-s-knigoy-i-lebedinaya-vernost-kakih-zhivotnyh-i-za-chto-uvekovechili-v-nizhnem-novgorode", "licenseUrl": "https://www.vgoroden.ru/statyi/koshka-s-knigoy-i-lebedinaya-vernost-kakih-zhivotnyh-i-za-chto-uvekovechili-v-nizhnem-novgorode"},
+    },
+  ]),
+];

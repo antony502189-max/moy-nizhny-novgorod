@@ -61,7 +61,7 @@ export function Narration({id,lang,open=false}:{id:string;lang:Lang;open?:boolea
   const [stories,setStories]=useState<Stories>(),[failed,setFailed]=useState(false);
   useEffect(()=>{let alive=true;loadStories().then(s=>{if(alive)setStories(s)},()=>{if(alive)setFailed(true)});return()=>{alive=false}},[]);
   const story=stories?.[id], l=labels[lang];
-  return <details key={id} className="narration" open={open || undefined}><summary>{l.guide} · DeepSeek</summary>
+  return <details key={id} className="narration" open={open || undefined}><summary>{l.guide}{story?.model.startsWith('deepseek') ? ' · DeepSeek' : ''}</summary>
     {story?<><p>{story.text[lang]}</p><div className="chips"><ReadAloud text={story.text[lang]} lang={lang} clip={id}/><a href={story.source} target="_blank" rel="noreferrer">{l.source} ↗</a></div>
       <StoryRating id={'deepseek.'+id} lang={lang}/></> : <p role="status">{failed || stories?l.missing:'…'}</p>}</details>;
 }

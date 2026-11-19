@@ -1,0 +1,119 @@
+.now-page {
+  gap: clamp(20px, 4vw, 36px);
+}
+
+.now-page h1 {
+  font-size: clamp(32px, 5.8vw, 52px);
+}
+
+.now-guide {
+  display: block;
+  color: var(--blue-d);
+  text-decoration: none;
+}
+
+.now-guide img {
+  display: block;
+  width: 100%;
+  height: clamp(144px, 27vw, 254px);
+  object-fit: cover;
+  object-position: center 56%;
+}
+
+.now-guide__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  min-height: 44px;
+  font: 400 clamp(23px, 3.2vw, 30px)/1.2 var(--heading-font);
+  overflow-wrap: anywhere;
+}
+
+.now-guide:hover .now-guide__label {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.now-shortcuts {
+  display: grid;
+  border-block: 1px solid var(--line);
+}
+
+.now-shortcuts .now-shortcut {
+  min-height: 64px;
+  padding: 12px 8px;
+  border: 0;
+}
+
+.now-shortcuts .now-shortcut + .now-shortcut { border-top: 1px solid var(--line); }
+.now-shortcut > svg { color: var(--blue-d); }
+
+.now-page > .sec {
+  gap: 12px;
+  min-width: 0;
+  padding-top: clamp(14px, 2.5vw, 21px);
+  border-top: 2px solid var(--blue-d);
+}
+
+.now-page > .sec > .sec__head {
+  align-items: center;
+  gap: 12px;
+}
+
+.now-page > .sec > .sec__head h2 {
+  font-size: clamp(26px, 3.8vw, 34px);
+}
+
+.now-guide svg,
+.now-page .row > svg { flex-shrink: 0; }
+
+.now-page .list > .row {
+  gap: clamp(10px, 2.4vw, 22px);
+  padding-block: 12px;
+}
+
+.now-page .list > .row:last-child { border-bottom: 0; }
+
+.now-page .row__time {
+  flex: none;
+  min-width: 5ch;
+  font-weight: 600;
+}
+
+.now-sunset {
+  display: grid;
+  gap: 10px;
+  padding: 8px 0 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.now-sunset .big {
+  color: var(--blue-d);
+  font: 400 clamp(42px, 6vw, 56px)/1 var(--heading-font);
+}
+
+@media (min-width: 600px) {
+  .now-shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .now-shortcuts .now-shortcut { padding-inline: 14px; }
+
+  .now-shortcuts .now-shortcut + .now-shortcut {
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 480px) {
+  .now-viewpoints .row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 10px;
+    row-gap: 4px;
+  }
+
+  .now-viewpoints .row:has(.now-distance) > :is(.thumb, svg) { grid-row: span 2; }
+  .now-viewpoints .row > svg { grid-column: 3; }
+  .now-viewpoints .now-distance { grid-area: 2 / 2; }
+}

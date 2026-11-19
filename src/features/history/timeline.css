@@ -1,0 +1,98 @@
+.history-timeline {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.history-timeline__photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 52dvh;
+  background: #e6e7df;
+  touch-action: pan-y pinch-zoom;
+}
+.history-timeline__photo > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: contain;
+}
+.history-timeline__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #192d2de8;
+  color: white;
+  padding: 4px 9px;
+  font-size: .875rem;
+}
+.history-timeline__strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(5px, 1.5vw, 12px);
+}
+.history-timeline__choice {
+  cursor: pointer;
+  min-height: 44px;
+  position: relative;
+  padding: 4px;
+  border-bottom: 3px solid var(--line);
+  color: var(--muted);
+  font-size: .875rem;
+  line-height: 1.2;
+}
+.history-timeline__choice input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.history-timeline__choice:has(:checked) {
+  border-color: var(--blue);
+  color: var(--blue-d);
+  background: var(--blue-l);
+  font-weight: 700;
+}
+.history-timeline__choice:has(:focus-visible) {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+.history-timeline__choice img {
+  display: block;
+  width: 100%;
+  height: clamp(40px, 9vw, 76px);
+  object-fit: cover;
+}
+.history-timeline__choice span { display: block; margin-block: 7px 3px; overflow-wrap: anywhere; }
+.history-timeline figcaption { display: grid; gap: 6px; }
+.history-spot__links { display: flex; justify-content: space-between; gap: 8px; }
+.history-timeline__credit { color: var(--muted); font-size: .8125rem; }
+@media (max-width: 520px) {
+  .history-spot { gap: 12px; }
+  .history-spot__links > a { min-height: 44px; }
+  .history-timeline { gap: 10px; }
+  .history-timeline__choice { text-align: center; }
+}
+@media (min-width: 521px) {
+  .history-timeline__photo { aspect-ratio: 16 / 10; }
+  .history-timeline__strip { order: -1; }
+}
+
+.history-atlas__search { position: relative; display: flex; align-items: center; }
+.history-atlas__search > svg { position: absolute; left: 12px; color: var(--muted); pointer-events: none; }
+.history-atlas__search input { padding-inline-start: 40px; }
+.history-atlas__map { height: clamp(210px, 37dvh, 340px); }
+.history-atlas__selected { display: flex; align-items: center; gap: 6px; min-height: 44px; }
+.history-atlas .row__main { overflow-wrap: anywhere; }
+.history-cluster {
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  font: 700 15px/1 system-ui, sans-serif;
+  box-shadow: 0 1px 5px #123b4260;
+}

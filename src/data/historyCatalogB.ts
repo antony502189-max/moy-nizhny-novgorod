@@ -1,0 +1,430 @@
+import { catalogHistory } from './catalogHistory.ts';
+import type { HistorySpot } from './history.ts';
+
+export const catalogB: HistorySpot[] = [
+  catalogHistory("prison", [
+    {
+      src: "history/catalog-b/prison-1905.webp",
+      year: 1905,
+      caption: {"ru": "Острожная площадь и тюремный замок на фотографии Максима Дмитриева.", "en": "Ostrozhnaya Square and the prison fortress, photographed by Maxim Dmitriev.", "zh": "马克西姆·德米特里耶夫拍摄的监狱广场和城堡式监狱。"},
+      credit: {"author": "Maxim Petrovich Dmitriev", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ostrozhnaya_Square-1.jpg"},
+    },
+    {
+      src: "history/catalog-b/prison-2011.webp",
+      year: 2011,
+      caption: {"ru": "За белой угловой башней тянется наружная стена острога.", "en": "The outer prison wall extends from the white corner tower.", "zh": "白色角楼与旧监狱的外墙相连。"},
+      credit: {"author": "Bestalex", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Ostrog_(Prison).jpg"},
+    },
+    {
+      src: "history/catalog-b/prison-2019.webp",
+      year: 2019,
+      caption: {"ru": "Главный корпус острога со стороны двора.", "en": "The main prison block seen from the courtyard.", "zh": "从庭院望向旧监狱的主楼。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B3%D0%B0.jpg"},
+    },
+    {
+      src: "history/catalog-b/prison-2022.webp",
+      year: 2022,
+      caption: {"ru": "Комендантский корпус выходит на бывшую Острожную площадь, сегодня это площадь Свободы.", "en": "The commandant’s block faces the old prison square, now called Freedom Square.", "zh": "典狱长办公楼面向昔日的监狱广场，如今这里称为自由广场。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B_%D0%BF%D0%BB._2_%D1%81%D0%BD%D0%B0%D1%80%D1%83%D0%B6%D0%B8.jpg"},
+    },
+  ]),
+  catalogHistory("olisov", [
+    {
+      src: "history/catalog-b/olisov-before-restoration.webp",
+      year: 1960,
+      yearLabel: {"ru": "До реставрации", "en": "Before restoration", "zh": "修复前"},
+      caption: {"ru": "Палаты до реставрации 1960–1970-х годов. Сквозь леса видно, как были перестроены окна и крыльцо.", "en": "The chambers before their restoration in the 1960s and 1970s. The scaffolding frames the altered windows and porch.", "zh": "20世纪60至70年代修复前的宅邸，透过脚手架可以看见曾经改建的门窗和门廊。"},
+      credit: {"author": "А. С., С. М. и М. С. Шумилкины / ННГАСУ", "license": "Иллюстрация из монографии, 2020", "sourceUrl": "https://bibl.nngasu.ru/electronicresources/uch-metod/architecture/874203.pdf#page=123"},
+    },
+    {
+      src: "history/catalog-b/olisov-2011.webp",
+      year: 2011,
+      caption: {"ru": "Вид из Крутого переулка. Справа от Успенской церкви стоят палаты.", "en": "The chambers stand to the right of the Assumption Church in this view from Krutoy Lane.", "zh": "从克鲁托伊巷望去，宅邸在圣母安息教堂右侧。"},
+      credit: {"author": "Андрей Романенко", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Olisov_Palace_and_Assumption_Church.jpg"},
+    },
+    {
+      src: "history/catalog-b/olisov-2015.webp",
+      year: 2015,
+      caption: {"ru": "Крупный план одного из изразцов на фасаде палат.", "en": "A close view of a glazed tile on the exterior.", "zh": "宅邸外墙上的釉面装饰砖特写。"},
+      credit: {"author": "Ольга Лисенкова", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%B7%D1%80%D0%B0%D0%B7%D0%B5%D1%86_%D0%BD%D0%B0_%D1%84%D0%B0%D1%81%D0%B0%D0%B4%D0%B5_%D0%BF%D0%B0%D0%BB%D0%B0%D1%82_%D0%9E%D0%BB%D0%B8%D1%81%D0%BE%D0%B2%D0%B0.jpg"},
+    },
+    {
+      src: "history/catalog-b/olisov-2026.webp",
+      year: 2026,
+      caption: {"ru": "Весенний вид палат с крытым крыльцом и резными обрамлениями окон.", "en": "A spring view of the chambers, with their covered porch and carved window surrounds.", "zh": "春季的商人宅邸，可以看到带顶门廊和雕花窗框。"},
+      credit: {"author": "Дмитрий Сазанов", "license": "CC BY 4.0", "licenseUrl": "https://creativecommons.org/licenses/by/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Olisov%27s_Palace,_Nizhny_Novgorod_-_2026-04-08_01.jpg"},
+    },
+  ]),
+  catalogHistory("peter", [
+    {
+      src: "history/catalog-b/peter-1896.webp",
+      year: 1896,
+      caption: {"ru": "Палаты на Почайне с высоким наружным крыльцом на снимке из дореволюционного издания.", "en": "The chambers on Pochaina Street, with a tall outside stair, in a pre-revolutionary publication.", "zh": "革命前出版物中的波恰伊纳街宅邸与高高的外部台阶。"},
+      credit: {"author": "Автотипии придворного фотографа Отто Ренар в Москве с фотографий А. О. Карелина, М. П. Дмитриева и др.", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%BE%D0%BC%D0%B8%D0%BA_%D0%BD%D0%B0_%D0%9F%D0%BE%D1%87%D0%B0%D0%B9%D0%BD%D0%B5.jpg"},
+    },
+    {
+      src: "history/catalog-b/peter-2011.webp",
+      year: 2011,
+      caption: {"ru": "Каменный дом и его крыльцо со стороны Почаинской улицы.", "en": "The stone house and its porch seen from Pochainskaya Street.", "zh": "从波恰因斯卡娅街看石砌宅邸与门廊。"},
+      credit: {"author": "Bestalex", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Peter_the_Great_House.jpg"},
+    },
+    {
+      src: "history/catalog-b/peter-2019.webp",
+      year: 2019,
+      caption: {"ru": "Синий рельефный изразец на стене старых палат.", "en": "A blue glazed relief tile on the wall of the chambers.", "zh": "宅邸墙上一块蓝色的浮雕釉砖。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D1%87%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-27-%D0%B8%D0%B7%D1%80%D0%B0%D0%B7%D0%B5%D1%861.jpg"},
+    },
+    {
+      src: "history/catalog-b/peter-2020.webp",
+      year: 2020,
+      caption: {"ru": "Осенний вид палат Чатыгина, известных в городе как Домик Петра I.", "en": "An autumn view of the Chatygin Chambers, known locally as Peter the Great’s House.", "zh": "秋天的恰特金宅邸，当地人称它为彼得大帝故居。"},
+      credit: {"author": "Birch 0510", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D1%8B_%D0%A7%D0%B0%D1%82%D1%8B%D0%B3%D0%B8%D0%BD%D0%B0.jpg"},
+    },
+  ]),
+  catalogHistory("garden", [
+    {
+      src: "history/catalog-b/garden-1886.webp",
+      year: 1886,
+      caption: {"ru": "Волжский откос с Александровским садом на панораме Максима Дмитриева.", "en": "Maxim Dmitriev’s panorama shows the Volga hillside occupied by Alexander Garden.", "zh": "马克西姆·德米特里耶夫的全景照记录了亚历山大花园所在的伏尔加河岸坡。"},
+      credit: {"author": "Maxim Petrovich Dmitriev", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volzhsky_escarpment_in_Nizhny_Novgorod.jpg"},
+    },
+    {
+      src: "history/catalog-b/garden-2004.webp",
+      year: 2004,
+      caption: {"ru": "Вид с зимнего склона сада в сторону Волги в феврале.", "en": "A February view from the garden hillside towards the Volga.", "zh": "二月，从花园的雪坡望向伏尔加河。"},
+      credit: {"author": "Neonbaraban", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alexandergarten_Nizhni_Novgorod.jpg"},
+    },
+    {
+      src: "history/catalog-b/garden-2021.webp",
+      year: 2021,
+      caption: {"ru": "Центральная площадка сада после благоустройства к 800-летию города.", "en": "The garden’s central clearing after landscaping for the city’s 800th anniversary.", "zh": "为纪念建城八百周年整修后的花园中心空地。"},
+      credit: {"author": "WildPea", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%BA%D0%B0_%D0%B2_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D1%81%D0%B0%D0%B4%D1%83_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0.jpg"},
+    },
+    {
+      src: "history/catalog-b/garden-2026.webp",
+      year: 2026,
+      caption: {"ru": "Осенние деревья на склоне между верхней и нижней набережными.", "en": "Autumn trees on the hillside between the upper and lower embankments.", "zh": "上、下滨河路之间的秋日花园山坡。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B5%D0%B2%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_-_%D0%BE%D1%82%D0%BA%D0%BE%D1%81_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4.jpg"},
+    },
+  ]),
+  catalogHistory("shell", [
+    {
+      src: "history/catalog-b/shell-1984.webp",
+      year: 1984,
+      caption: {"ru": "Прежняя летняя эстрада на фотографии Николая Мошкова.", "en": "The original summer bandstand in a photograph by Nikolai Moshkov.", "zh": "尼古拉·莫什科夫拍摄的旧夏季露天舞台。"},
+      credit: {"author": "Николай Мошков", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D1%82%D0%BD%D1%8F%D1%8F_%D1%8D%D1%81%D1%82%D1%80%D0%B0%D0%B4%D0%B0_%D0%B2_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D1%81%D0%B0%D0%B4%D1%83,_1984_%D0%B3._%D0%A4%D0%BE%D1%82%D0%BE_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%9C%D0%BE%D1%88%D0%BA%D0%BE%D0%B2.png"},
+    },
+    {
+      src: "history/catalog-b/shell-2021-july.webp",
+      year: 2021,
+      yearLabel: {"ru": "Июль 2021", "en": "Jul 2021", "zh": "2021年7月"},
+      caption: {"ru": "Рабочие собирают полукруглый каркас новой «Ракушки» в Александровском саду.", "en": "Workers assemble the curved frame of the new bandstand in Alexander Garden.", "zh": "工人们正在亚历山大花园组装新“贝壳”舞台的弧形框架。"},
+      credit: {"author": "Пресс-служба правительства Нижегородской области", "license": "Фото пресс-службы", "sourceUrl": "https://pravda-nn.ru/news/v-aleksandrovskom-sadu-montiruyut-istoricheskuyu-stsenu-rakushku/"},
+    },
+    {
+      src: "history/catalog-b/shell-2021-august.webp",
+      year: 2021,
+      yearLabel: {"ru": "Август 2021", "en": "Aug 2021", "zh": "2021年8月"},
+      caption: {"ru": "22 августа на восстановленной сцене прошёл первый концерт.", "en": "The restored bandstand hosted its first concert on 22 August.", "zh": "修复后的舞台于8月22日举办了首场音乐会。"},
+      credit: {"author": "Кирилл Мартынов / Нижегородская правда", "license": "© Нижегородская правда", "sourceUrl": "https://pravda-nn.ru/news/na-vosstanovlennoj-stsene-rakushke-v-aleksandrovskom-sadu-sostoyalsya-pervyj-kontsert/"},
+    },
+    {
+      src: "history/catalog-b/shell-2022.webp",
+      year: 2022,
+      caption: {"ru": "Вид сверху на новую сцену и площадку для слушателей среди деревьев.", "en": "An aerial view of the rebuilt bandstand and the audience area among the trees.", "zh": "俯瞰林间重建的舞台和观众区。"},
+      credit: {"author": "WildPea", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4_%D0%B2_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%BC_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5_2024.jpg"},
+    },
+  ]),
+  catalogHistory("sormovo-house", [
+    {
+      src: "history/catalog-b/sormovo-house-1950s.webp",
+      year: 1952,
+      yearLabel: {"ru": "1952–1954", "en": "1952–1954", "zh": "1952–1954年"},
+      generated: true,
+      caption: {"ru": "Дом архитектора Людмилы Рождественской во время строительства. Этап отделки фасада показан в реконструкции.", "en": "Lyudmila Rozhdestvenskaya’s apartment block under construction. The reconstruction shows its facade being finished.", "zh": "柳德米拉·罗日杰斯特文斯卡娅设计的住宅楼正在建设，复原图呈现外墙装修阶段。"},
+      credit: {"author": "OpenAI", "license": "ИИ-реконструкция", "sourceUrl": "https://archnn.ru/projects/kvartira-na-bolshoy-pokrovskoy"},
+    },
+    {
+      src: "history/catalog-b/sormovo-house-2015.webp",
+      year: 2015,
+      caption: {"ru": "Верхние этажи и ритм окон вдоль главного фасада.", "en": "The upper floors and rows of windows along the street facade.", "zh": "临街立面的楼层和一排排窗户。"},
+      credit: {"author": "Jane Gulneva", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%91_%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_29.jpg"},
+    },
+    {
+      src: "history/catalog-b/sormovo-house-2020.webp",
+      year: 2020,
+      caption: {"ru": "Сквозной проезд под домом, вид со двора на улицу.", "en": "Looking out to the street through the building’s carriage arch.", "zh": "从院落穿过楼下的拱形通道望向街道。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BA%D0%B2%D0%BE%D0%B7%D0%BD%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4_%D0%B2_%D0%B4%D0%BE%D0%BC%D0%B5_29_%D0%BF%D0%BE_%D1%83%D0%BB%D0%B8%D1%86%D0%B5_%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%B4%D0%B2%D0%BE%D1%80%D0%B0.jpg"},
+    },
+    {
+      src: "history/catalog-b/sormovo-house-2022.webp",
+      year: 2022,
+      caption: {"ru": "Угол дома № 29 со стороны пешеходной Большой Покровской.", "en": "The corner of No. 29 seen from pedestrian Bolshaya Pokrovskaya Street.", "zh": "从大波克罗夫步行街望向29号楼的转角。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_29_2022-09.jpg"},
+    },
+  ]),
+  catalogHistory("gaz", [
+    {
+      src: "history/catalog-b/gaz-1932.webp",
+      year: 1932,
+      caption: {"ru": "Главная проходная автозавода в год его открытия. Снимок 1932 года в позднейшей фоторепродукции.", "en": "The plant gate in the year the factory opened, seen in a later reproduction of a 1932 photograph.", "zh": "汽车厂开办当年的大门，图为1932年照片的翻拍。"},
+      credit: {"author": "Artem Svetlov from Moscow, Russia", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B0%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%D0%B8%D0%BC._%D0%9C%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B2%D0%B0_1932_(10785102533).jpg"},
+    },
+    {
+      src: "history/catalog-b/gaz-2011.webp",
+      year: 2011,
+      caption: {"ru": "Главное здание Горьковского автомобильного завода.", "en": "The main building of the Gorky Automobile Plant.", "zh": "高尔基汽车厂的主楼。"},
+      credit: {"author": "Mikhail (Vokabre) Shcherbakov", "license": "CC BY-SA 2.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gorky_Automobile_Plant_(main_building).jpg"},
+    },
+    {
+      src: "history/catalog-b/gaz-2018.webp",
+      year: 2018,
+      caption: {"ru": "У проходной стоит памятник грузовику ГАЗ-АА, знаменитой «полуторке».", "en": "A GAZ-AA truck, nicknamed the “one-and-a-half-tonner”, stands on a pedestal by the entrance.", "zh": "厂门旁陈列着一辆俗称“一吨半”的嘎斯-AA型卡车。"},
+      credit: {"author": "Алексей Трефилов", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:GAZ-AA_Monument.jpg"},
+    },
+    {
+      src: "history/catalog-b/gaz-2019.webp",
+      year: 2019,
+      caption: {"ru": "Центральная проходная за деревьями со стороны проспекта Ленина.", "en": "The main entrance seen through the trees from Lenin Avenue.", "zh": "从列宁大街透过树木可见汽车厂的正门。"},
+      credit: {"author": "Алексей Трефилов", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gorky_Automobile_Plant._Main_entrance._09-2019_01.jpg"},
+    },
+  ]),
+  catalogHistory("gaz-museum", [
+    {
+      src: "history/catalog-b/gaz-museum-2007.webp",
+      year: 2007,
+      caption: {"ru": "Седан ГАЗ-3105 из собрания заводского музея.", "en": "A GAZ-3105 saloon from the factory museum’s collection.", "zh": "厂史博物馆收藏的嘎斯-3105轿车。"},
+      credit: {"author": "Gerundiy", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:GAZ-3105.jpg"},
+    },
+    {
+      src: "history/catalog-b/gaz-museum-2015.webp",
+      year: 2015,
+      caption: {"ru": "Двигатель ГАЗ-51Ф в разрезе в зале музея.", "en": "A cutaway GAZ-51F engine on display in the museum.", "zh": "展厅中陈列着剖开展示的嘎斯-51F发动机。"},
+      credit: {"author": "Апатинаити", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%90%D0%97-51%D0%A4_%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8C.jpg"},
+    },
+    {
+      src: "history/catalog-b/gaz-museum-2024.webp",
+      year: 2024,
+      caption: {"ru": "Опытная «Волга» ГАЗ-3104 в выставочном зале.", "en": "An experimental GAZ-3104 Volga in the exhibition hall.", "zh": "展厅中的实验车型嘎斯-3104“伏尔加”轿车。"},
+      credit: {"author": "Лапоть", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:GAZ-3104_Volga_-_GAZ_museum.jpg"},
+    },
+    {
+      src: "history/catalog-b/gaz-museum-2026.webp",
+      year: 2026,
+      caption: {"ru": "Здание музея истории ГАЗ на проспекте Ленина.", "en": "The GAZ History Museum building on Lenin Avenue.", "zh": "位于列宁大街上的高尔基汽车厂历史博物馆大楼。"},
+      credit: {"author": "U51N433", "license": "CC BY 4.0", "licenseUrl": "https://creativecommons.org/licenses/by/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%93%D0%90%D0%97_%D0%B2_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%BC_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5,_2026_%D0%B3%D0%BE%D0%B4.jpg"},
+    },
+  ]),
+  catalogHistory("sormovo", [
+    {
+      src: "history/catalog-b/sormovo-1893.webp",
+      year: 1893,
+      caption: {"ru": "Группа рабочих, мастеров и служащих Сормовского завода.", "en": "Workers, foremen and staff pose for a group portrait at the Sormovo Works.", "zh": "索尔莫沃工厂的工人、工长和职员合影。"},
+      credit: {"author": "Автор неизвестен", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D0%BE._%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B5,_%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0_%D0%B8_%D1%81%D0%BB%D1%83%D0%B6%D0%B0%D1%89%D0%B8%D0%B5_%D0%BC%D0%B5%D1%85.%D1%86%D0%B5%D1%85%D0%B0_%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0._1893%D0%B3_%D0%93%D0%98%D0%9C_e2t3.jpg"},
+    },
+    {
+      src: "history/catalog-b/sormovo-1899.webp",
+      year: 1899,
+      caption: {"ru": "Сотый сормовский паровоз. Снимок сделал Максим Дмитриев.", "en": "The hundredth locomotive built at Sormovo, photographed by Maxim Dmitriev.", "zh": "马克西姆·德米特里耶夫拍摄的索尔莫沃制造的第一百台蒸汽机车。"},
+      credit: {"author": "Дмитриев М. П.", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%D0%92%D1%8B%D0%BF%D1%83%D1%81%D0%BA_100-%D0%B3%D0%BE_%D0%BF%D0%B0%D1%80%D0%BE%D0%B2%D0%BE%D0%B7%D0%B0_%D0%BD%D0%B0_%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B5._1899%D0%B3._283338.jpg"},
+    },
+    {
+      src: "history/catalog-b/sormovo-2015.webp",
+      year: 2015,
+      caption: {"ru": "Исторический корпус заводоуправления на улице Баррикад.", "en": "The historic factory offices on Barrikad Street.", "zh": "巴里卡德街上的历史厂部办公楼。"},
+      credit: {"author": "Алексей Белобородов", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Heritage_building_of_the_Krasnoye_Sormovo_Plant_(Barrikad_St.,_1).jpg"},
+    },
+    {
+      src: "history/catalog-b/sormovo-2024.webp",
+      year: 2024,
+      caption: {"ru": "Краснокирпичный фасад заводоуправления «Красного Сормова».", "en": "The red-brick facade of the Krasnoye Sormovo administration building.", "zh": "红索尔莫沃厂部办公楼的红砖外墙。"},
+      credit: {"author": "Serhiomatviavelli", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%BE%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%91%D0%B0%D1%80%D1%80%D0%B8%D0%BA%D0%B0%D0%B4_1_%D0%9D_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_2024.jpg"},
+    },
+  ]),
+  catalogHistory("sormovo-museum", [
+    {
+      src: "history/catalog-b/sormovo-museum-1967.webp",
+      year: 1967,
+      generated: true,
+      caption: {"ru": "В октябре заводской музей открылся во Дворце культуры. Реконструкция первого зала по описаниям музея.", "en": "In October the factory museum opened at the Palace of Culture. This reconstruction imagines the early gallery from the museum’s account.", "zh": "工厂博物馆于十月在文化宫开放。这幅复原图依据馆方记述想象了早期展厅的面貌。"},
+      credit: {"author": "OpenAI", "license": "ИИ-реконструкция", "sourceUrl": "https://museum.krsormovo.ru/docs/"},
+    },
+    {
+      src: "history/catalog-b/sormovo-museum-1985.webp",
+      year: 1985,
+      caption: {"ru": "Открытие музея подводного судостроения 7 мая. В 2004 году он объединился с музеем истории завода.", "en": "The submarine shipbuilding museum opened on 7 May. It joined the factory history museum in 2004.", "zh": "潜艇造船博物馆于5月7日剪彩，并于2004年并入厂史博物馆。"},
+      credit: {"author": "Музей истории завода «Красное Сормово»", "license": "С указанием источника", "sourceUrl": "https://museum.krsormovo.ru/upload/iblock/52a/sgxp0aul26wfykux6vcbx2f6pst18tsy.pdf#page=171"},
+    },
+    {
+      src: "history/catalog-b/sormovo-museum-2019.webp",
+      year: 2019,
+      yearLabel: {"ru": "к 2019", "en": "by 2019", "zh": "截至2019年"},
+      caption: {"ru": "Фрагмент музейной диорамы «Сормово. Баррикады 1905 г.» в альбоме завода 2019 года.", "en": "Part of the museum diorama “Sormovo. The Barricades of 1905”, reproduced in the factory’s 2019 album.", "zh": "厂方2019年画册收录的馆藏立体场景《索尔莫沃：1905年的街垒》局部。"},
+      credit: {"author": "Знаменский и Летянин / Музей истории завода «Красное Сормово»", "license": "С указанием источника", "sourceUrl": "https://museum.krsormovo.ru/upload/iblock/52a/sgxp0aul26wfykux6vcbx2f6pst18tsy.pdf#page=139"},
+    },
+    {
+      src: "history/catalog-b/sormovo-museum-2025.webp",
+      year: 2025,
+      caption: {"ru": "Посетители знакомятся с коллекцией на «Ночи музеев» в мае.", "en": "Visitors explore the collection during the Night of Museums in May.", "zh": "游客在五月的“博物馆之夜”参观馆藏。"},
+      credit: {"author": "Объединённая судостроительная корпорация", "license": "© ОСК", "sourceUrl": "https://vympel.ru/upload/iblock/56a/iffo6pau5gedirr16jjbw4880d8p74zc.pdf#page=45"},
+    },
+  ]),
+  catalogHistory("zachatie", [
+    {
+      src: "history/catalog-b/zachatie-2012.webp",
+      year: 2012,
+      caption: {"ru": "Воссозданная Зачатьевская башня незадолго до открытия в ноябре.", "en": "The reconstructed Zachatievskaya Tower shortly before its opening in November.", "zh": "重建的扎恰季耶夫塔，即将于11月开放。"},
+      credit: {"author": "Bestalex", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_rebuilt_Zachatskaya_Tower_of_Nizhny_Novgorod_Kremlin.jpg"},
+    },
+    {
+      src: "history/catalog-b/zachatie-2014.webp",
+      year: 2014,
+      caption: {"ru": "Восстановление прясла стены между Зачатьевской и Борисоглебской башнями.", "en": "Restoration of the wall linking the Zachatievskaya and Borisoglebskaya towers.", "zh": "扎恰季耶夫塔与鲍里索格列布塔之间正在修复的城墙。"},
+      credit: {"author": "Ovchinnikov dmitriy", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C_-_%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B2%D0%BB%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BE%D0%BA_%D1%81%D1%82%D0%B5%D0%BD%D1%8B_%D0%BC%D0%B5%D0%B6%D0%B4%D1%83_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F%D0%BC%D0%B8_%D0%97%D0%B0%D1%87%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BE%D0%B3%D0%BB%D0%B5%D0%B1%D1%81%D0%BA%D0%B0%D1%8F.jpg"},
+    },
+    {
+      src: "history/catalog-b/zachatie-2020.webp",
+      year: 2020,
+      caption: {"ru": "Вид на башню со двора кремля.", "en": "The tower seen from inside the Kremlin.", "zh": "从克里姆林宫内看这座城塔。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B0%D1%87%D0%B0%D1%82%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8F,_%D0%B2%D0%B8%D0%B4_%D1%81_%D1%82%D0%B5%D1%80%D1%80%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8F.jpg"},
+    },
+    {
+      src: "history/catalog-b/zachatie-2024.webp",
+      year: 2024,
+      caption: {"ru": "Прогулочная дорожка вдоль кремлёвской стены у башни.", "en": "The footpath beside the rebuilt section of Kremlin wall near the tower.", "zh": "城塔附近沿着修复城墙延伸的步道。"},
+      credit: {"author": "Vyacheslav Bukharov", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Kremlin_(June_2024)_-_8.jpg"},
+    },
+  ]),
+  catalogHistory("barracks", [
+    {
+      src: "history/catalog-b/barracks-1870s.webp",
+      year: 1870,
+      yearLabel: {"ru": "1870-е", "en": "1870s", "zh": "1870年代"},
+      caption: {"ru": "Казармы и церковь Живоносного Источника на снимке Андрея Карелина.", "en": "The barracks and the Church of the Life-Giving Spring, photographed by Andrei Karelin.", "zh": "安德烈·卡列林拍摄的兵营和生命之泉教堂。"},
+      credit: {"author": "Андрей Карелин / НТБ НГТУ им. Р. Е. Алексеева", "license": "Public domain", "sourceUrl": "https://www.nntu.ru/frontend/web/ngtu/files/org_structura/library/meropr/virt_vyst/20-09-21-nn800.pdf#page=114"},
+    },
+    {
+      src: "history/catalog-b/barracks-2015.webp",
+      year: 2015,
+      caption: {"ru": "Фасад комплекса казарм со стороны Нижне-Волжской набережной.", "en": "The barracks facade seen from Lower Volga Embankment.", "zh": "从下伏尔加滨河路望向兵营的立面。"},
+      credit: {"author": "RaisaYum", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%B2%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F,_1_%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D1%85_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC_(%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC%D1%8B).JPG"},
+    },
+    {
+      src: "history/catalog-b/barracks-2018.webp",
+      year: 2018,
+      caption: {"ru": "Восточный корпус после обновления набережной.", "en": "The east block seen from the renovated embankment.", "zh": "从整修后的滨河路望向东侧营房。"},
+      credit: {"author": "Гордиенко Надежда", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC%D1%8B%22_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5-%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg"},
+    },
+    {
+      src: "history/catalog-b/barracks-2024.webp",
+      year: 2024,
+      caption: {"ru": "Набережная у бывших казарм. Дорожки огибают газоны вдоль Волги.", "en": "On the embankment by the former barracks, paths curve around the riverside lawns.", "zh": "昔日兵营前的滨河路，步道绕过河畔的草坪。"},
+      credit: {"author": "Vyacheslav Bukharov", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lower_Volga_River_Embankment_(June_2024)_-_2.jpg"},
+    },
+  ]),
+  catalogHistory("cable", [
+    {
+      src: "history/catalog-b/cable-2010.webp",
+      year: 2010,
+      caption: {"ru": "Стройплощадка станции Нижегородской канатной дороги со стороны Бора.", "en": "The site of the cableway station under construction on the Bor side of the river.", "zh": "伏尔加河博尔一侧正在建设的索道站。"},
+      credit: {"author": "Евгений Катышев", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Construction_station_of_Nizhny_Novgorod_aerial_tramway_on_Bor_side.jpeg"},
+    },
+    {
+      src: "history/catalog-b/cable-2011.webp",
+      year: 2011,
+      caption: {"ru": "Опоры канатной дороги над Волгой до открытия пассажирского движения.", "en": "The cableway towers over the Volga before the start of passenger service.", "zh": "索道正式载客前，伏尔加河上的支撑塔。"},
+      credit: {"author": "Андрей Бобровский", "license": "CC BY 3.0", "licenseUrl": "https://creativecommons.org/licenses/by/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_-_panoramio_(8).jpg"},
+    },
+    {
+      src: "history/catalog-b/cable-2012.webp",
+      year: 2012,
+      caption: {"ru": "В первый сезон работы кабинка отправляется от станции «Нижегородская» в Бор.", "en": "During the first season, a cabin leaves Nizhegorodskaya station for Bor.", "zh": "通车后的第一个运营季，缆车从下诺夫哥罗德站驶向博尔。"},
+      credit: {"author": "Алексей Белобородов", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_aerial_tramway._Cabin_starts_to_Bor.jpg"},
+    },
+    {
+      src: "history/catalog-b/cable-2024.webp",
+      year: 2024,
+      caption: {"ru": "Станция «Нижегородская» в июне.", "en": "Nizhegorodskaya station in June.", "zh": "六月的下诺夫哥罗德索道站。"},
+      credit: {"author": "Vyacheslav Bukharov", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Cableway_(June_2024)_-_6.jpg"},
+    },
+  ]),
+  catalogHistory("mosque", [
+    {
+      src: "history/catalog-b/mosque-1913.webp",
+      year: 1913,
+      caption: {"ru": "Чтение Корана во время закладки Соборной мечети.", "en": "A reading from the Quran during the laying of the mosque’s foundation.", "zh": "大清真寺奠基仪式上的诵经场景。"},
+      credit: {"author": "Автор неизвестен", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:NizhniyMosque2.jpg"},
+    },
+    {
+      src: "history/catalog-b/mosque-2007.webp",
+      year: 2007,
+      caption: {"ru": "Купол и минарет мечети на высоком берегу, рядом со старым трамплином.", "en": "The dome and minaret rise on the high bank beside the old ski jump.", "zh": "清真寺的圆顶和宣礼塔矗立在河岸高地上，旁边是旧的跳台滑雪设施。"},
+      credit: {"author": "Vmenkov", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny-Novgorod-Mosque-and-Ski-Jump-C0269.jpg"},
+    },
+    {
+      src: "history/catalog-b/mosque-2022.webp",
+      year: 2022,
+      caption: {"ru": "Вид сверху на мечеть и её двор на Казанской набережной.", "en": "The mosque and its courtyard on Kazan Embankment, seen from above.", "zh": "俯瞰喀山滨河路上的清真寺和庭院。"},
+      credit: {"author": "Olga-lisenkova", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_6,_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D1%83.jpg"},
+    },
+    {
+      src: "history/catalog-b/mosque-2025.webp",
+      year: 2025,
+      caption: {"ru": "Краснокирпичное здание мечети и минарет летом.", "en": "The red-brick mosque and its minaret in summer.", "zh": "夏日的红砖清真寺和宣礼塔。"},
+      credit: {"author": "Il Nur", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_(Nizhny_Novgorod,_04-07-2025)-1.jpg"},
+    },
+  ]),
+  catalogHistory("hero", [
+    {
+      src: "history/catalog-b/hero-1985.webp",
+      year: 1985,
+      caption: {"ru": "Катер на постаменте в год открытия памятника волжским речникам.", "en": "The boat on its plinth in the year the memorial to Volga river crews opened.", "zh": "纪念碑落成当年，伏尔加河船员纪念船已经安放在基座上。"},
+      credit: {"author": "Памятники техники Нижегородской области, фотоархив", "license": "Архивная фотография", "sourceUrl": "https://techmem-52-rf.moy.su/index/rejdovyj_barkas_quot_geroj_quot/0-198"},
+    },
+    {
+      src: "history/catalog-b/hero-2011.webp",
+      year: 2011,
+      caption: {"ru": "Зимой хорошо видна ось Чкаловской лестницы, у подножия которой стоит катер.", "en": "In winter the Chkalov Staircase rises clearly behind the boat.", "zh": "冬日，纪念船背后的契卡洛夫阶梯清晰可见。"},
+      credit: {"author": "Bestalex", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Boat_Hero_and_Chkalov_Stairs.jpg"},
+    },
+    {
+      src: "history/catalog-b/hero-2017.webp",
+      year: 2017,
+      caption: {"ru": "Ночной снимок освещённого катера с проходящего теплохода.", "en": "The illuminated boat at night, photographed from a passing river vessel.", "zh": "夜晚从驶过的客船上拍摄的纪念船灯光。"},
+      credit: {"author": "Алексей Задонский", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kater_Geroy_Nizhny_Novgorod_noch.jpg"},
+    },
+    {
+      src: "history/catalog-b/hero-2025.webp",
+      year: 2025,
+      caption: {"ru": "«Герой» в профиль. Красная труба хорошо заметна над надстройкой.", "en": "The Hero in profile, with the red funnel rising above the deckhouse.", "zh": "“英雄”号的侧面，红色烟囱耸立在甲板室之上。"},
+      credit: {"author": "Alexxx1979", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Hero_ship_monument_P5180781_2800.jpg"},
+    },
+  ]),
+  catalogHistory("kremlin", [
+    {
+      src: "history/catalog-b/kremlin-1895.webp",
+      year: 1895,
+      caption: {"ru": "Дмитриевскую башню перестраивают для размещения художественного музея.", "en": "The Dmitrievskaya Tower under reconstruction to house an art museum.", "zh": "德米特里耶夫塔正在改建，以容纳美术馆。"},
+      credit: {"author": "Автор неизвестен", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Restructuring_Dmitrievskaya_Tower.jpg"},
+    },
+    {
+      src: "history/catalog-b/kremlin-1913.webp",
+      year: 1913,
+      caption: {"ru": "Городская улица у кремлёвской стены на фотографии из книги 1913 года.", "en": "A street by the Kremlin wall, as pictured in a book published in 1913.", "zh": "1913年出版物中的克里姆林宫城墙外街景。"},
+      credit: {"author": "Art Repro Co.", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nijni_Novgorod,_1913.jpg"},
+    },
+    {
+      src: "history/catalog-b/kremlin-1986.webp",
+      year: 1986,
+      yearLabel: {"ru": "ок. 1986", "en": "c. 1986", "zh": "约1986年"},
+      caption: {"ru": "Кремль в советское время, когда город носил имя Горький.", "en": "The Kremlin during the Soviet period, when the city was called Gorky.", "zh": "苏联时期的克里姆林宫，当时这座城市称为高尔基。"},
+      credit: {"author": "Алексей Белобородов", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gorky_City._Nizhny_Novgorod_Kremlin.jpg"},
+    },
+    {
+      src: "history/catalog-b/kremlin-2020.webp",
+      year: 2020,
+      caption: {"ru": "Кремлёвские башни и кирпичная крепостная стена.", "en": "The Kremlin towers and the brick fortress wall.", "zh": "克里姆林宫的城塔和砖砌城墙。"},
+      credit: {"author": "Michurins087", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C._%D0%91%D0%B0%D1%88%D0%BD%D0%B8_%D0%B8_%D1%81%D1%82%D0%B5%D0%BD%D1%8B.jpg"},
+    },
+  ]),
+];

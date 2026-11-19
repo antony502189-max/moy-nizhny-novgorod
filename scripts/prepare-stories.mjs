@@ -16,7 +16,7 @@ for(const p of PLACES) if (!catalog.has(p.id)) {
 }
 const jobs = [...catalog.values()].map(place=>({...place,kind:'place'}));
 for(const spot of HISTORY) for(const photo of spot.then) jobs.push({
-  id:'photo-'+photo.id, kind:'photo', name:spot.title.ru, facts:spot.story.ru,
+  id:'photo-'+photo.id, kind:'photo', name:spot.title.ru, facts:spot.story?.ru ?? catalog.get(spot.placeId)?.facts, caption:photo.caption.ru, reconstruction:photo.generated === true,
   source:photo.credit.sourceUrl, year:photo.yearLabel.ru, image:photo.src,
 });
 const current = await readFile(output,'utf8').then(JSON.parse).catch(e=>{
@@ -24,14 +24,14 @@ const current = await readFile(output,'utf8').then(JSON.parse).catch(e=>{
 });
 const result = {};
 const languages=['ru','en','zh'];
-const prompt = 'Write a short walking-guide narration in Russian, English and simplified Chinese, each 2 to 3 sentences. Use only the supplied facts. Do not invent dates, construction phases, people, ticket prices, stories or instructions. For a photograph mention one clearly visible feature and distinguish it from historical context. Do not claim a modern event or object is visible in the archive photograph. Be specific and spoken, without headings. Return JSON {"ru":"...","en":"...","zh":"..."}.';
+const prompt = 'Write a short walking-guide narration in Russian, English and simplified Chinese, each 2 to 3 sentences. Use only the supplied facts. Do not invent dates, construction phases, people, ticket prices, stories or instructions. Explicitly identify an AI reconstruction when reconstruction is true. For a photograph mention one clearly visible feature and distinguish it from historical context. Do not claim a modern event or object is visible in the archive photograph. Be specific and spoken, without headings. Return JSON {"ru":"...","en":"...","zh":"..."}.';
 for(const job of jobs) {
   const {image,...evidence}=job;
   const photo=image ? await readFile(new URL(image,root)) : null;
   const signature=createHash('sha256').update(model+prompt+JSON.stringify(evidence)).update(photo||'').digest('hex');
   if(current[job.id]?.signature===signature) { result[job.id]=current[job.id]; continue; }
   const content=[{type:'text', text:JSON.stringify(evidence)}];
-  if(photo) content.push({type:'image_url',image_url:{url:'data:image/jpeg;base64,'+photo.toString('base64')}});
+  if(photo) content.push({type:'image_url',image_url:{url:'data:image/'+(image.endsWith('.webp')?'webp':'jpeg')+';base64,'+photo.toString('base64')}});
   const response=await fetch('https://api.deepseek.com/chat/completions',{
     method:'POST',headers:{authorization:'Bearer '+key,'content-type':'application/json'},
     signal:AbortSignal.timeout(90000),body:JSON.stringify({model,thinking:{type:'disabled'},
