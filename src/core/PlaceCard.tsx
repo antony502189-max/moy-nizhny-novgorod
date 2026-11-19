@@ -45,6 +45,7 @@ export function PlaceSheet({ place, onClose, extra }: { place: Place; onClose?: 
         <button key={n} className="chip" aria-pressed={ratings?.[place.id] === n}
           onClick={()=>setRatingError(!setRatings({...readRatings(), [place.id]:n}))}>{n} ★</button>)}</div></div>
       {ratingError && <p role="alert">{t('common.storageError')}</p>}
+      <a className="btn btn--ghost" href={'#/history/landmark/'+place.id}>{t('hist.timeline')}</a>
       <a href={'#/guide/'+place.id}>{t('guide.stories')} · {t('guide.title')} →</a>{extra}
     </div>
   );

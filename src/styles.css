@@ -122,9 +122,6 @@ main:focus { outline: none; }
 .sec { padding-top: 8px; }
 .sec__head { align-items: baseline; flex-wrap: wrap; }
 .sec__head h2 svg { align-self:center; }
-.guide-cover { display: grid; color: var(--ink); text-decoration: none; }
-.guide-cover img { width: 100%; height: clamp(126px,25vw,230px); object-fit: cover; object-position: 50% 56%; }
-.guide-cover span { display: flex; justify-content:space-between; align-items:center; padding:10px 0; font: 400 clamp(21px,3vw,28px)/1.2 var(--heading-font); border-bottom:1px solid var(--line); }
 .chip[aria-pressed=true], .chip--on { background:var(--blue); color:white; border-color:var(--blue); }
 .chip { padding:6px 10px; min-height:40px; }
 .tour-interests { margin-bottom:8px; }

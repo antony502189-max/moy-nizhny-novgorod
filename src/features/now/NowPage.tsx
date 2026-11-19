@@ -8,10 +8,10 @@ import { CENTER, distanceM, fmtDist, type LatLon } from '../../core/geo';
 import { isOnCityMap } from '../../core/basemap';
 import { sunDay, compass } from '../../core/sun';
 import { fmtTime, getNow, TZ } from '../../core/time';
-import { go } from '../../core/router';
 import { PLACES, placeById, placePhoto, type Place } from '../../data/places';
 import { edition, upcomingEvents, type CityEvent } from '../../data/events';
 import amenityData from '../../data/amenities.json';
+import './now.css';
 
 interface Amenity { id: string; kind: 'toilet' | 'water' | 'steps' | 'stepfree'; lat: number; lon: number; name?: string; fee?: string; opening?: string }
 const AMEN = (amenityData as { items: Amenity[] }).items;
@@ -125,30 +125,39 @@ export function NowPage() {
     : sel?.type === 'amen' ? amenName(sel.a) : location ? t('now.you') : null;
 
   return (
-    <div className="page">
+    <div className="page now-page">
       <PageTitle title={t('now.title')} sub={t('now.sub')} />
-      <a className="guide-cover" href="#/guide"><img src={import.meta.env.BASE_URL+'places/kremlin.jpg'} alt={l(placeById('kremlin')?.name)}/>
-        <span>{t('guide.title')} <Icon name="arrow" size={21}/></span></a>
+      <a className="now-guide" href="#/guide">
+        <img src={import.meta.env.BASE_URL + 'places/kremlin.jpg'} alt="" />
+        <span className="now-guide__label">{t('guide.title')} <Icon name="arrow" size={22} /></span>
+      </a>
 
-      <a className="row row--btn" href="./resident.html#/home"><Icon name="pin" size={22}/><div className="row__main"><b>{t('more.resident')}</b></div><Icon name="chev" size={18}/></a>
-      <button className="row row--btn" onClick={() => go('/twin')}>
-        <Icon name="globe" size={22} /><div className="row__main"><b>{t('now.twin.q')}</b><span>{t('now.twin.go')}</span></div><Icon name="chev" size={18} />
-      </button>
+      <div className="now-shortcuts">
+        <a className="row row--btn now-shortcut" href="./resident.html#/home">
+          <Icon name="pin" size={20} />
+          <div className="row__main"><b>{t('now.resident')}</b><span>{t('now.resident.detail')}</span></div>
+          <Icon name="chev" size={18} />
+        </a>
+        <a className="row row--btn now-shortcut" href="#/twin">
+          <Icon name="globe" size={20} />
+          <div className="row__main"><b>{t('now.twin.go')}</b><span>{t('now.twin.detail')}</span></div>
+          <Icon name="chev" size={18} />
+        </a>
+      </div>
 
-      <Section title={t(upcoming.soon ? 'now.events' : 'now.next')} icon="clock">
-        {!upcoming.list.length && <p role="status">{t('now.noProgramme')}</p>}
-        <div className="list">
+      <Section title={t(upcoming.soon ? 'now.events' : 'now.next')}>
+        {upcoming.list.length === 0 ? <p role="status">{t('now.noProgramme')}</p> : <div className="list">
           {upcoming.list.map(e => <a className="row row--btn" key={e.id} href={e.source} target="_blank" rel="noreferrer">
-            <div className="row__time">{fmtTime(new Date(e.start),lang)}</div>
+            <time className="row__time" dateTime={e.start}>{fmtTime(new Date(e.start),lang)}</time>
             <div className="row__main"><b>{l(e.title)}</b><span>{new Date(e.start).toLocaleDateString(lang, {day:'numeric',month:'long',timeZone:TZ})} · {l(placeById(e.placeId)?.name)}</span></div>
             <Icon name="link" size={16}/>
           </a>)}
-        </div>
+        </div>}
         <p className="muted small">{t('now.edition', {date:edition})} <a href="https://arsenal-museum.art/events-all/" target="_blank" rel="noreferrer">{t('common.official')} ↗</a></p>
       </Section>
 
-      <Section title={sun.tomorrow ? t('now.sunset.tomorrow') : t('now.sunset')} icon="sunset">
-        <div className="hero">
+      <Section title={sun.tomorrow ? t('now.sunset.tomorrow') : t('now.sunset')}>
+        <div className="now-sunset">
           <div className="sunbox">
             <div className="kv"><div className="big">{sun.sunset ? fmtTime(sun.sunset, lang) : '—'}</div><small>{sunLeft !== null ? (sunLeft > 0 ? t('now.sunset.left', { m: fmtDur(sunLeft, lang) }) : t('now.sunset.done')) : ''}</small></div>
             {sun.goldenStart && <div className="kv"><b>{fmtTime(sun.goldenStart, lang)}</b><small>{t('now.golden')}</small></div>}
@@ -158,7 +167,7 @@ export function NowPage() {
         </div>
         <h3>{t('now.viewpoints')}</h3>
         <p className="muted small">{t('now.viewpoints.note')}{location && ' ' + t('now.geo.found')}</p>
-        <div className="list" role="group" aria-label={t('now.viewpoints')}>
+        <div className="list now-viewpoints" role="group" aria-label={t('now.viewpoints')}>
           {viewpoints.map((p) => (
             <button key={p.id} className="row row--btn" onClick={() => selectOnMap({ type: 'place', place: p }, 'sunset')}>
               {placePhoto(p) ? <img className="thumb" src={placePhoto(p)} alt="" loading="lazy" /> : <span className="thumb" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f08a24' }}><Icon name="sunset" size={26} /></span>}
@@ -170,7 +179,7 @@ export function NowPage() {
         </div>
       </Section>
 
-      <Section title={t('now.nearest')} icon="pin" right={<button className="btn btn--ghost btn--sm" onClick={locate} disabled={locating}><Icon name="pin" size={16} />{t('now.near_me')}</button>}>
+      <Section title={t('now.nearest')} right={<button className="btn btn--ghost btn--sm" onClick={locate} disabled={locating}><Icon name="pin" size={16} />{t('now.near_me')}</button>}>
         <p className="muted small" role="status">{t(geoStatus || 'now.geo.hint')}</p>
         {location && <div className="stats">
           {([{ k: 'wc', n: nWc, i: 'wc', lab: t('now.wc') }, { k: 'water', n: nWater, i: 'drop', lab: t('now.water') }] as const).map(({ k, n, i, lab }) => n && (
@@ -181,7 +190,7 @@ export function NowPage() {
         </div>}
       </Section>
 
-      <Section title={t('now.map')} icon="layers">
+      <Section title={t('now.map')}>
         <div className="chips">
           {(['events', 'sunset', 'wc', 'water', 'access', 'steps'] as Layer[]).map((k) => <Chip key={k} active={layers.has(k)} onClick={() => toggle(k)}>{t('now.layer.' + k)}</Chip>)}
         </div>

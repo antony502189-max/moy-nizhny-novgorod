@@ -550,13 +550,12 @@
     }
   },
   "photo-stadium-2016": {
-    "model": "deepseek-flash",
-    "signature": "c33c28f8e3b11c17a1cdd5590bcee321f5e2da944fdb2832f8d8b32f1f7ac37f",
+    "model": "editorial",
     "source": "https://commons.wikimedia.org/wiki/File:NN_Strelka_Stadium_construction_08-2016.jpg",
     "text": {
-      "ru": "На этом снимке от 5 августа 2016 года видна стройплощадка: синий сплошной забор на переднем плане и подъёмные краны над котлованом. Это документальная фиксация одного из этапов строительства стадиона на Стрелке, а не современный вид готового объекта. Позднее авторы снимали стадион с разных точек — второй снимок датирован 6 мая 2018 года, а панорама 8 июня 2024 года показывает его через шесть лет.",
-      "en": "This photograph dated 5 August 2016 shows a construction site, with a solid blue fence in the foreground and cranes rising above the excavation. It documents one stage of the stadium's construction at Strelka rather than a modern view of the finished venue. The authors later photographed the stadium from different points: the second image is dated 6 May 2018, and a panorama from 8 June 2024 shows it six years on.",
-      "zh": "这张标注为2016年8月5日的照片显示的是施工现场，前景是一道蓝色实心围挡，基坑上方立着起重机。它记录的是箭头岛体育场建设过程中的一个阶段，而不是建成后场馆的现代景象。拍摄者后来从不同角度拍摄了这座体育场：第二张照片标注为2018年5月6日，而2024年6月8日的全景则展示了六年后的它。"
+      "ru": "Стадион на Стрелке · 2016. Над строительной площадкой на Стрелке стоят краны. Уже видны бетонные ярусы будущих трибун.",
+      "en": "Stadium at the Strelka · 2016. Cranes stand over the construction site at the Strelka. The concrete tiers of the stands are taking shape.",
+      "zh": "斯特列尔卡体育场 · 2016年. 斯特列尔卡的工地上吊车林立，看台的混凝土结构已初具规模。"
     }
   },
   "photo-stadium-2018": {
@@ -609,24 +608,1426 @@
       "zh": "这张题为《下诺夫哥罗德集市。主楼》的明信片展示了带有店铺的立面，右侧招牌上写着“玩具”。如今楼前是公共空间，夕阳照亮了立面。取景角度几乎一致，但招牌和店铺属于历史背景，并非现代景象。"
     }
   },
-  "photo-s1896": {
-    "model": "deepseek-flash",
-    "signature": "8f63b832be0d05e77e6988cdd073be5ff66f3460a0caa1e91b0c5b4aee6a8de0",
-    "source": "https://commons.wikimedia.org/wiki/File:Shukhov_Hyperboloid_Tower_in_Nizhniy_Novgorod_1896.jpg",
-    "text": {
-      "ru": "На этой фотографии 1896 года видна гиперболоидная башня Шухова на фоне главного павильона Всероссийской выставки. На снимке хорошо заметна ажурная металлическая конструкция башни, однако это историческое изображение, а не современная точка съёмки. Ажурные металлические пакгаузы на Стрелке сохранились от павильонов той выставки — сегодня это выставочные пространства.",
-      "en": "This 1896 photograph shows Shukhov's hyperboloid tower against the backdrop of the main pavilion of the All-Russian Exhibition. The tower's openwork metal structure is clearly visible, but this is a historical image, not a modern viewpoint. The openwork metal warehouses on the Strelka have survived from the pavilions of that exhibition — today they are exhibition spaces.",
-      "zh": "这张1896年的照片显示了舒霍夫双曲面塔，背景是全俄展览会的主展馆。照片中塔的镂空金属结构清晰可见，但这是历史影像，并非现代拍摄点。箭头地的镂空金属仓库保留自那次展览会的展馆——如今是展览空间。"
-    }
-  },
   "photo-g1900": {
-    "model": "deepseek-flash",
-    "signature": "687365ea42b711743b4b54739c3e24d21c43a61769df3c8abb3846cb99d2617e",
+    "model": "editorial",
     "source": "https://commons.wikimedia.org/wiki/File:Blagoveschenskaya_Sq-Provincial_gymnasia-NNovgorod-1900.jpg",
     "text": {
-      "ru": "На этом архивном снимке Василия Зевеке, датированном примерно 1900 годом, заснеженная Благовещенская площадь и губернская гимназия. Здание на фотографии видно как светлый корпус с рядом окон, а его историческое местоположение в реестре Мининского университета указано по адресу улица Ульянова, 1. Современный вид площади Минина и Пожарского снят с другого ракурса, со стороны Дмитриевской башни, поэтому он не показывает то же самое здание в кадре.",
-      "en": "This archival photograph by Vasily Zeveke, dated around 1900, shows the snow-covered Blagoveshchenskaya Square and the provincial gymnasium. The building appears as a light-colored block with rows of windows, and its historical location is listed in the Minin University register at 1 Ulyanova Street. The modern photograph of Minin and Pozharsky Square is taken from a different angle, from the side of the Dmitrievskaya Tower, so it does not show the same building in the frame.",
-      "zh": "这张瓦西里·泽韦克拍摄的档案照片约摄于1900年，展现了白雪覆盖的报喜广场和省立中学。照片中的建筑是一座浅色楼房，可见成排窗户；在米宁大学的登记册中，其历史位置标注为乌里扬诺夫街1号。米宁与波扎尔斯基广场的现代照片是从德米特里耶夫塔一侧的另一角度拍摄的，因此画面中并未呈现同一座建筑。"
+      "ru": "Губернская гимназия · около 1900. Гимназия на зимнем снимке Василия Зевеке. Её длинный фасад выходит на заснеженную Благовещенскую площадь.",
+      "en": "The provincial gymnasium · c. 1900. Vasily Zeveke photographed the gymnasium in winter. Its long façade faces the snow-covered Blagoveshchenskaya Square.",
+      "zh": "省立中学 · 约1900年. 瓦西里·泽韦克在冬天拍下这座中学。教学楼的长立面朝向白雪覆盖的报喜广场。"
+    }
+  },
+  "photo-pechersky-1631": {
+    "model": "editorial",
+    "source": "https://www.pecherskiy.nne.ru/ob-obiteli/letopis-monastyirya.html",
+    "text": {
+      "ru": "Вознесенский собор · 1631. ИИ-реконструкция. Летом 1631 года артель Фёдора Опарина начала класть из белого камня нижний этаж будущего собора.",
+      "en": "Ascension Cathedral · 1631. AI reconstruction. In the summer of 1631, Fyodor Oparin’s masons began laying the white limestone base of the cathedral.",
+      "zh": "升天大教堂 · 1631年. 人工智能复原图。 1631年夏，费奥多尔·奥帕林带领石匠用白色石灰岩砌筑大教堂的底层。"
+    }
+  },
+  "photo-pechersky-1870s": {
+    "model": "editorial",
+    "source": "https://www.nnov.ec/Старый_центр_Нижнего_Новгорода_на_снимках_Карелина_и_Дмитриева",
+    "text": {
+      "ru": "Вознесенский собор · 1870-е. На раскрашенной фотографии Андрея Карелина пятиглавый собор виден за колокольней, на фоне Волги.",
+      "en": "Ascension Cathedral · 1870s. In Andrey Karelin’s coloured photograph, the five-domed cathedral rises behind the bell tower, with the Volga in the distance.",
+      "zh": "升天大教堂 · 1870年代. 在安德烈·卡列林的着色照片中，五圆顶大教堂矗立在钟楼后方，远处是伏尔加河。"
+    }
+  },
+  "photo-stadium-2017": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Construction_of_Nizhny_Novgorod_Stadium.jpg",
+    "text": {
+      "ru": "Стадион на Стрелке · Июль 2017. За портовыми складами уже виден овал стадиона. Между наружными колоннами пока просматриваются трибуны.",
+      "en": "Stadium at the Strelka · July 2017. The oval stadium rises behind the port warehouses. The stands are still visible between the outer columns.",
+      "zh": "斯特列尔卡体育场 · 2017年7月. 港口仓库后面已能看到椭圆形体育场，透过外围柱列还可以望见看台。"
+    }
+  },
+  "photo-dmitriev-1895": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Restructuring_Dmitrievskaya_Tower.jpg",
+    "text": {
+      "ru": "Дмитриевская башня · 1895. Башню перестраивают для художественного музея. Над стенами уже подняли новый ярус, а высокой шатровой крыши ещё нет.",
+      "en": "Dmitrievskaya Tower · 1895. The tower is being rebuilt as an art museum. A new storey rises above the walls, still without its steep tented roof.",
+      "zh": "季米特里塔 · 1895年. 塔楼正在改建为美术馆。新的一层已高出城墙，陡峭的帐篷形屋顶尚未建起。"
+    }
+  },
+  "photo-pokrovskaya-1902": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_image_of_the_Bolshaya_Pokrovskaya_Street.jpg",
+    "text": {
+      "ru": "Большая Покровская · 1902. Экипажи стоят вдоль торговых домов. В конце улицы видна Дмитриевская башня кремля.",
+      "en": "Bolshaya Pokrovskaya · 1902. Horse-drawn carriages line the shopfronts. The Kremlin’s Dmitrievskaya Tower stands at the far end of the street.",
+      "zh": "大波克罗夫卡街 · 1902年. 马车沿着商铺排列，街道尽头可以看到克里姆林宫的季米特里塔。"
+    }
+  },
+  "photo-pokrovskaya-1985": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_City._Sverdlov_Street_(now_Bolshaya_Pokrovskaya_St).jpg",
+    "text": {
+      "ru": "Большая Покровская · около 1985. В Горьком Большая Покровская носила имя Свердлова. На снимке прохожие пересекают широкую улицу под подвесными фонарями.",
+      "en": "Bolshaya Pokrovskaya · c. 1985. When the city was called Gorky, Bolshaya Pokrovskaya was known as Sverdlov Street. Pedestrians cross beneath suspended streetlights.",
+      "zh": "大波克罗夫卡街 · 约1985年. 城市名为高尔基时，大波克罗夫卡街称为斯维尔德洛夫街。行人从悬挂的路灯下穿过宽阔的街道。"
+    }
+  },
+  "photo-fair-1870-1880": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D1%8F%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%BC_%D0%9E%D0%B3%D1%8E%D1%81%D1%82%D0%B0_%D0%9C%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D1%80%D0%B0%D0%BD%D0%B0.jpg",
+    "text": {
+      "ru": "Главный ярмарочный дом · 1870–1880. На месте нынешнего здания стоял ярмарочный дом Огюста Монферрана. На снимке Андрея Карелина хорошо видны колонны и треугольный фронтон.",
+      "en": "Main Fair House · 1870–1880. Auguste de Montferrand’s earlier fair building stood on this site. Andrey Karelin’s photograph shows the columns and triangular pediment.",
+      "zh": "集市主楼 · 1870–1880年. 如今的主楼所在地原是蒙费朗设计的集市大楼。安德烈·卡列林的照片清楚地记录了立柱和三角形山墙。"
+    }
+  },
+  "photo-fair-1982": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_City._Detsky_Mir_in_Main_Fair_building.jpg",
+    "text": {
+      "ru": "Главный ярмарочный дом · 1982. В Главном ярмарочном доме Горького работал магазин «Детский мир». Перед фасадом лежала площадь, вымощенная крупными плитами.",
+      "en": "Main Fair House · 1982. The Main Fair House in Gorky housed the Detsky Mir children’s store. Large paving slabs covered the square in front.",
+      "zh": "集市主楼 · 1982年. 当时高尔基市的集市主楼里开设了“儿童世界”商店。楼前的广场铺着大块石板。"
+    }
+  },
+  "photo-packhouses-1882": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/25763/",
+    "text": {
+      "ru": "Пакгаузы на Стрелке · 1882. Павильоны будущих пакгаузов впервые собрали для выставки в Москве. Из центрального сада виден высокий застеклённый фасад.",
+      "en": "The Strelka warehouses · 1882. The pavilions that would become the warehouses were first assembled for an exhibition in Moscow. The photograph shows the tall glazed façade from the central garden.",
+      "zh": "斯特列尔卡仓库 · 1882年. 后来改建为仓库的展馆最早为莫斯科博览会而搭建。从中央花园望去，可见高大的玻璃立面。"
+    }
+  },
+  "photo-packhouses-1896": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80_%D0%BF%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD%D0%BE%D0%B2_%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F.jpg",
+    "text": {
+      "ru": "Пакгаузы на Стрелке · 1896. Для выставки в Нижнем Новгороде павильоны собрали заново. Над витринами художественно-промышленного отдела видны металлические фермы.",
+      "en": "The Strelka warehouses · 1896. The pavilions were reassembled for the Nizhny Novgorod exhibition. Steel trusses span the displays in the industrial arts section.",
+      "zh": "斯特列尔卡仓库 · 1896年. 展馆为下诺夫哥罗德博览会重新组装。工艺美术展厅的展柜上方可见金属桁架。"
+    }
+  },
+  "photo-packhouses-2019": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%B0%D0%B6%D1%83%D1%80%D0%BD%D1%8B%D0%B5_%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D0%B8_%D0%BF%D0%B0%D0%BA%D0%B3%D0%B0%D1%83%D0%B7%D0%BE%D0%B2_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D1%81%D1%82%D0%B0%D0%B4%D0%B8%D0%BE%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4.jpg",
+    "text": {
+      "ru": "Пакгаузы на Стрелке · 2019. На Стрелке каркасы бывших портовых складов стоят под открытым небом. Сквозь ажурные фермы виден противоположный берег.",
+      "en": "The Strelka warehouses · 2019. The frames of the former port warehouses stand in the open at the Strelka. The opposite bank is visible through the steel lattice.",
+      "zh": "斯特列尔卡仓库 · 2019年. 在斯特列尔卡，原港口仓库的钢架露天而立。透过金属桁架可以看到对岸。"
+    }
+  },
+  "photo-gymnasium-1870": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Blagoveschensky_Cathedral_and_Province_Gymnasia_NNovgorod.jpg",
+    "text": {
+      "ru": "Губернская гимназия · 1870. На раскрашенном снимке гимназия стоит справа от Благовещенского собора. Центральная часть здания возвышается над боковыми крыльями.",
+      "en": "The provincial gymnasium · 1870. In this coloured photograph the gymnasium stands to the right of the Annunciation Cathedral. The centre of the building rises above its wings.",
+      "zh": "省立中学 · 1870年. 在这张着色照片中，文理中学位于圣母领报主教座堂右侧。中学主楼的中央部分高于两翼。"
+    }
+  },
+  "photo-gymnasium-2009": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Pedagogical_University_Nizhny_Novgorod.jpg",
+    "text": {
+      "ru": "Губернская гимназия · 2009. В бывшей гимназии работает педагогический университет. После надстройки 1930-х годов у корпуса и его боковых крыльев общая линия крыши.",
+      "en": "The provincial gymnasium · 2009. The former gymnasium houses the pedagogical university. Floors added in the 1930s brought the central block and the wings up to a common roofline.",
+      "zh": "省立中学 · 2009年. 昔日的文理中学已成为师范大学教学楼。20世纪30年代加层后，中央主楼与两翼的屋顶已基本齐平。"
+    }
+  },
+  "photo-school-1": {
+    "model": "editorial",
+    "source": "https://opentextnn.ru/old/history/familisarchives/index.html@id=6429",
+    "text": {
+      "ru": "Гимназия №1 · Начало XX века. В бывшем доме Деулина на Благовещенской площади в 1903 году открылось коммерческое училище. На старом снимке здание ещё двухэтажное.",
+      "en": "Gymnasium No. 1 · Early 1900s. A commercial school opened in Deulin’s former building on Annunciation Square in 1903. The old photograph shows its two-storey façade.",
+      "zh": "第一中学 · 20世纪初. 1903年，商科学校在报喜广场的德乌林旧宅开学。这张老照片上的楼房仍只有两层。"
+    }
+  },
+  "photo-school-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gymnasia_1_-_Minin_and_Pozharsky_sq_-_Nyzhny_Novgorod.jpg",
+    "text": {
+      "ru": "Гимназия №1 · 2009. После перестройки 1950-х годов гимназия стала четырёхэтажной. На углу появилась закруглённая часть с высокими арочными входами.",
+      "en": "Gymnasium No. 1 · 2009. After rebuilding in the 1950s the school had four floors. Its rounded corner has tall arched entrances.",
+      "zh": "第一中学 · 2009年. 20世纪50年代改建后，学校增高到四层，圆弧形转角处设有高大的拱形入口。"
+    }
+  },
+  "photo-school-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NN_Minin_and_Pozharsky_Square_view_08-2016.jpg",
+    "text": {
+      "ru": "Гимназия №1 · 2016. Летом 2016 года гимназию сняли со стороны кремля. Светлый фасад с закруглённым углом виден справа от Дмитриевской башни.",
+      "en": "Gymnasium No. 1 · 2016. In this summer 2016 view from the Kremlin, the pale school building with its rounded corner stands to the right of Dmitrievskaya Tower.",
+      "zh": "第一中学 · 2016年. 从克里姆林宫方向拍摄的2016年夏日照片中，季米特里塔右侧可见浅色的校舍和圆弧形转角。"
+    }
+  },
+  "photo-shukhov-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Shukhov_Hyperboloid_Tower_in_Nizhniy_Novgorod_1896.jpg",
+    "text": {
+      "ru": "Имитация Шуховских башен · 1896. Исток замысла — водонапорная башня Шухова на выставке 1896 года. Позднее её сетчатая форма вдохновила авторов реплик на Стрелке.",
+      "en": "Shukhov tower replicas · 1896. The starting point was Shukhov’s water tower at the 1896 exhibition. Its lattice form later inspired the replicas at the Strelka.",
+      "zh": "舒霍夫塔仿制景观 · 1896年. 设计灵感来自1896年博览会上舒霍夫的水塔。后来，斯特列尔卡的仿制塔沿用了这种网格结构。"
+    }
+  },
+  "photo-shukhov-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Вид_на_ажурные_конструкции_пакгаузов_со_стороны_стадиона_Нижний_Новгород.jpg",
+    "text": {
+      "ru": "Имитация Шуховских башен · 2019. Будущее место установки у пакгаузов. В 2019 году на берегу уже открыли металлические каркасы бывших складов, башен-реплик здесь ещё не было.",
+      "en": "Shukhov tower replicas · 2019. The future site by the warehouses in 2019. The old steel frames stood exposed on the waterfront before the replica towers were installed.",
+      "zh": "舒霍夫塔仿制景观 · 2019年. 这是2019年仿制塔设置前的河岸。旧仓库的金属骨架已露出，当时场地上还没有两座仿制塔。"
+    }
+  },
+  "photo-shukhov-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B0,_%D0%BF%D0%B0%D0%BA%D0%B3%D0%B0%D1%83%D0%B7%D1%8B,_%D0%B2%D0%B8%D0%B4_%D1%81_%D0%B2%D0%BE%D0%B4%D1%8B.jpg",
+    "text": {
+      "ru": "Имитация Шуховских башен · 2021. В августе 2021 года с реки видна площадка за ограждением. Позднее в том же году между пакгаузами установили две ажурные башни.",
+      "en": "Shukhov tower replicas · 2021. In August 2021 the site was still behind a fence, seen here from the river. Later that year two lattice towers were installed between the warehouses.",
+      "zh": "舒霍夫塔仿制景观 · 2021年. 2021年8月，从河上望向岸边仍可见施工围挡。同年晚些时候，两座网格塔安置在仓库之间。"
+    }
+  },
+  "photo-chkalov-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Chkalov_Stairs_in_1954.jpg",
+    "text": {
+      "ru": "Чкаловская лестница · 1954. Летом 1954 года с нижних ступеней снимали лестницу и фонари, ведущие вверх к кремлю.",
+      "en": "Chkalov Stairs · 1954. In summer 1954 a photographer looked up the steps, following the lamps towards the Kremlin.",
+      "zh": "契卡洛夫台阶 · 1954年. 1954年夏天，摄影师从底部拍下阶梯，两排路灯一直延伸到克里姆林宫。"
+    }
+  },
+  "photo-chkalov-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%BA%D0%B0%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%86%D0%B0_-_panoramio.jpg",
+    "text": {
+      "ru": "Чкаловская лестница · 2008. С нижней площадки видны оба марша и башня кремля на гребне откоса.",
+      "en": "Chkalov Stairs · 2008. From the lower landing, both flights lead the eye to the Kremlin tower on the ridge.",
+      "zh": "契卡洛夫台阶 · 2008年. 从下方的平台看，两侧梯段一直通向坡顶的克里姆林宫城塔。"
+    }
+  },
+  "photo-chkalov-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_city_during_forest_fires._Chkalov_Stairs.jpg",
+    "text": {
+      "ru": "Чкаловская лестница · 2022. В августе дым от лесных пожаров затянул Волгу. На лестнице хорошо виден цветной парапет.",
+      "en": "Chkalov Stairs · 2022. Wildfire smoke veiled the Volga in August. The painted parapet stands out along the steps.",
+      "zh": "契卡洛夫台阶 · 2022年. 八月的林火烟雾笼罩伏尔加河，阶梯上彩色的栏墙格外醒目。"
+    }
+  },
+  "photo-art-1": {
+    "model": "editorial",
+    "source": "https://arsenal-museum.art/o-nas/history/",
+    "text": {
+      "ru": "Центр современного искусства «Арсенал» · Середина XIX века. На чертеже показаны фасад Арсенала, поперечный разрез и планы этажей. Здание построили в кремле в 1843 году.",
+      "en": "“Arsenal” Centre for Contemporary Art · Mid-19th century. The drawing shows the Arsenal’s façade, a cross section and floor plans. The building was completed inside the Kremlin in 1843.",
+      "zh": "“阿尔谢纳尔”当代艺术中心 · 19世纪中叶. 图纸展示了军械库的立面、剖面与楼层平面图。该建筑于1843年在克里姆林宫内建成。"
+    }
+  },
+  "photo-art-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Arsenal_in_Nizhny_Novgorod_Kremlin.jpg",
+    "text": {
+      "ru": "Центр современного искусства «Арсенал» · 2015. Зимой со двора особенно хорошо видны арочные окна бывшего военного Арсенала.",
+      "en": "“Arsenal” Centre for Contemporary Art · 2015. Snow outlines the arched windows of the former military arsenal in the courtyard.",
+      "zh": "“阿尔谢纳尔”当代艺术中心 · 2015年. 冬季的院内，昔日军械库的拱窗清晰可见。"
+    }
+  },
+  "photo-art-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%BE%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%90%D1%80%D1%81%D0%B5%D0%BD%D0%B0%D0%BB%D0%B0.jpg",
+    "text": {
+      "ru": "Центр современного искусства «Арсенал» · 2018. Внутри бывшего склада устроили выставочный зал с галереей над первым этажом.",
+      "en": "“Arsenal” Centre for Contemporary Art · 2018. An upper gallery overlooks the exhibition hall inside the former storehouse.",
+      "zh": "“阿尔谢纳尔”当代艺术中心 · 2018年. 旧库房已成为展厅，从上层回廊可以俯瞰底层。"
+    }
+  },
+  "photo-volga-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B0%D0%BA%D0%B0%D1%82_(2013.06)_-_panoramio_(1).jpg",
+    "text": {
+      "ru": "Волжская набережная · 2013. Летний закат над проездом у жилых домов на Волжской набережной.",
+      "en": "Volga Embankment · 2013. Summer sunset over the residential access road on Volzhskaya Embankment.",
+      "zh": "伏尔加河滨河路 · 2013年. 夏日夕阳映照着伏尔加滨河路住宅旁的车道。"
+    }
+  },
+  "photo-volga-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Apartment_building_on_Volzhskaya_embankment.jpg",
+    "text": {
+      "ru": "Волжская набережная · 2017. Со стороны квартала видны разноцветные фасады домов вдоль набережной.",
+      "en": "Volga Embankment · 2017. Seen from the neighbourhood, brightly coloured apartment blocks line the embankment.",
+      "zh": "伏尔加河滨河路 · 2017年. 从街区望去，滨河路旁是一排色彩鲜艳的住宅楼。"
+    }
+  },
+  "photo-volga-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Volga_River_Embankment_in_Nizhny_Novgorod.jpg",
+    "text": {
+      "ru": "Волжская набережная · 2019. На прогулочной дорожке вдоль реки — конный патруль.",
+      "en": "Volga Embankment · 2019. A mounted patrol follows the riverside promenade.",
+      "zh": "伏尔加河滨河路 · 2019年. 骑警沿河边的步道巡逻。 伏尔加河沿岸街位于卡纳文斯基区的伏尔加河左岸。"
+    }
+  },
+  "photo-oka-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_City._View_to_confluence_of_Volga_and_Oka_Rivers.jpg",
+    "text": {
+      "ru": "Окская набережная — Общественное пространство · Около 1985. Стрелка в годы Горького. На дальнем берегу видны портовые сооружения у слияния рек.",
+      "en": "Oka Embankment and the Strelka · c. 1985. The Spit in the Gorky era. Port structures stand on the far bank at the river confluence.",
+      "zh": "奥卡河滨河路与斯特列尔卡 · 约1985年. 城市仍名为高尔基时的河岬，对岸两河交汇处可见港口设施。"
+    }
+  },
+  "photo-oka-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D1%80%D1%82_-_panoramio_(2).jpg",
+    "text": {
+      "ru": "Окская набережная — Общественное пространство · 2011. До появления прогулочной зоны на берегу Стрелки работали грузовые краны.",
+      "en": "Oka Embankment and the Strelka · 2011. Cargo cranes worked on the Spit before the waterfront became a promenade.",
+      "zh": "奥卡河滨河路与斯特列尔卡 · 2011年. 在河岸改为步行区之前，河岬上还有货运起重机。"
+    }
+  },
+  "photo-oka-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D1%83_%D0%B8_%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B2%D1%83%D1%85_%D1%80%D0%B5%D0%BA._%D0%A1_%D0%BB%D0%B5%D0%B2%D0%BE%D0%B9_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%E2%80%94_%D1%80%D0%B5%D0%BA%D0%B0_%D0%9E%D0%BA%D0%B0,_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D0%B9_%E2%80%94_%D0%92%D0%BE%D0%BB%D0%B3%D0%B0.jpg",
+    "text": {
+      "ru": "Окская набережная — Общественное пространство · 2022. Сверху виден берег Стрелки между Окой и Волгой после преобразования бывшего порта.",
+      "en": "Oka Embankment and the Strelka · 2022. An aerial view shows the waterfront between the Oka and Volga after redevelopment of the port.",
+      "zh": "奥卡河滨河路与斯特列尔卡 · 2022年. 俯瞰旧港区改造后的河岬，两侧分别为奥卡河与伏尔加河。"
+    }
+  },
+  "photo-rowing-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB_-_panoramio.jpg",
+    "text": {
+      "ru": "Набережная Гребного канала · 2009. В декабре с откоса хорошо видна узкая полоса суши между каналом и Волгой.",
+      "en": "Rowing Canal Embankment · 2009. In December the narrow strip of land separating the canal from the Volga is clearly visible from the hillside.",
+      "zh": "赛艇运河滨河路 · 2009年. 十二月，从高坡上可以清楚看到隔开赛艇水道与伏尔加河的狭长陆地。"
+    }
+  },
+  "photo-rowing-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%B1%D0%B8%D0%BD%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BD%D0%B0%D1%82%D0%BD%D0%BE%D0%B9_%D0%B4%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0%D0%B4_%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D1%8B%D0%BC_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%BE%D0%BC.jpg",
+    "text": {
+      "ru": "Набережная Гребного канала · 2021. Кабины канатной дороги пересекают канал на закате.",
+      "en": "Rowing Canal Embankment · 2021. Cable cars cross the canal at sunset.",
+      "zh": "赛艇运河滨河路 · 2021年. 落日时分，缆车从赛艇水道上方经过。"
+    }
+  },
+  "photo-rowing-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D0%B5%D0%B5_%D1%81%D0%B2%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B0%D1%8D%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D0%BC_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B5_%D0%B2_%D1%80%D0%B0%D0%BC%D0%BA%D0%B0%D1%85_%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8F_%C2%AB%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%B8%D0%B5%D1%81%D1%82%D0%B0%C2%BB.jpg",
+    "text": {
+      "ru": "Набережная Гребного канала · 2022. На фестивале «Приволжская фиеста» аэростаты подсветили берег канала.",
+      "en": "Rowing Canal Embankment · 2022. Hot-air balloons light up the canal during the Volga Fiesta festival.",
+      "zh": "赛艇运河滨河路 · 2022年. 伏尔加热气球节期间，发光的热气球照亮了水道岸边。"
+    }
+  },
+  "photo-upper-volga-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Mariinsky_women_institute.jpg",
+    "text": {
+      "ru": "Верхне-Волжская набережная · 1910-е. Мариинский институт благородных девиц за оградой Верхне-Волжской набережной.",
+      "en": "Upper Volga Embankment · 1910s. The Mariinsky Institute for Young Women behind its fence on Upper Volga Embankment.",
+      "zh": "上伏尔加河滨河路 · 1910年代. 上伏尔加滨河路围栏后的马林斯基女子学院。"
+    }
+  },
+  "photo-upper-volga-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_(5969607359).jpg",
+    "text": {
+      "ru": "Верхне-Волжская набережная · 2011. Белые фасады старых особняков стоят вдоль проезжей части, напротив ограды откоса.",
+      "en": "Upper Volga Embankment · 2011. Pale mansion façades face the road, opposite the railing above the river slope.",
+      "zh": "上伏尔加河滨河路 · 2011年. 道路一侧是浅色宅邸，另一侧的栏杆守着临河的高坡。"
+    }
+  },
+  "photo-upper-volga-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NN_Upper_Volga_River_Embankment_05-2019.jpg",
+    "text": {
+      "ru": "Верхне-Волжская набережная · 2019. Весной улица идёт вдоль исторических домов по верхнему краю волжского склона.",
+      "en": "Upper Volga Embankment · 2019. The spring view follows the historic houses along the top of the Volga slope.",
+      "zh": "上伏尔加河滨河路 · 2019年. 春日里的街道沿着伏尔加高坡顶部的历史建筑延伸。"
+    }
+  },
+  "photo-fedorovsky-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NaberezhnayaFedorovskogoPan.jpg",
+    "text": {
+      "ru": "Набережная Федоровского · 2009. Панорама с набережной Федоровского охватывает долину Оки и противоположный берег.",
+      "en": "Fedorovsky Embankment · 2009. A panorama from Fedorovsky Embankment takes in the Oka valley and the opposite bank.",
+      "zh": "费多罗夫斯基滨河路 · 2009年. 从费多罗夫斯基滨河路拍摄的全景展现了奥卡河谷和对岸。"
+    }
+  },
+  "photo-fedorovsky-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Fedorovsky_Embankment.jpg",
+    "text": {
+      "ru": "Набережная Федоровского · 2013. Со смотровой площадки на закате видны Стрелка и расходящиеся от неё русла рек.",
+      "en": "Fedorovsky Embankment · 2013. At sunset, the viewpoint overlooks the Spit and the two river channels.",
+      "zh": "费多罗夫斯基滨河路 · 2013年. 日落时分，从观景台可见河岬和在此交汇的两条河道。"
+    }
+  },
+  "photo-fedorovsky-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NN_30-06-2022_Fedorovsky_Embankment.jpg",
+    "text": {
+      "ru": "Набережная Федоровского · 2022. После благоустройства по склону спускаются прогулочные дорожки с фонарями.",
+      "en": "Fedorovsky Embankment · 2022. After landscaping, paths with new lighting wind down the hillside.",
+      "zh": "费多罗夫斯基滨河路 · 2022年. 景观改造后，带有路灯的步道沿山坡蜿蜒而下。"
+    }
+  },
+  "photo-lower-volga-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Lower_Volga_Embankment_1894.jpg",
+    "text": {
+      "ru": "Нижне-Волжская набережная · 1894. На снимке Максима Дмитриева суда стоят вдоль торговой набережной.",
+      "en": "Lower Volga Embankment · 1894. Maxim Dmitriev’s photograph shows vessels moored along the commercial waterfront.",
+      "zh": "下伏尔加河滨河路 · 1894年. 马克西姆·德米特里耶夫的照片记录了停靠在商贸河岸边的船只。"
+    }
+  },
+  "photo-lower-volga-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Piers_on_the_Lower-Volga_embankment.jpg",
+    "text": {
+      "ru": "Нижне-Волжская набережная · 1901. Деревянные пристани принимают суда на нижнем берегу Волги.",
+      "en": "Lower Volga Embankment · 1901. Wooden piers serve riverboats on the lower bank of the Volga.",
+      "zh": "下伏尔加河滨河路 · 1901年. 伏尔加河低岸上的木码头停靠着河船。"
+    }
+  },
+  "photo-lower-volga-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4,_%D0%B0%D0%B2%D0%B3%D1%83%D1%81%D1%82_2021,_%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81_%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B0_%D1%80%D0%BE%D1%82%D0%BE%D0%BD%D0%B4%D1%8B_%D0%BD%D0%B0_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg",
+    "text": {
+      "ru": "Нижне-Волжская набережная · 2021. На набережной строят ротонду. Вокруг площадки ещё лежат стройматериалы.",
+      "en": "Lower Volga Embankment · 2021. The waterfront rotunda is under construction, with building materials stacked beside it.",
+      "zh": "下伏尔加河滨河路 · 2021年. 滨河圆亭正在施工，旁边仍堆放着建筑材料。"
+    }
+  },
+  "photo-kazan-embankment-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4,_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD,_%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB,_%D1%80%D0%B5%D0%BA%D0%B0_%D0%92%D0%BE%D0%BB%D0%B3%D0%B0_%D1%81_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1._%D0%B7%D0%B0_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C%D1%8E,_09-57_08.05.2006_-_panoramio.jpg",
+    "text": {
+      "ru": "Казанская набережная · 2006. Вид с края откоса за мечетью на Казанской набережной. Внизу виднеется Гребной канал.",
+      "en": "Kazan Embankment · 2006. Looking from the bluff behind the mosque on Kazan Embankment towards the rowing canal below.",
+      "zh": "喀山滨河路 · 2006年. 从喀山滨河路清真寺后的陡坡望去，下方是赛艇水道。"
+    }
+  },
+  "photo-kazan-embankment-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F,_%D0%B4.5_(2012.02.26)_-_panoramio.jpg",
+    "text": {
+      "ru": "Казанская набережная · 2012. Зимой над заснеженным склоном видны жилые башни дома № 5.",
+      "en": "Kazan Embankment · 2012. In winter, the residential towers at number 5 rise above the snowy hillside.",
+      "zh": "喀山滨河路 · 2012年. 冬日里，滨河路5号的住宅楼高耸于积雪的山坡上方。"
+    }
+  },
+  "photo-kazan-embankment-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%BD%D0%B0_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9,_6.jpg",
+    "text": {
+      "ru": "Казанская набережная · 2019. Минарет и купол Соборной мечети отмечают дом № 6 на набережной.",
+      "en": "Kazan Embankment · 2019. The Cathedral Mosque’s minaret and dome mark number 6 on the embankment.",
+      "zh": "喀山滨河路 · 2019年. 滨河路6号的大清真寺以宣礼塔和穹顶为标志。"
+    }
+  },
+  "photo-rozhdestvenskaya-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Rozhdesteskaya_Street_1898_2.jpg",
+    "text": {
+      "ru": "Улица Рождественская · 1898. Максим Дмитриев снял Рождественскую с мостовой, между рядами торговых домов.",
+      "en": "Rozhdestvenskaya Street · 1898. Maxim Dmitriev photographed Rozhdestvenskaya from its cobbled roadway between merchant buildings.",
+      "zh": "罗日杰斯特文斯卡亚街 · 1898年. 马克西姆·德米特里耶夫站在商铺间的石铺路面上拍下了圣诞街。"
+    }
+  },
+  "photo-rozhdestvenskaya-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_City._Mayakovsky_Street_(now_Rozhdestvenskaya_St).jpg",
+    "text": {
+      "ru": "Улица Рождественская · Около 1985. В годы Горького улица носила имя Маяковского. На снимке — Дом моделей.",
+      "en": "Rozhdestvenskaya Street · c. 1985. In the Gorky era the street bore Mayakovsky’s name. The photograph shows the Fashion House.",
+      "zh": "罗日杰斯特文斯卡亚街 · 约1985年. 城市名为高尔基时，这条街称马雅可夫斯基街。照片中可见时装设计院。"
+    }
+  },
+  "photo-rozhdestvenskaya-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4,_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD,_%D1%83%D0%BB.%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D1%82_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%86%D1%8B,_15-20_08.05.2006_-_panoramio.jpg",
+    "text": {
+      "ru": "Улица Рождественская · 2006. Вид от Рождественской церкви. Трамвайные рельсы идут вдоль старых фасадов.",
+      "en": "Rozhdestvenskaya Street · 2006. From the Nativity Church, tram tracks run past the old façades.",
+      "zh": "罗日杰斯特文斯卡亚街 · 2006年. 从圣母诞生教堂望去，电车轨道沿着老建筑延伸。"
+    }
+  },
+  "photo-mayak-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_City._LiAZ-677_bus_on_Embankment.jpg",
+    "text": {
+      "ru": "Торговый дом С.М. Рукавишникова (фабрика «Маяк») · Около 1985. Автобус ЛиАЗ остановился на набережной у корпуса бывшей фабрики «Маяк».",
+      "en": "Rukavishnikov Trading House (“Mayak”) · c. 1985. A LiAZ bus has stopped on the embankment beside the Mayak factory building.",
+      "zh": "鲁卡维什尼科夫商号（“灯塔”厂） · 约1985年. 一辆利亚兹牌公交车停在滨河路的灯塔工厂建筑旁。"
+    }
+  },
+  "photo-mayak-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Nizhnevolzhskaya_naberezhnaya,_11_(1).jpg",
+    "text": {
+      "ru": "Торговый дом С.М. Рукавишникова (фабрика «Маяк») · 2018. До реставрации со стороны Волги хорошо читался силуэт центрального фронтона.",
+      "en": "Rukavishnikov Trading House (“Mayak”) · 2018. Seen from the Volga before restoration, the central gable stands out against the hillside.",
+      "zh": "鲁卡维什尼科夫商号（“灯塔”厂） · 2018年. 修复前从伏尔加河望去，中央山墙的轮廓十分醒目。"
+    }
+  },
+  "photo-mayak-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5,_%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%BE%D0%B5_%D0%BA%D0%B0%D0%BA_%D0%B1%D1%8B%D0%B2%D1%88%D0%B0%D1%8F_%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0_%C2%AB%D0%9C%D0%B0%D1%8F%D0%BA%C2%BB,_%D0%BE%D1%82%D1%80%D0%B5%D1%81%D1%82%D0%B0%D0%B2%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BB%D0%B8_%D0%BA_800-%D0%BB%D0%B5%D1%82%D0%B8%D1%8E_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%B3%D0%BE_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0.jpg",
+    "text": {
+      "ru": "Торговый дом С.М. Рукавишникова (фабрика «Маяк») · 2021. Внутри корпуса ещё идут отделочные работы. За большими фабричными окнами видна набережная.",
+      "en": "Rukavishnikov Trading House (“Mayak”) · 2021. Finishing work is still underway inside, with the waterfront visible through the tall factory windows.",
+      "zh": "鲁卡维什尼科夫商号（“灯塔”厂） · 2021年. 厂房内的装修工程仍在进行，透过高大的窗户可以看到滨河路。"
+    }
+  },
+  "photo-station-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Romodanovsky_Railway_Station_02.jpg",
+    "text": {
+      "ru": "Ромодановский вокзал · 1904. Ромодановский вокзал со стороны площади в первый год работы нового здания.",
+      "en": "Romodanovsky Railway Station · 1904. Romodanovsky Station seen from the square in the new building’s first year.",
+      "zh": "罗莫达诺夫斯基火车站 · 1904年. 新站房投入使用的第一年，从广场望向罗莫达诺夫斯基车站。"
+    }
+  },
+  "photo-station-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Departure_of_military_units_on_the_front._Romodanovsky_Railway_Station.jpg",
+    "text": {
+      "ru": "Ромодановский вокзал · 1914. На площади перед вокзалом собрались военные части перед отправкой на фронт.",
+      "en": "Romodanovsky Railway Station · 1914. Military units gather on the station square before departing for the front.",
+      "zh": "罗莫达诺夫斯基火车站 · 1914年. 部队在车站广场集合，即将奔赴前线。"
+    }
+  },
+  "photo-station-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Romodanovski-2007-09-05.jpg",
+    "text": {
+      "ru": "Ромодановский вокзал · 2007. После реставрации видны угловые купола и арочные окна вокзала у подножия склона.",
+      "en": "Romodanovsky Railway Station · 2007. The restored station’s corner domes and arched windows stand at the foot of the hillside.",
+      "zh": "罗莫达诺夫斯基火车站 · 2007年. 修复后的车站坐落于山脚，转角穹顶与拱窗清晰可见。"
+    }
+  },
+  "photo-barysheva-1": {
+    "model": "editorial",
+    "source": "https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC_%D0%90._%D0%9B._%D0%91%D0%B0%D1%80%D1%8B%D1%88%D0%B5%D0%B2%D0%BE%D0%B9",
+    "text": {
+      "ru": "Дом А.Л. Барышевой · Конец 1830-х. ИИ-реконструкция. Так мог выглядеть дом Барышевой на Черниговской улице вскоре после постройки в конце 1830-х годов.",
+      "en": "Barysheva House · Late 1830s. AI reconstruction. An interpretation of Barysheva House on Chernigovskaya Street shortly after its construction in the late 1830s.",
+      "zh": "巴雷舍娃故居 · 1830年代末. 人工智能复原图。 想象复原的巴雷舍娃宅邸，呈现其在19世纪30年代末建成后不久的样貌。"
+    }
+  },
+  "photo-barysheva-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D1%80%D0%BD%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F,_4_%D0%94%D0%BE%D0%BC_%D0%90.%D0%9B._%D0%91%D0%B0%D1%80%D1%8B%D1%88%D0%B5%D0%B2%D0%BE%D0%B9.JPG",
+    "text": {
+      "ru": "Дом А.Л. Барышевой · 14 сентября 2015. Сентябрьское солнце освещает арочные обрамления окон под кронами деревьев.",
+      "en": "Barysheva House · 14 Sep 2015. September sunlight catches the arched window surrounds beneath the trees.",
+      "zh": "巴雷舍娃故居 · 2015年9月14日. 九月的阳光穿过树冠，照亮窗户的拱形饰框。"
+    }
+  },
+  "photo-barysheva-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D1%80%D0%BD%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_4_%D1%84%D0%B0%D1%81%D0%B0%D0%B4.jpg",
+    "text": {
+      "ru": "Дом А.Л. Барышевой · 26 сентября 2015. Другой ракурс той же осени показывает фасад, обращённый к улице.",
+      "en": "Barysheva House · 26 Sep 2015. Another view that autumn looks along the street-facing façade.",
+      "zh": "巴雷舍娃故居 · 2015年9月26日. 同年秋天的另一张照片展示临街立面。"
+    }
+  },
+  "photo-kozhevnikov-1": {
+    "model": "editorial",
+    "source": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%92._%D0%95._%D0%9A%D0%BE%D0%B6%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0",
+    "text": {
+      "ru": "Усадьба В.Е. Кожевникова · 1880-е. ИИ-реконструкция. По проекту 1883 года на месте деревянного дома строят каменный особняк. На реконструкции мастера завершают кладку ступенчатого аттика.",
+      "en": "Kozhevnikov Estate · 1880s. AI reconstruction. The 1883 design replaced a wooden house with a masonry mansion. This reconstruction shows masons finishing its stepped attic parapet.",
+      "zh": "科热夫尼科夫庄园 · 1880年代. 人工智能复原图。 按照1883年的设计，原有木屋被一栋砖石宅邸取代。复原图中，工匠正在完成阶梯状女儿墙的砌筑。"
+    }
+  },
+  "photo-kozhevnikov-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D1%80%D0%BD%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_14%D0%B0.jpg",
+    "text": {
+      "ru": "Усадьба В.Е. Кожевникова · 26 сентября 2015. Соседний корпус усадьбы на Черниговской, 14а отличается светлой штукатуркой фасада.",
+      "en": "Kozhevnikov Estate · 26 Sep 2015. The adjoining estate building at 14a Chernigovskaya has a pale rendered façade.",
+      "zh": "科热夫尼科夫庄园 · 2015年9月26日. 庄园内相邻的切尔尼戈夫街14a号建筑，立面覆有浅色灰泥。"
+    }
+  },
+  "photo-kozhevnikov-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%B2%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D1%8B_%D0%9A%D0%BE%D0%B6%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0.jpg",
+    "text": {
+      "ru": "Усадьба В.Е. Кожевникова · 2019. Со двора видны кирпичные хозяйственные постройки усадьбы.",
+      "en": "Kozhevnikov Estate · 2019. The estate’s brick outbuildings can be seen from the courtyard.",
+      "zh": "科热夫尼科夫庄园 · 2019年. 从院内可见庄园的砖砌附属建筑。"
+    }
+  },
+  "photo-vyakhirev-1": {
+    "model": "editorial",
+    "source": "https://www.nntu.ru/frontend/web/ngtu/files/org_structura/library/meropr/virt_vyst/20-09-21-nn800.pdf",
+    "text": {
+      "ru": "Усадьба Вяхиревых · 1840-е. ИИ-реконструкция. Усадьба складывалась в 1838–1849 годах. На реконструкции у фасада двухэтажного дома в Мельничном переулке ещё стоят козлы для отделочных работ.",
+      "en": "Vyakhirev Estate · 1840s. AI reconstruction. The estate took shape between 1838 and 1849. In this reconstruction, trestles for finishing work still stand outside the two-storey house on Melnichny Lane.",
+      "zh": "维亚希列夫庄园 · 1840年代. 人工智能复原图。 庄园逐步建成于1838年至1849年间。复原图中，磨坊巷两层住宅的立面前仍摆放着装修用的架凳。"
+    }
+  },
+  "photo-vyakhirev-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%90%D1%80%D0%BA%D0%B0_%D0%B2%D0%BE%D1%80%D0%BE%D1%82_%D1%83_%D0%B4%D0%BE%D0%BC%D0%B0_12-%D0%B1_%D0%B3%D1%80%D0%BE%D0%B7%D0%B8%D1%82_%D0%BE%D0%B1%D1%80%D1%83%D1%88%D0%B8%D1%82%D1%8C%D1%81%D1%8F.jpg",
+    "text": {
+      "ru": "Усадьба Вяхиревых · Май 2019. На весеннем снимке видны утраты кладки в арке усадебных ворот.",
+      "en": "Vyakhirev Estate · May 2019. A spring photograph records missing brickwork in the arch of the estate gate.",
+      "zh": "维亚希列夫庄园 · 2019年5月. 春天的照片记录了庄园门拱砖砌部分的缺损。"
+    }
+  },
+  "photo-vyakhirev-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A9%D0%B5%D0%BF%D0%B5%D1%82%D0%BE%D0%B2%D0%BE%D0%B9_%D0%94%D0%BE%D0%BC_%D0%92%D1%8F%D1%85%D0%B8%D1%80%D0%B5%D0%B2%D0%B0_%D0%B4%D0%B5%D0%BA%D0%BE%D1%80_%D1%84%D0%B0%D1%81%D0%B0%D0%B4%D0%B0.jpg",
+    "text": {
+      "ru": "Усадьба Вяхиревых · Октябрь 2019. Осенью крупным планом сняли три окна с арками и резным декором фасада.",
+      "en": "Vyakhirev Estate · Oct 2019. An autumn close-up shows three windows with arches and ornamental detailing.",
+      "zh": "维亚希列夫庄园 · 2019年10月. 秋季的特写展示了三扇窗上的拱形窗饰和雕花。"
+    }
+  },
+  "photo-bell-1": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/967/",
+    "text": {
+      "ru": "Спасская колокольня · 1900-е. На открытке рядом со Спасо-Преображенским собором стоит старая колокольня.",
+      "en": "Transfiguration Bell Tower · 1900s. The old bell tower stands beside the Transfiguration Cathedral on this postcard.",
+      "zh": "显圣容钟楼 · 1900年代. 这张明信片上，旧钟楼立在显圣容主教座堂旁。"
+    }
+  },
+  "photo-bell-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Transfiguration_Bell_Tower,_restoration_-_2020-08-08.jpg",
+    "text": {
+      "ru": "Спасская колокольня · 2020. Заново возведённую колокольню ещё закрывают строительные леса.",
+      "en": "Transfiguration Bell Tower · 2020. Scaffolding still surrounds the tower as it is being rebuilt.",
+      "zh": "显圣容钟楼 · 2020年. 重建中的钟楼外还围着脚手架。 克里姆林宫内的救世主钟楼是为下诺夫哥罗德建城800周年而重建的，它让人想起已消失的救世主显容大教堂。"
+    }
+  },
+  "photo-bell-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Transfiguration_Bell_Tower,_Nizhny_Novgorod_-_2021-08-26_(2).jpg",
+    "text": {
+      "ru": "Спасская колокольня · 2021. К августу леса сняли. На белом шатре видны слуховые окна.",
+      "en": "Transfiguration Bell Tower · 2021. By August the scaffolding is gone, revealing the openings in the white tent roof.",
+      "zh": "显圣容钟楼 · 2021年. 到了八月，脚手架已经拆除，白色帐篷顶上的小窗清晰可见。"
+    }
+  },
+  "photo-minin-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Blagoveschensky_Cathedral_and_Province_Gymnasia_NNovgorod.jpg",
+    "text": {
+      "ru": "Площадь Минина и Пожарского · 1870. Благовещенский собор и гимназия стоят на бывшей Благовещенской площади.",
+      "en": "Minin and Pozharsky Square · 1870. The Annunciation Cathedral and the gymnasium face what was then Annunciation Square.",
+      "zh": "米宁和波扎尔斯基广场 · 1870年. 在当年的圣母领报广场上，可以看到领报主教座堂和中学。"
+    }
+  },
+  "photo-minin-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Blagoveschenskaya_Sq-Provincial_gymnasia-NNovgorod-1900.jpg",
+    "text": {
+      "ru": "Площадь Минина и Пожарского · Около 1900. На снимке Василия Зевеке площадь перед гимназией покрыта снегом.",
+      "en": "Minin and Pozharsky Square · c. 1900. Snow covers the square in front of the gymnasium in Vasily Zeveke’s photograph.",
+      "zh": "米宁和波扎尔斯基广场 · 约1900年. 瓦西里·泽韦克拍下了积雪覆盖的广场和中学校舍。"
+    }
+  },
+  "photo-minin-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Dmitrovskaya_Tower._Minin_and_Pozharsky_square.jpg",
+    "text": {
+      "ru": "Площадь Минина и Пожарского · 2014. Над домами у площади видна Дмитриевская башня с зелёной крышей.",
+      "en": "Minin and Pozharsky Square · 2014. The green roof of the Dmitrievskaya Tower rises over the houses beside the square.",
+      "zh": "米宁和波扎尔斯基广场 · 2014年. 德米特里耶夫塔的绿顶高出广场旁的房屋。"
+    }
+  },
+  "photo-walls-1": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/2337/",
+    "text": {
+      "ru": "Стены кремля · 1890-е. На снимке Максима Дмитриева видны Пороховая башня и примыкающая к ней стена кремля.",
+      "en": "Kremlin walls · 1890s. Maxim Dmitriev’s photograph shows the Powder Tower and the adjoining Kremlin wall.",
+      "zh": "克里姆林宫城墙 · 1890年代. 马克西姆·德米特里耶夫的镜头记录了火药塔和与其相连的克里姆林宫城墙。"
+    }
+  },
+  "photo-walls-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Kremlin_wall_and_Volga_River_Nizhny_Novgorod_Russia_(14259081810).jpg",
+    "text": {
+      "ru": "Стены кремля · 2014. С внешней стороны хорошо видны уступы стены, спускающейся к Волге.",
+      "en": "Kremlin walls · 2014. Seen from outside, the wall drops in steps towards the Volga.",
+      "zh": "克里姆林宫城墙 · 2014年. 从外侧可以看到城墙顺着山坡逐级下降，伸向伏尔加河。"
+    }
+  },
+  "photo-walls-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Kremlin_—_Wall_between_Porokhovaya_and_Dmitrievskaya_towers.jpg",
+    "text": {
+      "ru": "Стены кремля · 2021. Крытый проход соединяет Пороховую и Дмитриевскую башни по верху стены.",
+      "en": "Kremlin walls · 2021. A roofed walkway follows the wall between the Powder and Dmitrievskaya towers.",
+      "zh": "克里姆林宫城墙 · 2021年. 有顶步道沿城墙顶部连接火药塔和德米特里耶夫塔。"
+    }
+  },
+  "photo-north-tower-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Lower_Bazaar_and_Nizhny_Novgorod_Kremlin.jpg",
+    "text": {
+      "ru": "Северная башня · 1870. На раскрашенном снимке Карелина Северная башня белеет над Нижним базаром.",
+      "en": "North Tower · 1870. In Karelin’s hand-coloured photograph, the white North Tower stands above the Lower Bazaar.",
+      "zh": "北塔 · 1870年. 卡列林拍摄的手工着色照片中，白色的北塔矗立在下集市上方。"
+    }
+  },
+  "photo-north-tower-2": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/922/",
+    "text": {
+      "ru": "Северная башня · 1900-е. Дмитриев снял подход к кремлёвскому элеватору. Выше по склону видны башни кремля.",
+      "en": "North Tower · 1900s. Dmitriev photographed the approach to the Kremlin funicular, with the towers visible higher up the hill.",
+      "zh": "北塔 · 1900年代. 德米特里耶夫拍下了通往克里姆林宫缆车的街道，坡上可见塔楼。"
+    }
+  },
+  "photo-north-tower-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Башня_Северная_(Нижегородская_область,_Нижний_Новгород).JPG",
+    "text": {
+      "ru": "Северная башня · 2012. Сквозь деревья видны круглая Северная башня и соседняя Часовая.",
+      "en": "North Tower · 2012. The round North Tower and the neighbouring Clock Tower rise above the trees.",
+      "zh": "北塔 · 2012年. 树木后方可以看到圆形北塔和旁边的钟塔。"
+    }
+  },
+  "photo-viewpoint-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_view_of_Nizhny_Novgorod_City.jpg",
+    "text": {
+      "ru": "Кремль Смотровая площадка · 1860. С высоты кремлёвского холма видны Нижний посад, крыши лавок и Стрелка.",
+      "en": "Kremlin viewing platform · 1860. The Kremlin hill overlooks the trading quarter, its rooftops and the Spit beyond.",
+      "zh": "克里姆林宫观景台 · 1860年. 从克里姆林宫山丘俯瞰，可见下城商区的屋顶和远处的两河交汇处。"
+    }
+  },
+  "photo-viewpoint-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Вид_на_Стрелку_с_территории_Нижегородского_кремля_-_panoramio.jpg",
+    "text": {
+      "ru": "Кремль Смотровая площадка · 2011. С территории кремля ещё видны портовые краны на другом берегу Оки.",
+      "en": "Kremlin viewing platform · 2011. The port cranes are still visible across the Oka in this view from the Kremlin.",
+      "zh": "克里姆林宫观景台 · 2011年. 从克里姆林宫望向奥卡河对岸，仍可见港口的起重机。"
+    }
+  },
+  "photo-viewpoint-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NN-16-05-2022_27.jpg",
+    "text": {
+      "ru": "Кремль Смотровая площадка · 2022. За собором Александра Невского появился стадион с белой крышей.",
+      "en": "Kremlin viewing platform · 2022. The stadium’s white roof has joined Alexander Nevsky Cathedral on the skyline.",
+      "zh": "克里姆林宫观景台 · 2022年. 亚历山大·涅夫斯基主教座堂后方的天际线上出现了白色体育场屋顶。"
+    }
+  },
+  "photo-markin-1": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/51303/",
+    "text": {
+      "ru": "Площадь Маркина · 1890-е. Максим Дмитриев снял Софроновскую площадь и дорогу к речным пристаням.",
+      "en": "Markin Square · 1890s. Maxim Dmitriev photographed Sofronovskaya Square and the road to the river piers.",
+      "zh": "马尔金广场 · 1890年代. 马克西姆·德米特里耶夫拍下了索夫罗诺夫广场以及通往河港的道路。"
+    }
+  },
+  "photo-markin-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Нижний_Новгород_Вид_на_Софроновскую_площадь.jpg",
+    "text": {
+      "ru": "Площадь Маркина · Рубеж XIX–XX вв.. В то время площадь у речных пристаней называлась Софроновской.",
+      "en": "Markin Square · c. 1900. At the time, the square by the river piers was known as Sofronovskaya Square.",
+      "zh": "马尔金广场 · 约1900年. 当时，河畔码头旁的广场名叫索夫罗诺夫广场。"
+    }
+  },
+  "photo-markin-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Fountain_on_Markin_Square.jpg",
+    "text": {
+      "ru": "Площадь Маркина · 2007. Вечером на площади Маркина включили цветную подсветку фонтана.",
+      "en": "Markin Square · 2007. Coloured lights illuminate the fountain on Markin Square after dark.",
+      "zh": "马尔金广场 · 2007年. 夜幕下，马尔金广场喷泉亮起彩灯。"
+    }
+  },
+  "photo-church-1": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/12421/",
+    "text": {
+      "ru": "Рождественская (Строгановская) церковь · 1870. Андрей Карелин снял Рождественскую церковь со стороны торговой улицы.",
+      "en": "Nativity Church (Stroganov Church) · 1870. Andrey Karelin photographed the Nativity Church from the trading street.",
+      "zh": "圣母诞生教堂（斯特罗加诺夫教堂） · 1870年. 安德烈·卡列林从商业街拍摄了圣母诞生教堂。"
+    }
+  },
+  "photo-church-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Ц._Рождества_Богородицы_(Строгановская)_(03.09.05)_-_panoramio.jpg",
+    "text": {
+      "ru": "Рождественская (Строгановская) церковь · 2005. С улицы хорошо виден резной белокаменный декор красного фасада.",
+      "en": "Nativity Church (Stroganov Church) · 2005. From the street, white stone carving stands out against the red façade.",
+      "zh": "圣母诞生教堂（斯特罗加诺夫教堂） · 2005年. 从街上可见，白色石雕装饰在红色立面上分外醒目。"
+    }
+  },
+  "photo-church-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Церковь_Собора_Пресвятой_Богородицы_(Строгановская)_-_panoramio_(1).jpg",
+    "text": {
+      "ru": "Рождественская (Строгановская) церковь · 2011. Колокольня со шпилем стоит поодаль от главного церковного здания.",
+      "en": "Nativity Church (Stroganov Church) · 2011. The steepled bell tower stands apart from the main church building.",
+      "zh": "圣母诞生教堂（斯特罗加诺夫教堂） · 2011年. 尖顶钟楼独立于教堂主建筑一侧。"
+    }
+  },
+  "photo-kazan-church-1": {
+    "model": "editorial",
+    "source": "https://russiainphoto.ru/photos/51236/",
+    "text": {
+      "ru": "Казанская церковь · 1890-е. Максим Дмитриев снял старую Казанскую церковь среди торговых рядов.",
+      "en": "Church of the Kazan Icon · 1890s. Maxim Dmitriev photographed the old Kazan church among the market stalls.",
+      "zh": "喀山圣母像教堂 · 1890年代. 马克西姆·德米特里耶夫拍下了集市商铺间的旧喀山教堂。"
+    }
+  },
+  "photo-kazan-church-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Россия,_Нижний_Новгород,_Нижегородский_район,_строительство_новой_церкви_(^),_13-54_08.05.2006_-_panoramio.jpg",
+    "text": {
+      "ru": "Казанская церковь · 2006. На площадке нового храма пока виден фундамент с очертаниями будущих стен.",
+      "en": "Church of the Kazan Icon · 2006. Only the foundation traces the outline of the new church on the construction site.",
+      "zh": "喀山圣母像教堂 · 2006年. 新教堂的工地上仅见基础，勾勒出未来墙体的轮廓。"
+    }
+  },
+  "photo-kazan-church-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Церковь_в_честь_иконы_Казанской_Божьей_Матери,_Почаинская,_31_-_panoramio.jpg",
+    "text": {
+      "ru": "Казанская церковь · 2008. С холма видна стройка нового храма. Стены уже подняты, купола ещё нет.",
+      "en": "Church of the Kazan Icon · 2008. From the hill the new church can be seen under construction, its walls up but its dome still missing.",
+      "zh": "喀山圣母像教堂 · 2008年. 从山上可见新教堂正在施工，墙体已砌起，圆顶尚未安装。"
+    }
+  },
+  "photo-ski-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhniy_Novgorod_ski_jumps_04.jpg",
+    "text": {
+      "ru": "Трамплинный комплекс у Сенной площади · 2006. На Сенной ещё стоит вышка большого старого трамплина. Её разберут в 2008 году.",
+      "en": "Ski jump at Sennaya Square · 2006. The old large jump still has its tower. It was dismantled in 2008.",
+      "zh": "干草广场跳台滑雪场 · 2006年. 当时旧大跳台的高塔仍然矗立，后来于2008年拆除。"
+    }
+  },
+  "photo-ski-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny-Novgorod-Mosque-and-Ski-Jump-C0273.jpg",
+    "text": {
+      "ru": "Трамплинный комплекс у Сенной площади · 2007. Со стороны Соборной мечети видны металлические опоры старого комплекса.",
+      "en": "Ski jump at Sennaya Square · 2007. The steel structures of the old jumps are visible beside the Cathedral Mosque.",
+      "zh": "干草广场跳台滑雪场 · 2007年. 从大清真寺旁望去，可以看到旧跳台的钢结构。"
+    }
+  },
+  "photo-ski-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Трамплинный_комплекс_(04.09.2010)_-_panoramio.jpg",
+    "text": {
+      "ru": "Трамплинный комплекс у Сенной площади · 2010. На склоне сохранились судейская вышка и трасса старого трамплинного комплекса.",
+      "en": "Ski jump at Sennaya Square · 2010. The judges’ tower and the old jump track still stand on the hillside.",
+      "zh": "干草广场跳台滑雪场 · 2010年. 山坡上还保留着旧跳台的裁判塔和滑道。"
+    }
+  },
+  "photo-wheel-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny-Novgorod-Mosque-and-Ski-Jump-C0273.jpg",
+    "text": {
+      "ru": "Колесо обозрения «Колесо НиНо» · 2007. У будущей площадки колеса над откосом возвышались конструкции лыжного трамплина.",
+      "en": "“NiNo” Ferris wheel · 2007. Beside the future wheel site, the ski jumping tower once dominated the hillside.",
+      "zh": "“尼诺”摩天轮 · 2007年. 在摩天轮建成前，附近的山坡上矗立着跳台滑雪设施。"
+    }
+  },
+  "photo-wheel-2": {
+    "model": "editorial",
+    "source": "https://www.vgoroden.ru/novosti/koleso-obozreniya-zarabotalo-na-ploshhadi-sennoy-v-nizhnem-novgorode-id341958",
+    "text": {
+      "ru": "Колесо обозрения «Колесо НиНо» · 2021. Колесо «НиНо» с застеклёнными кабинками открылось у Сенной площади.",
+      "en": "“NiNo” Ferris wheel · 2021. The NiNo wheel opened by Sennaya Square with enclosed passenger cabins.",
+      "zh": "“尼诺”摩天轮 · 2021年. 带有封闭式座舱的“尼诺”摩天轮在干草广场旁开放。"
+    }
+  },
+  "photo-wheel-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NiNo_Ferris_Wheel,_Nizhny_Novgorod_-_2023-02-07_(1).jpg",
+    "text": {
+      "ru": "Колесо обозрения «Колесо НиНо» · 2023. В зимнем небе видно, как кабинки подвешены к наружному ободу колеса.",
+      "en": "“NiNo” Ferris wheel · 2023. Against the winter sky, the cabins can be seen suspended from the outer rim.",
+      "zh": "“尼诺”摩天轮 · 2023年. 冬日天空下，能清楚看到悬挂在轮缘上的座舱。"
+    }
+  },
+  "photo-suetinskaya-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_(5970253168).jpg",
+    "text": {
+      "ru": "Дом на Суетинской, 29 · 2011. Со двора видно, как дом № 29 вписан в крутой склон Суетинской улицы.",
+      "en": "House at 29 Suetinskaya Street · 2011. The courtyard view shows how No. 29 is built into the steep slope of Suetinskaya Street.",
+      "zh": "苏耶京街29号住宅 · 2011年. 从院内可以看到，苏耶京街29号住宅依陡坡而建。"
+    }
+  },
+  "photo-suetinskaya-2": {
+    "model": "editorial",
+    "source": "https://www.vgoroden.ru/novosti/stena-zdaniya-rpc-na-suetinskoy-ne-vyderzhala-plohoy-pogody-id311790",
+    "text": {
+      "ru": "Дом на Суетинской, 29 · 2019. После обрушения стены западной пристройки обнажились внутренние перекрытия.",
+      "en": "House at 29 Suetinskaya Street · 2019. The collapse of a wall in the western extension exposed the floors inside.",
+      "zh": "苏耶京街29号住宅 · 2019年. 西侧附楼的外墙坍塌后，里面的楼板露了出来。"
+    }
+  },
+  "photo-suetinskaya-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Суетинская,_29.jpg",
+    "text": {
+      "ru": "Дом на Суетинской, 29 · 2021. С улицы видны розовый фасад, белые наличники и нижний этаж со стороны склона.",
+      "en": "House at 29 Suetinskaya Street · 2021. The street view shows the pink façade, white window surrounds and the lower floor on the hillside.",
+      "zh": "苏耶京街29号住宅 · 2021年. 从街边可见粉色外墙、白色窗套和面向山坡的底层。"
+    }
+  },
+  "photo-victory-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Вид_на_Парк_Победы_в_2013_году.jpg",
+    "text": {
+      "ru": "Парк Победы · 2013. В Парке Победы уже разбиты цветники, а за ними выстроена техника под открытым небом.",
+      "en": "Victory Park · 2013. Flowerbeds line the open-air display of vehicles in Victory Park.",
+      "zh": "胜利公园 · 2013年. 胜利公园的露天展区里，花坛后排列着各式展品。"
+    }
+  },
+  "photo-victory-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Л-29_Н.Новг.Парк_Победы_—_копия.JPG",
+    "text": {
+      "ru": "Парк Победы · 2015. Среди самолётов парка стоит учебный реактивный Л-29 «Дельфин».",
+      "en": "Victory Park · 2015. An L-29 Delfín jet trainer is among the aircraft on display.",
+      "zh": "胜利公园 · 2015年. 公园的飞机展区里陈列着一架L-29“海豚”喷气教练机。"
+    }
+  },
+  "photo-victory-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Нижний_Новгород,_памятник_группе_Девятаева_в_Парке_Победы.jpg",
+    "text": {
+      "ru": "Парк Победы · 2021. На аллее установлен памятник лётчику Михаилу Девятаеву и его товарищам по побегу.",
+      "en": "Victory Park · 2021. A monument along the path commemorates pilot Mikhail Devyataev and the men who escaped with him.",
+      "zh": "胜利公园 · 2021年. 步道旁的纪念碑纪念飞行员米哈伊尔·杰维亚塔耶夫及与他共同逃生的同伴。"
+    }
+  },
+  "photo-gorky-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Памятник_Максиму_Горькому_на_набережной_Федоровского.jpg",
+    "text": {
+      "ru": "Памятник Максиму Горькому · 1972. ИИ-реконструкция. Так могла выглядеть верхняя терраса, когда сюда перенесли скульптуру Ивана Шмагуна.",
+      "en": "Monument to Maxim Gorky · 1972. AI reconstruction. A reconstruction of the upper terrace when Ivan Shmagun’s sculpture was moved here.",
+      "zh": "马克西姆·高尔基纪念像 · 1972年. 人工智能复原图。 这幅复原图描绘了伊万·施马贡的雕像迁到上层观景台时可能的场景。"
+    }
+  },
+  "photo-gorky-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Памятник_Максиму_Горькому_на_набережной_Федоровского.jpg",
+    "text": {
+      "ru": "Памятник Максиму Горькому · 2016. Старый каменный постамент приподнимал фигуру писателя над краем откоса.",
+      "en": "Monument to Maxim Gorky · 2016. The old stone plinth raised the writer’s figure above the edge of the slope.",
+      "zh": "马克西姆·高尔基纪念像 · 2016年. 旧石基座将作家的雕像托起，高出坡顶。"
+    }
+  },
+  "photo-gorky-3": {
+    "model": "editorial",
+    "source": "https://www.vgoroden.ru/statyi/gorkiy-na-karte-nizhnego",
+    "text": {
+      "ru": "Памятник Максиму Горькому · 2018. Ещё до переустройства набережной скульптуру можно было рассмотреть сбоку. В руке у Горького трость.",
+      "en": "Monument to Maxim Gorky · 2018. Before the embankment was remodelled, this side view showed the cane in Gorky’s hand.",
+      "zh": "马克西姆·高尔基纪念像 · 2018年. 滨河路改造前的侧面照中，可以看到高尔基手中的拐杖。"
+    }
+  },
+  "photo-deer-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_(5969669039).jpg",
+    "text": {
+      "ru": "Олень · 2011. Вид вниз от Чкаловской лестницы. За три года до установки оленя у воды ещё свободная площадка.",
+      "en": "“Deer” sculpture · 2011. Looking down from the Chkalov Stairs, the space by the river is still open three years before the deer arrived.",
+      "zh": "“鹿”雕塑 · 2011年. 从契卡洛夫阶梯向下俯瞰，雕像落成前三年，河边仍是一片空地。"
+    }
+  },
+  "photo-deer-2": {
+    "model": "editorial",
+    "source": "https://gabormszoke.com/wp-content/uploads/2023/05/22_GaborMSzoke_PORTFOLIO_online.pdf",
+    "text": {
+      "ru": "Олень · До открытия. ИИ-реконструкция. Так могла выглядеть работа в венгерской мастерской. Шкуру оленя мастер собрал из стальных пластинок.",
+      "en": "“Deer” sculpture · Before unveiling. AI reconstruction. A reconstruction of the Hungarian workshop. The sculptor formed the deer’s coat from strips of steel.",
+      "zh": "“鹿”雕塑 · 揭幕前. 人工智能复原图。 这幅复原图描绘了匈牙利工作室中的制作场景，雕塑家用钢片拼出了鹿的皮毛。"
+    }
+  },
+  "photo-deer-3": {
+    "model": "editorial",
+    "source": "https://www.vremyan.ru/news/skulpturu_olenja_otkryli_na_nizhnevolzhskoj_naberezhnoj.html",
+    "text": {
+      "ru": "Олень · 12 июня 2014. 12 июня на Нижне-Волжской набережной открыли пятиметровую скульптуру Габора Миклоша Жоке.",
+      "en": "“Deer” sculpture · 12 Jun 2014. On 12 June, Gábor Miklós Szőke’s five-metre sculpture was unveiled on the Lower Volga Embankment.",
+      "zh": "“鹿”雕塑 · 2014年6月12日. 6月12日，加博尔·米克洛什·瑟克创作的五米高鹿雕塑在下伏尔加滨河路揭幕。"
+    }
+  },
+  "photo-prison-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Ostrozhnaya_Square-1.jpg",
+    "text": {
+      "ru": "Нижегородский острог · 1905. Острожная площадь и тюремный замок на фотографии Максима Дмитриева.",
+      "en": "Nizhny Novgorod Prison · 1905. Ostrozhnaya Square and the prison fortress, photographed by Maxim Dmitriev.",
+      "zh": "下诺夫哥罗德旧监狱 · 1905年. 马克西姆·德米特里耶夫拍摄的监狱广场和城堡式监狱。"
+    }
+  },
+  "photo-prison-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Ostrog_(Prison).jpg",
+    "text": {
+      "ru": "Нижегородский острог · 2011. За белой угловой башней тянется наружная стена острога.",
+      "en": "Nizhny Novgorod Prison · 2011. The outer prison wall extends from the white corner tower.",
+      "zh": "下诺夫哥罗德旧监狱 · 2011年. 白色角楼与旧监狱的外墙相连。"
+    }
+  },
+  "photo-prison-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B3%D0%B0.jpg",
+    "text": {
+      "ru": "Нижегородский острог · 2019. Главный корпус острога со стороны двора.",
+      "en": "Nizhny Novgorod Prison · 2019. The main prison block seen from the courtyard.",
+      "zh": "下诺夫哥罗德旧监狱 · 2019年. 从庭院望向旧监狱的主楼。"
+    }
+  },
+  "photo-olisov-1": {
+    "model": "editorial",
+    "source": "https://bibl.nngasu.ru/electronicresources/uch-metod/architecture/874203.pdf#page=123",
+    "text": {
+      "ru": "Палаты Афанасия Олисова · До реставрации. Палаты до реставрации 1960–1970-х годов. Сквозь леса видно, как были перестроены окна и крыльцо.",
+      "en": "Olisov Chambers · Before restoration. The chambers before their restoration in the 1960s and 1970s. The scaffolding frames the altered windows and porch.",
+      "zh": "奥利索夫宅邸 · 修复前. 20世纪60至70年代修复前的宅邸，透过脚手架可以看见曾经改建的门窗和门廊。"
+    }
+  },
+  "photo-olisov-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Olisov_Palace_and_Assumption_Church.jpg",
+    "text": {
+      "ru": "Палаты Афанасия Олисова · 2011. Вид из Крутого переулка. Справа от Успенской церкви стоят палаты.",
+      "en": "Olisov Chambers · 2011. The chambers stand to the right of the Assumption Church in this view from Krutoy Lane.",
+      "zh": "奥利索夫宅邸 · 2011年. 从克鲁托伊巷望去，宅邸在圣母安息教堂右侧。"
+    }
+  },
+  "photo-olisov-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%B7%D1%80%D0%B0%D0%B7%D0%B5%D1%86_%D0%BD%D0%B0_%D1%84%D0%B0%D1%81%D0%B0%D0%B4%D0%B5_%D0%BF%D0%B0%D0%BB%D0%B0%D1%82_%D0%9E%D0%BB%D0%B8%D1%81%D0%BE%D0%B2%D0%B0.jpg",
+    "text": {
+      "ru": "Палаты Афанасия Олисова · 2015. Крупный план одного из изразцов на фасаде палат.",
+      "en": "Olisov Chambers · 2015. A close view of a glazed tile on the exterior.",
+      "zh": "奥利索夫宅邸 · 2015年. 宅邸外墙上的釉面装饰砖特写。 商人阿法纳西·奥利索夫的石砌宅邸是城中现存最古老的民用建筑之一。"
+    }
+  },
+  "photo-peter-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%BE%D0%BC%D0%B8%D0%BA_%D0%BD%D0%B0_%D0%9F%D0%BE%D1%87%D0%B0%D0%B9%D0%BD%D0%B5.jpg",
+    "text": {
+      "ru": "Палаты Чатыгина (Домик Петра I) · 1896. Палаты на Почайне с высоким наружным крыльцом на снимке из дореволюционного издания.",
+      "en": "Chatygin Chambers (Peter the Great’s House) · 1896. The chambers on Pochaina Street, with a tall outside stair, in a pre-revolutionary publication.",
+      "zh": "恰特金宅邸（彼得大帝故居） · 1896年. 革命前出版物中的波恰伊纳街宅邸与高高的外部台阶。"
+    }
+  },
+  "photo-peter-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_Peter_the_Great_House.jpg",
+    "text": {
+      "ru": "Палаты Чатыгина (Домик Петра I) · 2011. Каменный дом и его крыльцо со стороны Почаинской улицы.",
+      "en": "Chatygin Chambers (Peter the Great’s House) · 2011. The stone house and its porch seen from Pochainskaya Street.",
+      "zh": "恰特金宅邸（彼得大帝故居） · 2011年. 从波恰因斯卡娅街看石砌宅邸与门廊。"
+    }
+  },
+  "photo-peter-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D1%87%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-27-%D0%B8%D0%B7%D1%80%D0%B0%D0%B7%D0%B5%D1%861.jpg",
+    "text": {
+      "ru": "Палаты Чатыгина (Домик Петра I) · 2019. Синий рельефный изразец на стене старых палат.",
+      "en": "Chatygin Chambers (Peter the Great’s House) · 2019. A blue glazed relief tile on the wall of the chambers.",
+      "zh": "恰特金宅邸（彼得大帝故居） · 2019年. 宅邸墙上一块蓝色的浮雕釉砖。"
+    }
+  },
+  "photo-garden-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Volzhsky_escarpment_in_Nizhny_Novgorod.jpg",
+    "text": {
+      "ru": "Александровский сад · 1886. Волжский откос с Александровским садом на панораме Максима Дмитриева.",
+      "en": "Alexander Garden · 1886. Maxim Dmitriev’s panorama shows the Volga hillside occupied by Alexander Garden.",
+      "zh": "亚历山大花园 · 1886年. 马克西姆·德米特里耶夫的全景照记录了亚历山大花园所在的伏尔加河岸坡。"
+    }
+  },
+  "photo-garden-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Alexandergarten_Nizhni_Novgorod.jpg",
+    "text": {
+      "ru": "Александровский сад · 2004. Вид с зимнего склона сада в сторону Волги в феврале.",
+      "en": "Alexander Garden · 2004. A February view from the garden hillside towards the Volga.",
+      "zh": "亚历山大花园 · 2004年. 二月，从花园的雪坡望向伏尔加河。"
+    }
+  },
+  "photo-garden-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%BA%D0%B0_%D0%B2_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D1%81%D0%B0%D0%B4%D1%83_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0.jpg",
+    "text": {
+      "ru": "Александровский сад · 2021. Центральная площадка сада после благоустройства к 800-летию города.",
+      "en": "Alexander Garden · 2021. The garden’s central clearing after landscaping for the city’s 800th anniversary.",
+      "zh": "亚历山大花园 · 2021年. 为纪念建城八百周年整修后的花园中心空地。"
+    }
+  },
+  "photo-shell-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D1%82%D0%BD%D1%8F%D1%8F_%D1%8D%D1%81%D1%82%D1%80%D0%B0%D0%B4%D0%B0_%D0%B2_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D1%81%D0%B0%D0%B4%D1%83,_1984_%D0%B3._%D0%A4%D0%BE%D1%82%D0%BE_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%9C%D0%BE%D1%88%D0%BA%D0%BE%D0%B2.png",
+    "text": {
+      "ru": "Сцена Ракушка · 1984. Прежняя летняя эстрада на фотографии Николая Мошкова.",
+      "en": "Rakushka open-air stage · 1984. The original summer bandstand in a photograph by Nikolai Moshkov.",
+      "zh": "“贝壳”露天舞台 · 1984年. 尼古拉·莫什科夫拍摄的旧夏季露天舞台。"
+    }
+  },
+  "photo-shell-2": {
+    "model": "editorial",
+    "source": "https://pravda-nn.ru/news/v-aleksandrovskom-sadu-montiruyut-istoricheskuyu-stsenu-rakushku/",
+    "text": {
+      "ru": "Сцена Ракушка · Июль 2021. Рабочие собирают полукруглый каркас новой «Ракушки» в Александровском саду.",
+      "en": "Rakushka open-air stage · Jul 2021. Workers assemble the curved frame of the new bandstand in Alexander Garden.",
+      "zh": "“贝壳”露天舞台 · 2021年7月. 工人们正在亚历山大花园组装新“贝壳”舞台的弧形框架。"
+    }
+  },
+  "photo-shell-3": {
+    "model": "editorial",
+    "source": "https://pravda-nn.ru/news/na-vosstanovlennoj-stsene-rakushke-v-aleksandrovskom-sadu-sostoyalsya-pervyj-kontsert/",
+    "text": {
+      "ru": "Сцена Ракушка · Август 2021. 22 августа на восстановленной сцене прошёл первый концерт.",
+      "en": "Rakushka open-air stage · Aug 2021. The restored bandstand hosted its first concert on 22 August.",
+      "zh": "“贝壳”露天舞台 · 2021年8月. 修复后的舞台于8月22日举办了首场音乐会。"
+    }
+  },
+  "photo-sormovo-house-1": {
+    "model": "editorial",
+    "source": "https://archnn.ru/projects/kvartira-na-bolshoy-pokrovskoy",
+    "text": {
+      "ru": "Жилой дом завода «Красное Сормово» · 1952–1954. ИИ-реконструкция. Дом архитектора Людмилы Рождественской во время строительства. Этап отделки фасада показан в реконструкции.",
+      "en": "Krasnoye Sormovo apartment building · 1952–1954. AI reconstruction. Lyudmila Rozhdestvenskaya’s apartment block under construction. The reconstruction shows its facade being finished.",
+      "zh": "红索尔莫沃工厂家属楼 · 1952–1954年. 人工智能复原图。 柳德米拉·罗日杰斯特文斯卡娅设计的住宅楼正在建设，复原图呈现外墙装修阶段。"
+    }
+  },
+  "photo-sormovo-house-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%91_%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_29.jpg",
+    "text": {
+      "ru": "Жилой дом завода «Красное Сормово» · 2015. Верхние этажи и ритм окон вдоль главного фасада.",
+      "en": "Krasnoye Sormovo apartment building · 2015. The upper floors and rows of windows along the street facade.",
+      "zh": "红索尔莫沃工厂家属楼 · 2015年. 临街立面的楼层和一排排窗户。"
+    }
+  },
+  "photo-sormovo-house-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BA%D0%B2%D0%BE%D0%B7%D0%BD%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4_%D0%B2_%D0%B4%D0%BE%D0%BC%D0%B5_29_%D0%BF%D0%BE_%D1%83%D0%BB%D0%B8%D1%86%D0%B5_%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%B4%D0%B2%D0%BE%D1%80%D0%B0.jpg",
+    "text": {
+      "ru": "Жилой дом завода «Красное Сормово» · 2020. Сквозной проезд под домом, вид со двора на улицу.",
+      "en": "Krasnoye Sormovo apartment building · 2020. Looking out to the street through the building’s carriage arch.",
+      "zh": "红索尔莫沃工厂家属楼 · 2020年. 从院落穿过楼下的拱形通道望向街道。"
+    }
+  },
+  "photo-gaz-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B0%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%D0%B8%D0%BC._%D0%9C%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B2%D0%B0_1932_(10785102533).jpg",
+    "text": {
+      "ru": "Завод «ГАЗ» · 1932. Главная проходная автозавода в год его открытия. Снимок 1932 года в позднейшей фоторепродукции.",
+      "en": "GAZ automobile plant · 1932. The plant gate in the year the factory opened, seen in a later reproduction of a 1932 photograph.",
+      "zh": "高尔基汽车厂 · 1932年. 汽车厂开办当年的大门，图为1932年照片的翻拍。"
+    }
+  },
+  "photo-gaz-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_Automobile_Plant_(main_building).jpg",
+    "text": {
+      "ru": "Завод «ГАЗ» · 2011. Главное здание Горьковского автомобильного завода.",
+      "en": "GAZ automobile plant · 2011. The main building of the Gorky Automobile Plant.",
+      "zh": "高尔基汽车厂 · 2011年. 高尔基汽车厂的主楼。 高尔基汽车厂是下诺夫哥罗德的一家大型汽车制造企业，它的历史与汽车厂区的发展相关。"
+    }
+  },
+  "photo-gaz-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:GAZ-AA_Monument.jpg",
+    "text": {
+      "ru": "Завод «ГАЗ» · 2018. У проходной стоит памятник грузовику ГАЗ-АА, знаменитой «полуторке».",
+      "en": "GAZ automobile plant · 2018. A GAZ-AA truck, nicknamed the “one-and-a-half-tonner”, stands on a pedestal by the entrance.",
+      "zh": "高尔基汽车厂 · 2018年. 厂门旁陈列着一辆俗称“一吨半”的嘎斯-AA型卡车。"
+    }
+  },
+  "photo-gaz-museum-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:GAZ-3105.jpg",
+    "text": {
+      "ru": "Музей «ГАЗ» · 2007. Седан ГАЗ-3105 из собрания заводского музея.",
+      "en": "GAZ History Museum · 2007. A GAZ-3105 saloon from the factory museum’s collection.",
+      "zh": "高尔基汽车厂历史博物馆 · 2007年. 厂史博物馆收藏的嘎斯-3105轿车。"
+    }
+  },
+  "photo-gaz-museum-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%90%D0%97-51%D0%A4_%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8C.jpg",
+    "text": {
+      "ru": "Музей «ГАЗ» · 2015. Двигатель ГАЗ-51Ф в разрезе в зале музея.",
+      "en": "GAZ History Museum · 2015. A cutaway GAZ-51F engine on display in the museum.",
+      "zh": "高尔基汽车厂历史博物馆 · 2015年. 展厅中陈列着剖开展示的嘎斯-51F发动机。"
+    }
+  },
+  "photo-gaz-museum-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:GAZ-3104_Volga_-_GAZ_museum.jpg",
+    "text": {
+      "ru": "Музей «ГАЗ» · 2024. Опытная «Волга» ГАЗ-3104 в выставочном зале.",
+      "en": "GAZ History Museum · 2024. An experimental GAZ-3104 Volga in the exhibition hall.",
+      "zh": "高尔基汽车厂历史博物馆 · 2024年. 展厅中的实验车型嘎斯-3104“伏尔加”轿车。"
+    }
+  },
+  "photo-sormovo-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D0%BE._%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B5,_%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0_%D0%B8_%D1%81%D0%BB%D1%83%D0%B6%D0%B0%D1%89%D0%B8%D0%B5_%D0%BC%D0%B5%D1%85.%D1%86%D0%B5%D1%85%D0%B0_%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0._1893%D0%B3_%D0%93%D0%98%D0%9C_e2t3.jpg",
+    "text": {
+      "ru": "Завод «Красное Сормово» · 1893. Группа рабочих, мастеров и служащих Сормовского завода.",
+      "en": "Krasnoye Sormovo shipyard · 1893. Workers, foremen and staff pose for a group portrait at the Sormovo Works.",
+      "zh": "红索尔莫沃造船厂 · 1893年. 索尔莫沃工厂的工人、工长和职员合影。"
+    }
+  },
+  "photo-sormovo-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%D0%92%D1%8B%D0%BF%D1%83%D1%81%D0%BA_100-%D0%B3%D0%BE_%D0%BF%D0%B0%D1%80%D0%BE%D0%B2%D0%BE%D0%B7%D0%B0_%D0%BD%D0%B0_%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B5._1899%D0%B3._283338.jpg",
+    "text": {
+      "ru": "Завод «Красное Сормово» · 1899. Сотый сормовский паровоз. Снимок сделал Максим Дмитриев.",
+      "en": "Krasnoye Sormovo shipyard · 1899. The hundredth locomotive built at Sormovo, photographed by Maxim Dmitriev.",
+      "zh": "红索尔莫沃造船厂 · 1899年. 马克西姆·德米特里耶夫拍摄的索尔莫沃制造的第一百台蒸汽机车。"
+    }
+  },
+  "photo-sormovo-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Heritage_building_of_the_Krasnoye_Sormovo_Plant_(Barrikad_St.,_1).jpg",
+    "text": {
+      "ru": "Завод «Красное Сормово» · 2015. Исторический корпус заводоуправления на улице Баррикад.",
+      "en": "Krasnoye Sormovo shipyard · 2015. The historic factory offices on Barrikad Street.",
+      "zh": "红索尔莫沃造船厂 · 2015年. 巴里卡德街上的历史厂部办公楼。"
+    }
+  },
+  "photo-sormovo-museum-1": {
+    "model": "editorial",
+    "source": "https://museum.krsormovo.ru/docs/",
+    "text": {
+      "ru": "Музей истории завода «Красное Сормово» · 1967. ИИ-реконструкция. В октябре заводской музей открылся во Дворце культуры. Реконструкция первого зала по описаниям музея.",
+      "en": "Krasnoye Sormovo History Museum · 1967. AI reconstruction. In October the factory museum opened at the Palace of Culture. This reconstruction imagines the early gallery from the museum’s account.",
+      "zh": "红索尔莫沃工厂历史博物馆 · 1967年. 人工智能复原图。 工厂博物馆于十月在文化宫开放。这幅复原图依据馆方记述想象了早期展厅的面貌。"
+    }
+  },
+  "photo-sormovo-museum-2": {
+    "model": "editorial",
+    "source": "https://museum.krsormovo.ru/upload/iblock/52a/sgxp0aul26wfykux6vcbx2f6pst18tsy.pdf#page=171",
+    "text": {
+      "ru": "Музей истории завода «Красное Сормово» · 1985. Открытие музея подводного судостроения 7 мая. В 2004 году он объединился с музеем истории завода.",
+      "en": "Krasnoye Sormovo History Museum · 1985. The submarine shipbuilding museum opened on 7 May. It joined the factory history museum in 2004.",
+      "zh": "红索尔莫沃工厂历史博物馆 · 1985年. 潜艇造船博物馆于5月7日剪彩，并于2004年并入厂史博物馆。"
+    }
+  },
+  "photo-sormovo-museum-3": {
+    "model": "editorial",
+    "source": "https://museum.krsormovo.ru/upload/iblock/52a/sgxp0aul26wfykux6vcbx2f6pst18tsy.pdf#page=139",
+    "text": {
+      "ru": "Музей истории завода «Красное Сормово» · к 2019. Фрагмент музейной диорамы «Сормово. Баррикады 1905 г.» в альбоме завода 2019 года.",
+      "en": "Krasnoye Sormovo History Museum · by 2019. Part of the museum diorama “Sormovo. The Barricades of 1905”, reproduced in the factory’s 2019 album.",
+      "zh": "红索尔莫沃工厂历史博物馆 · 截至2019年. 厂方2019年画册收录的馆藏立体场景《索尔莫沃：1905年的街垒》局部。"
+    }
+  },
+  "photo-zachatie-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:The_rebuilt_Zachatskaya_Tower_of_Nizhny_Novgorod_Kremlin.jpg",
+    "text": {
+      "ru": "Зачатьевская башня · 2012. Воссозданная Зачатьевская башня незадолго до открытия в ноябре.",
+      "en": "Zachatievskaya Tower · 2012. The reconstructed Zachatievskaya Tower shortly before its opening in November.",
+      "zh": "扎恰季耶夫塔 · 2012年. 重建的扎恰季耶夫塔，即将于11月开放。"
+    }
+  },
+  "photo-zachatie-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C_-_%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B2%D0%BB%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BE%D0%BA_%D1%81%D1%82%D0%B5%D0%BD%D1%8B_%D0%BC%D0%B5%D0%B6%D0%B4%D1%83_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F%D0%BC%D0%B8_%D0%97%D0%B0%D1%87%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BE%D0%B3%D0%BB%D0%B5%D0%B1%D1%81%D0%BA%D0%B0%D1%8F.jpg",
+    "text": {
+      "ru": "Зачатьевская башня · 2014. Восстановление прясла стены между Зачатьевской и Борисоглебской башнями.",
+      "en": "Zachatievskaya Tower · 2014. Restoration of the wall linking the Zachatievskaya and Borisoglebskaya towers.",
+      "zh": "扎恰季耶夫塔 · 2014年. 扎恰季耶夫塔与鲍里索格列布塔之间正在修复的城墙。"
+    }
+  },
+  "photo-zachatie-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B0%D1%87%D0%B0%D1%82%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8F,_%D0%B2%D0%B8%D0%B4_%D1%81_%D1%82%D0%B5%D1%80%D1%80%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8F.jpg",
+    "text": {
+      "ru": "Зачатьевская башня · 2020. Вид на башню со двора кремля.",
+      "en": "Zachatievskaya Tower · 2020. The tower seen from inside the Kremlin.",
+      "zh": "扎恰季耶夫塔 · 2020年. 从克里姆林宫内看这座城塔。 扎恰季耶夫斯卡亚塔位于克里姆林宫靠伏尔加河的下部。"
+    }
+  },
+  "photo-barracks-1": {
+    "model": "editorial",
+    "source": "https://www.nntu.ru/frontend/web/ngtu/files/org_structura/library/meropr/virt_vyst/20-09-21-nn800.pdf#page=114",
+    "text": {
+      "ru": "Красные казармы · 1870-е. Казармы и церковь Живоносного Источника на снимке Андрея Карелина.",
+      "en": "Red Barracks · 1870s. The barracks and the Church of the Life-Giving Spring, photographed by Andrei Karelin.",
+      "zh": "红色兵营 · 1870年代. 安德烈·卡列林拍摄的兵营和生命之泉教堂。"
+    }
+  },
+  "photo-barracks-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%B2%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F,_1_%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D1%85_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC_(%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC%D1%8B).JPG",
+    "text": {
+      "ru": "Красные казармы · 2015. Фасад комплекса казарм со стороны Нижне-Волжской набережной.",
+      "en": "Red Barracks · 2015. The barracks facade seen from Lower Volga Embankment.",
+      "zh": "红色兵营 · 2015年. 从下伏尔加滨河路望向兵营的立面。 红兵营是一座历史建筑群，由东翼和西翼组成，建于1835–1853年，由伊万·叶菲莫夫设计。"
+    }
+  },
+  "photo-barracks-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4._%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC%D1%8B%22_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5-%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg",
+    "text": {
+      "ru": "Красные казармы · 2018. Восточный корпус после обновления набережной.",
+      "en": "Red Barracks · 2018. The east block seen from the renovated embankment.",
+      "zh": "红色兵营 · 2018年. 从整修后的滨河路望向东侧营房。 红兵营是一座历史建筑群，由东翼和西翼组成，建于1835–1853年，由伊万·叶菲莫夫设计。"
+    }
+  },
+  "photo-cable-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Construction_station_of_Nizhny_Novgorod_aerial_tramway_on_Bor_side.jpeg",
+    "text": {
+      "ru": "Канатная дорога · 2010. Стройплощадка станции Нижегородской канатной дороги со стороны Бора.",
+      "en": "Cable car Nizhny — Bor · 2010. The site of the cableway station under construction on the Bor side of the river.",
+      "zh": "下诺夫哥罗德—博尔缆车 · 2010年. 伏尔加河博尔一侧正在建设的索道站。"
+    }
+  },
+  "photo-cable-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_-_panoramio_(8).jpg",
+    "text": {
+      "ru": "Канатная дорога · 2011. Опоры канатной дороги над Волгой до открытия пассажирского движения.",
+      "en": "Cable car Nizhny — Bor · 2011. The cableway towers over the Volga before the start of passenger service.",
+      "zh": "下诺夫哥罗德—博尔缆车 · 2011年. 索道正式载客前，伏尔加河上的支撑塔。"
+    }
+  },
+  "photo-cable-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_aerial_tramway._Cabin_starts_to_Bor.jpg",
+    "text": {
+      "ru": "Канатная дорога · 2012. В первый сезон работы кабинка отправляется от станции «Нижегородская» в Бор.",
+      "en": "Cable car Nizhny — Bor · 2012. During the first season, a cabin leaves Nizhegorodskaya station for Bor.",
+      "zh": "下诺夫哥罗德—博尔缆车 · 2012年. 通车后的第一个运营季，缆车从下诺夫哥罗德站驶向博尔。"
+    }
+  },
+  "photo-mosque-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:NizhniyMosque2.jpg",
+    "text": {
+      "ru": "Соборная мечеть · 1913. Чтение Корана во время закладки Соборной мечети.",
+      "en": "Cathedral Mosque · 1913. A reading from the Quran during the laying of the mosque’s foundation.",
+      "zh": "大清真寺 · 1913年. 大清真寺奠基仪式上的诵经场景。 喀山沿岸街的聚礼清真寺于1915年开放，成为该市穆斯林社群的重要中心。"
+    }
+  },
+  "photo-mosque-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny-Novgorod-Mosque-and-Ski-Jump-C0269.jpg",
+    "text": {
+      "ru": "Соборная мечеть · 2007. Купол и минарет мечети на высоком берегу, рядом со старым трамплином.",
+      "en": "Cathedral Mosque · 2007. The dome and minaret rise on the high bank beside the old ski jump.",
+      "zh": "大清真寺 · 2007年. 清真寺的圆顶和宣礼塔矗立在河岸高地上，旁边是旧的跳台滑雪设施。"
+    }
+  },
+  "photo-mosque-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F_6,_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D1%83.jpg",
+    "text": {
+      "ru": "Соборная мечеть · 2022. Вид сверху на мечеть и её двор на Казанской набережной.",
+      "en": "Cathedral Mosque · 2022. The mosque and its courtyard on Kazan Embankment, seen from above.",
+      "zh": "大清真寺 · 2022年. 俯瞰喀山滨河路上的清真寺和庭院。 喀山沿岸街的聚礼清真寺于1915年开放，成为该市穆斯林社群的重要中心。"
+    }
+  },
+  "photo-hero-1": {
+    "model": "editorial",
+    "source": "https://techmem-52-rf.moy.su/index/rejdovyj_barkas_quot_geroj_quot/0-198",
+    "text": {
+      "ru": "Катер Герой · 1985. Катер на постаменте в год открытия памятника волжским речникам.",
+      "en": "The Hero memorial boat · 1985. The boat on its plinth in the year the memorial to Volga river crews opened.",
+      "zh": "“英雄”号纪念船 · 1985年. 纪念碑落成当年，伏尔加河船员纪念船已经安放在基座上。"
+    }
+  },
+  "photo-hero-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod._Boat_Hero_and_Chkalov_Stairs.jpg",
+    "text": {
+      "ru": "Катер Герой · 2011. Зимой хорошо видна ось Чкаловской лестницы, у подножия которой стоит катер.",
+      "en": "The Hero memorial boat · 2011. In winter the Chkalov Staircase rises clearly behind the boat.",
+      "zh": "“英雄”号纪念船 · 2011年. 冬日，纪念船背后的契卡洛夫阶梯清晰可见。"
+    }
+  },
+  "photo-hero-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Kater_Geroy_Nizhny_Novgorod_noch.jpg",
+    "text": {
+      "ru": "Катер Герой · 2017. Ночной снимок освещённого катера с проходящего теплохода.",
+      "en": "The Hero memorial boat · 2017. The illuminated boat at night, photographed from a passing river vessel.",
+      "zh": "“英雄”号纪念船 · 2017年. 夜晚从驶过的客船上拍摄的纪念船灯光。"
+    }
+  },
+  "photo-kremlin-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Restructuring_Dmitrievskaya_Tower.jpg",
+    "text": {
+      "ru": "Нижегородский кремль · 1895. Дмитриевскую башню перестраивают для размещения художественного музея.",
+      "en": "Nizhny Novgorod Kremlin · 1895. The Dmitrievskaya Tower under reconstruction to house an art museum.",
+      "zh": "下诺夫哥罗德克里姆林宫 · 1895年. 德米特里耶夫塔正在改建，以容纳美术馆。"
+    }
+  },
+  "photo-kremlin-2": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Nijni_Novgorod,_1913.jpg",
+    "text": {
+      "ru": "Нижегородский кремль · 1913. Городская улица у кремлёвской стены на фотографии из книги 1913 года.",
+      "en": "Nizhny Novgorod Kremlin · 1913. A street by the Kremlin wall, as pictured in a book published in 1913.",
+      "zh": "下诺夫哥罗德克里姆林宫 · 1913年. 1913年出版物中的克里姆林宫城墙外街景。"
+    }
+  },
+  "photo-kremlin-3": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:Gorky_City._Nizhny_Novgorod_Kremlin.jpg",
+    "text": {
+      "ru": "Нижегородский кремль · ок. 1986. Кремль в советское время, когда город носил имя Горький.",
+      "en": "Nizhny Novgorod Kremlin · c. 1986. The Kremlin during the Soviet period, when the city was called Gorky.",
+      "zh": "下诺夫哥罗德克里姆林宫 · 约1986年. 苏联时期的克里姆林宫，当时这座城市称为高尔基。"
+    }
+  },
+  "photo-model-1": {
+    "model": "editorial",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%BC_%D0%B2_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%BC_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D0%B5.jpg",
+    "text": {
+      "ru": "Макет старого Нижнего Новгорода · 2016. Корпус № 10 в кремле за пять лет до открытия макета. Скульптуру установят в сквере рядом с бывшей казармой.",
+      "en": "Scale model of old Nizhny Novgorod · 2016. Kremlin Building 10 five years before the model opened. The sculpture would stand in the garden beside these former barracks.",
+      "zh": "下诺夫哥罗德古城模型 · 2016年. 模型揭幕前五年的克里姆林宫10号楼。雕塑后来设在这座旧军营旁的花园里。"
+    }
+  },
+  "photo-model-2": {
+    "model": "editorial",
+    "source": "https://pravda-nn.ru/news/v-nizhegorodskom-kremle-mozhet-poyavitsya-bronzovyj-3-metrovoj-maket-istoricheskoj-chasti-nizhnego-novgoroda/",
+    "text": {
+      "ru": "Макет старого Нижнего Новгорода · Июль 2020. ИИ-реконструкция. На презентации проекта показали рабочий макет в масштабе 1:250. Реконструкция передаёт этот этап проектирования.",
+      "en": "Scale model of old Nizhny Novgorod · July 2020. AI reconstruction. A working model at 1:250 was presented in July. This interpretation shows the project at its design stage.",
+      "zh": "下诺夫哥罗德古城模型 · 2020年7月. 人工智能复原图。 七月的项目展示会上展出了1:250的工作模型。此图复原了设计阶段的情景。"
+    }
+  },
+  "photo-model-3": {
+    "model": "editorial",
+    "source": "https://newsroom24.ru/news/gradostroitelstvo/2021/news_223677/",
+    "text": {
+      "ru": "Макет старого Нижнего Новгорода · Начало 2021. ИИ-реконструкция. Перед отливкой в бронзе скульптор Марина Логунова проработала рельеф и миниатюрные здания. Так могла выглядеть работа над деталями.",
+      "en": "Scale model of old Nizhny Novgorod · Early 2021. AI reconstruction. Before casting the bronze, sculptor Marina Logunova shaped the terrain and miniature buildings. This interpretation imagines the detailing process.",
+      "zh": "下诺夫哥罗德古城模型 · 2021年初. 人工智能复原图。 在铸铜之前，雕塑家玛丽娜·洛古诺娃先塑造地形和微型建筑。这幅复原图展现了细部制作的可能情景。"
     }
   }
 }

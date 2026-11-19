@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {extname,resolve,sep} from 'node:path';
 import {chromium} from 'playwright-core';
 import {places,walks} from '../resident/domain/data.ts';
-import {HISTORY} from '../src/data/history.ts';
+import {HISTORY,historyForPlace} from '../src/data/history.ts';
 import {TWINS} from '../src/data/twin.ts';
 
 const root=resolve('dist');
@@ -131,13 +131,47 @@ try{
       assert.equal(await page.locator('.leaflet-overlay-pane path').count(),walk.placeIds.length-1);
     }
   }
+  for (const place of places) {
+    await visit('#/history/landmark/' + place.id, '.history-timeline');
+    assert.equal(await page.locator('main h1').innerText(), historyForPlace(place.id).title.ru, place.id);
+  }
+  await visit('#/guide', '.leafmap');
+  await page.locator('input[type=search]').fill('Дмитриевская башня');
+  await page.locator('.leaflet-marker-icon[title="Дмитриевская башня"]').click();
+  await page.locator('.history-timeline').waitFor();
+  assert.equal(await page.locator('main h1').innerText(), 'Дмитриевская башня');
+  await page.getByRole('link', {name:'Где это'}).click();
+  await page.locator('.history-atlas__map .pin--sel').waitFor();
+  assert.equal(await page.locator('.history-atlas__selected').innerText(), 'Дмитриевская башня');
+  await visit('#/history', '.history-atlas__map');
+  assert.equal(await page.locator('.history-atlas .row').count(), HISTORY.length);
+  const search = page.getByRole('searchbox', {name:'Найти место на карте'});
+  await search.fill('несуществующий объект');
+  assert.equal(await page.locator('.history-atlas .row, .history-atlas .leaflet-marker-icon').count(), 0);
+  await search.fill('Губернская гимназия');
+  await page.locator('.leaflet-marker-icon[title="Губернская гимназия"]').click();
+  await page.locator('.history-timeline').waitFor();
+  assert.equal(await page.locator('main h1').innerText(), 'Губернская гимназия');
   for(const spot of HISTORY){
-    await visit('#/history/'+spot.id,'.ba');
-    for(let i=0;i<spot.then.length;i++){
-      if(spot.then.length>1)await page.locator('.seg button').nth(i).click();
-      await page.locator('.ba img').evaluateAll(images=>Promise.all(images.map(img=>img.decode())));
-      await page.getByRole('slider').focus();await page.keyboard.press('ArrowRight');
+    await visit('#/history/map/'+spot.id, '.history-atlas__map .pin--sel');
+    await page.locator('.history-atlas__map .pin--sel').click();
+    await page.locator('.history-timeline').waitFor();
+    assert.equal(await page.locator('main h1').innerText(), spot.title.ru);
+    const stages = page.getByRole('radiogroup', {name:'Фотохронология'}).getByRole('radio');
+    const photo = page.locator('.history-timeline__photo img');
+    const frames = [...spot.then, spot.now];
+    assert.equal(await stages.count(), 4);
+    for (const [i, frame] of frames.entries()) {
+      await page.locator('.history-timeline__choice').nth(i).click();
+      assert(await stages.nth(i).isChecked(), spot.id);
+      assert.equal(await photo.getAttribute('src'), frame.src);
+      await photo.evaluate(img => img.decode());
+      assert.equal(await page.locator('figcaption p').innerText(), frame.caption.ru);
     }
+    await stages.last().focus();
+    await page.keyboard.press('ArrowLeft');
+    assert(await stages.nth(2).isChecked());
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   }
   await visit('#/tour?ids=kremlin,art','.step');
   await page.getByRole('button',{name:'Начать прогулку'}).click();
@@ -153,7 +187,7 @@ try{
   for(const [width,height,scale] of [[320,568,1],[390,844,1],[768,1024,1],[1280,800,1],[320,640,2],[844,390,1]]){
     await page.setViewportSize({width,height});
     await page.evaluate(scale=>{document.documentElement.style.fontSize=16*scale+'px'},scale);
-    for(const route of ['#/tour','#/guide','#/history/stadium','#/report','#/more','#/twin','#/twin/east-sarajevo']){
+    for(const route of ['#/tour','#/guide','#/history','#/history/stadium','#/report','#/more','#/twin','#/twin/east-sarajevo']){
       await visit(route,'main h1');
       const fits=await page.evaluate(()=>{
         const main=document.querySelector('.app > main'),nav=document.querySelector('.tabbar');

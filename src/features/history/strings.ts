@@ -1,7 +1,9 @@
 import type { Bundle } from '../../core/i18n';
 export const historyStrings: Bundle = {
   ru: {
-    'hist.title': 'Тогда и сейчас', 'hist.sub': 'Как выглядели места раньше: двигайте ползунок', 'hist.guess': 'Угадай год', 'hist.guess.sub': 'Посмотрите на старое фото и назовите год',
+    'hist.map': 'Карта достопримечательностей', 'hist.search': 'Найти место на карте',
+    'hist.timeline': 'Фотохронология', 'hist.reconstruction': 'ИИ-реконструкция', 'hist.reference': 'Источник реконструкции',
+    'hist.title': 'Тогда и сейчас', 'hist.sub': 'Выберите место на карте, чтобы увидеть его в разные годы.', 'hist.guess': 'Угадай год', 'hist.guess.sub': 'Посмотрите на старое фото и назовите год',
     'hist.then': 'Тогда', 'hist.now': 'Сейчас', 'hist.slider': 'Ползунок: старое фото и современное', 'hist.drag': 'Двигайте ползунок',
     'hist.credit.then': 'Старое фото', 'hist.credit.now': 'Современное фото', 'hist.angle': 'Ракурс может отличаться.', 'hist.licence.note': 'Лицензии указаны так, как их приводит Wikimedia Commons.',
     'hist.on_map': 'Где это', 'hist.spots': 'Места', 'hist.back': 'Все места',
@@ -11,7 +13,9 @@ export const historyStrings: Bundle = {
     'yrs.1': 'год', 'yrs.2': 'года', 'yrs.5': 'лет',
   },
   en: {
-    'hist.title': 'Then and now', 'hist.sub': 'How places looked before: drag the slider', 'hist.guess': 'Guess the year', 'hist.guess.sub': 'Look at an old photo and name the year',
+    'hist.map': 'Landmark map', 'hist.search': 'Find a landmark',
+    'hist.timeline': 'Photo timeline', 'hist.reconstruction': 'AI reconstruction', 'hist.reference': 'Reconstruction source',
+    'hist.title': 'Then and now', 'hist.sub': 'Choose a place on the map to see it through the years.', 'hist.guess': 'Guess the year', 'hist.guess.sub': 'Look at an old photo and name the year',
     'hist.then': 'Then', 'hist.now': 'Now', 'hist.slider': 'Slider: old photo versus modern photo', 'hist.drag': 'Drag the slider',
     'hist.credit.then': 'Old photo', 'hist.credit.now': 'Modern photo', 'hist.angle': 'The angle may differ.', 'hist.licence.note': 'Licences are given as stated on Wikimedia Commons.',
     'hist.on_map': 'Where is it', 'hist.spots': 'Places', 'hist.back': 'All places',
@@ -21,7 +25,9 @@ export const historyStrings: Bundle = {
     'yrs.1': 'year', 'yrs.2': 'years', 'yrs.5': 'years',
   },
   zh: {
-    'hist.title': '今昔对比', 'hist.sub': '看看地点过去的模样：拖动滑块', 'hist.guess': '猜年份', 'hist.guess.sub': '看老照片，说出年份',
+    'hist.map': '景点地图', 'hist.search': '查找景点',
+    'hist.timeline': '影像时间线', 'hist.reconstruction': 'AI 复原图', 'hist.reference': '复原依据',
+    'hist.title': '今昔对比', 'hist.sub': '点选地图上的地点，查看它在不同时期的样貌。', 'hist.guess': '猜年份', 'hist.guess.sub': '看老照片，说出年份',
     'hist.then': '当年', 'hist.now': '现在', 'hist.slider': '滑块：老照片与现代照片对比', 'hist.drag': '拖动滑块',
     'hist.credit.then': '老照片', 'hist.credit.now': '现代照片', 'hist.angle': '拍摄角度可能不同。', 'hist.licence.note': '许可信息按维基共享资源所示。',
     'hist.on_map': '在哪里', 'hist.spots': '地点', 'hist.back': '全部地点',

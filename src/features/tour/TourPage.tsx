@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useI18n } from '../../core/i18n';
 import { Icon } from '../../core/Icon';
 import { LeafMap, type MapMarker } from '../../core/Map';
+import { go } from '../../core/router';
 import { PageTitle, Section } from '../../core/ui';
 import { EffortDots } from '../../core/PlaceCard';
 import { useLocal } from '../../core/store';
@@ -89,7 +90,11 @@ export function TourPage() {
     if (today && m && today.getTime() - m.total*60000 >= now.getTime()) return {time:today,tomorrow:false};
     return {time:sunDay(new Date(now.getTime()+86400000),CENTER.lat,CENTER.lon).sunset,tomorrow:true};
   }, [m?.total, tour]);
-  const markers = useMemo<MapMarker[]>(() => (tour?.stops ?? []).map((s, i) => { const p = placeById(s.id)!; return { id: s.id, lat: p.lat, lon: p.lon, cls: 'pin pin--num', glyph: String(i + 1), size: 30, title: l(p.name) }; }), [tour, l]);
+  const markers = useMemo<MapMarker[]>(() => (tour?.stops ?? []).map((stop, i) => {
+    const p = placeById(stop.id)!;
+    return { id: p.id, lat: p.lat, lon: p.lon, cls: 'pin pin--num', glyph: String(i + 1),
+      size: 30, title: l(p.name), onClick: () => go('/history/landmark/' + p.id) };
+  }), [tour, l]);
   const line = useMemo(() => tour?.stops.slice(1).map((s,i) => ({
     id: 'leg-'+i, points: walkLine(tour.stops[i].id, s.id, tour.profile || 'walk'),
   })).filter(leg => leg.points.length > 1) || [], [tour]);
