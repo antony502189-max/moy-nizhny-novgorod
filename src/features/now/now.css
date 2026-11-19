@@ -117,3 +117,5 @@
   .now-viewpoints .row > svg { grid-column: 3; }
   .now-viewpoints .now-distance { grid-area: 2 / 2; }
 }
+
+.now-geo-status:empty { position: absolute; }
