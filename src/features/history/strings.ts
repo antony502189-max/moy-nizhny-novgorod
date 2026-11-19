@@ -1,6 +1,7 @@
 import type { Bundle } from '../../core/i18n';
 export const historyStrings: Bundle = {
   ru: {
+    'hist.mapTitle': 'Интересные места Нижнего Новгорода',
     'hist.map': 'Карта достопримечательностей', 'hist.search': 'Найти место на карте',
     'hist.timeline': 'Фотохронология', 'hist.reconstruction': 'ИИ-реконструкция', 'hist.reference': 'Источник реконструкции',
     'hist.title': 'Тогда и сейчас', 'hist.sub': 'Выберите место на карте, чтобы увидеть его в разные годы.', 'hist.guess': 'Угадай год', 'hist.guess.sub': 'Посмотрите на старое фото и назовите год',
@@ -13,6 +14,7 @@ export const historyStrings: Bundle = {
     'yrs.1': 'год', 'yrs.2': 'года', 'yrs.5': 'лет',
   },
   en: {
+    'hist.mapTitle': 'Places to explore in Nizhny Novgorod',
     'hist.map': 'Landmark map', 'hist.search': 'Find a landmark',
     'hist.timeline': 'Photo timeline', 'hist.reconstruction': 'AI reconstruction', 'hist.reference': 'Reconstruction source',
     'hist.title': 'Then and now', 'hist.sub': 'Choose a place on the map to see it through the years.', 'hist.guess': 'Guess the year', 'hist.guess.sub': 'Look at an old photo and name the year',
@@ -25,6 +27,7 @@ export const historyStrings: Bundle = {
     'yrs.1': 'year', 'yrs.2': 'years', 'yrs.5': 'years',
   },
   zh: {
+    'hist.mapTitle': '下诺夫哥罗德值得探访的地方',
     'hist.map': '景点地图', 'hist.search': '查找景点',
     'hist.timeline': '影像时间线', 'hist.reconstruction': 'AI 复原图', 'hist.reference': '复原依据',
     'hist.title': '今昔对比', 'hist.sub': '点选地图上的地点，查看它在不同时期的样貌。', 'hist.guess': '猜年份', 'hist.guess.sub': '看老照片，说出年份',
