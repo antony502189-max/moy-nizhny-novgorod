@@ -95,8 +95,15 @@ try{
 
   await visit('#/twin', '#twin-search');
   const cityLinks = page.locator('main a[href^="#/twin/"]');
+  const citySearch = page.locator('#twin-search');
   assert.equal(await cityLinks.count(), TWINS.length);
-  await page.locator('#twin-search').fill('Wuxi');
+  await citySearch.fill('Сербия');
+  assert.equal(await cityLinks.count(), 1);
+  assert.equal(await cityLinks.first().getAttribute('href'), '#/twin/novi-sad');
+  await citySearch.fill('Германия');
+  assert.equal(await cityLinks.count(), 0);
+  await page.getByText('Ничего не найдено.', {exact: true}).waitFor();
+  await citySearch.fill('Wuxi');
   assert.equal(await cityLinks.count(), 1);
   await cityLinks.first().click();
   await page.getByRole('heading', { name: 'Уси', exact: true }).waitFor();
@@ -105,6 +112,10 @@ try{
     await visit('#/twin/' + city.id, 'main h1');
     assert.equal(await page.locator('main h1').innerText(), city.name.ru);
     assert.equal(await page.getByRole('link', {name: /Источник о статусе/}).getAttribute('href'), city.source);
+    if (city.relatedAgreement) {
+      await page.getByText(city.relatedAgreement.text.ru, {exact: false}).waitFor();
+      assert.equal(await page.getByRole('link', {name: /Источник о соглашении/}).getAttribute('href'), city.relatedAgreement.source);
+    }
   }
   await visit('#/guide','main h2');
   assert.equal(await page.locator('.leaflet-marker-icon').count(),places.length);
