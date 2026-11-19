@@ -95,6 +95,8 @@
   font: 400 clamp(42px, 6vw, 56px)/1 var(--heading-font);
 }
 
+.now-sunset [role="timer"] { font-variant-numeric: tabular-nums; }
+
 @media (min-width: 600px) {
   .now-shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .now-shortcuts .now-shortcut { padding-inline: 14px; }

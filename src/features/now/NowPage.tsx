@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { useI18n } from '../../core/i18n';
 import { Icon, svgInner } from '../../core/Icon';
 import { LeafMap, type MapMarker } from '../../core/Map';
@@ -6,22 +6,16 @@ import { PageTitle, Section, Chip } from '../../core/ui';
 import { PlaceSheet } from '../../core/PlaceCard';
 import { CENTER, distanceM, fmtDist, type LatLon } from '../../core/geo';
 import { isOnCityMap } from '../../core/basemap';
-import { sunDay, compass } from '../../core/sun';
-import { fmtTime, getNow, TZ } from '../../core/time';
+import { fmtTime, TZ } from '../../core/time';
+import { useClock } from '../../core/useClock';
 import { PLACES, placeById, placePhoto, type Place } from '../../data/places';
 import { edition, upcomingEvents, type CityEvent } from '../../data/events';
 import amenityData from '../../data/amenities.json';
+import { SunsetSection } from './SunsetSection';
 import './now.css';
 
 interface Amenity { id: string; kind: 'toilet' | 'water' | 'steps' | 'stepfree'; lat: number; lon: number; name?: string; fee?: string; opening?: string }
 const AMEN = (amenityData as { items: Amenity[] }).items;
-
-export function fmtDur(min: number, lang: string): string {
-  const tot = Math.round(min), h = Math.floor(tot / 60), m = tot % 60;
-  if (lang === 'en') return h ? `${h} h ${m} min` : `${m} min`;
-  if (lang === 'zh') return h ? `${h}小时${m}分钟` : `${m}分钟`;
-  return h ? `${h} ч ${m} мин` : `${m} мин`;
-}
 
 type Layer = 'events' | 'sunset' | 'wc' | 'water' | 'access' | 'steps';
 type Sel = { type: 'place'; place: Place; event?: CityEvent } | { type: 'amen'; a: Amenity };
@@ -30,8 +24,7 @@ const MAX_LOCATION_ACCURACY_M = 500;
 
 export function NowPage() {
   const { t, l, lang } = useI18n();
-  const [now, setNow] = useState(getNow());
-  useEffect(() => { const i = setInterval(() => setNow(getNow()), 30000); return () => clearInterval(i); }, []);
+  const now = useClock(30000);
   const [location, setLocation] = useState<LatLon | null>(null);
   const [geoStatus, setGeoStatus] = useState('');
   const [layers, setLayers] = useState<Set<Layer>>(new Set(['events', 'sunset', 'wc', 'water']));
@@ -40,12 +33,6 @@ export function NowPage() {
   const mapAnchor = useRef<HTMLDivElement>(null);
 
   const upcoming = useMemo(() => upcomingEvents(now), [now]);
-
-  const sun = useMemo(() => {
-    let d = sunDay(now, CENTER.lat, CENTER.lon), tomorrow = false;
-    if (d.sunset && d.sunset.getTime() < now.getTime()) { d = sunDay(new Date(now.getTime() + 86400000), CENTER.lat, CENTER.lon); tomorrow = true; }
-    return { ...d, tomorrow };
-  }, [now]);
 
   const viewpoints = useMemo(() => {
     const origin = location ?? CENTER;
@@ -113,7 +100,6 @@ export function NowPage() {
   }, [layers, upcoming, viewpoints, location, l, t]);
 
   const toggle = (k: Layer) => setLayers((s) => { const n = new Set(s); n.has(k) ? n.delete(k) : n.add(k); return n; });
-  const sunLeft = sun.sunset && !sun.tomorrow ? Math.round((sun.sunset.getTime() - now.getTime()) / 60000) : null;
   const amenName = (a: Amenity) => a.name || (a.kind === 'toilet' ? t('now.wc') : a.kind === 'water' ? t('now.water') : a.kind === 'steps' ? t('now.steps') : t('now.access'));
   const selectedId = sel?.type === 'place' ? (sel.event ? 'ev-' + sel.event.id : 'sun-' + sel.place.id)
     : sel?.type === 'amen' ? sel.a.id : location ? LOCATION_MARKER : undefined;
@@ -152,15 +138,7 @@ export function NowPage() {
         <p className="muted small">{t('now.edition', {date:edition})} <a href="https://arsenal-museum.art/events-all/" target="_blank" rel="noreferrer">{t('common.official')} ↗</a></p>
       </Section>
 
-      <Section title={sun.tomorrow ? t('now.sunset.tomorrow') : t('now.sunset')}>
-        <div className="now-sunset">
-          <div className="sunbox">
-            <div className="kv"><div className="big">{sun.sunset ? fmtTime(sun.sunset, lang) : '—'}</div><small>{sunLeft !== null ? (sunLeft > 0 ? t('now.sunset.left', { m: fmtDur(sunLeft, lang) }) : t('now.sunset.done')) : ''}</small></div>
-            {sun.goldenStart && <div className="kv"><b>{fmtTime(sun.goldenStart, lang)}</b><small>{t('now.golden')}</small></div>}
-            {sun.sunsetAzimuth !== null && <div className="kv"><b>{compass(sun.sunsetAzimuth, lang)} · {Math.round(sun.sunsetAzimuth)}°</b><small>{t('now.dir')}</small></div>}
-          </div>
-          <p className="muted small">{t('now.sunset.calc')}</p>
-        </div>
+      <SunsetSection location={location}>
         <h3>{t('now.viewpoints')}</h3>
         <p className="muted small">{t('now.viewpoints.note')}{location && ' ' + t('now.geo.found')}</p>
         <div className="list now-viewpoints" role="group" aria-label={t('now.viewpoints')}>
@@ -173,7 +151,7 @@ export function NowPage() {
             </button>
           ))}
         </div>
-      </Section>
+      </SunsetSection>
 
       <Section title={t('now.map')} right={
         <button type="button" className="btn btn--ghost btn--sm" onClick={locate} disabled={locating}>

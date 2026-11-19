@@ -10,8 +10,9 @@ import { PageTitle, Section } from '../../core/ui';
 import { EffortDots } from '../../core/PlaceCard';
 import { useLocal } from '../../core/store';
 import { CENTER, fmtDist } from '../../core/geo';
-import { sunDay } from '../../core/sun';
-import { fmtTime, getNow } from '../../core/time';
+import { fmtTime } from '../../core/time';
+import { useClock } from '../../core/useClock';
+import { useSunSchedule } from '../../core/useSunSchedule';
 import { PLACES, placeById, placePhoto, photoCredits } from '../../data/places';
 import { walkLine } from './paths';
 import { readRatings } from '../../core/ratings';
@@ -83,13 +84,11 @@ export function TourPage() {
     setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   };
 
-  const m = tour ? tourMetrics(tour.stops, tour.profile) : null;
-  const sunset = useMemo(() => {
-    const now = getNow();
-    const today = sunDay(now, CENTER.lat, CENTER.lon).sunset;
-    if (today && m && today.getTime() - m.total*60000 >= now.getTime()) return {time:today,tomorrow:false};
-    return {time:sunDay(new Date(now.getTime()+86400000),CENTER.lat,CENTER.lon).sunset,tomorrow:true};
-  }, [m?.total, tour]);
+  const m = useMemo(() => tour ? tourMetrics(tour.stops, tour.profile) : null, [tour]);
+  const now = useClock(1000);
+  const { today, tomorrow } = useSunSchedule(now, CENTER);
+  const canStartToday = today.sunset && m && today.sunset.getTime() - m.total * 60000 >= now.getTime();
+  const sunset = canStartToday ? { time: today.sunset, tomorrow: false } : { time: tomorrow.sunset, tomorrow: true };
   const markers = useMemo<MapMarker[]>(() => (tour?.stops ?? []).map((stop, i) => {
     const p = placeById(stop.id)!;
     return { id: p.id, lat: p.lat, lon: p.lon, cls: 'pin pin--num', glyph: String(i + 1),
