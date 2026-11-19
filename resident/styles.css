@@ -36,11 +36,10 @@
 .walk-content>a.primary-button{display:flex;justify-content:center;align-items:center;text-decoration:none;margin:12px 0}
 
 .home-screen{padding:20px clamp(14px,4vw,24px) 24px}
-.resident-cover h1,.home-surface h2,.walk-heading h2,.page-header h1,.onboarding h1,.sheet h3 {font-family:var(--heading-font);font-weight:400;line-height:1.14}
-.resident-cover h1 {font-size:clamp(1.625rem,7.5vw,2.375rem);margin:0 0 12px}
-.resident-cover img {width:100%;height:clamp(145px,42vw,205px);object-fit:cover;object-position:50% 56%}
-.resident-cover a {display:inline-block;margin-top:6px}
-.resident-cover a, .onboarding figcaption a {color:#42575a;font-size:12px;line-height:1.4}
+.home-surface h2,.walk-heading h2,.page-header h1,.onboarding h1,.sheet h3 {font-family:var(--heading-font);font-weight:400;line-height:1.14}
+.resident-title {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.resident-cover img {width:100%;height:auto;border-radius:4px}
+.onboarding figcaption a {color:#42575a;font-size:12px;line-height:1.4}
 .home-surface {margin-top:0;padding-top:4px}
 .home-surface h2 {margin:0 0 6px;font-size:1.375rem}
 .service-carousel {display:block;overflow:visible;padding:0}
@@ -50,6 +49,14 @@
 .city-link,.home-personal {display:flex;width:100%;min-height:48px;align-items:center;justify-content:space-between;gap:12px;text-align:left;padding:12px 4px;border-bottom:1px solid var(--line);color:#174e57;background:transparent}
 .home-personal {margin:0}
 .city-contact {padding:22px 0 0}
+.city-contact h2 {margin-bottom:12px}
+.city-link-label {flex:1;min-width:0}
+.city-link-label strong,.city-link-label small {display:block}
+.city-link-label small {margin-top:3px;color:var(--muted);font-size:.8125rem;line-height:1.35}
+.city-request {padding:10px 12px;border:1px solid #c9d9d5;border-radius:4px;background:#edf3f1}
+.city-request-icon,.mayor-portrait {width:44px;height:44px;flex:none;border-radius:4px}
+.city-request-icon {display:grid;place-items:center;background:#dcebe7}
+.mayor-portrait {object-fit:cover}
 .list-card,.personal-route-card,.contact-card {border-bottom:1px solid #c9d0c9}
 .onboarding {background:#fbfaf5;color:#253436}
 .onboarding figure {margin:0}
@@ -92,8 +99,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {outline-color:#125a66}
  .bottom-nav button{flex:0 1 220px}
 
  .home-screen{padding:28px clamp(24px,3vw,44px) 32px}
- .resident-cover h1{font-size:clamp(38px,4vw,58px);margin-bottom:18px}
- .resident-cover img{height:clamp(232px,32dvh,360px)}
+ .resident-cover img{max-height:360px;object-fit:cover}
 
  .home-surface{
   display:grid;
@@ -114,7 +120,6 @@ button:focus-visible,a:focus-visible,input:focus-visible {outline-color:#125a66}
   border:1px solid var(--line);
   background:var(--surface);
  }
- .city-contact h2{margin-bottom:4px}
- .city-link{padding-inline:0;min-height:52px}
+ .city-link{min-height:52px}
  .city-link:last-child{border-bottom:0}
 }
