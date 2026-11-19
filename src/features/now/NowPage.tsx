@@ -38,10 +38,6 @@ export function NowPage() {
     const origin = location ?? CENTER;
     return PLACES.filter(p => p.sunset).sort((a, b) => distanceM(origin, a) - distanceM(origin, b)).slice(0, 5);
   }, [location]);
-  const nearest = (kind: Amenity['kind']) => location
-    ? AMEN.filter(a => a.kind === kind).map(a => ({ a, d: distanceM(location, a) })).sort((a, b) => a.d - b.d)[0]
-    : undefined;
-  const nWc = nearest('toilet'), nWater = nearest('water');
   const locating = geoStatus === 'now.geo.locating';
   const fromLocation = (meters: number) => t('now.distance', { d: fmtDist(meters, lang) });
 
@@ -51,10 +47,10 @@ export function NowPage() {
     mapAnchor.current?.focus({ preventScroll: true });
   }
 
-  function selectOnMap(selection: Sel, layer: Layer) {
-    setSel(selection);
-    setLayers(active => active.has(layer) ? active : new Set(active).add(layer));
-    revealMap(selection.type === 'place' ? selection.place : selection.a);
+  function selectViewpoint(place: Place) {
+    setSel({ type: 'place', place });
+    setLayers(active => active.has('sunset') ? active : new Set(active).add('sunset'));
+    revealMap(place);
   }
 
   function locate() {
@@ -147,7 +143,7 @@ export function NowPage() {
         <p className="muted small">{t('now.viewpoints.note')}{location && ' ' + t('now.geo.found')}</p>
         <div className="list now-viewpoints" role="group" aria-label={t('now.viewpoints')}>
           {viewpoints.map((p) => (
-            <button key={p.id} className="row row--btn" onClick={() => selectOnMap({ type: 'place', place: p }, 'sunset')}>
+            <button key={p.id} className="row row--btn" onClick={() => selectViewpoint(p)}>
               {placePhoto(p) ? <img className="thumb" src={placePhoto(p)} alt="" loading="lazy" /> : <span className="thumb" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f08a24' }}><Icon name="sunset" size={26} /></span>}
               <div className="row__main"><b>{l(p.name)}</b><span>{l(p.sunset)}</span></div>
               {location && <span className="muted small now-distance">{fromLocation(distanceM(location, p))}</span>}
@@ -157,18 +153,12 @@ export function NowPage() {
         </div>
       </SunsetSection>
 
-      <Section title={t('now.nearest')} right={<button className="btn btn--ghost btn--sm" onClick={locate} disabled={locating}><Icon name="pin" size={16} />{t('now.near_me')}</button>}>
-        <p className="muted small" role="status">{t(geoStatus || 'now.geo.hint')}</p>
-        {location && <div className="stats">
-          {([{ k: 'wc', n: nWc, i: 'wc', lab: t('now.wc') }, { k: 'water', n: nWater, i: 'drop', lab: t('now.water') }] as const).map(({ k, n, i, lab }) => n && (
-            <button key={k} className="stat row--btn" style={{ border: 0, textAlign: 'left' }} onClick={() => selectOnMap({ type: 'amen', a: n.a }, k)}>
-              <Icon name={i} size={22} /><b>{lab}</b><span className="muted small">{fromLocation(n.d)}</span>
-            </button>
-          ))}
-        </div>}
-      </Section>
-
-      <Section title={t('now.map')}>
+      <Section title={t('now.map')} right={
+        <button type="button" className="btn btn--ghost btn--sm" onClick={locate} disabled={locating}>
+          <Icon name="pin" size={16} />{t('now.near_me')}
+        </button>
+      }>
+        <p className="muted small now-geo-status" role="status" aria-atomic="true">{geoStatus && t(geoStatus)}</p>
         <div className="chips">
           {(['events', 'sunset', 'wc', 'water', 'access', 'steps'] as Layer[]).map((k) => <Chip key={k} active={layers.has(k)} onClick={() => toggle(k)}>{t('now.layer.' + k)}</Chip>)}
         </div>

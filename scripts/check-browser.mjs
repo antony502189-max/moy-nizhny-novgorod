@@ -100,13 +100,16 @@ try{
     await spot.click();
     await checkCenteredPin(title);
   }
-  const nearMe = page.getByRole('button', { name: 'Рядом со мной' });
+  const mapSection = page.locator('main section').filter({ has: page.getByRole('heading', { name: 'Карта мест и удобств' }) });
+  const nearMe = mapSection.getByRole('button', { name: 'Рядом со мной' });
   await nearMe.click();
   await checkCenteredPin('Вы здесь');
   assert.equal(await page.locator('.now-distance').count(), await sunsetSpots.count());
   assert.match(await page.locator('.now-distance').first().innerText(), /^≈ /);
-  await page.locator('.stats button').first().click();
-  await page.locator('.pin--sel.pin--wc').waitFor();
+  assert.equal(await page.getByRole('heading', { name: /^(Ближайшее|Удобства рядом)$/ }).count(), 0);
+  assert.equal(await page.locator('.stats button').count(), 0);
+  assert(await mapSection.getByRole('button', { name: 'Туалеты', exact: true }).isVisible());
+  assert(await mapSection.getByRole('button', { name: 'Питьевая вода', exact: true }).isVisible());
 
   await context.setGeolocation({ latitude: 56.3280332, longitude: 44.0021054, accuracy: 1000 });
   await nearMe.click();
