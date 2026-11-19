@@ -14,9 +14,39 @@ const prefix='/city/';
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json',
   '.webp':'image/webp','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.m4a':'audio/mp4',
   '.webmanifest':'application/manifest+json','.ttf':'font/ttf'};
+const updatePrefix = '/update-test/';
+const workerTemplate = await readFile(new URL('./worker.js', import.meta.url), 'utf8');
+let release = 1;
+let onlineTitle;
+
+function serveUpdateFixture(pathname, res) {
+  const file = pathname.slice(updatePrefix.length) || 'index.html';
+  const bundle = 'bundle/release-' + release + '.js';
+  if (file === 'sw.js') {
+    res.writeHead(200, {'content-type':'text/javascript','cache-control':'no-store'}).end(workerTemplate
+      .replace('__VERSION__', 'fixture-' + release)
+      .replace('/* MANIFEST */ []', JSON.stringify(['index.html', 'resident.html', bundle])));
+    return;
+  }
+  if (file === 'index.html' || file === 'resident.html') {
+    res.writeHead(200, {'content-type':'text/html','cache-control':'no-store'})
+      .end('<h1>' + (onlineTitle ?? 'Release ' + release) + '</h1>');
+    return;
+  }
+  if (file === bundle) {
+    res.writeHead(200, {'content-type':'text/javascript'}).end('/* release ' + release + ' */');
+    return;
+  }
+  res.writeHead(404).end();
+}
+
 const server=createServer(async(req,res)=>{
   try{
     const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+    if (pathname.startsWith(updatePrefix)) {
+      serveUpdateFixture(pathname, res);
+      return;
+    }
     const file=resolve(root,pathname.slice(prefix.length)||'index.html');
     if(!pathname.startsWith(prefix)||!file.startsWith(root+sep)){res.writeHead(404).end();return;}
     const data=await readFile(file);
@@ -25,9 +55,58 @@ const server=createServer(async(req,res)=>{
 });
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base='http://127.0.0.1:'+server.address().port+prefix;
+
+async function checkReleaseUpgrade(browser) {
+  const context = await browser.newContext({ viewport: {width:390,height:844} });
+  try {
+    const fixture = new URL(updatePrefix, base).href;
+    const guest = await context.newPage();
+    await guest.goto(fixture);
+    await guest.evaluate(async () => {
+      await navigator.serviceWorker.register('sw.js');
+      await navigator.serviceWorker.ready;
+    });
+    await guest.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
+    const resident = await context.newPage();
+    await resident.goto(fixture + 'resident.html');
+    assert.equal(await resident.locator('h1').innerText(), 'Release 1');
+
+    release = 2;
+    for (const tab of [guest, resident]) {
+      await tab.evaluate(() => {
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          document.body.dataset.upgraded = 'true';
+        }, {once:true});
+      });
+    }
+    await guest.evaluate(async () => (await navigator.serviceWorker.getRegistration()).update().then(() => {}));
+    for (const tab of [guest, resident]) {
+      await tab.locator('body[data-upgraded=true]').waitFor({timeout:10000});
+      assert.equal(await tab.locator('h1').innerText(), 'Release 1');
+    }
+    await context.setOffline(true);
+    assert.equal(await guest.evaluate(async () => (await fetch('bundle/release-1.js')).text()), '/* release 1 */');
+
+    await context.setOffline(false);
+    onlineTitle = 'Latest HTML from the server';
+    for (const tab of [guest, resident]) {
+      await tab.reload();
+      assert.equal(await tab.locator('h1').innerText(), onlineTitle);
+    }
+    await context.setOffline(true);
+    for (const tab of [guest, resident]) {
+      await tab.reload();
+      assert.equal(await tab.locator('h1').innerText(), 'Release 2');
+    }
+  } finally {
+    await context.close();
+  }
+}
+
 let browser;
 try{
   browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||undefined,headless:true});
+  await checkReleaseUpgrade(browser);
   const geolocation = { latitude: 56.3280332, longitude: 44.0021054 };
   const clockContext = await browser.newContext({
     locale: 'ru-RU', timezoneId: 'America/Los_Angeles', permissions: ['geolocation'], geolocation,
