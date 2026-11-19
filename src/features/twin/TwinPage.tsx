@@ -2,13 +2,9 @@ import { useState } from 'react';
 import { useI18n } from '../../core/i18n';
 import { Icon } from '../../core/Icon';
 import { PageTitle, Section } from '../../core/ui';
-import { CITY_PROGRAMME, SISTER_CITY_REGISTER, TWINS, type CityRelationship } from '../../data/twin';
+import { CITY_PROGRAMME, SISTER_CITY_REGISTER, TWINS } from '../../data/twin';
 
-const groups: { title: string; relationships: CityRelationship[] }[] = [
-  { title: 'twin.group.sister', relationships: ['sister'] },
-  { title: 'twin.group.partner', relationships: ['partner'] },
-  { title: 'twin.group.history', relationships: ['paused', 'ended'] },
-];
+const groups = ['sister', 'partner'] as const;
 
 function searchText(value: string) {
   return value.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
@@ -34,11 +30,11 @@ export function TwinPage({ path }: { path: string }) {
           <input id="twin-search" type="search" value={query} onChange={e => setQuery(e.target.value)} />
         </div>
         {!matches.length && <p role="status">{t('twin.empty')}</p>}
-        {groups.map(({title, relationships}) => {
-          const entries = matches.filter(c => relationships.includes(c.relationship));
+        {groups.map(relationship => {
+          const entries = matches.filter(c => c.relationship === relationship);
           if (!entries.length) return null;
           return (
-            <Section key={title} title={t(title)} icon="globe">
+            <Section key={relationship} title={t('twin.group.' + relationship)} icon="globe">
               <div className="list">
                 {entries.map(c => (
                   <a className="row row--btn" key={c.id} href={'#/twin/' + c.id}>
@@ -76,7 +72,7 @@ export function TwinPage({ path }: { path: string }) {
       <PageTitle title={l(city.name)} sub={l(city.area)} />
       <div className="hero">
         <b>{t('twin.relationship.' + city.relationship)}</b>
-        {city.since && <p>{t(city.relationship === 'paused' ? 'twin.initialAgreement' : 'twin.since', { year: city.since })}</p>}
+        {city.since && <p>{t('twin.since', { year: city.since })}</p>}
         <a href={city.source} target="_blank" rel="noreferrer">{t('twin.source')} ↗</a>
         {city.relatedAgreement && (
           <p>{l(city.relatedAgreement.text)} <a href={city.relatedAgreement.source} target="_blank" rel="noreferrer">{t('twin.agreementSource')} ↗</a></p>
