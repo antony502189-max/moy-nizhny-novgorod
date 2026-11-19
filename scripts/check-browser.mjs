@@ -6,6 +6,8 @@ import {chromium} from 'playwright-core';
 import {places,walks} from '../resident/domain/data.ts';
 import {HISTORY,historyForPlace} from '../src/data/history.ts';
 import {TWINS} from '../src/data/twin.ts';
+import {CENTER} from '../src/core/geo.ts';
+import {sunDay} from '../src/core/sun.ts';
 
 const root=resolve('dist');
 const prefix='/city/';
@@ -105,8 +107,47 @@ let browser;
 try{
   browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||undefined,headless:true});
   await checkReleaseUpgrade(browser);
+  const geolocation = { latitude: 56.3280332, longitude: 44.0021054 };
+  const clockContext = await browser.newContext({
+    locale: 'ru-RU', timezoneId: 'America/Los_Angeles', permissions: ['geolocation'], geolocation,
+  });
+  try {
+    const clockPage = await clockContext.newPage();
+    const afternoon = new Date('2026-11-19T12:00:00+03:00');
+    const today = sunDay(afternoon, CENTER.lat, CENTER.lon);
+    const nextAfternoon = new Date('2026-11-20T12:00:00+03:00');
+    const tomorrow = sunDay(nextAfternoon, CENTER.lat, CENTER.lon);
+    await clockPage.clock.install({ time: afternoon });
+    await clockPage.goto(base + '?now=01:00#/now');
+    const timer = clockPage.getByRole('timer');
+    const sunsetTime = clockPage.locator('.now-sunset .big time');
+    await clockPage.getByRole('heading', { name: 'Закат сегодня' }).waitFor();
+    await clockPage.getByText('Сейчас 12:00 МСК', { exact: false }).waitFor();
+    assert.equal(await sunsetTime.getAttribute('datetime'), today.sunset.toISOString());
+    const firstCountdown = await timer.innerText();
+    await clockPage.clock.runFor(1000);
+    await clockPage.waitForFunction(previous => document.querySelector('[role="timer"]').textContent !== previous, firstCountdown);
+
+    await clockPage.clock.setSystemTime(new Date(today.sunset.getTime() + 1000));
+    await clockPage.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+    await clockPage.getByRole('heading', { name: 'Закат завтра' }).waitFor();
+    assert.equal(await sunsetTime.getAttribute('datetime'), tomorrow.sunset.toISOString());
+    assert.match(await timer.innerText(), /до заката/);
+
+    await clockPage.clock.setSystemTime(new Date('2026-11-19T23:59:59+03:00'));
+    await clockPage.clock.runFor(1000);
+    await clockPage.getByRole('heading', { name: 'Закат сегодня' }).waitFor();
+    assert.equal(await sunsetTime.getAttribute('datetime'), tomorrow.sunset.toISOString());
+
+    await clockPage.getByRole('button', { name: 'Рядом со мной' }).click();
+    await clockPage.getByText(/Прогноз по вашей геопозиции/).waitFor();
+    const local = sunDay(nextAfternoon, geolocation.latitude, geolocation.longitude);
+    assert.equal(await sunsetTime.getAttribute('datetime'), local.sunset.toISOString());
+  } finally {
+    await clockContext.close();
+  }
   const context=await browser.newContext({locale:'ru-RU',viewport:{width:390,height:844},
-    permissions:['geolocation'],geolocation:{latitude:56.3280332,longitude:44.0021054}});
+    permissions:['geolocation'],geolocation});
   const page=await context.newPage(),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url())});
@@ -138,13 +179,16 @@ try{
     await spot.click();
     await checkCenteredPin(title);
   }
-  const nearMe = page.getByRole('button', { name: 'Рядом со мной' });
+  const mapSection = page.locator('main section').filter({ has: page.getByRole('heading', { name: 'Карта мест и удобств' }) });
+  const nearMe = mapSection.getByRole('button', { name: 'Рядом со мной' });
   await nearMe.click();
   await checkCenteredPin('Вы здесь');
   assert.equal(await page.locator('.now-distance').count(), await sunsetSpots.count());
   assert.match(await page.locator('.now-distance').first().innerText(), /^≈ /);
-  await page.locator('.stats button').first().click();
-  await page.locator('.pin--sel.pin--wc').waitFor();
+  assert.equal(await page.getByRole('heading', { name: /^(Ближайшее|Удобства рядом)$/ }).count(), 0);
+  assert.equal(await page.locator('.stats button').count(), 0);
+  assert(await mapSection.getByRole('button', { name: 'Туалеты', exact: true }).isVisible());
+  assert(await mapSection.getByRole('button', { name: 'Питьевая вода', exact: true }).isVisible());
 
   await context.setGeolocation({ latitude: 56.3280332, longitude: 44.0021054, accuracy: 1000 });
   await nearMe.click();
