@@ -57,6 +57,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .pin{display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--blue);color:#fff;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
 .pin--sun{background:#f08a24}.pin--wc{background:#6a4fc7}.pin--water{background:#1aa3c9}.pin--step{background:#9aa3ab;border-width:1px}.pin--access{background:#2e9e5b}.pin--ev{background:var(--blue)}.pin--bad{background:var(--bad)}.pin--num{font-weight:700;font-size:13px}
 .pin--sel{box-shadow:0 0 0 4px rgba(50,131,199,.35),0 1px 4px rgba(0,0,0,.35)}
+.pin--me{background:#176dc4}
+.now-map-point{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-weight:600}
+.now-distance{flex:none;white-space:nowrap}
 .pin-drop{width:28px;height:28px;background:var(--bad);border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);margin:2px}
 .sunbox{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
 .sunbox .big{font-size:40px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
@@ -101,7 +104,6 @@ input:focus,textarea:focus,select:focus,button:focus-visible,a:focus-visible{out
 .err{color:var(--bad)}
 .hero{background:#e8eeea;color:var(--ink);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:10px}
 .hero .muted{color:var(--muted)}
-.flagc{font-size:22px}
 @media (min-width:760px){.leafmap{height:420px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .lang button{white-space:nowrap}
