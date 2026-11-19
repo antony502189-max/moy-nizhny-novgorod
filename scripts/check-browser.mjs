@@ -105,6 +105,10 @@ try{
     await visit('#/twin/' + city.id, 'main h1');
     assert.equal(await page.locator('main h1').innerText(), city.name.ru);
     assert.equal(await page.getByRole('link', {name: /Источник о статусе/}).getAttribute('href'), city.source);
+    if (city.relatedAgreement) {
+      await page.getByText(city.relatedAgreement.text.ru, {exact: false}).waitFor();
+      assert.equal(await page.getByRole('link', {name: /Источник о соглашении/}).getAttribute('href'), city.relatedAgreement.source);
+    }
   }
   await visit('#/guide','main h2');
   assert.equal(await page.locator('.leaflet-marker-icon').count(),places.length);

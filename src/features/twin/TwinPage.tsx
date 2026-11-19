@@ -76,8 +76,11 @@ export function TwinPage({ path }: { path: string }) {
       <PageTitle title={l(city.name)} sub={l(city.area)} />
       <div className="hero">
         <b>{t('twin.relationship.' + city.relationship)}</b>
-        {city.since && <p>{t('twin.since', { year: city.since })}</p>}
+        {city.since && <p>{t(city.relationship === 'paused' ? 'twin.initialAgreement' : 'twin.since', { year: city.since })}</p>}
         <a href={city.source} target="_blank" rel="noreferrer">{t('twin.source')} ↗</a>
+        {city.relatedAgreement && (
+          <p>{l(city.relatedAgreement.text)} <a href={city.relatedAgreement.source} target="_blank" rel="noreferrer">{t('twin.agreementSource')} ↗</a></p>
+        )}
       </div>
       <Section title={t('twin.start')} icon="route">
         <div className="list">{starts.map(s => (

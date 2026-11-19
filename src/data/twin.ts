@@ -9,6 +9,7 @@ export interface TwinCity {
   relationship: CityRelationship;
   since?: number;
   source: string;
+  relatedAgreement?: { text: L10n; source: string };
 }
 
 export const SISTER_CITY_REGISTER = 'https://admgor.nnov.ru/Gostyam/Goroda-pobratimy';
@@ -68,6 +69,8 @@ export const TWINS: TwinCity[] = [
     relationship: 'sister', since: 2025, source: 'https://admgor.nnov.ru/news/29393' },
   { id: 'gomel', name: { ru: "Гомель", en: "Gomel", zh: "戈梅利" }, area: areas.BY,
     relationship: 'sister', since: 2025, source: 'https://admgor.nnov.ru/news/28990' },
+  { id: 'derbent', name: { ru: "Дербент", en: "Derbent", zh: "杰尔宾特" }, area: areas.RU,
+    relationship: 'partner', since: 2024, source: 'https://www.gordumannov.ru/?id=171377' },
   { id: 'dobrich', name: { ru: "Добрич", en: "Dobrich", zh: "多布里奇" }, area: areas.BG,
     relationship: 'sister', since: 2017, source: SISTER_CITY_REGISTER },
   { id: 'gyor', name: { ru: "Дьёр", en: "Győr", zh: "杰尔" }, area: areas.HU,
@@ -87,7 +90,16 @@ export const TWINS: TwinCity[] = [
   { id: 'matanzas', name: { ru: "Матансас", en: "Matanzas", zh: "马坦萨斯" }, area: areas.CU,
     relationship: 'sister', since: 2004, source: SISTER_CITY_REGISTER },
   { id: 'minsk', name: { ru: "Минск", en: "Minsk", zh: "明斯克" }, area: areas.BY,
-    relationship: 'sister', since: 2007, source: SISTER_CITY_REGISTER },
+    relationship: 'sister', since: 2007, source: SISTER_CITY_REGISTER,
+    relatedAgreement: {
+      text: {
+        ru: 'В 2017 году города подписали соглашение о побратимских отношениях и сотрудничестве.',
+        en: 'The cities signed a twinning and cooperation agreement in 2017.',
+        zh: '两市于2017年签署友好城市关系与合作协议。',
+      },
+      source: 'https://book-hall.ru/files/den-goroda/001/DG_32%20%281196%29.pdf',
+    },
+  },
   { id: 'novi-sad', name: { ru: "Нови-Сад", en: "Novi Sad", zh: "诺维萨德" }, area: areas.RS,
     relationship: 'sister', since: 2006, source: SISTER_CITY_REGISTER },
   { id: 'novopolotsk', name: { ru: "Новополоцк", en: "Novopolotsk", zh: "新波洛茨克" }, area: areas.BY,
@@ -99,7 +111,16 @@ export const TWINS: TwinCity[] = [
   { id: 'suwon', name: { ru: "Сувон", en: "Suwon", zh: "水原" }, area: areas.KR,
     relationship: 'sister', since: 2005, source: SISTER_CITY_REGISTER },
   { id: 'sukhum', name: { ru: "Сухум", en: "Sukhum", zh: "苏呼米" }, area: areas.AB,
-    relationship: 'sister', source: 'https://www.gordumannov.ru/?id=200691' },
+    relationship: 'sister', since: 2011, source: SISTER_CITY_REGISTER,
+    relatedAgreement: {
+      text: {
+        ru: 'В перечне Нижнего Новгорода указано соглашение 2011 года. Администрация Сухума сообщает о подписании соглашения о побратимстве в сентябре 2024 года.',
+        en: 'Nizhny Novgorod’s directory records a 2011 agreement. Sukhum’s administration reports that a twinning agreement was signed in September 2024.',
+        zh: '下诺夫哥罗德市名录记载了2011年的协议。苏呼米市政府称，两市于2024年9月签署了友好城市协议。',
+      },
+      source: 'https://g.sukhumcity.ru/index.php/novosti/item/3873-glava-administratsii-sukhuma-timur-agrba-prinyal-delegatsiyu-iz-nizhnego-novgoroda',
+    },
+  },
   { id: 'tampere', name: { ru: "Тампере", en: "Tampere", zh: "坦佩雷" }, area: areas.FI,
     relationship: 'sister', since: 1995, source: SISTER_CITY_REGISTER },
   { id: 'wuxi', name: { ru: "Уси", en: "Wuxi", zh: "无锡" }, area: areas.CN,
@@ -119,5 +140,5 @@ export const TWINS: TwinCity[] = [
   { id: 'zhuhai', name: { ru: "Чжухай", en: "Zhuhai", zh: "珠海" }, area: areas.CN,
     relationship: 'partner', source: CITY_PROGRAMME },
   { id: 'essen', name: { ru: "Эссен", en: "Essen", zh: "埃森" }, area: areas.DE,
-    relationship: 'paused', source: 'https://essen.de/dasistessen/international/partnerstaedte/essens_partnerstaedte.de.jsp' },
+    relationship: 'paused', since: 1991, source: 'https://essen.de/dasistessen/international/partnerstaedte/essens_partnerstaedte.de.jsp' },
 ];
